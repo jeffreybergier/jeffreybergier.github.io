@@ -18,6 +18,7 @@ RUN gem install jekyll -v 4.4.1
 RUN gem install jekyll-theme-chirpy -v 7.3.1
 RUN gem install jekyll-feed -v 0.17.0
 RUN gem install jekyll-seo-tag -v 2.8.0
+RUN gem install html-proofer -v 5.0.9
 RUN gem install rake -v 13.3.0
 RUN gem install rouge -v 4.6.1
 RUN gem install rexml -v 3.4.4

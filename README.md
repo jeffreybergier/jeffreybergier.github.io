@@ -17,7 +17,20 @@ Move the files from the temp folder into the root folder
 
 ### Serve
 
-`docker run --rm -it -p 8080:4000 --volume="$PWD:/app" jekyll-container jekyll serve --host 0.0.0.0 --port 4000`
+```
+docker run --rm -it -p 8080:4000 \
+  --volume="$PWD:/app" \
+  jekyll-container \
+  jekyll serve --host 0.0.0.0 --port 4000
+```
+
+```
+docker run --rm -it -p 8080:4000 \
+  -e JEKYLL_ENV=production \
+  --volume="$PWD:/app" \
+  jekyll-container \
+  jekyll serve --host 0.0.0.0 --port 4000
+```
 
 ### Interactive Ruby Shell
 

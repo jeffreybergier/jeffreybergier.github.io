@@ -28,4 +28,4 @@ RUN gem install bigdecimal -v 3.2.3
 RUN gem install base64 -v 0.3.0
 
 # Default command
-CMD ["jekyll", "serve", "--host", "0.0.0.0", "--port", "4000"]
+CMD ["irb"]

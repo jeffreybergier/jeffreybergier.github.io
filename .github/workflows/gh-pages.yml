@@ -1,4 +1,4 @@
-name: Publish Jekyll
+name: Jekyll Build
 
 on:
   push:

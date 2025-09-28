@@ -14,9 +14,11 @@ timezone: Asia/Tokyo (JST)
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Jeffrey Bergier # the main title
+# the main title
+title: Jeffrey Bergier
 
-tagline: The window to yesterday # it will display as the subtitle
+# it will display as the subtitle
+tagline: A software developer and tech lover trying to share his enthusiasm
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -127,9 +129,9 @@ assets:
     env: # [development | production]
 
 pwa:
-  enabled: true # The option for PWA feature (installable)
+  enabled: false # The option for PWA feature (installable)
   cache:
-    enabled: true # The option for PWA offline cache
+    enabled: false # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.

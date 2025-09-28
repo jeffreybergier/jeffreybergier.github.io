@@ -4,7 +4,7 @@
   <id>http://jeffburg.com/</id>
   <title>Jeffrey Bergier</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-09-28T13:10:39+00:00</updated>
+  <updated>2025-09-28T13:47:17+00:00</updated>
   <author>
     <name>Jeffrey Bergier</name>
     <uri>http://jeffburg.com/</uri>
@@ -20,38 +20,14 @@
 
   
   <entry>
-    <title>Tech One</title>
-    <link href="http://jeffburg.com/posts/tech1/" rel="alternate" type="text/html" title="Tech One" />
-    <published>2023-04-05T00:00:00+00:00</published>
+    <title>WaterMe: Gardening Reminders</title>
+    <link href="http://jeffburg.com/posts/WaterMe/" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" />
+    <published>2016-04-15T00:00:00+00:00</published>
   
-    <updated>2023-04-05T00:00:00+00:00</updated>
+    <updated>2016-04-15T00:00:00+00:00</updated>
   
-    <id>http://jeffburg.com/posts/tech1/</id>
-    <content type="text/html" src="http://jeffburg.com/posts/tech1/" />
-    <author>
-      <name>Jeffrey Bergier</name>
-    </author>
-
-  
-    
-    <category term="Tech" />
-    
-  
-
-  <summary>Heading 2  Testing 123  Heading 3  Testing 1244</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Apps One</title>
-    <link href="http://jeffburg.com/posts/app1/" rel="alternate" type="text/html" title="Apps One" />
-    <published>2022-03-04T00:00:00+00:00</published>
-  
-    <updated>2022-03-04T00:00:00+00:00</updated>
-  
-    <id>http://jeffburg.com/posts/app1/</id>
-    <content type="text/html" src="http://jeffburg.com/posts/app1/" />
+    <id>http://jeffburg.com/posts/WaterMe/</id>
+    <content type="text/html" src="http://jeffburg.com/posts/WaterMe/" />
     <author>
       <name>Jeffrey Bergier</name>
     </author>
@@ -62,31 +38,7 @@
     
   
 
-  <summary>Heading 2  Testing 123  Heading 3  Testing 1244</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Design One</title>
-    <link href="http://jeffburg.com/posts/design1/" rel="alternate" type="text/html" title="Design One" />
-    <published>2021-02-03T00:00:00+00:00</published>
-  
-    <updated>2021-02-03T00:00:00+00:00</updated>
-  
-    <id>http://jeffburg.com/posts/design1/</id>
-    <content type="text/html" src="http://jeffburg.com/posts/design1/" />
-    <author>
-      <name>Jeffrey Bergier</name>
-    </author>
-
-  
-    
-    <category term="Design" />
-    
-  
-
-  <summary>Heading 2  Testing 123  Heading 3  Testing 1244</summary>
+  <summary>WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016</summary>
 
   </entry>
 

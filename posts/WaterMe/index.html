@@ -112,12 +112,7 @@
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
-  
 
-  
-    <!-- Image Popup -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- Scripts -->
@@ -133,13 +128,6 @@
 <!-- layout specified -->
 
 
-  
-
-  
-    <!-- image lazy-loading & popup & clipboard -->
-    
-  
-
 
 
 
@@ -168,58 +156,9 @@
 
   
 
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
 
 
-
-  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/tocbot@4.32.2/dist/tocbot.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/tocbot@4.32.2/dist/tocbot.min.js"></script>
 
 
 
@@ -227,15 +166,11 @@
 
 
 
-<script defer src="/assets/js/dist/post.min.js"></script>
+<script defer src="/assets/js/dist/commons.min.js"></script>
 
 
 
 <!-- Pageviews -->
-
-  
-
-  
 
 
 
@@ -456,7 +391,7 @@
     </button>
 
     <div id="topbar-title">
-      Post
+      Post-column
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
@@ -539,6 +474,87 @@
       
 
       
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
     
       
 
@@ -853,9 +869,18 @@
   
 
   <div class="content">
-    <p><a href="/assets/img/apps-waterme/apps-screen-waterme-01.png" class="popup img-link left shimmer"><img src="/assets/img/apps-waterme/apps-screen-waterme-01.png" alt="WaterMe Screenshot 1" width="250" class="shadow" loading="lazy"></a></p>
+    
 
-<h2 id="waterme-gardening-reminders"><span class="me-2">WaterMe: Gardening Reminders</span><a href="#waterme-gardening-reminders" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="row">
+  <div class="col-md-4">
+    
+  <p><a href="/assets/img/apps-waterme/apps-screen-waterme-01.png" class="popup img-link left shimmer"><img src="/assets/img/apps-waterme/apps-screen-waterme-01.png" alt="WaterMe Screenshot 1" width="250" class="shadow" loading="lazy"></a>
+<a href="/assets/img/apps-waterme/apps-screen-waterme-02.png" class="popup img-link left shimmer"><img src="/assets/img/apps-waterme/apps-screen-waterme-02.png" alt="WaterMe Screenshot 2" width="250" class="shadow" loading="lazy"></a></p>
+
+
+  </div>
+  <div class="col-md-8 content">
+    <h2 id="waterme-gardening-reminders"><span class="me-2">WaterMe: Gardening Reminders</span><a href="#waterme-gardening-reminders" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
 a database app. It Creates, Reads, Updates, and Deletes database entries. But it
@@ -878,7 +903,6 @@ drop which you can see in the screenshot to the left. Over the years I also
 enable Core Data to CloudKit syncing for automatic and reliable iCloud sync
 between devices.</p>
 
-<!-- ![WaterMe Screenshot 2](/assets/img/apps-waterme/apps-screen-waterme-02.png){: w="250" }{: .left }{: .shadow } -->
 <!-- 
 
 
@@ -920,6 +944,9 @@ between devices.</p>
   
 </p>
  -->
+
+  </div>
+</div>
 
   </div>
 

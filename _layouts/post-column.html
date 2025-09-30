@@ -1,0 +1,17 @@
+---
+layout: post
+## populate column with markdown content
+---
+
+{% capture _column %}
+  {{ page.column | markdownify }}
+{% endcapture %}
+
+<div class="row">
+  <div class="col-md-4">
+    {{ _column }}
+  </div>
+  <div class="col-md-8 content">
+    {{ content }}
+  </div>
+</div>

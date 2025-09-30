@@ -1,18 +1,11 @@
 ---
-layout: page
+layout: post
 icon: fas fa-info-circle
+image: /assets/img/profile.jpg
+title: Jeffrey Bergier
+description: A software developer and tech lover trying to share his enthusiasm
+date: 1987-01-01
 ---
-
-> Ongoing Projects
-> - [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4)
-> - [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb)
-> - [MathEdit for OpenStep App Updates](http://jeffburg.social/tags/OpenStep)
-> - [iMac 5K Display Project Updates](http://jeffburg.social/tags/iMac5K)
-{: .prompt-info }
-
-![Jeff using a computer in the 90's](/assets/img/profile.jpg){: w="250" }{: .left }{: .shadow }
-
-# Jeffrey Bergier
 
 I’m a Quality Assurance Engineer and Team Lead in the automotive software
 industry here in Tokyo. In a past life, I was an iOS and macOS developer and
@@ -23,5 +16,11 @@ In my spare time I still enjoy working on Apps and I am very interested in Retro
 Computing, specifically with old Macs, Mac OS X, and NeXTSTEP. I try to share
 everything as much as possible on this site and on social media:　 
 [Mastodon](http://jeffburg.social/@jeff)・
-[Github](http://github.com/jeffreybergier)・
-[LinkedIn](http://linkedin.com/in/jeffreybergier)
+[Github](http://github.com/jeffreybergier)
+
+> Ongoing Projects
+> - [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4)
+> - [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb)
+> - [MathEdit for OpenStep App Updates](http://jeffburg.social/tags/OpenStep)
+> - [iMac 5K Display Project Updates](http://jeffburg.social/tags/iMac5K)
+{: .prompt-info }

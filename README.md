@@ -12,6 +12,8 @@
 ### Create New Project (if needed)
 
 `docker run --rm -it --volume="$PWD:/app" jekyll-container jekyll new /app/temp --skip-bundle`
+`cd temp`
+`docker run --rm -it --volume="$PWD:/app" jekyll-container bundle install`
 
 Move the files from the temp folder into the root folder
 

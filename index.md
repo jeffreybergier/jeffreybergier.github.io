@@ -1,10 +1,8 @@
 ---
-layout: post
-icon: fas fa-info-circle
-image: /assets/img/profile.jpg
-title: Jeffrey Bergier
-description: A software developer and tech lover trying to share his enthusiasm
-date: 1987-01-01
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
 ---
 
 I’m a Quality Assurance Engineer and Team Lead in the automotive software
@@ -14,7 +12,7 @@ Industrial Design at San Francisco State University.
 
 In my spare time I still enjoy working on Apps and I am very interested in Retro
 Computing, specifically with old Macs, Mac OS X, and NeXTSTEP. I try to share
-everything as much as possible on this site and on social media:　 
+everything as much as possible on this site and on social media:
 [Mastodon](http://jeffburg.social/@jeff)・
 [Github](http://github.com/jeffreybergier)
 

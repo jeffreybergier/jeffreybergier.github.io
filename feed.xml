@@ -1,47 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-01T14:32:14+00:00</updated><id>http://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><subtitle>A software developer and tech lover trying to share his enthusiasm</subtitle><entry><title type="html">WaterMe: Gardening Reminders</title><link href="http://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>http://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="http://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<h2 id="waterme-gardening-reminders">WaterMe: Gardening Reminders</h2>
 
+<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
+a database app. It Creates, Reads, Updates, and Deletes database entries. But it
+displays them in a nice way with really great animations. The premise of the app
+is that, unlike reminders style apps, this app only gives you one reminder per
+day letting you know which plants need to be watered that day.</p>
 
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://jeffburg.com/</id>
-  <title>Jeffrey Bergier</title>
-  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-09-30T14:05:27+00:00</updated>
-  <author>
-    <name>Jeffrey Bergier</name>
-    <uri>http://jeffburg.com/</uri>
-  </author>
-  <link rel="self" type="application/atom+xml" href="http://jeffburg.com/feed.xml"/>
-  <link rel="alternate" type="text/html" hreflang="en"
-    href="http://jeffburg.com/"/>
-  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
-  <rights> © 2025 Jeffrey Bergier </rights>
-  <icon>/assets/img/favicons/favicon.ico</icon>
-  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+<p>Because of this premise, I had to do quite a lot of complex date math to figure
+out which day a plant need to be watered. If your a developer, you know this can
+be complex because days and time zones are pretty complex. As well, because I
+don’t use a Push Notification server, I need to schedule what Apple calls “Local
+Notifications,” This basically means that any time the database changes, I need
+to look about 14 days ahead and figure out, for every day, if a plant needs to
+be watered and which one, and then schedule 14 notifications. Anyway, I am going
+too deep.</p>
 
+<p>WaterMe has been on the app store since 2016 and has gone through many updates
+and changes to improve as new features are added into the OS, such as drag and
+drop which you can see in the screenshot to the left. Over the years I also
+enable Core Data to CloudKit syncing for automatic and reliable iCloud sync
+between devices.</p>
 
-  
-  <entry>
-    <title>WaterMe: Gardening Reminders</title>
-    <link href="http://jeffburg.com/posts/WaterMe/" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" />
-    <published>2016-04-15T00:00:00+00:00</published>
-  
-    <updated>2016-04-15T00:00:00+00:00</updated>
-  
-    <id>http://jeffburg.com/posts/WaterMe/</id>
-    <content type="text/html" src="http://jeffburg.com/posts/WaterMe/" />
-    <author>
-      <name>Jeffrey Bergier</name>
-    </author>
-
-  
-    
-    <category term="Apps" />
-    
-  
-
-  <summary>WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016</summary>
-
-  </entry>
-
-</feed>
-
-
+<p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’
+<img src="/assets/img/apps-waterme/apps-screen-waterme-01.png" alt="WaterMe Screenshot 1" w="250" class="left shadow" />
+<img src="/assets/img/apps-waterme/apps-screen-waterme-02.png" alt="WaterMe Screenshot 2" w="250" class="left shadow" /></p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016]]></summary></entry></feed>

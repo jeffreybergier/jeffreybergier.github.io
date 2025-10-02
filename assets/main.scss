@@ -1,0 +1,52 @@
+// ============================
+// Minima custom main.scss
+// ============================
+
+// Import default Minima styles first
+@import "minima";
+
+// ----------------------------
+// Global Custom Styles
+// ----------------------------
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 1.6;
+}
+
+// ----------------------------
+// Two-column layout for home
+// ----------------------------
+.home-columns {
+  display: flex;
+  flex-wrap: wrap; // stack on smaller screens
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-columns .left-column {
+  flex: 1; // smaller column
+  min-width: 200px; // ensure it doesn't shrink too small
+}
+
+.home-columns .right-column {
+  flex: 2; // larger column
+  min-width: 300px;
+}
+
+// ----------------------------
+// Images
+// ----------------------------
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ----------------------------
+// Optional: Media Queries for small screens
+// ----------------------------
+@media (max-width: 768px) {
+  .home-columns {
+    flex-direction: column;
+  }
+}

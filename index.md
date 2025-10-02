@@ -1,8 +1,8 @@
 ---
-layout: home
+layout: home-custom
+left_column: |
+  ![Jeff using a computer in the 90's](/assets/images/profile.jpeg)
 ---
-
-![Jeff using a computer in the 90's](/assets/images/profile.jpeg)
 
 I’m a Quality Assurance Engineer and Team Lead in the automotive software
 industry here in Tokyo. In a past life, I was an iOS and macOS developer and

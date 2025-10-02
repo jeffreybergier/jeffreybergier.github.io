@@ -1,0 +1,16 @@
+---
+layout: home
+---
+
+{% capture _left_column %}
+  {{ page.left_column | markdownify }}
+{% endcapture %}
+
+<div class="home-columns">
+  <div class="left-column">
+    {{ _left_column }}
+  </div>
+  <div class="right-column">
+    {{ content }}
+  </div>
+</div>

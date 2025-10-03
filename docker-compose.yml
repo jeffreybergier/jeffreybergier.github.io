@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  jekyll-container:
+    image: ruby-container:latest
+    container_name: jekyll-environment
+    restart: always
+    tty: true
+    volumes:
+      - ./jekyll:/jekyll
+    ports:
+      - "8080:8080"
+networks:
+  my-network:
+    driver: bridge

@@ -1,52 +1,26 @@
 # jeffreybergier.github.io
 
-### Build Docker Container
+### Build New Docker Container
 
 `cd ~/Developer/My\ Github/jeffreybergier.github.io `
-`docker build -t jekyll-container .`
+`docker build -t ruby-container .`
 
-### Confirm It Works
+### Launch Docker Compose
 
-`docker run --rm jekyll-container jekyll --version`
+`docker-compose up -d`
+`docker exec -it jekyll-environment bash`
 
-### Create New Project (if needed)
+### Set up new jekyll site
 
-`docker run --rm -it --volume="$PWD:/app" jekyll-container jekyll new /app/temp --skip-bundle`
-`cd temp`
-`docker run --rm -it --volume="$PWD:/app" jekyll-container bundle install`
+`jekyll new temp`
 
-Move the files from the temp folder into the root folder
+Then move everything from temp into the parent (jekyll) folder
 
-### Serve
+### Serve Jekyll
 
-```
-docker run --rm -it -p 8080:4000 \
-  --volume="$PWD:/app" \
-  jekyll-container \
-  jekyll serve --host 0.0.0.0 --port 4000
-```
+`bundle install`
+`bundle exec jekyll serve --host 0.0.0.0 --port 8080`
 
-```
-docker run --rm -it -p 8080:4000 \
-  -e JEKYLL_ENV=production \
-  --volume="$PWD:/app" \
-  jekyll-container \
-  jekyll serve --host 0.0.0.0 --port 4000
-```
+### Open In Your Browser
 
-### Interactive Ruby Shell
-
-To proper site properties and understand the variables in Jekyll use the irb.
-
-`docker run --rm -it --volume="$PWD:/app" jekyll-container`
-
-```
-require "jekyll"
-
-site = Jekyll::Site.new(Jekyll.configuration({}))
-site.reset
-site.read
-
-site.categories.keys
-site.pages.first.to_liquid
-```
+`http://localhost:8080`

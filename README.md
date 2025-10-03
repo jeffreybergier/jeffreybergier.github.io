@@ -1,5 +1,7 @@
 # jeffreybergier.github.io
 
+Basic but wrong instructions are from https://dev.to/cuongnp/setting-up-a-local-development-environment-for-jekyll-with-docker-d8k
+
 ### Build New Docker Container
 
 `cd ~/Developer/My\ Github/jeffreybergier.github.io `

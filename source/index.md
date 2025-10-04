@@ -1,6 +1,6 @@
 ---
 layout: home-accessory
-accessory: "![Jeff using a computer in the 90's](/assets/images/profile.jpeg)"
+accessory: "![Jeff using a computer in the 90's](/assets/images/profile.jpeg){: .reflect }"
 ---
 
 I’m a Quality Assurance Engineer and Team Lead in the automotive software

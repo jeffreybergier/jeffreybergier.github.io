@@ -853,13 +853,15 @@ table td {
 }
 /* Now add your overrides */
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif; /* obvious test font */
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  min-width: 1024px; /* remove mobile layout */
 }
 
 .two-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .left-column {
@@ -932,6 +934,11 @@ body {
   font-family: "Font Awesome 7 Free";
   content: "\f057"; /* fa-times-circle */
   font-size: 1.5em;
+}
+
+/* Create a class to mirror the image like iWeb */
+.reflect {
+  -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,25 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-04T04:18:44+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><subtitle>A software developer and tech lover trying to share his enthusiasm</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="https://jeffburg.com/unknown/2025/10/03/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-10-03T13:34:17+00:00</published><updated>2025-10-03T13:34:17+00:00</updated><id>https://jeffburg.com/unknown/2025/10/03/welcome-to-jekyll</id><content type="html" xml:base="https://jeffburg.com/unknown/2025/10/03/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].</p>
-
-<p>Follow me on GitHub: <i class="fab fa-github"></i>
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</p>]]></content><author><name></name></author><category term="Unknown" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-04T05:04:44+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><subtitle>A software developer and tech lover trying to share his enthusiasm</subtitle><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
 a database app. It Creates, Reads, Updates, and Deletes database entries. But it
 displays them in a nice way with really great animations. The premise of the app
 is that, unlike reminders style apps, this app only gives you one reminder per
@@ -40,4 +19,4 @@ drop which you can see in the screenshot to the left. Over the years I also
 enable Core Data to CloudKit syncing for automatic and reliable iCloud sync
 between devices.</p>
 
-<p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016]]></summary></entry></feed>
+<p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016.]]></summary></entry></feed>

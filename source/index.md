@@ -10,9 +10,9 @@ Industrial Design at San Francisco State University.
 
 In my spare time I still enjoy working on Apps and I am very interested in Retro
 Computing, specifically with old Macs, Mac OS X, and NeXTSTEP. I try to share
-everything as much as possible on this site and on social media:
-[Mastodon <i class="fab fa-mastodon"></i>](http://jeffburg.social/@jeff)・
-[GitHub <i class="fab fa-github"></i> ](http://github.com/jeffreybergier)
+everything as much as possible on this site and on social media
+[<i class="fab fa-mastodon"></i>Mastodon](http://jeffburg.social/@jeff)
+[<i class="fab fa-github"></i>GitHub](http://github.com/jeffreybergier)
 
 > Ongoing Projects
 > - [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4)

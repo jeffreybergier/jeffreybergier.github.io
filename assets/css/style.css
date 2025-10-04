@@ -856,4 +856,20 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif; /* obvious test font */
 }
 
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.left-column {
+  flex: 1 1 30%;
+  min-width: 200px;
+}
+
+.right-column {
+  flex: 1 1 65%;
+  min-width: 300px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -33,9 +33,11 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-  
 minima:
   skin: dark
+sass:
+  load_paths:
+    - _sass
 
 # Exclude from processing.
 # The following items will not be processed, by default.

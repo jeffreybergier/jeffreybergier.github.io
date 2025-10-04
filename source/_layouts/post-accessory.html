@@ -32,10 +32,18 @@ layout: base
     </div>
   </header>
 
+<!-- Custom Layout Starts Here -->
   <div class="post-content e-content" itemprop="articleBody">
-    <p>This is a custom layout</p>
-    {{ content }}
+    <div class="two-columns">
+      <div class="left-column">
+        {{ page.accessory | markdownify }}
+      </div>
+      <div class="right-column">
+        {{ content }}
+      </div>
+    </div>
   </div>
+<!-- Custom Layout Ends Here -->
 
   {% if jekyll.environment == 'production' -%}
     {% if page.comments == false -%}

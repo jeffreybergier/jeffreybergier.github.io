@@ -9,3 +9,19 @@
 body {
   font-family: "Comic Sans MS", cursive, sans-serif; /* obvious test font */
 }
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap; // allows wrapping on small screens
+  gap: 2rem;       // spacing between columns
+}
+
+.left-column {
+  flex: 1 1 30%;   // 30% width but flexible
+  min-width: 200px; // don’t get too small on mobile
+}
+
+.right-column {
+  flex: 1 1 65%;   // 65% width
+  min-width: 300px;
+}

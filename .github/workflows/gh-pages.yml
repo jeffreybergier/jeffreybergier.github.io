@@ -21,16 +21,16 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler
-          cd ./jekyll
+          cd ./source
           bundle install
 
       - name: Build site
         run: |
-          cd ./jekyll
+          cd ./source
           bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./jekyll/_site
+          publish_dir: ./source/_site

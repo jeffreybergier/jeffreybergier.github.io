@@ -16,7 +16,13 @@ body {
 /* Create a class to mirror the image like iWeb */
 
 .reflect {
-  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.3) 100%);
+  border-radius: 1em;
+  -webkit-box-reflect: below 2px
+    -webkit-linear-gradient(
+      transparent,
+      transparent 60%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
 }
 
 /* Accessory Layout */
@@ -35,6 +41,18 @@ body {
 .al-primary {
   flex: 1 1 65%;   // 65% width
   min-width: 300px;
+}
+
+/* On small screens, reverse order */
+@media (max-width: 768px) {
+  .al-accessory {
+    order: 1; /* goes below */
+    flex: 1 1 100%;
+  }
+  .al-primary {
+    order: 0; /* goes first */
+    flex: 1 1 100%;
+  }
 }
 
 /* Prompt styling */

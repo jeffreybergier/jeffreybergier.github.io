@@ -851,5 +851,9 @@ table td {
     width: calc(50% - 30px / 2);
   }
 }
+/* Now add your overrides */
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif; /* obvious test font */
+}
 
 /*# sourceMappingURL=style.css.map */

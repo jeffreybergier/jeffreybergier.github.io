@@ -9,21 +9,30 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  min-width: 1024px; /* remove mobile layout */
+  // min-width: 1024px; /* remove mobile layout */
 }
 
-.two-columns {
+
+/* Create a class to mirror the image like iWeb */
+
+.reflect {
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.3) 100%);
+}
+
+/* Accessory Layout */
+
+.accessory-layout {
   display: flex;
   flex-wrap: wrap; // allows wrapping on small screens
   gap: 1rem;       // spacing between columns
 }
 
-.left-column {
+.al-accessory {
   flex: 1 1 30%;   // 30% width but flexible
   min-width: 200px; // don’t get too small on mobile
 }
 
-.right-column {
+.al-primary {
   flex: 1 1 65%;   // 65% width
   min-width: 300px;
 }
@@ -89,10 +98,4 @@ body {
   font-family: "Font Awesome 7 Free";
   content: "\f057"; /* fa-times-circle */
   font-size: 1.5em;
-}
-
-/* Create a class to mirror the image like iWeb */
-
-.reflect {
-  -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.5) 100%);
 }

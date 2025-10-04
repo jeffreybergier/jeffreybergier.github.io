@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory to /app
-WORKDIR /jekyll
+WORKDIR /source
 
 # Display Ruby version and bundler version
 RUN ruby --version && bundle --version && gem install bundler jekyll

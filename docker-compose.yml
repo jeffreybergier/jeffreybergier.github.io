@@ -7,7 +7,7 @@ services:
     restart: always
     tty: true
     volumes:
-      - ./jekyll:/jekyll
+      - ./source:/source
     ports:
       - "8080:8080"
 networks:

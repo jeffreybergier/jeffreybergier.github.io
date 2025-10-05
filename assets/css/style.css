@@ -913,6 +913,41 @@ body a:active {
     flex: 1 1 100%;
   }
 }
+/* Title Accessory Styles */
+.title-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* always center as a group */
+  gap: 1.5rem; /* space between image and title */
+  flex-wrap: wrap; /* allow stacking on smaller screens */
+  margin-bottom: 1.5rem;
+  text-align: center; /* ensures title text stays centered */
+}
+
+.title-accessory {
+  flex: 0 0 auto;
+  max-width: 120px;
+}
+
+.title-accessory img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto; /* centers the image inside its container */
+}
+
+/* Stack accessory above title on small screens */
+@media (max-width: 640px) {
+  .title-flex {
+    flex-direction: column;
+    align-items: center; /* still centered even when stacked */
+  }
+  .title-accessory {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
 /* Flexible Grid Layout for post-grid.html */
 .flex-grid {
   display: flex;

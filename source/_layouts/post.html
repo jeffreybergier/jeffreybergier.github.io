@@ -1,6 +1,5 @@
 ---
 layout: base
-## Populate accessory to put markdown to the left of the primary content
 ## populate titleAccessory with custom markdown if you like
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -41,18 +40,9 @@ layout: base
     </div>
   </header>
 
-<!-- Custom Layout Starts Here -->
   <div class="post-content e-content" itemprop="articleBody">
-    <div class="accessory-layout">
-      <div class="al-accessory">
-        {{ page.accessory | markdownify }}
-      </div>
-      <div class="al-primary">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
   </div>
-<!-- Custom Layout Ends Here -->
 
   {% if jekyll.environment == 'production' -%}
     {% if page.comments == false -%}

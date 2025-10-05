@@ -913,6 +913,32 @@ body a:active {
     flex: 1 1 100%;
   }
 }
+/* Flexible Grid Layout for post-grid.html */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* space between columns */
+  justify-content: flex-start; /* aligns columns nicely on wrap */
+}
+
+/* Each column */
+.flex-col {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 columns with gap compensation */
+  box-sizing: border-box;
+}
+
+/* 2-column layout on medium screens */
+@media (max-width: 1024px) {
+  .flex-col {
+    flex: 1 1 calc(50% - 0.75rem); /* adjust gap for 2 columns */
+  }
+}
+/* 1-column layout on small screens */
+@media (max-width: 640px) {
+  .flex-col {
+    flex: 1 1 100%;
+  }
+}
 /* Prompt styling */
 .prompt-info,
 .prompt-warning,

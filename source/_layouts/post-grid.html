@@ -1,0 +1,14 @@
+---
+layout: post
+## Populate grid variable with array of strings containing markdown
+---
+
+{{ content }}
+
+<div class="flex-grid">
+  {%- for entry in page.grid -%}
+  <div class="flex-col">
+    {{ entry | markdownify }}
+  </div>
+  {%- endfor -%}
+</div>

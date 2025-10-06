@@ -80,41 +80,48 @@ body {
   }
 }
 
-/* Title Accessory Styles */
+/* Title Accessory + Header Layout */
 
 .title-flex {
   display: flex;
-  align-items: center;
-  justify-content: center; /* always center as a group */
-  gap: 1.5rem; /* space between image and title */
-  flex-wrap: wrap; /* allow stacking on smaller screens */
+  align-items: flex-start; /* align image and text top edges */
+  justify-content: flex-start; /* keep content aligned left */
+  gap: 1.5rem; /* space between image and text */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
   margin-bottom: 1.5rem;
-  text-align: center; /* ensures title text stays centered */
+  text-align: left; /* left-align text */
 }
 
 .title-accessory {
   flex: 0 0 auto;
-  max-width: 120px;
+  max-width: 350px; /* a bit bigger for images */
 }
 
-.title-accessory img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 0 auto; /* centers the image inside its container */
+/* Right side (text block) */
+.post-meta {
+  flex: 1; /* take remaining space */
+  display: flex;
+  flex-direction: column; /* stack title, excerpt, date vertically */
+  justify-content: center;
+  text-align: left;
 }
 
-/* Stack accessory above title on small screens */
-@media (max-width: 640px) {
+
+/* Stack image above text on mobile */
+@media (max-width: 800px) {
   .title-flex {
     flex-direction: column;
-    align-items: center; /* still centered even when stacked */
+    align-items: center;
+    text-align: center;
+  }
+
+  .post-meta {
+    align-items: center;
+    text-align: center;
   }
 
   .title-accessory {
     max-width: 100%;
-    margin-bottom: 1rem;
   }
 }
 

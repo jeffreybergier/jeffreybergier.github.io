@@ -1,25 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-07T12:15:24+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><subtitle>A software developer and tech lover trying to share his enthusiasm</subtitle><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
-a database app. It Creates, Reads, Updates, and Deletes database entries. But it
-displays them in a nice way with really great animations. The premise of the app
-is that, unlike reminders style apps, this app only gives you one reminder per
-day letting you know which plants need to be watered that day.</p>
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>QoS Redesign | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="QoS Redesign" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity." />
+<meta property="og:description" content="Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity." />
+<link rel="canonical" href="https://jeffburg.com/design/2014/01/01/QoS.html" />
+<meta property="og:url" content="https://jeffburg.com/design/2014/01/01/QoS.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="QoS Redesign" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2014-01-01T00:00:00+00:00","datePublished":"2014-01-01T00:00:00+00:00","description":"Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity.","headline":"QoS Redesign","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/design/2014/01/01/QoS.html"},"url":"https://jeffburg.com/design/2014/01/01/QoS.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
 
-<p>Because of this premise, I had to do quite a lot of complex date math to figure
-out which day a plant need to be watered. If your a developer, you know this can
-be complex because days and time zones are pretty complex. As well, because I
-don’t use a Push Notification server, I need to schedule what Apple calls “Local
-Notifications,” This basically means that any time the database changes, I need
-to look about 14 days ahead and figure out, for every day, if a plant needs to
-be watered and which one, and then schedule 14 notifications. Anyway, I am going
-too deep.</p>
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
 
-<p>WaterMe has been on the app store since 2016 and has gone through many updates
-and changes to improve as new features are added into the OS, such as drag and
-drop which you can see in the screenshot to the left. Over the years I also
-enable Core Data to CloudKit syncing for automatic and reliable iCloud sync
-between devices.</p>
+        <div class="nav-items">
+  <a class="nav-item" href="/apps/">Apps</a>
+  <a class="nav-item" href="/design/">Design</a>
+  <a class="nav-item" href="/retro-tech/">Retro Tech</a>
+</div>
 
-<p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016.]]></summary></entry><entry><title type="html">QoS Redesign</title><link href="https://jeffburg.com/design/2014/01/01/QoS.html" rel="alternate" type="text/html" title="QoS Redesign" /><published>2014-01-01T00:00:00+00:00</published><updated>2014-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/design/2014/01/01/QoS</id><content type="html" xml:base="https://jeffburg.com/design/2014/01/01/QoS.html"><![CDATA[<h2 id="project">Project</h2>
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+<!-- Custom Layout Starts Here -->
+  <header class="post-header title-flex">
+    
+    <div class="title-accessory">
+      <p><img src="/assets/images/design-qos/qos-profiles-600.png" alt="WaterMe Icon" class="reflect" /></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">QoS Redesign</h1><p>Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility
+and improved simplicity.
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2014-01-01T00:00:00+00:00" itemprop="datePublished">
+        Jan 1, 2014
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="project">Project</h2>
 <p class="end">The QoS feature of the SteelHead was being re-implemented and so it was due for
 a redesign. QoS is extremely complex and the design process was long. But it was
 an incredible success. Through extensive UX research and design, we proposed a
@@ -138,4 +182,60 @@ site. In those conditions, critical traffic needs a higher priority.</p>
 <p class="end">SteelCentral Controller has really great dashboards that give an overview of
 what is going on on your network. This is one mockups I made of what a QoS
 widget could have looked at. It shows the QoS classes. When a class is
-expanded, it shows relevant errors and warnings.</p>]]></content><author><name></name></author><category term="Design" /><summary type="html"><![CDATA[Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity.]]></summary></entry></feed>
+expanded, it shows relevant errors and warnings.</p>
+
+  </div>
+
+  <a class="u-url" href="/design/2014/01/01/QoS.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p>A software developer and tech lover trying to share his enthusiasm</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="Github">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

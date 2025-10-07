@@ -6,6 +6,7 @@
   "minima/initialize";
 
 /* Now add your overrides */
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -35,6 +36,32 @@ body {
       text-decoration-thickness: 2px;
       text-underline-offset: 2px;
     }
+  }
+}
+
+p.end::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.inline-photo,
+.inline-photo img {
+  float: left;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 0.7em 0.5em 0em 0;
+}
+
+/* Make it full-width on narrow screens */
+@media (max-width: 640px) {
+  .inline-photo,
+  .inline-photo img {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 1em;
   }
 }
 
@@ -122,35 +149,6 @@ body {
 
   .title-accessory {
     max-width: 100%;
-  }
-}
-
-/* Flexible Grid Layout for post-grid.html */
-
-.flex-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem; /* space between columns */
-  justify-content: flex-start; /* aligns columns nicely on wrap */
-}
-
-/* Each column */
-.flex-col {
-  flex: 1 1 calc(33.333% - 1rem); /* 3 columns with gap compensation */
-  box-sizing: border-box;
-}
-
-/* 2-column layout on medium screens */
-@media (max-width: 1024px) {
-  .flex-col {
-    flex: 1 1 calc(50% - 0.75rem); /* adjust gap for 2 columns */
-  }
-}
-
-/* 1-column layout on small screens */
-@media (max-width: 640px) {
-  .flex-col {
-    flex: 1 1 100%;
   }
 }
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-07T12:15:24+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><subtitle>A software developer and tech lover trying to share his enthusiasm</subtitle><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-07T14:05:58+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><subtitle>A software developer and tech lover trying to share his enthusiasm</subtitle><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
 a database app. It Creates, Reads, Updates, and Deletes database entries. But it
 displays them in a nice way with really great animations. The premise of the app
 is that, unlike reminders style apps, this app only gives you one reminder per
@@ -20,7 +20,7 @@ enable Core Data to CloudKit syncing for automatic and reliable iCloud sync
 between devices.</p>
 
 <p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016.]]></summary></entry><entry><title type="html">QoS Redesign</title><link href="https://jeffburg.com/design/2014/01/01/QoS.html" rel="alternate" type="text/html" title="QoS Redesign" /><published>2014-01-01T00:00:00+00:00</published><updated>2014-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/design/2014/01/01/QoS</id><content type="html" xml:base="https://jeffburg.com/design/2014/01/01/QoS.html"><![CDATA[<h2 id="project">Project</h2>
-<p class="end">The QoS feature of the SteelHead was being re-implemented and so it was due for
+<p>The QoS feature of the SteelHead was being re-implemented and so it was due for
 a redesign. QoS is extremely complex and the design process was long. But it was
 an incredible success. Through extensive UX research and design, we proposed a
 new mental model for QoS in the SteelHead.</p>
@@ -43,27 +43,27 @@ new mental model for QoS in the SteelHead.</p>
   </li>
 </ul>
 
-<p><a href="/assets/images/design-qos/qos-feature-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-feature-600.png" alt="Screenshot" /></a></p>
 <h3 id="feature-research">Feature Research</h3>
-<p class="end">QoS is an enormously complex feature. The first step in the process was to fully
+<p><a href="/assets/images/design-qos/qos-feature-2k.png"><img src="/assets/images/design-qos/qos-feature-600.png" alt="Screenshot" /></a>
+QoS is an enormously complex feature. The first step in the process was to fully
 understand how QoS works, what its intended to do, and what is needed to make it
 do that. I learned everything from the HFSC algorithm, QoS classes, deep packet
 inspection, latency priority, minimum and maximum bandwidth, etc. It got to the
 point where the questions I asked of the engineers couldn’t be answered without
-looking into their source code.{: .end }</p>
+looking into their source code.</p>
 
-<p><a href="/assets/images/design-qos/qos-user-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-user-600.png" alt="Screenshot" /></a></p>
 <h3 id="user-research">User Research</h3>
-<p class="end">After learning everything there is to know about how QoS works, it was time to
+<p><a href="/assets/images/design-qos/qos-user-2k.png"><img src="/assets/images/design-qos/qos-user-600.png" alt="Screenshot" /></a>
+After learning everything there is to know about how QoS works, it was time to
 speak with network administrators to see how they actually use it. I went onsite
 at several companies in Illinois, Montreal, and the UK. The user researcher and
 I also conducted remote interviews of many more firms. We learned what they used
 QoS for, what issues they had with the current version of QoS, and what they
 wanted to do with the QoS feature in the future.</p>
 
-<p><a href="/assets/images/design-qos/qos-sites-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-sites-600.png" alt="Screenshot" /></a></p>
 <h3 id="sites">Sites</h3>
-<p class="end">QoS needs to know the speeds of every network connection in the system. It needs
+<p><a href="/assets/images/design-qos/qos-sites-2k.png"><img src="/assets/images/design-qos/qos-sites-600.png" alt="Screenshot" /></a>
+QoS needs to know the speeds of every network connection in the system. It needs
 to know this so it can adequately divide up resources. Network administrators
 have hundreds, or even thousands of locations. And each location can have
 multiple network connections. So I created an entire concept around this called
@@ -72,9 +72,9 @@ uplink has upstream and downstream bandwidths associated with them. This gives
 the QoS system the information it needs on bandwidth restrictions across the
 entire network.</p>
 
-<p><a href="/assets/images/design-qos/qos-classes-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-classes-600.png" alt="Screenshot" /></a></p>
 <h3 id="classes">Classes</h3>
-<p class="end">QoS systems usually have the concept of classes. Classes are sort of like
+<p><a href="/assets/images/design-qos/qos-classes-2k.png"><img src="/assets/images/design-qos/qos-classes-600.png" alt="Screenshot" /></a>
+QoS systems usually have the concept of classes. Classes are sort of like
 buckets. The network administrator puts certain applications into certain
 buckets, then the system treats each bucket with a certain level of importance.
 The most important thing to remember about these buckets, is that giving one
@@ -87,9 +87,9 @@ information in a visual way, but in the end, we settled for a fairly simple tree
 visualization. A few slides after this, there are some concepts I made for
 visually showing class information.</p>
 
-<p><a href="/assets/images/design-qos/qos-classes-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-classes-600.png" alt="Screenshot" /></a></p>
 <h3 id="rules">Rules</h3>
-<p class="end">QoS classes are like buckets you put Apps into that then get managed by the QoS
+<p><a href="/assets/images/design-qos/qos-classes-2k.png"><img src="/assets/images/design-qos/qos-classes-600.png" alt="Screenshot" /></a>
+QoS classes are like buckets you put Apps into that then get managed by the QoS
 system. Rules are the mechanism by which the network administrator puts apps
 into the classes. Because SteelHead has incredibly powerful Deep Packet
 Inspection (DPI) technology. Specifying apps is very easy. Users can search for
@@ -98,9 +98,9 @@ Also, our team pre-grouped the apps into about 8 groups. Each group contains
 approximately 800 applications. The rules can be specified with an individual
 app or an individual app group. This makes configuring QoS extremely fast.</p>
 
-<p><a href="/assets/images/design-qos/qos-profiles-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-profiles-600.png" alt="Screenshot" /></a></p>
 <h3 id="profiles">Profiles</h3>
-<p class="end">QoS profiles are how you connect QoS Classes and Rules and Sites. The
+<p><a href="/assets/images/design-qos/qos-profiles-2k.png"><img src="/assets/images/design-qos/qos-profiles-600.png" alt="Screenshot" /></a>
+QoS profiles are how you connect QoS Classes and Rules and Sites. The
 SteelCentral Controller has a birds-eye view of all the SteelHeads on a
 customer’s network. We designed the profiles UI to take advantage of this extra
 knowledge. We did this by having the network administrator choose a source and
@@ -113,29 +113,29 @@ they want, rather than <strong>how</strong> to make it happen. This is an incred
 paradigm for the new QoS feature.</p>
 
 <h2 id="experimentation">Experimentation</h2>
-<p class="end">As with all products and features, not everything the design team makes, makes
+<p>As with all products and features, not everything the design team makes, makes
 it into the product. Sometimes they’re features that are not needed, sometimes
 they are too complex, and sometimes they are just way too cool. Below are some
 experiments that I made that never shipped.</p>
 
-<p><a href="/assets/images/design-qos/qos-profile-experiment1-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-profile-experiment1-600.png" alt="Screenshot" /></a></p>
 <h3 id="experimentation-qos-class-feedback">Experimentation: QoS Class Feedback</h3>
-<p class="end">Setting the min and max bandwidth allocations for a QoS class is kind of a
+<p><a href="/assets/images/design-qos/qos-profile-experiment1-2k.png"><img src="/assets/images/design-qos/qos-profile-experiment1-600.png" alt="Screenshot" /></a>
+Setting the min and max bandwidth allocations for a QoS class is kind of a
 guessing game. Set the numbers and see how it goes. In order to alleviate
 this, I attempted to create some mockups with configurations that would
 advise the user of issues with the classes and tried to summarize their
 congestion over time in a visual way.</p>
 
-<p><a href="/assets/images/design-qos/qos-profile-experiment2-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-profile-experiment2-600.png" alt="Screenshot" /></a></p>
 <h3 id="experimentation-uplink-variations">Experimentation: Uplink Variations</h3>
-<p class="end">Uplink Variations are a system where the network admin could select
+<p><a href="/assets/images/design-qos/qos-profile-experiment2-2k.png"><img src="/assets/images/design-qos/qos-profile-experiment2-600.png" alt="Screenshot" /></a>
+Uplink Variations are a system where the network admin could select
 different QoS Class min and max assignments based on the Uplink that was
 being used. This is important when one or more network connections fail at a
 site. In those conditions, critical traffic needs a higher priority.</p>
 
-<p><a href="/assets/images/design-qos/qos-dashboard-experiment-2k.png" class="inline-photo"><img src="/assets/images/design-qos/qos-dashboard-experiment-600.png" alt="Screenshot" /></a></p>
 <h3 id="experimentation-dashboard-widget">Experimentation: Dashboard Widget</h3>
-<p class="end">SteelCentral Controller has really great dashboards that give an overview of
+<p><a href="/assets/images/design-qos/qos-dashboard-experiment-2k.png"><img src="/assets/images/design-qos/qos-dashboard-experiment-600.png" alt="Screenshot" /></a>
+SteelCentral Controller has really great dashboards that give an overview of
 what is going on on your network. This is one mockups I made of what a QoS
 widget could have looked at. It shows the QoS classes. When a class is
 expanded, it shows relevant errors and warnings.</p>]]></content><author><name></name></author><category term="Design" /><summary type="html"><![CDATA[Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity.]]></summary></entry></feed>

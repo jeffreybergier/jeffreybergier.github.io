@@ -39,25 +39,23 @@ body {
   }
 }
 
-p.end::after {
+article.post p::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.inline-photo,
-.inline-photo img {
+article.post img {
   float: left;
   max-width: 300px;
   width: 100%;
   height: auto;
-  margin: 0.7em 0.5em 0em 0;
+  margin: 0em 0.5em 0em 0;
 }
 
 /* Make it full-width on narrow screens */
 @media (max-width: 640px) {
-  .inline-photo,
-  .inline-photo img {
+  article.post img {
     float: none;
     display: block;
     max-width: 100%;

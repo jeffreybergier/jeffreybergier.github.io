@@ -2,11 +2,12 @@
 layout: base
 author: Jeffrey Bergier
 ## populate titleAccessory with custom markdown if you like
+## populate excerpt to show it in the title area
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<!-- Custom Layout Starts Here -->
-  <header class="post-header title-flex">
+  <header class="post-header">
+  <!-- Custom Layout Starts Here -->
     {% if page.titleAccessory %}
     <div class="title-accessory">
       {{ page.titleAccessory | markdownify }}

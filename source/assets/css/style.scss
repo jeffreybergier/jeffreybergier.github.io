@@ -39,13 +39,13 @@ body {
   }
 }
 
-article.post p::after {
+.post-content p::after {
   content: "";
   display: block;
   clear: both;
 }
 
-article.post img {
+.post-content img {
   float: left;
   max-width: 300px;
   width: 100%;
@@ -105,46 +105,23 @@ article.post img {
   }
 }
 
+.al-accessory img {
+  padding: 0em 0em 0.5em 0em;
+}
+
 /* Title Accessory + Header Layout */
 
-.title-flex {
-  display: flex;
-  align-items: flex-start; /* align image and text top edges */
-  justify-content: flex-start; /* keep content aligned left */
-  gap: 1.5rem; /* space between image and text */
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  margin-bottom: 1.5rem;
-  text-align: left; /* left-align text */
-}
-
 .title-accessory {
-  flex: 0 0 auto;
-  max-width: 350px; /* a bit bigger for images */
+  max-width: 350px;
+  margin: 0 auto 0rem;
 }
 
-/* Right side (text block) */
 .post-meta {
-  flex: 1; /* take remaining space */
-  display: flex;
-  flex-direction: column; /* stack title, excerpt, date vertically */
-  justify-content: center;
-  text-align: left;
+  display: block;
+  text-align: center;
 }
 
-
-/* Stack image above text on mobile */
-@media (max-width: 800px) {
-  .title-flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .post-meta {
-    align-items: center;
-    text-align: center;
-  }
-
+@media (max-width: 640px) {
   .title-accessory {
     max-width: 100%;
   }

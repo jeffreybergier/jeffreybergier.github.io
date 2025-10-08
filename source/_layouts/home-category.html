@@ -1,38 +1,46 @@
 ---
 layout: base
 ## define category
+## define titleAccessory
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
+  <header class="post-header">
+    {% if page.titleAccessory %}
+      <div class="title-accessory">
+        {{ page.titleAccessory | markdownify }}
+      </div>
+    {% endif %}
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+  </header>
 
-  {{ content }}
-
-  {% if page.category %}
-    {% assign posts = site.categories[page.category] %}
-    {%- if posts.size > 0 -%}
-      <ul class="post-list">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {%- for post in posts -%}
-        <li>
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if site.minima.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
+  <article class="post">
+    {{ content }}
+  </article>
+  <div class="home">
+    {% if page.category %}
+      {% assign posts = site.categories[page.category] %}
+      {%- if posts.size > 0 -%}
+        <ul class="post-list">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {%- for post in posts -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.minima.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      {% else %}
+        <h2 class="post-list-heading">Error: No posts found</h2>
+      {%- endif -%}
     {% else %}
-      <h2 class="post-list-heading">Error: No posts found</h2>
-    {%- endif -%}
-  {% else %}
-      <h2 class="post-list-heading">Error: 'category' not defined</h2>
-  {% endif %}
-</div>
+        <h2 class="post-list-heading">Error: 'category' not defined</h2>
+    {% endif %}
+  </div>

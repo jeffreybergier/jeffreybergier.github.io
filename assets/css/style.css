@@ -879,12 +879,24 @@ body a:active {
   text-underline-offset: 2px;
 }
 
+.page-content ol::after,
+.post-content ol::after,
+.page-content ul::after,
+.post-content ul::after,
+.page-content p::after,
 .post-content p::after {
   content: "";
   display: block;
   clear: both;
 }
 
+ol.continued::after,
+ul.continued::after,
+p.continued::after {
+  content: none; /* removes the clearfix above */
+}
+
+.page-content img,
 .post-content img {
   float: left;
   max-width: 300px;
@@ -895,7 +907,8 @@ body a:active {
 
 /* Make it full-width on narrow screens */
 @media (max-width: 640px) {
-  article.post img {
+  .page-content img,
+  .post-content img {
     float: none;
     display: block;
     max-width: 100%;
@@ -903,7 +916,8 @@ body a:active {
   }
 }
 /* Create a class to mirror the image like iWeb */
-.reflect {
+.reflect,
+a.reflect img {
   border-radius: 1em;
   -webkit-box-reflect: below 2px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.3) 100%);
 }

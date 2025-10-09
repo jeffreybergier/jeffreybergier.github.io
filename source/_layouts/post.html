@@ -16,7 +16,7 @@ author: Jeffrey Bergier
     <div class="post-meta">
       <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
       {%- if page.excerpt -%}
-      <p>{{ page.excerpt }}</p>
+      <p>{{ page.excerpt | markdownify }}</p>
       {%- endif -%}
 <!-- Custom Layout Ends Here -->
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

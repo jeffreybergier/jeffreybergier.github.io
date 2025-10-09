@@ -879,11 +879,11 @@ body a:active {
   text-underline-offset: 2px;
 }
 
-.page-content ol::after,
+.home ol::after,
+.home ul::after,
+.home p::after,
 .post-content ol::after,
-.page-content ul::after,
 .post-content ul::after,
-.page-content p::after,
 .post-content p::after {
   content: "";
   display: block;
@@ -896,7 +896,7 @@ p.continued::after {
   content: none; /* removes the clearfix above */
 }
 
-.page-content img,
+.home img,
 .post-content img {
   float: left;
   max-width: 300px;
@@ -907,7 +907,7 @@ p.continued::after {
 
 /* Make it full-width on narrow screens */
 @media (max-width: 640px) {
-  .page-content img,
+  .home img,
   .post-content img {
     float: none;
     display: block;
@@ -920,6 +920,10 @@ p.continued::after {
 a.reflect img {
   border-radius: 1em;
   -webkit-box-reflect: below 2px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+img.page-title {
+  max-height: 256px;
 }
 
 /* Accessory Layout */

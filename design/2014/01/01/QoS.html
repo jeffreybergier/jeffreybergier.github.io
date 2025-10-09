@@ -48,13 +48,13 @@
   <!-- Custom Layout Starts Here -->
     
     <div class="title-accessory">
-      <p><img src="/assets/images/design-qos/qos-profiles-600.png" alt="WaterMe Icon" class="reflect" /></p>
+      <p><img src="/assets/images/design/qos/profiles-600.png" alt="WaterMe Icon" class="reflect page-title" /></p>
 
     </div>
     
     <div class="post-meta">
-      <h1 class="post-title p-name" itemprop="name headline">QoS Redesign</h1><p>Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility
-and improved simplicity.
+      <h1 class="post-title p-name" itemprop="name headline">QoS Redesign</h1><p><p>Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility
+and improved simplicity.</p>
 </p><!-- Custom Layout Ends Here -->
       <time class="dt-published" datetime="2014-01-01T00:00:00+00:00" itemprop="datePublished">
         Jan 1, 2014
@@ -88,7 +88,7 @@ new mental model for QoS in the SteelHead.</p>
 </ul>
 
 <h3 id="feature-research">Feature Research</h3>
-<p><a href="/assets/images/design-qos/qos-feature-2k.png"><img src="/assets/images/design-qos/qos-feature-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/feature-2k.png"><img src="/assets/images/design/qos/feature-600.png" alt="Screenshot" /></a>
 QoS is an enormously complex feature. The first step in the process was to fully
 understand how QoS works, what its intended to do, and what is needed to make it
 do that. I learned everything from the HFSC algorithm, QoS classes, deep packet
@@ -97,7 +97,7 @@ point where the questions I asked of the engineers couldn’t be answered withou
 looking into their source code.</p>
 
 <h3 id="user-research">User Research</h3>
-<p><a href="/assets/images/design-qos/qos-user-2k.png"><img src="/assets/images/design-qos/qos-user-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/user-2k.png"><img src="/assets/images/design/qos/user-600.png" alt="Screenshot" /></a>
 After learning everything there is to know about how QoS works, it was time to
 speak with network administrators to see how they actually use it. I went onsite
 at several companies in Illinois, Montreal, and the UK. The user researcher and
@@ -106,7 +106,7 @@ QoS for, what issues they had with the current version of QoS, and what they
 wanted to do with the QoS feature in the future.</p>
 
 <h3 id="sites">Sites</h3>
-<p><a href="/assets/images/design-qos/qos-sites-2k.png"><img src="/assets/images/design-qos/qos-sites-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/sites-2k.png"><img src="/assets/images/design/qos/sites-600.png" alt="Screenshot" /></a>
 QoS needs to know the speeds of every network connection in the system. It needs
 to know this so it can adequately divide up resources. Network administrators
 have hundreds, or even thousands of locations. And each location can have
@@ -117,7 +117,7 @@ the QoS system the information it needs on bandwidth restrictions across the
 entire network.</p>
 
 <h3 id="classes">Classes</h3>
-<p><a href="/assets/images/design-qos/qos-classes-2k.png"><img src="/assets/images/design-qos/qos-classes-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/classes-2k.png"><img src="/assets/images/design/qos/classes-600.png" alt="Screenshot" /></a>
 QoS systems usually have the concept of classes. Classes are sort of like
 buckets. The network administrator puts certain applications into certain
 buckets, then the system treats each bucket with a certain level of importance.
@@ -132,7 +132,7 @@ visualization. A few slides after this, there are some concepts I made for
 visually showing class information.</p>
 
 <h3 id="rules">Rules</h3>
-<p><a href="/assets/images/design-qos/qos-classes-2k.png"><img src="/assets/images/design-qos/qos-classes-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/classes-2k.png"><img src="/assets/images/design/qos/classes-600.png" alt="Screenshot" /></a>
 QoS classes are like buckets you put Apps into that then get managed by the QoS
 system. Rules are the mechanism by which the network administrator puts apps
 into the classes. Because SteelHead has incredibly powerful Deep Packet
@@ -143,7 +143,7 @@ approximately 800 applications. The rules can be specified with an individual
 app or an individual app group. This makes configuring QoS extremely fast.</p>
 
 <h3 id="profiles">Profiles</h3>
-<p><a href="/assets/images/design-qos/qos-profiles-2k.png"><img src="/assets/images/design-qos/qos-profiles-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/profiles-2k.png"><img src="/assets/images/design/qos/profiles-600.png" alt="Screenshot" /></a>
 QoS profiles are how you connect QoS Classes and Rules and Sites. The
 SteelCentral Controller has a birds-eye view of all the SteelHeads on a
 customer’s network. We designed the profiles UI to take advantage of this extra
@@ -163,7 +163,7 @@ they are too complex, and sometimes they are just way too cool. Below are some
 experiments that I made that never shipped.</p>
 
 <h3 id="experimentation-qos-class-feedback">Experimentation: QoS Class Feedback</h3>
-<p><a href="/assets/images/design-qos/qos-profile-experiment1-2k.png"><img src="/assets/images/design-qos/qos-profile-experiment1-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/profile-experiment1-2k.png"><img src="/assets/images/design/qos/profile-experiment1-600.png" alt="Screenshot" /></a>
 Setting the min and max bandwidth allocations for a QoS class is kind of a
 guessing game. Set the numbers and see how it goes. In order to alleviate
 this, I attempted to create some mockups with configurations that would
@@ -171,14 +171,14 @@ advise the user of issues with the classes and tried to summarize their
 congestion over time in a visual way.</p>
 
 <h3 id="experimentation-uplink-variations">Experimentation: Uplink Variations</h3>
-<p><a href="/assets/images/design-qos/qos-profile-experiment2-2k.png"><img src="/assets/images/design-qos/qos-profile-experiment2-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/profile-experiment2-2k.png"><img src="/assets/images/design/qos/profile-experiment2-600.png" alt="Screenshot" /></a>
 Uplink Variations are a system where the network admin could select
 different QoS Class min and max assignments based on the Uplink that was
 being used. This is important when one or more network connections fail at a
 site. In those conditions, critical traffic needs a higher priority.</p>
 
 <h3 id="experimentation-dashboard-widget">Experimentation: Dashboard Widget</h3>
-<p><a href="/assets/images/design-qos/qos-dashboard-experiment-2k.png"><img src="/assets/images/design-qos/qos-dashboard-experiment-600.png" alt="Screenshot" /></a>
+<p><a href="/assets/images/design/qos/dashboard-experiment-2k.png"><img src="/assets/images/design/qos/dashboard-experiment-600.png" alt="Screenshot" /></a>
 SteelCentral Controller has really great dashboards that give an overview of
 what is going on on your network. This is one mockups I made of what a QoS
 widget could have looked at. It shows the QoS classes. When a class is

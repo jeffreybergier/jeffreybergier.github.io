@@ -27,4 +27,4 @@ everything as much as possible on this site and on social media:
 - [<i class="fab fa-mastodon"></i>Mastodon](http://jeffburg.social/@jeff)
 - [<i class="fab fa-github"></i>GitHub](http://github.com/jeffreybergier)
 
-# Chronological Activity
+# Recent Articles

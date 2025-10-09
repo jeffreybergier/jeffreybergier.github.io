@@ -3,5 +3,5 @@ layout: home-category
 title: Design
 category: Design
 permalink: /design/
-titleAccessory: "![WaterMe Icon](/assets/images/apps-waterme/apps-icon-waterme.png){: .reflect}"
+titleAccessory: "![Title Icon](/assets/images/design/title.png){: .reflect}{: .page-title}"
 ---

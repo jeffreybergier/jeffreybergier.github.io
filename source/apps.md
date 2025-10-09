@@ -3,7 +3,7 @@ layout: home-category
 title: Apps
 category: Apps
 permalink: /apps/
-titleAccessory: "![WaterMe Icon](/assets/images/apps/title.png){: .reflect}{: .page-title}"
+titleAccessory: "![Xcode Icon](/assets/images/apps/title.png){: .reflect}{: .page-title}"
 excerpt: |
   I would not consider myself the best developer out there, but I enjoy
   developing for Apple platforms. So over the years I have created several apps.

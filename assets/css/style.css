@@ -918,8 +918,13 @@ p.continued::after {
 /* Create a class to mirror the image like iWeb */
 .reflect,
 a.reflect img {
-  border-radius: 1em;
-  -webkit-box-reflect: below 2px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 0.5em;
+  -webkit-box-reflect: below 4px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.reflect-icon,
+a.reflect-icon img {
+  -webkit-box-reflect: below -24px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.1) 100%);
 }
 
 img.page-title {

@@ -38,6 +38,12 @@ body {
     }
   }
 }
+
+// Remove underlines from the header links
+.site-header a {
+  text-decoration: none;
+}
+
 .home ol::after,
 .home ul::after,
 .home p::after,
@@ -90,7 +96,7 @@ a.reflect img {
 
 .reflect-icon,
 a.reflect-icon img {
-  -webkit-box-reflect: below -24px
+  -webkit-box-reflect: below -32px
     -webkit-linear-gradient(
       transparent,
       transparent 60%,

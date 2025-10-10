@@ -1,6 +1,6 @@
 ---
 layout: home-category
-title: Apps
+title: '<i class="fa-solid fa-compass-drafting"></i> Apps'
 category: Apps
 permalink: /apps/
 titleAccessory: "![Xcode Icon](/assets/images/apps/title.png){: .reflect-icon }{: .page-title}"

@@ -1,0 +1,9 @@
+retro-tech:
+  title: '<i class="fa-solid fa-microchip"></i>Retro Tech'
+  url: "/retro-tech/"
+design:
+  title: '<i class="fa-solid fa-swatchbook"></i>Design'
+  url: "/design/"
+apps:
+  title: '<i class="fa-solid fa-compass-drafting"></i>Apps'
+  url: "/apps/"

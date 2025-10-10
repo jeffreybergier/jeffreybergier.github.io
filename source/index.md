@@ -3,8 +3,11 @@ layout: home
 ---
 
 # Ongoing Projects
-Choose the [Apps](/apps), [Design](/design), and [Retro Tech](/retro-tech) menu
-items to browse all articles, but to see more about my currently active
+Choose the 
+[{{ site.data.constants.apps.title }}]({{ site.data.constants.apps.url }}), 
+[{{ site.data.constants.design.title }}]({{ site.data.constants.design.url }}), 
+and [{{ site.data.constants.retro-tech.title }}]({{ site.data.constants.retro-tech.url }}) 
+menu items to browse all articles, but to see more about my currently active
 projects, use the links below (Updated November 2025)
 - [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4)
 - [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb)
@@ -24,7 +27,14 @@ Computing, specifically with old Macs, Mac OS X, and NeXTSTEP. I try to share
 everything as much as possible on this site and on social media:
 {: .continued }
 
-- [<i class="fab fa-mastodon"></i>Mastodon](http://jeffburg.social/@jeff)
-- [<i class="fab fa-github"></i>GitHub](http://github.com/jeffreybergier)
+<ul>
+{% for link in site.minima.social_links %}
+  <li>
+    <a href="{{ link.url }}" target="_blank" rel="noopener">
+      <i class="fab fa-{{ link.icon }}"></i>{{ link.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
 
 # Recent Articles

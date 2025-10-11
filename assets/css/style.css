@@ -879,6 +879,10 @@ body a:active {
   text-underline-offset: 2px;
 }
 
+.site-header a {
+  text-decoration: none;
+}
+
 .home ol::after,
 .home ul::after,
 .home p::after,
@@ -915,19 +919,8 @@ p.continued::after {
     margin: 0 auto 1em;
   }
 }
-/* Create a class to mirror the image like iWeb */
-.reflect,
-a.reflect img {
-  border-radius: 0.5em;
-  -webkit-box-reflect: below 4px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.2) 100%);
-}
-
-.reflect-icon,
-a.reflect-icon img {
-  -webkit-box-reflect: below -24px -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.1) 100%);
-}
-
-img.page-title {
+img.page-title,
+a.page-title img {
   max-height: 256px;
 }
 
@@ -1026,6 +1019,67 @@ img.page-title {
   font-family: "Font Awesome 7 Free";
   content: "\f057"; /* fa-times-circle */
   font-size: 1.5em;
+}
+
+/* ============================================
+   🌟 Reflection Utilities
+   --------------------------------------------
+   Usage Examples in HTML:
+     <img src="/assets/images/photo.jpg" class="reflect below-md round-md">
+     <a href="#" class="reflect below-sm round-lg"><img src="..."></a>
+
+   Usage Examples in Markdown (Kramdown):
+     ![Photo](/assets/images/photo.jpg){: .reflect .below-md .round-md }
+     [![App Icon](/assets/images/appicon.png){: .reflect .below-sm .round-lg }](/some-link)
+
+   Notes:
+     - Distance modifiers: below-xl, below-lg, below-md, below-sm, below-xs
+     - Radius modifiers: round-none, round-sm, round-md, round-lg
+     - Apply classes to <img> or <a> wrapping <img> for reflections
+   ============================================ */
+/* Base reflection style */
+.reflect,
+a.reflect img {
+  border-radius: var(--reflect-radius, 0.5em);
+  -webkit-box-reflect: below var(--reflect-distance, 4px) -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+/* Distance modifiers */
+.below-xl {
+  --reflect-distance: 4px;
+}
+
+.below-lg {
+  --reflect-distance: 0px;
+}
+
+.below-md {
+  --reflect-distance: -16px;
+}
+
+.below-sm {
+  --reflect-distance: -32px;
+}
+
+.below-xs {
+  --reflect-distance: -38px;
+}
+
+/* Corner radius modifiers */
+.round-none {
+  --reflect-radius: 0;
+}
+
+.round-sm {
+  --reflect-radius: 0.5em;
+}
+
+.round-md {
+  --reflect-radius: 1em;
+}
+
+.round-lg {
+  --reflect-radius: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */

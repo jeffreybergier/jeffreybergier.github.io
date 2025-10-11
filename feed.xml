@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-11T17:55:27+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Hipstapaper</title><link href="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html" rel="alternate" type="text/html" title="Hipstapaper" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2017/01/01/Hipstapaper</id><content type="html" xml:base="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html"><![CDATA[<h2 id="overview">Overview</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-11T18:07:02+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Hipstapaper</title><link href="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html" rel="alternate" type="text/html" title="Hipstapaper" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2017/01/01/Hipstapaper</id><content type="html" xml:base="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html"><![CDATA[<h2 id="overview">Overview</h2>
 
 <p>Hipstapaper is an app I built for myself to save links to web pages similar to 
 Instapaper which was popular in the 2012’s or so. But as Instapaper was losing
@@ -111,26 +111,58 @@ is incredible. SwiftUI is truly a gamechanger</p>
 on the App Store or anything like that as I know it is missing key features
 that people will want such as offline reading of webpages. Yes, the link to
 the web page is stored offline in the database, but to actually open the web
-page you will need an internet connection.</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><category term="appkit" /><summary type="html"><![CDATA[Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
-a database app. It Creates, Reads, Updates, and Deletes database entries. But it
-displays them in a nice way with really great animations. The premise of the app
-is that, unlike reminders style apps, this app only gives you one reminder per
-day letting you know which plants need to be watered that day.</p>
+page you will need an internet connection.</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><category term="appkit" /><summary type="html"><![CDATA[Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<h2 id="overview">Overview</h2>
 
-<p>Because of this premise, I had to do quite a lot of complex date math to figure
-out which day a plant need to be watered. If your a developer, you know this can
-be complex because days and time zones are pretty complex. As well, because I
-don’t use a Push Notification server, I need to schedule what Apple calls “Local
-Notifications,” This basically means that any time the database changes, I need
-to look about 14 days ahead and figure out, for every day, if a plant needs to
-be watered and which one, and then schedule 14 notifications. Anyway, I am going
-too deep.</p>
+<p>H</p>
 
-<p>WaterMe has been on the app store since 2016 and has gone through many updates
-and changes to improve as new features are added into the OS, such as drag and
-drop which you can see in the screenshot to the left. Over the years I also
-enable Core Data to CloudKit syncing for automatic and reliable iCloud sync
-between devices.</p>
+<ul>
+  <li>Basic CRUD management of websites</li>
+</ul>
+
+<h3 id="download">Download</h3>
+
+<p>A</p>
+
+<ul>
+  <li><a href="https://github.com/jeffreybergier/Hipstapaper/">Hipstapaper Source Code</a></li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
+      <li><a href="#download" id="markdown-toc-download">Download</a></li>
+      <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+    </ul>
+  </li>
+  <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
+      <li><a href="#phase-1-2016-2018" id="markdown-toc-phase-1-2016-2018">Phase 1 (2016-2018)</a></li>
+      <li><a href="#phase-2-2019-2021" id="markdown-toc-phase-2-2019-2021">Phase 2 (2019-2021)</a></li>
+      <li><a href="#phase-3-2022-current" id="markdown-toc-phase-3-2022-current">Phase 3 (2022-Current)</a></li>
+    </ul>
+  </li>
+  <li><a href="#current-status" id="markdown-toc-current-status">Current Status</a></li>
+</ul>
+
+<h2 id="development">Development</h2>
+
+<p>A</p>
+
+<h3 id="phase-1-2016-2018">Phase 1 (2016-2018)</h3>
+
+<p>A</p>
+
+<h3 id="phase-2-2019-2021">Phase 2 (2019-2021)</h3>
+
+<p>A</p>
+
+<h3 id="phase-3-2022-current">Phase 3 (2022-Current)</h3>
+
+<p>A</p>
+
+<h2 id="current-status">Current Status</h2>
+
+<p>A</p>
 
 <p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016.]]></summary></entry><entry><title type="html">QoS Redesign</title><link href="https://jeffburg.com/design/2014/01/01/QoS.html" rel="alternate" type="text/html" title="QoS Redesign" /><published>2014-01-01T00:00:00+00:00</published><updated>2014-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/design/2014/01/01/QoS</id><content type="html" xml:base="https://jeffburg.com/design/2014/01/01/QoS.html"><![CDATA[<h2 id="project">Project</h2>
 <p>The QoS feature of the SteelHead was being re-implemented and so it was due for

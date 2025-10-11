@@ -1,10 +1,15 @@
 ---
-layout: post
+layout: post-accessory
 title: "Hipstapaper"
 titleAccessory: "![Hipstapaper Screenshot](/assets/images/apps/hipstapaper/title.png){: .page-title .reflect .below-xl .round-sm }"
-excerpt: "Hipstapaper was my very first cross-platform app that worked on iPhone, iPad, and macOS"
+excerpt: "Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS"
 categories: [Apps]
 tags: [cocoa, cocoa-touch, swift, uikit, appkit]
+accessory: |
+  [![Hipstapaper Screenshot 1](/assets/images/apps/hipstapaper/01-thumb.png)](/assets/images/apps/hipstapaper/01-full.png)
+  [![Hipstapaper Screenshot 2](/assets/images/apps/hipstapaper/02-thumb.png)](/assets/images/apps/hipstapaper/02-full.png)
+  [![Hipstapaper Screenshot 3](/assets/images/apps/hipstapaper/03-thumb.png)](/assets/images/apps/hipstapaper/03-full.png)
+  [![Hipstapaper Screenshot 4](/assets/images/apps/hipstapaper/04-thumb.png)](/assets/images/apps/hipstapaper/04-full.png)
 ---
 
 ## Overview

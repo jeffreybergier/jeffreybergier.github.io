@@ -3,7 +3,7 @@ layout: home-category
 title: '<i class="fa-solid fa-compass-drafting"></i> Apps'
 category: Apps
 permalink: /apps/
-titleAccessory: "![Xcode Icon](/assets/images/apps/title.png){: .reflect-icon }{: .page-title}"
+titleAccessory: "![Xcode Icon](/assets/images/apps/title.png){: .page-title .reflect .below-xs .round-none }"
 excerpt: |
   I would not consider myself the best developer out there, but I enjoy
   developing for Apple platforms. So over the years I have created several apps.

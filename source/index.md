@@ -9,13 +9,13 @@ Choose the
 and [{{ site.data.constants.retro-tech.title }}]({{ site.data.constants.retro-tech.url }}) 
 menu items to browse all articles, but to see more about my currently active
 projects, use the links below (Updated November 2025)
-- [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4)
-- [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb)
-- [MathEdit for OpenStep App Updates](http://jeffburg.social/tags/OpenStep)
-- [iMac 5K Display Project Updates](http://jeffburg.social/tags/iMac5K)
+- [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4){: target="_blank" }
+- [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb){: target="_blank" }
+- [MathEdit for OpenStep App Updates](http://jeffburg.social/tags/OpenStep){: target="_blank" }
+- [iMac 5K Display Project Updates](http://jeffburg.social/tags/iMac5K){: target="_blank" }
 
 # About Me
-[![Jeff using a computer in the 90's](/assets/images/profile.jpeg)](/assets/images/profile.jpeg){: .reflect }
+[![Jeff using a computer in the 90's](/assets/images/profile.jpeg)](/assets/images/profile.jpeg){: .reflect .below-xl .round-sm }
 I’m a Quality Assurance Engineer and Team Lead in the automotive software
 industry here in Tokyo. In a past life, I was an iOS and macOS developer and
 teacher in San Francisco. In a past past life I earned my Bachelor of Science in

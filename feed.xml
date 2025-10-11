@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-11T15:01:27+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-11T16:10:40+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Hipstapaper</title><link href="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html" rel="alternate" type="text/html" title="Hipstapaper" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2017/01/01/Hipstapaper</id><content type="html" xml:base="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html"><![CDATA[<h2 id="overview">Overview</h2>
+
+<p>Hipstapaper is an app I built for myself to save links to web pages similar to 
+Instapaper which was popular in the 2012’s or so. But as Instapaper was losing
+traction, I didn’t want to lose the functionality</p>
+
+<ul>
+  <li>Basic CRUD management of websites</li>
+  <li>Tagging, Filtering, Sorting</li>
+  <li>Bulk editing</li>
+  <li>State restoration</li>
+  <li>iPadOS and macOS Menus</li>
+  <li>iPadOS and macOS “Scenes” for multiple window support</li>
+  <li>Share extension for adding content</li>
+  <li>iCloud Sync</li>
+</ul>
+
+<h3 id="download">Download</h3>
+
+<p>I never release Hipstapaper on the AppStore but you can always use Hipstaper
+on your iOS and macOS devices using the links below:</p>
+
+<ul>
+  <li><a href="https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS">macOS Downloads</a></li>
+  <li><a href="https://testflight.apple.com/join/V1f2j5Jd">iOS TestFlight</a></li>
+  <li><a href="https://github.com/jeffreybergier/Hipstapaper/">Hipstapaper Source Code</a></li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
+      <li><a href="#download" id="markdown-toc-download">Download</a></li>
+      <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+    </ul>
+  </li>
+  <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
+      <li><a href="#phase-1-2016-2018" id="markdown-toc-phase-1-2016-2018">Phase 1 (2016-2018)</a></li>
+      <li><a href="#phase-2-2019-2021" id="markdown-toc-phase-2-2019-2021">Phase 2 (2019-2021)</a></li>
+      <li><a href="#phase-3-2022-current" id="markdown-toc-phase-3-2022-current">Phase 3 (2022-Current)</a></li>
+    </ul>
+  </li>
+  <li><a href="#current-status" id="markdown-toc-current-status">Current Status</a></li>
+</ul>
+
+<h2 id="development">Development</h2>
+
+<p>Hipstapaper was a learning exercise I wanted to learn how to make a
+cross-platform application that worked on all of Apple’s platforms, including
+macOS. This was a big learning opportunity as I had never made an AppKit based
+app before. The TL;DR is that I ended up liking AppKit even more than UIKit and
+most of the toy apps I make now are either AppKit or SwiftUI.</p>
+
+<h3 id="phase-1-2016-2018">Phase 1 (2016-2018)</h3>
+
+<p>During this phase, there were no cross-platform UI frameworks from Apple and
+there was no Database that had online syncing from Apple. Thus the technologies 
+I chose were not ideal, but they were the only way to get the job done:</p>
+
+<ol>
+  <li>Cross-Platform: UIKit and AppKit UI implementations
+    <ul>
+      <li>Two UI implementations meant everything had to be implemented and updated
+ twice. This was a big pain</li>
+    </ul>
+  </li>
+  <li>Realm Database: Realm featured powerful sync capabilities that iCloud could
+not match
+    <ul>
+      <li>Realm was a great database, but it was not the platform standard “Core Data”</li>
+    </ul>
+  </li>
+  <li>Realm Sync Server: Realm-powered server running in Digital Ocean
+    <ul>
+      <li>Running my own server meant that I would never be able to support users for
+ free. So this kept the app limited to my own personal use.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="phase-2-2019-2021">Phase 2 (2019-2021)</h3>
+
+<p>In WWDC 2019, Apple introduced Core Data syncing via CloudKit. While Apple
+pitched this as their final solution to Core Data syncing, the actual
+<a href="https://developer.apple.com/videos/play/wwdc2019/202">session video</a> they
+published was so quick, and so information dense that it was hard to follow.
+As well, the feature has fundamental limitations, that I think have prevented
+it from being very successful.</p>
+
+<p>But with the introduction of Core Data syncing, I worked in Hipstapaper to 
+swap out Realm with Core Data. This was no easy task as I had not wrapped
+Realm in its own wrapper and Realm headers and tokens needs to be removed
+from hundreds of UI files… two times for UIKit and AppKit.</p>
+
+<h3 id="phase-3-2022-current">Phase 3 (2022-Current)</h3>
+
+<p>I wanted to learn SwiftUI and because SwiftUI was finally becoming full-featured
+enough to support apps with complex navigation for both iOS and macOS, I decided
+to take on the challenge. This required significant updates to the Database
+wrapper to support SwiftUI’s dynamic data model. However, it worked. I was able
+to delete thousands of lines of platform specific UI code and replace it with
+just one SwiftUI codebase. As well, I learned to love SwiftUI. If you can figure
+out how to let go and let the data drive your application, SwiftUI is simply
+amazing. The way the it dynamically updates when there are literally hudreds
+of database changes happening every second (such as during a sync operation)
+is incredible. SwiftUI is truly a gamechanger</p>
+
+<h2 id="current-status">Current Status</h2>
+
+<p>I still use Hipstapaper across my devices daily. However, I have never put it 
+on the App Store or anything like that as I know it is missing key features
+that people will want such as offline reading of webpages. Yes, the link to
+the web page is stored offline in the database, but to actually open the web
+page you will need an internet connection.</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><category term="appkit" /><summary type="html"><![CDATA[Hipstapaper was my very first cross-platform app that worked on iPhone, iPad, and macOS]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<p>WaterMe was my first app that was 100% a CRUD app. CRUD basically means that its
 a database app. It Creates, Reads, Updates, and Deletes database entries. But it
 displays them in a nice way with really great animations. The premise of the app
 is that, unlike reminders style apps, this app only gives you one reminder per

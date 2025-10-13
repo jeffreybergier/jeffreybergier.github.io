@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-11T18:07:02+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Hipstapaper</title><link href="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html" rel="alternate" type="text/html" title="Hipstapaper" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2017/01/01/Hipstapaper</id><content type="html" xml:base="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html"><![CDATA[<h2 id="overview">Overview</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-13T07:12:23+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Hipstapaper</title><link href="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html" rel="alternate" type="text/html" title="Hipstapaper" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2017/01/01/Hipstapaper</id><content type="html" xml:base="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html"><![CDATA[<h2 id="overview">Overview</h2>
 
 <p>Hipstapaper is an app I built for myself to save links to web pages similar to 
 Instapaper which was popular in the 2012’s or so. But as Instapaper was losing
@@ -21,9 +21,9 @@ traction, I didn’t want to lose the functionality</p>
 on your iOS and macOS devices using the links below:</p>
 
 <ul>
-  <li><a href="https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS">macOS Downloads</a></li>
-  <li><a href="https://testflight.apple.com/join/V1f2j5Jd">iOS TestFlight</a></li>
-  <li><a href="https://github.com/jeffreybergier/Hipstapaper/">Hipstapaper Source Code</a></li>
+  <li><a href="https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS"><i class="fa-regular fa-circle-down"></i>macOS Downloads</a></li>
+  <li><a href="https://testflight.apple.com/join/V1f2j5Jd"><i class="fa-brands fa-app-store"></i>iOS TestFlight</a></li>
+  <li><a href="https://github.com/jeffreybergier/Hipstapaper/"><i class="fa-brands fa-github"></i>Hipstapaper Source Code</a></li>
 </ul>
 
 <h3 id="table-of-contents">Table of Contents</h3>
@@ -111,32 +111,17 @@ is incredible. SwiftUI is truly a gamechanger</p>
 on the App Store or anything like that as I know it is missing key features
 that people will want such as offline reading of webpages. Yes, the link to
 the web page is stored offline in the database, but to actually open the web
-page you will need an internet connection.</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><category term="appkit" /><summary type="html"><![CDATA[Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<h2 id="overview">Overview</h2>
-
-<p>H</p>
-
-<ul>
-  <li>Basic CRUD management of websites</li>
-</ul>
-
-<h3 id="download">Download</h3>
-
-<p>A</p>
-
-<ul>
-  <li><a href="https://github.com/jeffreybergier/Hipstapaper/">Hipstapaper Source Code</a></li>
-</ul>
-
-<h3 id="table-of-contents">Table of Contents</h3>
+page you will need an internet connection.</p>]]></content><author><name></name></author><category term="Apps" /><category term="cocoa" /><category term="cocoa-touch" /><category term="swift" /><category term="uikit" /><category term="appkit" /><summary type="html"><![CDATA[Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<h2 id="table-of-contents">Table of Contents</h2>
 
 <ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
   <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
+      <li><a href="#app-store-description" id="markdown-toc-app-store-description">App Store Description</a></li>
       <li><a href="#download" id="markdown-toc-download">Download</a></li>
-      <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
     </ul>
   </li>
   <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
-      <li><a href="#phase-1-2016-2018" id="markdown-toc-phase-1-2016-2018">Phase 1 (2016-2018)</a></li>
+      <li><a href="#version-1-2016" id="markdown-toc-version-1-2016">Version 1 (2016)</a></li>
       <li><a href="#phase-2-2019-2021" id="markdown-toc-phase-2-2019-2021">Phase 2 (2019-2021)</a></li>
       <li><a href="#phase-3-2022-current" id="markdown-toc-phase-3-2022-current">Phase 3 (2022-Current)</a></li>
     </ul>
@@ -144,13 +129,83 @@ page you will need an internet connection.</p>]]></content><author><name></name>
   <li><a href="#current-status" id="markdown-toc-current-status">Current Status</a></li>
 </ul>
 
+<h2 id="overview">Overview</h2>
+
+<p>WaterMe is the only app that I have released on the App Store that got any sort
+of usage traction at all. It doesn’t have a lot of users, but at the time of
+this writing (September 2025) it had 993K total sessions according to App Store
+Connect analytics. Since these analytics are opt-in I assume that means its had
+about 3M total sessions… which is still not a lot, but for a nice little hobby
+app, I think its pretty cool <i class="fa-regular fa-hand-peace"></i></p>
+
+<h3 id="app-store-description">App Store Description</h3>
+
+<p>Never let another plant turn brown again. WaterMe reminds you when to tend to
+the plants in your garden:</p>
+
+<ol>
+  <li>Add your plants into the app.</li>
+  <li>Add reminders for watering, fertilizing, etc.</li>
+  <li>Get 1 notification every day reminding you which plants need care.</li>
+  <li>Take care of the plant in real life.</li>
+  <li>Drag and drop the reminder to mark it as complete.</li>
+</ol>
+
+<p>Thats it! Every day you’ll get one, and only one, notification that reminds you
+to take care of your plants.</p>
+
+<ul>
+  <li>Supports multiple kinds of reminders per plant
+    <ul>
+      <li>Water, Fertilize, Trim, and more</li>
+    </ul>
+  </li>
+  <li>Easy to see which plants need to be taken care of and when.</li>
+  <li>Syncs data across all of your iOS devices via iCloud.</li>
+  <li>Supports working quickly with Drag and Drop interface.</li>
+  <li>Customize the time notifications are sent every day.</li>
+  <li>Care for your garden with your voice using Siri Shortcuts.</li>
+  <li>Tip Jar In-App Purchases allow you to directly support the development of WaterMe.</li>
+  <li>Supports Split Screen and Slide Over iPad Multitasking.</li>
+  <li>Supports Dynamic Type.</li>
+  <li>Supports Voiceover and other iOS accessibility features.</li>
+</ul>
+
+<h3 id="download">Download</h3>
+
+<ul>
+  <li><a href="https://apps.apple.com/us/app/waterme-gardening-reminders/id1089742494" target="_blank"><i class="fa-brands fa-app-store"></i>App Store</a></li>
+  <li><a href="https://github.com/jeffreybergier/WaterMe/" target="_blank"><i class="fa-brands fa-github"></i>WaterMe Source Code</a></li>
+  <li><a href="https://bitbucket.org/saturdayapps/waterme/" target="_blank"><i class="fa-brands fa-bitbucket"></i>WaterMe Source Code (Outdated)</a></li>
+</ul>
+
 <h2 id="development">Development</h2>
 
-<p>A</p>
+<p>WaterMe was the first ever app I wrote that is 100% a <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> 
+app. Its just a database app with a pretty user interface placed on top of it.
+I also got help from a designer friend to make the watering animation video as
+well as the icon. Its written entirely in Swift and UIKit but has gone through
+a lot of iterations over the years.</p>
 
-<h3 id="phase-1-2016-2018">Phase 1 (2016-2018)</h3>
+<h3 id="version-1-2016">Version 1 (2016)</h3>
 
-<p>A</p>
+<p>The original version of WaterMe was extremely simple and the Core Data model was
+simple to match. You had a plant with a name, photo, last watered date, and
+watering interval. The app would then sort them categorize them as needing
+“Water Today”, “Water Tomorrow”, or “Water Later.” As this was the days of iOS
+7, the user interface was also extremely simple.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/assets/images/apps/waterme/v1/01-full.png"><img src="/assets/images/apps/waterme/v1/01-thumb.png" alt="WaterMe v1 Screenshot 1" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v1/02-full.png"><img src="/assets/images/apps/waterme/v1/02-thumb.png" alt="WaterMe v1 Screenshot 2" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v1/03-full.png"><img src="/assets/images/apps/waterme/v1/03-thumb.png" alt="WaterMe v1 Screenshot 3" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v1/04-full.png"><img src="/assets/images/apps/waterme/v1/04-thumb.png" alt="WaterMe v1 Screenshot 4" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v1/05-full.png"><img src="/assets/images/apps/waterme/v1/05-thumb.png" alt="WaterMe v1 Screenshot 5" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="phase-2-2019-2021">Phase 2 (2019-2021)</h3>
 

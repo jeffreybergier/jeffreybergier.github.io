@@ -8,17 +8,20 @@
 /* Now add your overrides */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//min-width: 1024px; /* remove mobile layout */
+  font-family: -apple-system, 
+               BlinkMacSystemFont, 
+               "Helvetica Neue", 
+               Helvetica, 
+               Arial, 
+               sans-serif;
   line-height: 1.6;
-  color: #E5E5E5;
-  // min-width: 1024px; /* remove mobile layout */
+  color: #CFCFCF;
   a {
     color: #FFF;
     text-decoration: underline;
-    text-decoration-style: solid;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
-    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
     &:visited {
       color: #FFF;
@@ -26,14 +29,14 @@ body {
 
     &:hover,
     &:focus {
-      color: #FFF;
-      text-decoration-thickness: 2px;
+      color: #aaa;
+    text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
 
     &:active {
       color: #aaa;
-      text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
   }

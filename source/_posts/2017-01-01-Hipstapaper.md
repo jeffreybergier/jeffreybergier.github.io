@@ -32,9 +32,9 @@ traction, I didn't want to lose the functionality
 I never release Hipstapaper on the AppStore but you can always use Hipstaper
 on your iOS and macOS devices using the links below:
 
-- [macOS Downloads](https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS)
-- [iOS TestFlight](https://testflight.apple.com/join/V1f2j5Jd)
-- [Hipstapaper Source Code](https://github.com/jeffreybergier/Hipstapaper/)
+- [<i class="fa-regular fa-circle-down"></i>macOS Downloads](https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS)
+- [<i class="fa-brands fa-app-store"></i>iOS TestFlight](https://testflight.apple.com/join/V1f2j5Jd)
+- [<i class="fa-brands fa-github"></i>Hipstapaper Source Code](https://github.com/jeffreybergier/Hipstapaper/)
 
 ### Table of Contents
 

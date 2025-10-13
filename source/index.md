@@ -8,7 +8,7 @@ Choose the
 [{{ site.data.constants.design.title }}]({{ site.data.constants.design.url }}), 
 and [{{ site.data.constants.retro-tech.title }}]({{ site.data.constants.retro-tech.url }}) 
 menu items to browse all articles, but to see more about my currently active
-projects, use the links below (Updated November 2025)
+projects, use the links below \(Updated October 2025\)
 - [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4){: target="_blank" }
 - [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb){: target="_blank" }
 - [MathEdit for OpenStep App Updates](http://jeffburg.social/tags/OpenStep){: target="_blank" }

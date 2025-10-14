@@ -89,6 +89,13 @@ a.page-title img {
   max-height: 256px;
 }
 
+img.page-poster,
+a.page-poster img {
+  float: none;
+  max-width: none;
+  margin: 0 0 0 0;
+}
+
 /* Accessory Layout */
 
 .accessory-layout {

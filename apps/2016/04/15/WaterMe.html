@@ -65,11 +65,12 @@
   <div class="post-content e-content" itemprop="articleBody">
     <div class="accessory-layout">
       <div class="al-accessory">
-        <p><a href="/assets/images/apps/waterme/v2/01-full.png"><img src="/assets/images/apps/waterme/v2/01-thumb.png" alt="WaterMe Screenshot 1" /></a>
-<a href="/assets/images/apps/waterme/v2/02-full.png"><img src="/assets/images/apps/waterme/v2/02-thumb.png" alt="WaterMe Screenshot 2" /></a>
-<a href="/assets/images/apps/waterme/v2/03-full.png"><img src="/assets/images/apps/waterme/v2/03-thumb.png" alt="WaterMe Screenshot 3" /></a>
-<a href="/assets/images/apps/waterme/v2/04-full.png"><img src="/assets/images/apps/waterme/v2/04-thumb.png" alt="WaterMe Screenshot 4" /></a>
-<a href="/assets/images/apps/waterme/v2/05-full.png"><img src="/assets/images/apps/waterme/v2/05-thumb.png" alt="WaterMe Screenshot 5" /></a></p>
+        <p><a href="/assets/images/apps/waterme/v2.5/vid-full.mp4"><img src="/assets/images/apps/waterme/v2.5/vid-thumb.png" alt="WaterMe Video 1" /></a>
+<a href="/assets/images/apps/waterme/v2.5/01-full.png"><img src="/assets/images/apps/waterme/v2.5/01-thumb.png" alt="WaterMe Screenshot 1" /></a>
+<a href="/assets/images/apps/waterme/v2.5/02-full.png"><img src="/assets/images/apps/waterme/v2.5/02-thumb.png" alt="WaterMe Screenshot 2" /></a>
+<a href="/assets/images/apps/waterme/v2.5/03-full.png"><img src="/assets/images/apps/waterme/v2.5/03-thumb.png" alt="WaterMe Screenshot 3" /></a>
+<a href="/assets/images/apps/waterme/v2.5/04-full.png"><img src="/assets/images/apps/waterme/v2.5/04-thumb.png" alt="WaterMe Screenshot 4" /></a>
+<a href="/assets/images/apps/waterme/v2.5/05-full.png"><img src="/assets/images/apps/waterme/v2.5/05-thumb.png" alt="WaterMe Screenshot 5" /></a></p>
 
       </div>
       <div class="al-primary">
@@ -84,11 +85,11 @@
   </li>
   <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
       <li><a href="#version-1-2016" id="markdown-toc-version-1-2016">Version 1 (2016)</a></li>
-      <li><a href="#phase-2-2019-2021" id="markdown-toc-phase-2-2019-2021">Phase 2 (2019-2021)</a></li>
-      <li><a href="#phase-3-2022-current" id="markdown-toc-phase-3-2022-current">Phase 3 (2022-Current)</a></li>
+      <li><a href="#version-2-2017" id="markdown-toc-version-2-2017">Version 2 (2017)</a></li>
+      <li><a href="#version-25-2020" id="markdown-toc-version-25-2020">Version 2.5 (2020)</a></li>
     </ul>
   </li>
-  <li><a href="#current-status" id="markdown-toc-current-status">Current Status</a></li>
+  <li><a href="#version-3-and-beyond" id="markdown-toc-version-3-and-beyond">Version 3 and Beyond</a></li>
 </ul>
 
 <h2 id="overview">Overview</h2>
@@ -155,7 +156,7 @@ a lot of iterations over the years.</p>
 simple to match. You had a plant with a name, photo, last watered date, and
 watering interval. The app would then sort them categorize them as needing
 “Water Today”, “Water Tomorrow”, or “Water Later.” As this was the days of iOS
-7, the user interface was also extremely simple.</p>
+10, the user interface was also extremely simple.</p>
 
 <table>
   <tbody>
@@ -169,19 +170,73 @@ watering interval. The app would then sort them categorize them as needing
   </tbody>
 </table>
 
-<h3 id="phase-2-2019-2021">Phase 2 (2019-2021)</h3>
+<h3 id="version-2-2017">Version 2 (2017)</h3>
 
-<p>A</p>
+<p>This version was a major rewrite where I updated the data model to be more
+sophisticated. In v2.0, the data model included a hierarchy that allowed each
+plant to contain multiple reminders each of which had their own watering
+history. Also each plant and each reminder also had a type. For reminders, this
+resulted in watering, trimming, or other. But for the plant this field remains
+unusued. But I added it so that theoretically types could be added for other
+househeld reminders like clothes or something.</p>
 
-<h3 id="phase-3-2022-current">Phase 3 (2022-Current)</h3>
+<p>This update took advantage of the new drag and drop support that was
+added in iOS 11 to make it possible to perform multiple reminders at once.
+Lastly, I changed to the database to Realm in the hopes that I could one day
+add multi-device syncing.</p>
 
-<p>A</p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/assets/images/apps/waterme/v2.0/01-full.png"><img src="/assets/images/apps/waterme/v2.0/01-thumb.png" alt="WaterMe v2.0 Screenshot 1" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.0/02-full.png"><img src="/assets/images/apps/waterme/v2.0/02-thumb.png" alt="WaterMe v2.0 Screenshot 2" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.0/03-full.png"><img src="/assets/images/apps/waterme/v2.0/03-thumb.png" alt="WaterMe v2.0 Screenshot 3" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.0/04-full.png"><img src="/assets/images/apps/waterme/v2.0/04-thumb.png" alt="WaterMe v2.0 Screenshot 4" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.0/05-full.png"><img src="/assets/images/apps/waterme/v2.0/05-thumb.png" alt="WaterMe v2.0 Screenshot 5" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="current-status">Current Status</h2>
+<h3 id="version-25-2020">Version 2.5 (2020)</h3>
 
-<p>A</p>
+<p>This version brought few UI changes, but completely changed the database under
+the hood. In 2019 with iOS 13, Apple released
+<a href="https://developer.apple.com/documentation/coredata/nspersistentcloudkitcontainer"><code class="language-plaintext highlighter-rouge">NSPersistentCloudKitContainer</code></a> 
+which allowed syncing Core Data reliably via CloudKit. I really wanted to
+provide syncing to my users so I started the process of swapping the database
+layer. This involved writing a wrapper for Realm and Core Data so the UI would
+not know the difference. As well, I had to write a one-time migration capability
+that would do the terrifying work of performing the migration.</p>
 
-<p>include embed/video.html src=’{/assets/img/apps-waterme/apps-video-waterme.mp4}’</p>
+<p>At this time I also added error reporting using a hacked together (but free)
+system built with AWS Simple Email Service. It would just send a JSON payload to
+AWS Lambda, and that would use the Simple Email Service to email me the errors.
+This way I would know if the database migrations were failing.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/assets/images/apps/waterme/v2.5/01-full.png"><img src="/assets/images/apps/waterme/v2.5/01-thumb.png" alt="WaterMe Screenshot 1" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.5/02-full.png"><img src="/assets/images/apps/waterme/v2.5/02-thumb.png" alt="WaterMe Screenshot 2" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.5/03-full.png"><img src="/assets/images/apps/waterme/v2.5/03-thumb.png" alt="WaterMe Screenshot 3" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.5/04-full.png"><img src="/assets/images/apps/waterme/v2.5/04-thumb.png" alt="WaterMe Screenshot 4" /></a></td>
+      <td><a href="/assets/images/apps/waterme/v2.5/05-full.png"><img src="/assets/images/apps/waterme/v2.5/05-thumb.png" alt="WaterMe Screenshot 5" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="version-3-and-beyond">Version 3 and Beyond</h2>
+
+<p>In 2024, I worked on a new version of WaterMe with an all new UI in SwiftUI.
+I created it to actually make an Apple Watch version of the app. Its mostly 
+complete but other projects caught my interest and I have yet to finish and
+release it. I would also like to reuse the UI for the iPhone version as I really
+dislike working in UIKit. However, I am not sure if I will get the interest
+again to do this work.</p>
+
+<p>I am at a crossing point where I could just let WaterMe fade away due updates 
+needed for Liquid Glass or inevitable future changes, or I could keep working
+on it. We shall see I suppose.</p>
 
       </div>
     </div>

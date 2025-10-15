@@ -5412,6 +5412,10 @@ body a:active {
   text-decoration: none;
 }
 
+.site-header {
+  border-top: none;
+}
+
 .home ol::after,
 .home ul::after,
 .home p::after,
@@ -5429,11 +5433,6 @@ p.continued::after {
   content: none; /* removes the clearfix above */
 }
 
-img.page-title,
-a.page-title img {
-  max-height: 256px;
-}
-
 img.thumbnail,
 a.thumbnail img {
   float: left;
@@ -5444,7 +5443,7 @@ a.thumbnail img {
 }
 
 /* Make it full-width on narrow screens */
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   img.thumbnail,
   a.thumbnail img {
     float: none;
@@ -5471,7 +5470,7 @@ a.thumbnail img {
 }
 
 /* On small screens, reverse order */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .al-accessory {
     order: 1; /* goes below */
     flex: 1 1 100%;
@@ -5487,20 +5486,20 @@ a.thumbnail img {
 
 /* Title Accessory + Header Layout */
 .title-accessory {
-  max-width: 350px;
+  max-width: 256px;
   margin: 0 auto 0rem;
 }
 
+@media (max-width: 800px) {
+  .title-accessory {
+    max-width: none;
+  }
+}
 .post-meta {
   display: block;
   text-align: center;
 }
 
-@media (max-width: 640px) {
-  .title-accessory {
-    max-width: 100%;
-  }
-}
 /* Prompt styling */
 .prompt-info,
 .prompt-warning,
@@ -5569,7 +5568,7 @@ a.thumbnail img {
 /* Base reflection style */
 .reflect,
 a.reflect img {
-  border-radius: var(--reflect-radius, 0.5em);
+  border-radius: var(--reflect-radius, 0);
   -webkit-box-reflect: below var(--reflect-distance, 4px) -webkit-linear-gradient(transparent, transparent 60%, rgba(255, 255, 255, 0.3) 100%);
 }
 

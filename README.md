@@ -21,7 +21,7 @@ Then move everything from temp into the parent (jekyll) folder
 ### Serve Jekyll
 
 `bundle install`
-`bundle exec jekyll serve --host 0.0.0.0 --port 8080`
+`bundle exec jekyll serve --incremental --host 0.0.0.0 --port 8080`
 
 ### Open In Your Browser
 

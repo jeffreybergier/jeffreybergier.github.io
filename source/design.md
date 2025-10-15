@@ -3,7 +3,7 @@ layout: home-category
 title: '<i class="fa-solid fa-swatchbook"></i> Design'
 category: Design
 permalink: /design/
-titleAccessory: "![Title Icon](/assets/images/design/title.png){: .page-title .reflect .below-sm .round-none }"
+titleAccessory: "<i class='apl-app-quartz-composer-256 reflect below-sm round-none'></i>"
 excerpt: |
   I earned my [Bachelor of Science in Industrial Design](https://design.sfsu.edu/bachelor-science-industrial-design) 
   in 2011 and that gave me the design thinking foundation for all of my

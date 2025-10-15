@@ -1,7 +1,7 @@
 ---
 layout: post-accessory
 title: "Hipstapaper: Cross Platform Reading List"
-titleAccessory: "![Hipstapaper Screenshot](/assets/images/apps/hipstapaper/title.png){: .page-title .reflect .below-xl .round-sm }"
+titleAccessory: "[![Hipstapaper Screenshot](/assets/images/apps/hipstapaper/title-thumb.png)](/assets/images/apps/hipstapaper/title-full.png){: .reflect .below-xl .round-sm }"
 excerpt: "Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS"
 categories: [Apps]
 tags: [Apps, Hobby]

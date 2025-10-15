@@ -4,6 +4,7 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+@import "icons";
 
 /* Now add your overrides */
 

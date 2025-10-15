@@ -5,6 +5,7 @@
 # - Creates retina-sharp CSS with half-size dimensions
 # - Preserves original folder names (no cleaning)
 # - Alphabetizes icons with numeric awareness
+# - Escapes dots in CSS class names
 # ===============================================
 
 output="./assets/css/_icons.scss"
@@ -20,10 +21,13 @@ find ./assets/icons -mindepth 2 -type f -name "*.png" | sort -V | while IFS= rea
   half_width=$((width / 2))
   half_height=$((height / 2))
 
+  # Escape dots for CSS
+  escaped_folder=$(echo "$folder" | sed 's/\./\\./g')
+
   # Convert to web path
   web_path="/${f#./}"  # strips leading ./ and adds leading /
 
-  echo ".icon-$folder-$half_width {" >> "$output"
+  echo ".icon-$escaped_folder-$half_width {" >> "$output"
   echo "  display: inline-block;" >> "$output"
   echo "  width: ${half_width}px;" >> "$output"
   echo "  height: ${half_height}px;" >> "$output"

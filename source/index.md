@@ -15,7 +15,7 @@ projects, use the links below \(Updated October 2025\)
 - [iMac 5K Display Project Updates](http://jeffburg.social/tags/iMac5K){: target="_blank" }
 
 # About Me
-[![Jeff using a computer in the 90's](/assets/images/profile.jpeg)](/assets/images/profile.jpeg){: .reflect .below-xl .round-sm }
+[![Jeff using a computer in the 90's](/assets/images/profile.jpeg)](/assets/images/profile.jpeg){: .thumbnail .reflect .below-xl .round-sm }
 I’m a Quality Assurance Engineer and Team Lead in the automotive software
 industry here in Tokyo. In a past life, I was an iOS and macOS developer and
 teacher in San Francisco. In a past past life I earned my Bachelor of Science in

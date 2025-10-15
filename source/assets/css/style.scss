@@ -64,8 +64,13 @@ p.continued::after {
   content: none; /* removes the clearfix above */
 }
 
-.home img,
-.post-content img {
+img.page-title,
+a.page-title img {
+  max-height: 256px;
+}
+
+img.thumbnail,
+a.thumbnail img {
   float: left;
   max-width: 300px;
   width: 100%;
@@ -75,25 +80,13 @@ p.continued::after {
 
 /* Make it full-width on narrow screens */
 @media (max-width: 640px) {
-  .home img,
-  .post-content img {
+  img.thumbnail,
+  a.thumbnail img {
     float: none;
     display: block;
     max-width: 100%;
     margin: 0 auto 1em;
   }
-}
-
-img.page-title,
-a.page-title img {
-  max-height: 256px;
-}
-
-img.page-poster,
-a.page-poster img {
-  float: none;
-  max-width: none;
-  margin: 0 0 0 0;
 }
 
 /* Accessory Layout */

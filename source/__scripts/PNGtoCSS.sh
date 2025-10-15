@@ -1,18 +1,18 @@
 #!/bin/bash
 # ===============================================
 # 🧩 Generate CSS for icons from PNGs
-# - Scans ../assets/icons/*/*.png
+# - Scans ./assets/icons/*/*.png
 # - Creates retina-sharp CSS with half-size dimensions
+# - Preserves original folder names (no cleaning)
+# - Alphabetizes icons with numeric awareness
 # ===============================================
 
-output="../assets/css/_icons.scss"
+output="./assets/css/_icons.scss"
 echo "/* Auto-Generated Stylesheet for Icons */" > "$output"
 
-find ../assets/icons -mindepth 2 -type f -name "*.png" | while read -r f; do
+find ./assets/icons -mindepth 2 -type f -name "*.png" | sort -V | while IFS= read -r f; do
   folder=$(basename "$(dirname "$f")" .iconset)
   base=$(basename "$f" .png)
-
-  clean_name=$(echo "$folder" | tr '[:upper:]' '[:lower:]' | tr '_' '-')
 
   width=$(sips -g pixelWidth "$f" | awk '/pixelWidth/ {print $2}')
   height=$(sips -g pixelHeight "$f" | awk '/pixelHeight/ {print $2}')
@@ -21,9 +21,9 @@ find ../assets/icons -mindepth 2 -type f -name "*.png" | while read -r f; do
   half_height=$((height / 2))
 
   # Convert to web path
-  web_path="/${f#../}"  # strips leading ../ and adds leading /
+  web_path="/${f#./}"  # strips leading ./ and adds leading /
 
-  echo ".icon-$clean_name-$half_width {" >> "$output"
+  echo ".icon-$folder-$half_width {" >> "$output"
   echo "  display: inline-block;" >> "$output"
   echo "  width: ${half_width}px;" >> "$output"
   echo "  height: ${half_height}px;" >> "$output"
@@ -34,7 +34,7 @@ find ../assets/icons -mindepth 2 -type f -name "*.png" | while read -r f; do
   echo "}" >> "$output"
   echo "" >> "$output"
 
-  echo "✅ Added .icon-$clean_name-$width (${half_width}×${half_height})"
+  echo "✅ Added .icon-$folder-$half_width (${half_width}×${half_height})"
 done
 
 echo "🎉 CSS written to $output"

@@ -32,9 +32,9 @@
         </label>
 
         <div class="nav-items">
-  <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
-  <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
-  <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
 </div>
 
       </nav>
@@ -48,7 +48,7 @@
   <!-- Custom Layout Starts Here -->
     
     <div class="title-accessory">
-      <p><img src="/assets/images/apps/teskemon/title.png" alt="Teskemon About Window" class="page-title" /></p>
+      <p><i class="jsb-app-teskemon-256 reflect below-xs round-none"></i></p>
 
     </div>
     
@@ -62,7 +62,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><a href="/assets/images/apps/teskemon/01-full.png" class="page-poster"><img src="/assets/images/apps/teskemon/01-thumb.png" alt="Teskemon Main Window" /></a></p>
+    <p><a href="/assets/images/apps/teskemon/01-full.png"><img src="/assets/images/apps/teskemon/01-thumb.png" alt="Teskemon Main Window" /></a></p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 
@@ -83,7 +83,7 @@
 
 <h2 id="overview">Overview</h2>
 
-<p><a href="/assets/images/apps/teskemon/02-full.png"><img src="/assets/images/apps/teskemon/02-thumb.png" alt="Teskemon About Window" /></a>
+<p><a href="/assets/images/apps/teskemon/02-full.png" class="thumbnail"><img src="/assets/images/apps/teskemon/02-thumb.png" alt="Teskemon About Window" /></a>
 Teskemon is a SwiftUI application built to monitor Tailscale networks. 
 It is provided under the <a href="LICENSE">GPLv3 open source license</a> and without any warranty or liability. 
 If this application is useful for you, please use as you wish and provide feedback. 
@@ -101,8 +101,8 @@ And yes, I do accept pull requests.</p>
 
 <h2 id="development">Development</h2>
 
-<p>Teskemon was the first app I developed to make heavy use of the new <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/">Swift
-Concurrency</a> 
+<p>Teskemon was the first app I developed to make heavy use of the new 
+<a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/">Swift Concurrency</a> 
 system. Concurrency is used to ping and check open ports on many network
 endpoints at once. That said, Teskemon uses a standard (boring) Model View
 Controller approach. There are 3 Swift Packages, Model, Controller, View. When I
@@ -126,11 +126,12 @@ Process, and Presentation complexity into simple types the views can read from
 and write to</li>
 </ol>
 
-<p>In order to ensure consistency and live updating across all screens all the time 
-either AppStorage or SceneStorage are used as an underlying storage primitive. 
-AppStorage stores settings like custom names and the list of services. 
-SceneStorage stores temporary information like the list of Machines from Tailscale,
-the results of the Service scans, and the presentation state of all the views.</p>
+<p>In order to ensure consistency and live updating across all screens all the time
+either AppStorage or SceneStorage are used as an underlying storage primitive.
+AppStorage stores settings like custom names and the list of services.
+SceneStorage stores temporary information like the list of Machines from
+Tailscale, the results of the Service scans, and the presentation state of all
+the views.</p>
 
 <h3 id="view">View</h3>
 <p>This layer contains all of the views for the application. They are all fairly
@@ -143,10 +144,10 @@ name, but it is only stored in SceneStorage and never uploaded anywhere.
 Passwords are stored in the keychain but they are cached in memory 
 for performance reasons.</p>
 
-<p>That said, Teskemon is not sandboxed because it uses the Process API 
-(previously NSTask). Because Process allows the application to run any executable 
-on the machine, it is not possible to use this API in a sandboxed application. 
-Process is only used to run netcat, ping, and the Tailscale CLI.</p>
+<p>That said, Teskemon is not sandboxed because it uses the Process API (previously
+NSTask). Because Process allows the application to run any executable on the
+machine, it is not possible to use this API in a sandboxed application. Process
+is only used to run netcat, ping, and the Tailscale CLI.</p>
 
 <p>Also, if your employer tightly monitors their network, using Netcat 
 to port scan a large number of ports on a large number of machines can cause 

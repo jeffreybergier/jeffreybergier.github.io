@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>QoS Redesign | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="QoS Redesign" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity." />
+<meta property="og:description" content="Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity." />
+<link rel="canonical" href="https://jeffburg.com/design/2016/01/01/IconSys.html" />
+<meta property="og:url" content="https://jeffburg.com/design/2016/01/01/IconSys.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="QoS Redesign" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-01-01T00:00:00+00:00","datePublished":"2016-01-01T00:00:00+00:00","description":"Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity.","headline":"QoS Redesign","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/design/2016/01/01/IconSys.html"},"url":"https://jeffburg.com/design/2016/01/01/IconSys.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+  <!-- Custom Layout Starts Here -->
+    
+    <div class="title-accessory">
+      <p><a href="/assets/images/design/qos/profiles-2k.png" class="reflect below-xl round-sm"><img src="/assets/images/design/qos/profiles-600.png" alt="WaterMe Icon" /></a></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">QoS Redesign</h1><p><p>Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility
+and improved simplicity.</p>
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2016-01-01T00:00:00+00:00" itemprop="datePublished">
+        Jan 1, 2016
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="project">Project</h2>
+<p>The QoS feature of the SteelHead was being re-implemented and so it was due for
+a redesign. QoS is extremely complex and the design process was long. But it was
+an incredible success. Through extensive UX research and design, we proposed a
+new mental model for QoS in the SteelHead.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#project" id="markdown-toc-project">Project</a>    <ul>
+      <li><a href="#feature-research" id="markdown-toc-feature-research">Feature Research</a></li>
+      <li><a href="#user-research" id="markdown-toc-user-research">User Research</a></li>
+      <li><a href="#sites" id="markdown-toc-sites">Sites</a></li>
+      <li><a href="#classes" id="markdown-toc-classes">Classes</a></li>
+      <li><a href="#rules" id="markdown-toc-rules">Rules</a></li>
+      <li><a href="#profiles" id="markdown-toc-profiles">Profiles</a></li>
+    </ul>
+  </li>
+  <li><a href="#experimentation" id="markdown-toc-experimentation">Experimentation</a>    <ul>
+      <li><a href="#qos-class-feedback" id="markdown-toc-qos-class-feedback">QoS Class Feedback</a></li>
+      <li><a href="#uplink-variations" id="markdown-toc-uplink-variations">Uplink Variations</a></li>
+      <li><a href="#dashboard-widget" id="markdown-toc-dashboard-widget">Dashboard Widget</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="feature-research">Feature Research</h3>
+<p><a href="/assets/images/design/qos/feature-2k.png" class="thumbnail"><img src="/assets/images/design/qos/feature-600.png" alt="Screenshot" /></a>
+QoS is an enormously complex feature. The first step in the process was to fully
+understand how QoS works, what its intended to do, and what is needed to make it
+do that. I learned everything from the HFSC algorithm, QoS classes, deep packet
+inspection, latency priority, minimum and maximum bandwidth, etc. It got to the
+point where the questions I asked of the engineers couldn’t be answered without
+looking into their source code.</p>
+
+<h3 id="user-research">User Research</h3>
+<p><a href="/assets/images/design/qos/user-2k.png" class="thumbnail"><img src="/assets/images/design/qos/user-600.png" alt="Screenshot" /></a>
+After learning everything there is to know about how QoS works, it was time to
+speak with network administrators to see how they actually use it. I went onsite
+at several companies in Illinois, Montreal, and the UK. The user researcher and
+I also conducted remote interviews of many more firms. We learned what they used
+QoS for, what issues they had with the current version of QoS, and what they
+wanted to do with the QoS feature in the future.</p>
+
+<h3 id="sites">Sites</h3>
+<p><a href="/assets/images/design/qos/sites-2k.png" class="thumbnail"><img src="/assets/images/design/qos/sites-600.png" alt="Screenshot" /></a>
+QoS needs to know the speeds of every network connection in the system. It needs
+to know this so it can adequately divide up resources. Network administrators
+have hundreds, or even thousands of locations. And each location can have
+multiple network connections. So I created an entire concept around this called
+‘Sites.’ Each site has any number of uplinks (network connections) and each
+uplink has upstream and downstream bandwidths associated with them. This gives
+the QoS system the information it needs on bandwidth restrictions across the
+entire network.</p>
+
+<h3 id="classes">Classes</h3>
+<p><a href="/assets/images/design/qos/classes-2k.png" class="thumbnail"><img src="/assets/images/design/qos/classes-600.png" alt="Screenshot" /></a>
+QoS systems usually have the concept of classes. Classes are sort of like
+buckets. The network administrator puts certain applications into certain
+buckets, then the system treats each bucket with a certain level of importance.
+The most important thing to remember about these buckets, is that giving one
+more resources, necessarily gives the others less. Also, putting all traffic
+into an important bucket may not be desirable. QoS works by prioritizing
+important traffic over less important traffic. If all traffic is marked as
+important, it can’t do that. Concerns like this were common from network
+administrators. I attempted to produce UI’s that could show some of this
+information in a visual way, but in the end, we settled for a fairly simple tree
+visualization. A few slides after this, there are some concepts I made for
+visually showing class information.</p>
+
+<h3 id="rules">Rules</h3>
+<p><a href="/assets/images/design/qos/classes-2k.png" class="thumbnail"><img src="/assets/images/design/qos/classes-600.png" alt="Screenshot" /></a>
+QoS classes are like buckets you put Apps into that then get managed by the QoS
+system. Rules are the mechanism by which the network administrator puts apps
+into the classes. Because SteelHead has incredibly powerful Deep Packet
+Inspection (DPI) technology. Specifying apps is very easy. Users can search for
+commonly known app names, as opposed to intricate IP address and port mappings.
+Also, our team pre-grouped the apps into about 8 groups. Each group contains
+approximately 800 applications. The rules can be specified with an individual
+app or an individual app group. This makes configuring QoS extremely fast.</p>
+
+<h3 id="profiles">Profiles</h3>
+<p><a href="/assets/images/design/qos/profiles-2k.png" class="thumbnail"><img src="/assets/images/design/qos/profiles-600.png" alt="Screenshot" /></a>
+QoS profiles are how you connect QoS Classes and Rules and Sites. The
+SteelCentral Controller has a birds-eye view of all the SteelHeads on a
+customer’s network. We designed the profiles UI to take advantage of this extra
+knowledge. We did this by having the network administrator choose a source and
+destination site, or group of sites, that each profile applies to. With this
+information, the SteelCentral Controller knows how to distribute the QoS
+Profiles to all appliances automatically. This simplification makes QoS
+configuration far more declarative. This is something we strive for. We call it
+‘intent’ based management. Where the network administrator specifies <strong>what</strong>
+they want, rather than <strong>how</strong> to make it happen. This is an incredibly powerful
+paradigm for the new QoS feature.</p>
+
+<h2 id="experimentation">Experimentation</h2>
+<p>As with all products and features, not everything the design team makes, makes
+it into the product. Sometimes they’re features that are not needed, sometimes
+they are too complex, and sometimes they are just way too cool. Below are some
+experiments that I made that never shipped.</p>
+
+<h3 id="qos-class-feedback">QoS Class Feedback</h3>
+<p><a href="/assets/images/design/qos/profile-experiment1-2k.png" class="thumbnail"><img src="/assets/images/design/qos/profile-experiment1-600.png" alt="Screenshot" /></a>
+Setting the min and max bandwidth allocations for a QoS class is kind of a
+guessing game. Set the numbers and see how it goes. In order to alleviate
+this, I attempted to create some mockups with configurations that would
+advise the user of issues with the classes and tried to summarize their
+congestion over time in a visual way.</p>
+
+<h3 id="uplink-variations">Uplink Variations</h3>
+<p><a href="/assets/images/design/qos/profile-experiment2-2k.png" class="thumbnail"><img src="/assets/images/design/qos/profile-experiment2-600.png" alt="Screenshot" /></a>
+Uplink Variations are a system where the network admin could select
+different QoS Class min and max assignments based on the Uplink that was
+being used. This is important when one or more network connections fail at a
+site. In those conditions, critical traffic needs a higher priority.</p>
+
+<h3 id="dashboard-widget">Dashboard Widget</h3>
+<p><a href="/assets/images/design/qos/dashboard-experiment-2k.png" class="thumbnail"><img src="/assets/images/design/qos/dashboard-experiment-600.png" alt="Screenshot" /></a>
+SteelCentral Controller has really great dashboards that give an overview of
+what is going on on your network. This is one mockups I made of what a QoS
+widget could have looked at. It shows the QoS classes. When a class is
+expanded, it shows relevant errors and warnings.</p>
+
+  </div>
+
+  <a class="u-url" href="/design/2016/01/01/IconSys.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="Github">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

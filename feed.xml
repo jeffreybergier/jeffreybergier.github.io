@@ -1,4 +1,343 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-10-25T04:03:25+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Teskemon: Tailscale Specialist</title><link href="https://jeffburg.com/apps/2025/02/14/Teskemon.html" rel="alternate" type="text/html" title="Teskemon: Tailscale Specialist" /><published>2025-02-14T00:00:00+00:00</published><updated>2025-02-14T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2025/02/14/Teskemon</id><content type="html" xml:base="https://jeffburg.com/apps/2025/02/14/Teskemon.html"><![CDATA[<p><a href="/assets/images/apps/teskemon/01-full.png"><img src="/assets/images/apps/teskemon/01-thumb.png" alt="Teskemon Main Window" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2025-12-04T14:28:40+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Enabling iPhone Development for PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1.html" rel="alternate" type="text/html" title="Enabling iPhone Development for PowerPC Macs" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1.html"><![CDATA[<table>
+  <thead>
+    <tr>
+      <th>PowerPC Setup</th>
+      <th>Xcode Screenshots</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/run3.jpeg"><img src="/assets/images/retro-tech/ppc-iphone-1/run3-thumb.jpeg" alt="iMac G4 Beauty Shot" /></a></td>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/run2.png"><img src="/assets/images/retro-tech/ppc-iphone-1/run2-thumb.png" alt="Xcode Screenshot" /></a> <a href="/assets/images/retro-tech/ppc-iphone-1/run1.png"><img src="/assets/images/retro-tech/ppc-iphone-1/run1-thumb.png" alt="Xcode Screenshot" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
+      <li><a href="#caveats" id="markdown-toc-caveats">Caveats</a></li>
+      <li><a href="#approach" id="markdown-toc-approach">Approach</a></li>
+      <li><a href="#system-requirements" id="markdown-toc-system-requirements">System Requirements</a></li>
+    </ul>
+  </li>
+  <li><a href="#tutorial" id="markdown-toc-tutorial">Tutorial</a>    <ul>
+      <li><a href="#0-download-everything" id="markdown-toc-0-download-everything">0. Download Everything</a></li>
+      <li><a href="#1-install-xcode-314" id="markdown-toc-1-install-xcode-314">1. Install Xcode 3.1.4</a></li>
+      <li><a href="#2-force-install-the-iphone-os-313-sdk" id="markdown-toc-2-force-install-the-iphone-os-313-sdk">2. Force install the iPhone OS 3.1.3 SDK</a></li>
+      <li><a href="#3-force-install-iphone-simulatorapp-from-the-iphone-os-221-sdk" id="markdown-toc-3-force-install-iphone-simulatorapp-from-the-iphone-os-221-sdk">3. Force install iPhone Simulator.app from the iPhone OS 2.2.1 SDK</a></li>
+      <li><a href="#4-patch-ld" id="markdown-toc-4-patch-ld">4. Patch ld</a></li>
+      <li><a href="#5-run-an-app-in-the-simulator" id="markdown-toc-5-run-an-app-in-the-simulator">5. Run an App in the Simulator</a></li>
+      <li><a href="#6-coming-soon-run-an-app-on-device" id="markdown-toc-6-coming-soon-run-an-app-on-device">6. (Coming Soon) Run an App on Device</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p>Apple always officially required an Intel Mac to do iPhone app development, 
+but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing 
+Original iPhone and iPhone 3G apps on your PowerPC Mac. This builds upon the
+work of whoever in the community created the custom installers and scripts found
+on <a href="https://www.macintoshrepository.org/1090-iphone-os-2-2-1-sdk-for-ppc">Macintosh Repository.</a>
+This hack relied on the fact that even though Apple required Intel Macs for
+iPhone development, they actually shipped universal binaries for the iPhone
+SDK up until iPhone OS 2.2.1 SDK.</p>
+
+<p>But the 2.2.1 SDK is quite limited and the iPhone really started to come into
+its own with the 3.0 and higher SDK’s. These included critical improvements
+like Core Data, AVFoundation, MediaPlayer, and others. So I started to look
+into if it was possible to get the new SDK on a PowerPC Mac as well. And to my
+surprise, it is possible! And will even deploy to a real iPhone running 3.1.3.</p>
+
+<p>In this document you I will walk you through how I did it.</p>
+
+<h3 id="caveats">Caveats</h3>
+
+<p>While this does work, there are some fundamental limitations</p>
+
+<ul>
+  <li>iPhone Simulator only runs iPhone OS 2.2.1
+    <ul>
+      <li>This cannot be overcome because Apple only shipped universal PowerPC and Intel binaries for iPhone OS 2.2.1 and lower</li>
+    </ul>
+  </li>
+  <li>You must have a developer account if you want to deploy to device
+    <ul>
+      <li>There are probably workarounds, but I just did everything the official way</li>
+    </ul>
+  </li>
+  <li>Your iPhone must be Jailbroken if you want to deploy to device
+    <ul>
+      <li>I think this is due to expired certificate authorities on the iPhone OS 3.1.3 but I am not 100% sure</li>
+    </ul>
+  </li>
+  <li>This Xcode 3 is very old and is not much different than the original Project Builder
+    <ul>
+      <li>Xcode would not get its new UI style that is still used today until Xcode 4 which only runs on Mac OS X 10.6 Snow Leopard which is Intel only</li>
+      <li>The SDK does not support many basic features such as Automatic Reference Counting</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="approach">Approach</h3>
+
+<ol>
+  <li>Install Xcode 3.1.4</li>
+  <li>Force install the iPhone OS 3.1.3 SDK</li>
+  <li>Force install iPhone Simulator.app from the iPhone OS 2.2.1 SDK</li>
+  <li>Patch some installed files so everything runs on PowerPC</li>
+</ol>
+
+<h3 id="system-requirements">System Requirements</h3>
+
+<ul>
+  <li>PowerPC Mac</li>
+  <li>Mac OS X Leopard 10.5.8 with all updates installed</li>
+  <li>To run on real device
+    <ul>
+      <li>USB 2.0 (it might work with USB 1.1 but no promises)</li>
+      <li>Original iPhone, iPhone 3G, iPod Touch (1st generation), iPod Touch (2nd generation)</li>
+      <li>Device running OS software 3.1.3 or lower
+        <ul>
+          <li>These devices can easily be downgraded using <a href="https://github.com/LukeZGD/Legacy-iOS-Kit">Legacy iOS Kit</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tutorial">Tutorial</h2>
+
+<h3 id="0-download-everything">0. Download Everything</h3>
+
+<p><img src="/assets/images/retro-tech/ppc-iphone-1/download1.png" alt="AquaFox About Window" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Internet Archive</th>
+      <th>Macintosh Repository</th>
+      <th>All Downloaded</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/download2.png"><img src="/assets/images/retro-tech/ppc-iphone-1/download2-thumb.png" alt="Internet Archive" /></a></td>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/download3.png"><img src="/assets/images/retro-tech/ppc-iphone-1/download3-thumb.png" alt="Internet Archive" /></a></td>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/download4.png"><img src="/assets/images/retro-tech/ppc-iphone-1/download4-thumb.png" alt="Internet Archive" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you use <a href="https://blackbirdlc.github.io/aquafox/Homepage.html">AquaFox</a>, 
+you can actually do the downloads directly on your PowerPC Mac. But of course, 
+you can also download everything on a modern computer and transfer it over to 
+the Mac via AFP or SCP.</p>
+
+<ol>
+  <li><a href="https://archive.org/download/iOS_Firmware_Exhibit_Collection"><code class="language-plaintext highlighter-rouge">iphone_sdk_3.1.3_with_xcode_3.1.4__leopard__9m2809a.dmg</code></a> (Internet Archive)
+    <ol>
+      <li><a href="https://archive.org/download/iOS_Firmware_Exhibit_Collection/iphone_sdk_3.1.3_with_xcode_3.1.4__leopard__9m2809a.dmg">Direct Link</a> in case you can’t find the exact right build <code class="language-plaintext highlighter-rouge">9m2809a</code></li>
+    </ol>
+  </li>
+  <li><a href="https://www.macintoshrepository.org/1090-iphone-os-2-2-1-sdk-for-ppc"><code class="language-plaintext highlighter-rouge">iPhone_SDK_for_iPhone_OS_2.2.1_PPC.iso</code></a> (Macintosh Repository)
+    <ol>
+      <li>Also available on <a href="https://macintoshgarden.org/apps/iphone-os-221-sdk-ppc">Macintosh Garden</a></li>
+    </ol>
+  </li>
+  <li><a href="/assets/downloads/retro-tech/ppc-iphone-1/iPhone313PPCInstaller.zip"><code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.zip</code></a> (This website)
+    <ol>
+      <li>Do not download <code class="language-plaintext highlighter-rouge">iPhoneSDK.dist_.zip</code> or <code class="language-plaintext highlighter-rouge">iPhonePPCEnabler.dmg</code> on Macintosh Repository as these are for the 2.2.1 SDK only</li>
+    </ol>
+  </li>
+  <li>Unzip <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.zip</code></li>
+</ol>
+
+<h3 id="1-install-xcode-314">1. Install Xcode 3.1.4</h3>
+
+<p><a href="/assets/images/retro-tech/ppc-iphone-1/install1.png"><img src="/assets/images/retro-tech/ppc-iphone-1/install1-thumb.png" alt="Install Xcode 3.1.4" /></a></p>
+
+<p>Mount the <code class="language-plaintext highlighter-rouge">iphone_sdk_3.1.3_with_xcode_3.1.4__leopard__9m2809a.dmg</code> and open
+the installer file to do a normal install of Xcode. I selected all possible 
+options, but you should only need the basic developer tools package. The 
+installer WILL NOT let you select the iPhone SDK packages. Thats OK, we will
+do that in the next step. This took about 30 minutes on my 1.25GHz iMac G4 
+with 1TB SSD, so please be patient if your system is slower and/or does not 
+have an SSD.</p>
+
+<p>Note that you must install in the default location <code class="language-plaintext highlighter-rouge">/Developer</code></p>
+
+<h3 id="2-force-install-the-iphone-os-313-sdk">2. Force install the iPhone OS 3.1.3 SDK</h3>
+
+<p><a href="/assets/images/retro-tech/ppc-iphone-1/install2.png"><img src="/assets/images/retro-tech/ppc-iphone-1/install2-thumb.png" alt="Force Install iPhone OS 3.1.3 SDK" /></a></p>
+
+<ol>
+  <li>Verify that the iPhone SDK disk image is mounted with the correct name
+    <ol>
+      <li>Open terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
+      <li>You should see <code class="language-plaintext highlighter-rouge">iPhone SDK</code>, not <code class="language-plaintext highlighter-rouge">iPhone SDK 2</code> or some other name. If
+its not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
+    </ol>
+  </li>
+  <li>Open <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.mpkg</code> and run the installer
+    <ol>
+      <li>This installs the entire iPhone OS 3.1.3 SDK except for simulators higher
+than 2.2.1. Those simulators are Intel only and therefore will never work
+on a PowerPC Mac.</li>
+    </ol>
+  </li>
+  <li>Unmount the iPhone SDK disk image</li>
+</ol>
+
+<p>At this point you will have a fully working Xcode install and if you will even
+be able to create new iPhone projects. However, there are 3 problems that need 
+to be fixed:</p>
+
+<ol>
+  <li>iPhone Simulator.app will not open because it is Intel only</li>
+  <li>The copy of <code class="language-plaintext highlighter-rouge">ld</code> for the iPhone SDK is Intel only</li>
+  <li>Interface Builder cannot open XIBs for the iPhone because its plugin is Intel only</li>
+</ol>
+
+<p>If you want to confirm that iPhone Simulator is Intel only you can use the 
+following terminal command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ichigodaifuku:~ me<span class="nv">$ </span>lipo <span class="nt">-archs</span> /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone<span class="se">\ </span>Simulator.app/Contents/MacOS/iPhone<span class="se">\ </span>Simulator 
+i386
+</code></pre></div></div>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">lipo -archs</code> to check any binary on your system to see if it is
+universal.</p>
+
+<h3 id="3-force-install-iphone-simulatorapp-from-the-iphone-os-221-sdk">3. Force install iPhone Simulator.app from the iPhone OS 2.2.1 SDK</h3>
+
+<p><a href="/assets/images/retro-tech/ppc-iphone-1/install3.png"><img src="/assets/images/retro-tech/ppc-iphone-1/install3-thumb.png" alt="Force Install iPhone OS 2.2.1 Simulator" /></a></p>
+
+<p>One of the included files is <code class="language-plaintext highlighter-rouge">iPhone221PPCInstaller.mpkg</code>. This file was 
+originally provided on Macintosh Repository but I customized it to only install
+one small part of the iPhone OS 2.2.1 SDK instead of the whole thing. It only
+install the <code class="language-plaintext highlighter-rouge">iPhoneSimulatorPlatform.pkg</code> which installs the Universal binary
+version of the iPhone Simulator as well as the Interface Builder plugin for
+iPhone XIBs.</p>
+
+<ol>
+  <li>Unmount the iPhone SDK disk image (if you didn’t do it already as instructed in the previous step)</li>
+  <li>Mount <code class="language-plaintext highlighter-rouge">iPhone_SDK_for_iPhone_OS_2.2.1_PPC.iso</code></li>
+  <li>Verify that the iPhone SDK disk image is mounted with the correct name
+    <ol>
+      <li>Open terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
+      <li>You should see <code class="language-plaintext highlighter-rouge">iPhone SDK</code>, not <code class="language-plaintext highlighter-rouge">iPhone SDK 2</code> or some other name. If
+its not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
+    </ol>
+  </li>
+  <li>Open <code class="language-plaintext highlighter-rouge">iPhone221PPCInstaller.mpkg</code> and run the installer. This installs:
+    <ol>
+      <li>iPhone Simulator app that is a Universal Binary</li>
+      <li>Interface Builder plugin for reading iPhone XIBs that is a Universal Binary</li>
+      <li>Runs a script that patches the xcspec files
+        <ol>
+          <li>There is no credit for this script on Macintosh Repository</li>
+          <li>If you want to know more about what it patches, see this <a href="https://chrishardie.com/2009/01/using-the-iphoneos-sdk-on-older-ppc-macs/">blog post by Chris Hardie</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="4-patch-ld">4. Patch ld</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ichigodaifuku:~ me<span class="nv">$ </span><span class="nb">chmod</span> +x /Users/me/Desktop/iPhoneSDKInstall/iPhone313PPCldPatch.sh 
+ichigodaifuku:~ me<span class="nv">$ </span><span class="nb">sudo</span> /Users/me/Desktop/iPhoneSDKInstall/iPhone313PPCldPatch.sh 
+<span class="nt">---</span> iPhone OS 3.1.3 PPC Enabler LD Patch Post-Install Script Started <span class="nt">---</span>
+Verifying files: SUCCESS.
+Target linker <span class="o">(</span>/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/ld<span class="o">)</span> and <span class="nb">source </span>linker <span class="o">(</span>/Developer/usr/bin/ld<span class="o">)</span> found.
+COMMAND: Backing up Intel <span class="s1">'ld'</span> binary to /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/ld.backup.intel
+COMMAND: Copying functional PPC <span class="s1">'ld'</span> over the Intel one...
+COMMAND: Setting executable permissions <span class="k">for</span> /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/ld
+SUCCESS: PPC <span class="s1">'ld'</span> copied and permissions set.
+<span class="nt">---</span> iPhone OS 3.1.3 PPC Enabler LD Patch Post-Install Script Completed Successfully <span class="nt">---</span>
+ichigodaifuku:~ me<span class="nv">$ </span>
+</code></pre></div></div>
+
+<p>The normal version of <code class="language-plaintext highlighter-rouge">ld</code> that comes with Xcode is a universal binary but the
+the version that comes with the iPhone SDK is Intel only (for some reason). 
+Its the only Intel-only part of the SDK, as far as I can tell. I provided a 
+script to patch <code class="language-plaintext highlighter-rouge">ld</code> to make it easy, but all it does is backup the original 
+and then copy the version from Xcode into the place the iPhone SDK is.</p>
+
+<p>I wanted to make the script run automatically at the end of Step 2 but I could 
+not  figure out how to insert the script into the installer. If you know how, 
+please let me know and I will improve <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.mpkg</code></p>
+
+<ol>
+  <li>Open Terminal</li>
+  <li>Change the permissions to make the script executable (this is not preserved by the zip file)
+    <ol>
+      <li>Type <code class="language-plaintext highlighter-rouge">chmod +x </code> note the space at the end</li>
+      <li>Drag <code class="language-plaintext highlighter-rouge">iPhone313PPCldPatch.sh</code> into the terminal window</li>
+      <li>Press the return key to set the permissions</li>
+    </ol>
+  </li>
+  <li>Execute the script with admin privileges
+    <ol>
+      <li>Type <code class="language-plaintext highlighter-rouge">sudo </code> note the space at the end</li>
+      <li>Drag <code class="language-plaintext highlighter-rouge">iPhone313PPCldPatch.sh</code> into the terminal window</li>
+      <li>Press the return key to run the script</li>
+    </ol>
+  </li>
+  <li>The terminal output should look like the code snippet above</li>
+  <li>Restart your computer</li>
+</ol>
+
+<p>If you want to manually verify it worked, you can use the <code class="language-plaintext highlighter-rouge">lipo</code> command again:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ichigodaifuku:~ me<span class="nv">$ </span>lipo <span class="nt">-archs</span> /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/ld.backup.intel
+i386
+ichigodaifuku:~ me<span class="nv">$ </span>lipo <span class="nt">-archs</span> /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/ld
+i386 ppc7400
+ichigodaifuku:~ me<span class="nv">$ </span>
+</code></pre></div></div>
+
+<h3 id="5-run-an-app-in-the-simulator">5. Run an App in the Simulator</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step 2</th>
+      <th>Step 3</th>
+      <th>Step 4</th>
+      <th>Step 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/test1.png"><img src="/assets/images/retro-tech/ppc-iphone-1/test1-thumb.png" alt="Test Simulator 1" /></a></td>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/test2.png"><img src="/assets/images/retro-tech/ppc-iphone-1/test2-thumb.png" alt="Test Simulator 2" /></a></td>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/test3.png"><img src="/assets/images/retro-tech/ppc-iphone-1/test3-thumb.png" alt="Test Simulator 3" /></a></td>
+      <td><a href="/assets/images/retro-tech/ppc-iphone-1/test4.png"><img src="/assets/images/retro-tech/ppc-iphone-1/test4-thumb.png" alt="Test Simulator 4" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We can’t deploy to device yet as there is more work to do, but you should make 
+a sample app and make sure it launches in the simulator.</p>
+
+<ol>
+  <li>Open Xcode and select File→New Project</li>
+  <li>Choose any iPhone project you like but I chose “Tab Bar Application”</li>
+  <li>There is a toolbar item labeled “Overview” where you can change the deployment target from Device to Simulator</li>
+  <li>Now open one of the XIBs in Interface Builder to make sure that is working. Change some text so you know that the app runs properly when changed</li>
+  <li>Click Build and Run to compile the app, launch the Simulator app, and launch your new app</li>
+</ol>
+
+<h3 id="6-coming-soon-run-an-app-on-device">6. (Coming Soon) Run an App on Device</h3>
+
+<p>In the next episode, we will go through the steps needed to get an app running
+on the device. Remember, this is before Xcode could manage signing for you, so
+you will need to do it the old fashioned way <i class="fa-solid fa-hand-peace"></i></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[Apple always officially required an Intel Mac to do iPhone app development, but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing Original iPhone and iPhone 3G apps on your PowerPC Mac.]]></summary></entry><entry><title type="html">Teskemon: Tailscale Specialist</title><link href="https://jeffburg.com/apps/2025/02/14/Teskemon.html" rel="alternate" type="text/html" title="Teskemon: Tailscale Specialist" /><published>2025-02-14T00:00:00+00:00</published><updated>2025-02-14T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2025/02/14/Teskemon</id><content type="html" xml:base="https://jeffburg.com/apps/2025/02/14/Teskemon.html"><![CDATA[<p><a href="/assets/images/apps/teskemon/01-full.png"><img src="/assets/images/apps/teskemon/01-thumb.png" alt="Teskemon Main Window" /></a></p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 

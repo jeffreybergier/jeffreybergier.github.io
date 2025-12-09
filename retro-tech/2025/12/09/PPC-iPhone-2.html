@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="How to Develop Original iPhone Apps in 2025" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="iOS Developers out there, have you ever been interested to try developing for the original iPhone? In 2025 there are a few more headaches due to expired certificates, but this article will walk you through step by step." />
-<meta property="og:description" content="iOS Developers out there, have you ever been interested to try developing for the original iPhone? In 2025 there are a few more headaches due to expired certificates, but this article will walk you through step by step." />
+<meta name="description" content="iOS Developers out there, have you ever been interested in stepping back for a moment from the new hotness to go back to your roots and try developing apps for the original iPhone? This article will walk you through the whole process of doing this even in 2025 when things no longer work as smoothly as they did in 2008." />
+<meta property="og:description" content="iOS Developers out there, have you ever been interested in stepping back for a moment from the new hotness to go back to your roots and try developing apps for the original iPhone? This article will walk you through the whole process of doing this even in 2025 when things no longer work as smoothly as they did in 2008." />
 <link rel="canonical" href="https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html" />
 <meta property="og:url" content="https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html" />
 <meta property="og:site_name" content="Jeffrey Bergier" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How to Develop Original iPhone Apps in 2025" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-09T00:00:00+00:00","datePublished":"2025-12-09T00:00:00+00:00","description":"iOS Developers out there, have you ever been interested to try developing for the original iPhone? In 2025 there are a few more headaches due to expired certificates, but this article will walk you through step by step.","headline":"How to Develop Original iPhone Apps in 2025","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html"},"url":"https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-09T00:00:00+00:00","datePublished":"2025-12-09T00:00:00+00:00","description":"iOS Developers out there, have you ever been interested in stepping back for a moment from the new hotness to go back to your roots and try developing apps for the original iPhone? This article will walk you through the whole process of doing this even in 2025 when things no longer work as smoothly as they did in 2008.","headline":"How to Develop Original iPhone Apps in 2025","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html"},"url":"https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
 </head>
@@ -53,7 +53,7 @@
     </div>
     
     <div class="post-meta">
-      <h1 class="post-title p-name" itemprop="name headline">How to Develop Original iPhone Apps in 2025</h1><p><p>iOS Developers out there, have you ever been interested to try developing for the original iPhone? In 2025 there are a few more headaches due to expired certificates, but this article will walk you through step by step.</p>
+      <h1 class="post-title p-name" itemprop="name headline">How to Develop Original iPhone Apps in 2025</h1><p><p>iOS Developers out there, have you ever been interested in stepping back for a moment from the new hotness to go back to your roots and try developing apps for the original iPhone? This article will walk you through the whole process of doing this even in 2025 when things no longer work as smoothly as they did in 2008.</p>
 </p><!-- Custom Layout Ends Here -->
       <time class="dt-published" datetime="2025-12-09T00:00:00+00:00" itemprop="datePublished">
         Dec 9, 2025
@@ -109,18 +109,18 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>In this article we will cover how to deploy apps from Xcode to an original 
-iPhone running iPhone OS 3 or iPhone OS 2 in 2025. This will also work with 
-iPhone 3G, iPod Touch (1st Generation), iPod Touch (2nd Generation). 
-This is the 2nd article in the <a href="../04/PPC-iPhone-1.html">"Enabling iPhone Development for PowerPC Macs"</a>
-series but this no longer requires a PowerPC Mac. You can use any Mac you like
-that can install Xcode . This one is quite a bit more involved with a lot of 
-fiddly steps.</p>
+<p>In this article we will cover how to deploy apps from Xcode to an original
+iPhone running iPhone OS 2 or 3 in 2025. This will also work with iPhone 3G,
+iPod Touch (1st Generation), iPod Touch (2nd Generation). This is the 2nd
+article in the <a href="../04/PPC-iPhone-1.html">"Enabling iPhone Development for PowerPCMacs"</a> 
+series but this no longer requires a PowerPC Mac. You can use any Mac running
+10.7, 10.6, or 10.5 that has Xcode 3 or 4 with the iPhone SDK installed,
+including Virtual Machine (if you still have an Intel Mac).</p>
 
-<p>But I think its important to remember that this is no different than what
-every iPhone developer had to do back in the day. Now Xcode has been enhanced
-so much that it does all of this for you, but this is what is iPhone 
-development required in 2010.</p>
+<p>There are a lot of fiddly steps, but I think its important to remember that this
+is no different than what every iPhone developer had to do back in 2008. Now
+Xcode has been enhanced so much that its all done for you. But back then, these
+were totally normal steps.</p>
 
 <h3 id="caveats">Caveats</h3>
 
@@ -140,23 +140,25 @@ but I have not tried.</p>
 
 <h3 id="approach">Approach</h3>
 
-<p>We are going to prepare the computer to sign iPhone apps using the Apple 
-Developer Portal. Then we are going to  prepare the iPhone to ignore the 
-signature via Jailbreak. This approach seems strange, but there are 2 sides 
-of the equation. Xcode will not complete the build process for iPhone apps that 
-are intended for the device without proper signatures. But then, these old 
-iPhone OS’s are so out of date that they no longer contain valid Certificate 
-Authorities to trust those signatures, resulting in them refusing to launch 
-the signed apps, thus requiring the Jailbreak.</p>
+<p>We are going to prepare Xcode to sign iPhone apps using the Apple Developer
+Portal. Then we are going to  prepare the iPhone to ignore the signature via
+Jailbreak. This approach seems strange, but there are 2 sides of the equation.
+Xcode will not complete the build process for iPhone apps that are intended for
+the device without proper signatures. But then, these old iPhone OS’s are so out
+of date that they no longer contain valid Certificate Authorities to trust those
+signatures, resulting in them refusing to launch the signed apps, thus requiring
+the Jailbreak.</p>
 
-<p>In this tutorial we are going to be basically living in the “Organizer” in 
-Xcode 3. Modern Xcode also has a window called Organizer, but it is 
-significantly different now. So you may want to check out 
-<a href="https://archive.org/details/professional-xcode-3/page/616/mode/2up">"Professional Xcode: Chapter 22 Using the Organizer"</a> 
-on Archive.org to read more about Organizer. It actually has
-many capabilities you would not expect, e.g. capturing screenshots from
-the device. It also covers <a href="https://archive.org/details/professional-xcode-3/page/628/mode/2up">provisioning your iPhone</a>, 
-admittedly in less detail than this tutorial.</p>
+<p>In this tutorial we are going to be basically living in the “Organizer” in Xcode</p>
+<ol>
+  <li>Modern Xcode also has a window called Organizer, but it is significantly
+different now. So you may want to check out 
+<a href="https://archive.org/details/professional-xcode-3/page/616/mode/2up">"Professional Xcode: Chapter 22 Using the Organizer"</a>
+on Archive.org to read more about Organizer. It actually has many capabilities
+you would not expect such as capturing screenshots from the device. The book
+also covers <a href="https://archive.org/details/professional-xcode-3/page/628/mode/2up">provisioning your iPhone</a>,
+admittedly in less detail than this tutorial.</li>
+</ol>
 
 <h4 id="prepare-the-computer-to-sign-iphone-apps-apple-developer-portal">Prepare the Computer to Sign iPhone Apps (Apple Developer Portal)</h4>
 
@@ -172,7 +174,7 @@ admittedly in less detail than this tutorial.</p>
 <h4 id="prepare-the-iphone-to-ignore-the-signature-jailbreak">Prepare the iPhone to Ignore the Signature (Jailbreak)</h4>
 
 <ol>
-  <li><strong>Jailbreak:</strong> Restore and Jailbreak iPhone using Legacy iOS Kit</li>
+  <li><strong>Jailbreak:</strong> Restore and Jailbreak iPhone using <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a></li>
   <li><strong>Cydia:</strong> Install the AppSync Tweak in Cydia</li>
   <li><strong>Provision:</strong> Install the Provisioning Profile on Device</li>
   <li><strong>Run:</strong> Run App on Device</li>
@@ -206,7 +208,7 @@ developer account AND need a jailbreak. It should be one or the other, not both.
 
 <p>Before any of this will work, we need to make sure your ancient version of
 Mac OS X is loaded with the latest Apple Certificate Authorities and 
-Intermediate Certificates that Apple uses for signing all of its development
+Intermediate Certificates that Apple uses for signing its development
 certificates.</p>
 
 <table>
@@ -255,10 +257,10 @@ keychain, not the Login keychain.</li>
 
 <p>This is the most tedious part. You should probably make a folder on your system
 for storing all of the output of this step, so you can zip it all up at the end
-and then back it up. This should all be possible on your PowerPC Mac via
-AquaFox, but I chose to use my modern Mac to do all of the Apple Portal stuff.
-This means, you will need to transfer files back and forth between the old
-system and the new system.</p>
+as a backup. This should all be possible on your Vintage Mac via AquaFox
+(PowerPC) or ArcticFox (Intel), but I chose to use my modern Mac to do all of
+the Apple Portal stuff. This means, you I needed to transfer files back and
+forth between the old system and the new system.</p>
 
 <h4 id="a-make-your-certificate-signing-request">A. Make Your Certificate Signing Request</h4>
 
@@ -283,7 +285,7 @@ for me at first. The Assistant said it had made my request and saved it to the
 Desktop, but it had not. To resolve this, I went into the System keychain and
 selected the Apple Root CA before starting the the Assistant. I am not sure if 
 it matters which certificate you select, but it seems like you need to select
-something.</p>
+something first.</p>
 
 <p>The way, I could tell that it was going to work is the assistant had the 
 checkbox in the UI that says “Let me specify key pair information”. When that
@@ -378,6 +380,7 @@ of every App you make, so make it something easy to remember.</p>
   <li>When it asks you for the bundle identifier click the “Wildcard” radio button 
 and type in your identifier</li>
   <li>Click “Register”</li>
+  <li>There is nothing to download in this step, so you can move to the next step</li>
 </ol>
 
 <h3 id="4-device-add-iphone-device-to-portal">4. Device: Add iPhone Device to Portal</h3>
@@ -414,12 +417,10 @@ Identifier”</li>
 provisioning</li>
 </ol>
 
-<p>A note on compatibility: 1. Xcode 3.1.4 that I am using only Original iPhone 
-and iPhone 3G as well as iPod Touch (1st Generation) and iPod Touch (2nd 
-Generation) running iPhone/iPod OS 3.1.3 or lower. But this will change if you 
-are running Xcode 3.2.X or 4.X.X. If its only a software version that needs to
-change then you can do that using Legacy-iOS-Kit which we will do later. As long
-as its iPhone 4 and lower, the devices can be downgraded without issue.</p>
+<p>If you got the error above that your device is not compatible, please verify
+your device version, the software version, and the Xcode version. These all
+need to be compatible to move on. If its an iPhone 4 or lower, then the device
+software can easily be downgraded via <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit.</a></p>
 
 <h3 id="5-provision-create-provisioning-profile-combines-step-2-3-4">5. Provision: Create Provisioning Profile (Combines Step 2, 3, 4)</h3>
 
@@ -456,17 +457,18 @@ provisioning profile invalid.</p>
 
 <ol>
   <li><strong>Open</strong> <a href="https://developer.apple.com/account/resources/profiles/list">Apple Developer Portal - Profiles</a> and click the + button next to Profiles</li>
-  <li><strong>Prompt 1:</strong> choose “iOS App Development”</li>
+  <li><strong>Prompt 1:</strong> Choose “iOS App Development”</li>
   <li><strong>Prompt 2:</strong> Choose the App Identifier you made in Step 3</li>
   <li><strong>Prompt 3:</strong> Choose the Certificate you made in Step 2. The names can be 
 pretty vague but I think the bottom one is the newest</li>
   <li><strong>Prompt 4:</strong> Choose the Device you added in Step 4</li>
   <li><strong>Prompt 5:</strong> Give the Profile a name</li>
   <li><strong>Prompt 6:</strong> Download the provisioning profile</li>
-  <li><strong>Organizer:</strong> In Xcode, choose Window→Organizer. In the sidebar Select 
-Provisioning Profiles and then drag the profile from the Finder into the Organizer</li>
-  <li>Now you can ZIP up all of the uploads and downloaded created during this part 
-of the tutorial for safe-keeping, if they are ever needed again</li>
+  <li><strong>Organizer:</strong> In Xcode, choose Window→Organizer. In the sidebar, select 
+Provisioning Profiles and then drag the profile from the Finder into the 
+Organizer</li>
+  <li>Now you can ZIP up all of the uploads and downloads created during this part 
+of the tutorial for safe-keeping, in case they are ever needed again</li>
 </ol>
 
 <h3 id="6-info-plist-edit-the-infoplist-and-build-settings-of-your-app">6. Info Plist: Edit the Info.plist and Build Settings of Your App</h3>
@@ -494,7 +496,7 @@ of the tutorial for safe-keeping, if they are ever needed again</li>
 
 <p>Now you are going to edit the Info.plist and the build settings of your 
 application. If you don’t have an application, you can just creat one from the
-templates under File → New Project. And yes, you will need to do this any time
+templates under File→New Project. And yes, you will need to do this any time
 you create a new application project.</p>
 
 <ol>
@@ -537,7 +539,7 @@ of this tutorial on the Phone, but I still got the same error.</p>
 
 <p>Its OK though, because honestly, these old devices are pretty much bricks
 without a Jailbreak. Also, jailbreaking is so incredibly easy now thanks
-to <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy-iOS-Kit</a> by LukeZGD. 
+to <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a> by LukeZGD. 
 If you use this tool successfully, you should definitely 
 <a href="https://ko-fi.com/lukezgd">buy him a Coffee</a> because the script is amazing!
 It even helps you enter DFU mode with exactly timed instructions.</p>
@@ -567,12 +569,13 @@ It even helps you enter DFU mode with exactly timed instructions.</p>
 
 <p>I will provide the instructions for performing a Restore and Jailbreak which
 will erase everything on the device. However, if your device is a time capsule,
-and you do not want to erase it, I totally understand. Legacy-iOS-Kit can also
-just jailbreak it for you. Please see the <a href="https://github.com/LukeZGD/Legacy-iOS-Kit/wiki/Jailbreaking-with-Legacy-iOS-Kit">documentation.</a></p>
+and you do not want to erase it, I totally understand. 
+<a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a> can also just 
+jailbreak it for you. Please see the <a href="https://github.com/LukeZGD/Legacy-iOS-Kit/wiki/Jailbreaking-with-Legacy-iOS-Kit">documentation.</a></p>
 
 <ol>
   <li>On a modern-ish Intel or Apple Silicon Mac, open Terminal: <code class="language-plaintext highlighter-rouge">cd Downloads</code></li>
-  <li>Clone Legacy-iOS-Kit: <code class="language-plaintext highlighter-rouge">git clone https://github.com/LukeZGD/Legacy-iOS-Kit.git</code></li>
+  <li>Clone Legacy iOS Kit: <code class="language-plaintext highlighter-rouge">git clone https://github.com/LukeZGD/Legacy-iOS-Kit.git</code></li>
   <li>CD into the Directory: <code class="language-plaintext highlighter-rouge">cd Legacy-iOS-Kit</code></li>
   <li>Run the setup script: <code class="language-plaintext highlighter-rouge">./restore.sh</code></li>
   <li>Plug in your device and then run the script again: <code class="language-plaintext highlighter-rouge">./restore.sh</code></li>
@@ -619,13 +622,13 @@ sometimes you have try the “ligher” activation thing 2 or 3 times.</p>
 </table>
 
 <p>Now you will be installing a special Teak for the iPhone called AppSync. This
-Tweak will prevent the process called ‘installd’ from checking for signatures
+Tweak will prevent the process called <code class="language-plaintext highlighter-rouge">installd</code> from checking for signatures
 when Apps are installed. This is critical to installing apps from iTunes,
-Xcode, or even Legacy-iOS-Kit as this one process checks all of them for a 
+Xcode, or even Legacy iOS Kit as this one process checks all of them for a 
 valid signature before installing.</p>
 
 <p>There is a different version of AppSync for different iOS versions, so see the
-<a href="https://github.com/LukeZGD/Legacy-iOS-Kit/wiki/Install-IPA-AppSync">Legacy-iOS-Kit Documentation</a> 
+<a href="https://github.com/LukeZGD/Legacy-iOS-Kit/wiki/Install-IPA-AppSync">Legacy iOS Kit Documentation</a> 
 for full details. In this tutorial, I will be showing this for iPhone OS 3.1.3.</p>
 
 <ol>
@@ -665,7 +668,7 @@ tap it and then restart the device</li>
 </table>
 
 <p>The last step before running an app is to connect it to your Vintage Mac and
-ask the Mac to use it for development. Lets go!</p>
+ask the Mac to use it for development.</p>
 
 <ol>
   <li><strong>Organizer:</strong> In Xcode, choose Window→Organizer and then plug in your device</li>
@@ -673,7 +676,8 @@ ask the Mac to use it for development. Lets go!</p>
 “Use for Development”(sorry, no screenshot because this is a 1-time action)</li>
   <li><strong>Add Profile:</strong> Under the Provisioning section, click the + button to add 
 your provisioning profile</li>
-  <li><strong>Device Verify:</strong> Open Settings, then tap General, then tap Profiles</li>
+  <li><strong>Device Verify:</strong> On your device, open Settings, then tap General, then tap 
+Profiles to verify your provisioning profile was installed</li>
 </ol>
 
 <h3 id="4-run-run-app-on-device">4. Run: Run App on Device</h3>
@@ -710,14 +714,14 @@ Breakpoint screenshot above:
       <li>① Open <code class="language-plaintext highlighter-rouge">main.m</code></li>
       <li>② Set a breakpoint on or before UIApplicationMain (click in that little 
 gutter area)</li>
-      <li>③ Make sure the Overview menu is set to run in Device</li>
-      <li>④ Click to change to debug view</li>
+      <li>③ Make sure the Overview menu is set to run on Device</li>
+      <li>④ Click to change to the debugging view</li>
       <li>⑤ Click Build and Go</li>
     </ol>
   </li>
   <li>Wait 30-60 seconds and you should see your app launch on your phone and it 
 will pause at the launch image</li>
-  <li>No in Xcode you will see the breakpoint was hit. Click the Continue button</li>
+  <li>In Xcode you will see the breakpoint was hit, click the Continue button</li>
   <li>On your phone, your app will now be running</li>
   <li>If you see the error in the screenshot above with the selected console output
 that means that AppSync from the previous step is not installed or not 
@@ -732,11 +736,12 @@ working properly and the iPhone is still checking signatures</li>
 
 <p>You now have a setup that can build and deploy apps to your vintage iPhone!
 Please enjoy the process of making vintage apps and working with old school 
-Objective-C. Its kind of a pain in the button, but I think you will enjoy its
+Objective-C. Its kind of a pain in the butt, but I think you will enjoy its
 simplicity and flexibility.</p>
 
 <p>If you want to run MameDaifuku, my sample app that lists out some build and
-runtime information, you can clone or download it from Github. <a href="https://github.com/jeffreybergier/MameDaifuku">https://github.com/jeffreybergier/MameDaifuku</a></p>
+runtime information, you can clone or download it from Github. 
+<a href="https://github.com/jeffreybergier/MameDaifuku">https://github.com/jeffreybergier/MameDaifuku</a></p>
 
   </div>
 

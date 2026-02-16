@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How to Sync iPhone 5 with PowerPC Macs | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How to Sync iPhone 5 with PowerPC Macs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Get an iPhone 5 to sync with a Mac running Mac OS X 10.5.8, this was never possible back in the day because Apple restricted the iPhone 5 to syncing only with Mac OS X 10.6.8 or higher." />
+<meta property="og:description" content="Get an iPhone 5 to sync with a Mac running Mac OS X 10.5.8, this was never possible back in the day because Apple restricted the iPhone 5 to syncing only with Mac OS X 10.6.8 or higher." />
+<link rel="canonical" href="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html" />
+<meta property="og:url" content="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to Sync iPhone 5 with PowerPC Macs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-16T00:00:00+00:00","datePublished":"2026-02-16T00:00:00+00:00","description":"Get an iPhone 5 to sync with a Mac running Mac OS X 10.5.8, this was never possible back in the day because Apple restricted the iPhone 5 to syncing only with Mac OS X 10.6.8 or higher.","headline":"How to Sync iPhone 5 with PowerPC Macs","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html"},"url":"https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+  <!-- Custom Layout Starts Here -->
+    
+    <div class="title-accessory">
+      <p><i class="apl-device-iphone-5-black-256 reflect below-md round-none"></i></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">How to Sync iPhone 5 with PowerPC Macs</h1><p><p>Get an iPhone 5 to sync with a Mac running Mac OS X 10.5.8, this was never possible back in the day because Apple restricted the iPhone 5 to syncing only with Mac OS X 10.6.8 or higher.</p>
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2026-02-16T00:00:00+00:00" itemprop="datePublished">
+        Feb 16, 2026
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    
+<table>
+  <thead>
+    <tr>
+      <th style="width: 50%;">iMac G4 and iPhone 5</th>
+      <th>iTunes Screenshots</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+        <a href="/assets/images/retro-tech/reverse-itunes-1/beauty-shot-1.jpeg">
+          <img src="/assets/images/retro-tech/reverse-itunes-1/beauty-shot-1-thumb.jpeg" alt="iMac G4 Beauty Shot" style="width: 100%; height: auto;" />
+        </a>
+      </td>
+      <td style="vertical-align: top;">
+        <a href="/assets/images/retro-tech/reverse-itunes-1/sync-success-1.png">
+          <img src="/assets/images/retro-tech/reverse-itunes-1/sync-success-1-thumb.png" alt="Sync Success 1" />
+        </a>
+        <a href="/assets/images/retro-tech/reverse-itunes-1/sync-success-2.png">
+          <img src="/assets/images/retro-tech/reverse-itunes-1/sync-success-2-thumb.png" alt="Sync Success 2" />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#tldr" id="markdown-toc-tldr">TL;DR</a>    <ul>
+      <li><a href="#tutorial" id="markdown-toc-tutorial">Tutorial</a></li>
+      <li><a href="#caveats" id="markdown-toc-caveats">Caveats</a></li>
+    </ul>
+  </li>
+  <li><a href="#background" id="markdown-toc-background">Background</a>    <ul>
+      <li><a href="#but-why" id="markdown-toc-but-why">But Why</a></li>
+    </ul>
+  </li>
+  <li><a href="#approach" id="markdown-toc-approach">Approach</a>    <ul>
+      <li><a href="#0-run-itunes-with-gdb" id="markdown-toc-0-run-itunes-with-gdb">0. Run iTunes with GDB</a></li>
+      <li><a href="#1-defeat-ptrace" id="markdown-toc-1-defeat-ptrace">1. Defeat PTRACE</a></li>
+      <li><a href="#2-inspect-every-string-created" id="markdown-toc-2-inspect-every-string-created">2. Inspect Every String Created</a></li>
+      <li><a href="#3-inspect-every-dictionary-created" id="markdown-toc-3-inspect-every-dictionary-created">3. Inspect Every Dictionary Created</a></li>
+      <li><a href="#4-failed-use-gdb-to-replace-the-minitunesversion" id="markdown-toc-4-failed-use-gdb-to-replace-the-minitunesversion">4. [Failed] Use GDB to Replace the MinITunesVersion</a></li>
+      <li><a href="#5-replace-the-key-directly-in-the-itunes-binary" id="markdown-toc-5-replace-the-key-directly-in-the-itunes-binary">5. Replace the Key Directly in the iTunes Binary</a></li>
+      <li><a href="#6-future-work-iphone-artwork" id="markdown-toc-6-future-work-iphone-artwork">6. [Future Work] iPhone Artwork</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p>In this article, I will briefly show you how to get an iPhone 5 to sync
+with any Mac running Mac OS X 10.5.8, and yes, this includes PowerPC Macs.
+Syncing the iPhone 5 with PowerPC Macs was never possible because Apple
+restricted the iPhone 5 to Mac OS X 10.6.8 or higher.</p>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>When the iPhone and iTunes communicate with each-other they do a handshake
+involving a lot of Property List (PLIST) XML passing. iTunes will start key
+exchanges and then the iPhone will send a large PLIST payload that explains the
+capabilities of the device such as the supported languages/regions, sync
+features, and most importantly the minimum version of iTunes required by this
+iPhone. This part of the PLIST is stored in the key “MinITunesVersion.” iTunes
+then checks this key and if the value is larger than the current version, iTunes
+will display an error saying which version of of iTunes is required. What is
+most important, is this key is not present when the iPhone 4s and iTunes do
+their handshake.</p>
+
+<p>So to bypass this check, all we need to do is change the “MinITunesVersion”
+string hardcoded into the iTunes binary to anything else and iTunes will then
+check for a key that does not exist in the PLIST XML provided by the iPhone
+and then iTunes will happily not display an error and bring your straight to the
+normal syncing screen in iTunes.</p>
+
+<h3 id="tutorial">Tutorial</h3>
+
+<ol>
+  <li>Download your favorite Binary HEX editor for your PowerPC Mac such as Hex Feind 
+(<a href="https://www.macintoshrepository.org/25974-hex-fiend">Macintosh Repository</a>, <a href="https://macintoshgarden.org/apps/hex-fiend">Macintosh Garden</a>)</li>
+  <li>In Finder, click Go→Go to Folder and type in <code class="language-plaintext highlighter-rouge">/Applications/iTunes.app/Contents/MacOS</code></li>
+  <li>Backup the iTunes binary by right clicking on it and choosing “Compress”</li>
+  <li>Open the iTunes binary in the Hex Editor</li>
+  <li>Search for the string “MinITunesVersion” (there should only be 1)</li>
+  <li>Change it to literally anything else
+    <ol>
+      <li>I changed mine to “MinITuMesVersion”</li>
+    </ol>
+  </li>
+  <li>Save the changes</li>
+  <li>Relaunch iTunes, you’re good to go</li>
+</ol>
+
+<p>With this approach, I have been able to sync Apps, Music, Podcasts, iPhoto, and
+Videos. Even the feature that allows you to rearrange your home screen from
+iTunes works fine.</p>
+
+<h3 id="caveats">Caveats</h3>
+
+<ul>
+  <li>This is a hack and may not work properly: hacker beware <i class="fa-solid fa-skull-crossbones"></i></li>
+  <li>After performing this hack, iTunes forcefully exits when trying to play
+any video. VLC has way better video playback performance so this is not a
+problem for me.
+    <ul>
+      <li>I assume there is some sort of checksum iTunes checks before it tries to 
+play video to protect DRM’ed content but I have not tried to troubleshoot 
+this yet.</li>
+    </ul>
+  </li>
+  <li>This might work for iPhone 5s and others but I have not tried</li>
+  <li>This may not work on newer versions of iOS. I was using iOS 6.1.3 but if your
+iPhone 5 is running a newer version, this may not work.
+    <ul>
+      <li>I confirmed this does not work if the iPhone is running iOS 10. I have not
+yet tested in iOS 8.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<p>You may or may not remember, but when the iPhone 5 was released, its official
+minimum system requirement was Mac OS X 10.6.8 Snow Leopard or newer. This of
+course ruled out the ability to sync your iPhone 5 with a PowerPC Mac as those
+only ran Mac OS X 10.5.8 Leopard at most. Given that Mac OS X 10.6 Snow Leopard
+was released in August 2009 and the iPhone 5 was released in 2012, this seems
+like a reasonable cutoff, especially in the fast-moving world of technology back
+then.</p>
+
+<p>If you Google this problem, you will find that there are many people online
+(well, online back in 2012) complaining about this limitation and others
+confidently making the <strong>wrong</strong> assertion that this is because of the switch
+from the 30-pin dock connector to the lightning connector. However, I was
+extremely suspicious of this because when I open iTunes 10.6.3 and plug in the
+iPhone 5, iTunes immediately shows a very nice error that says iTunes 10.7 is
+required. Furthermore, the iPhone 5 shows up in Xcode! Xcode won’t deploy to the
+device because iOS is too new, but it shows up and it can see its an iPhone 5
+and which iOS version its running. So I knew that this lightning issue was not
+true; clearly, the iPhone was communicating with the Mac even over lightning.</p>
+
+<p>Given that my iPhone 5 and my iPhone 4s were both running iOS 6.1.3 and one of
+them would happily sync with iTunes 10.6.3 one would not, I knew this limitation
+was artificial. And so began my first reverse engineering project: Figure out
+this artificial limitation and eliminate it.</p>
+
+<h3 id="but-why">But Why</h3>
+
+<p>Why did you I spend so much time getting my iMac G4 to sync to with an iPhone 5?
+The answer is that I want to try to use an iOS 6 iPhone as my main iPhone in
+\2026. What does that mean? Does that mean I won’t have a backup, modern,
+iPhone? No, of course I will. Its not possible to survive in the world without a
+semi-modern mobile phone. But it will be my backup. I only have a few apps I use
+on my iPhone and I think I can recreate them for iOS 6 without much issue. But
+more on that later.</p>
+
+<p>But why not use my iPhone 4s; its running iOS 6 as well. Well, the iPhone 5 is
+the newest iPhone that can run iOS 6 so the performance is much better and 1GB
+of RAM <i class="fa-regular fa-face-surprise"></i> which seems insane to me. But
+more important than that, the iPhone 5 has a widescreen display. Given so much
+of what I do on the iPhone is Youtube, the lack of widescreen is kind of killer.
+Also, the iPhone 5 can join 5GHz WiFi networks and it has a lightning connector.
+The lightning connector is so important because they are plentiful and I can
+charge anywhere, even in 2026.</p>
+
+<p>For these reasons I wanted to get my iPhone 5 working on my iMac G4 so I have a
+full retro sync solution for all of my music, photos, podcasts, etc.</p>
+
+<h2 id="approach">Approach</h2>
+
+<p>At first, I thought the mechanism that prevented syncing with the iPhone 5 was
+a whitelist in iTunes or in MobileDevice.framework. However, after many many
+hours searching both the disk and the iTunes and MobileDevice binaries in
+Hopper, I was totally failing to find a whitelist of supported devices 
+(Spoiler Alert: There isn’t one). So I had to change techniques, I had to
+try to debug iTunes live in GDB.</p>
+
+<p>I had never done disassembly or GDB on an app I did’t make before. Its
+definitely an interesting process. I used a ton of Gemini to get this done 
+(But I assume any AI will work). Gemini can’t think for you. But it can help
+you with syntax and with knowing which functions in Core Foundation to set 
+breakpoints on. But yeah, it can also totally lead you astray. There were
+times when I was outright scolding it to try to get it back on the right path.</p>
+
+<p>In the following few sections, I will walk you through how I defeated the iTunes
+version restriction for the iPhone 5. Considering how simple the fix ended up
+being, there’s probably a lot of people out there wondering why no one did this 
+12 years ago when the iPhone 5 was new (me included).</p>
+
+<h3 id="0-run-itunes-with-gdb">0. Run iTunes with GDB</h3>
+
+<p>I used GDB to launch and debug iTunes. I used custom GDB files to set 
+breakpoints and inspect the data flow between the iPhone and iTunes.</p>
+
+<p>In every section below, I will include the GDB file so you get an idea of how
+it works. To use the file, use the -x command in GDB.</p>
+
+<p><code class="language-plaintext highlighter-rouge">gdb -x ~/Desktop/myfile.gdb /Applications/iTunes/Content/MacOS/iTunes</code></p>
+
+<h3 id="1-defeat-ptrace">1. Defeat PTRACE</h3>
+
+<p>iTunes operates in a very defensive way. Its not surprising given this is one
+massively complex codebase and it deals with a lot of DRM content, purchasing,
+etc. For this reason, iTunes does frequently use <code class="language-plaintext highlighter-rouge">ptrace</code> to check if its
+connected to a debugger, and if so, it just quits. So the first thing I had to
+figure out how to do was bypass this check.</p>
+
+<p>It turns out its pretty easy. I set a breakpoint on the <code class="language-plaintext highlighter-rouge">ptrace</code> function and
+then forcefully return 0. With that simple trick, it worked. With this in place,
+iTunes happily runs while connected to the debugger <i class="fa-solid fa-user-ninja"></i></p>
+
+<pre><code class="language-gdb"># Set a breakpoint on ptrace
+break ptrace
+commands
+  # Optional, tells GDB to not print that the breakpoint was hit
+  silent
+  # Trick iTunes by forcing ptrace to return 0, no debugger attached
+  return 0
+  # Automatically continue so that the debugger doesn't pause
+  continue
+end
+
+# Tells GDB to run the executable after it reads the file
+run
+</code></pre>
+
+<h3 id="2-inspect-every-string-created">2. Inspect Every String Created</h3>
+
+<p>I had very little to go on at this point, I had already searched the binaries in
+Hopper thoroughly and I could not find any hardcoded references to any iPhone
+identifiers. I had also exhaustively searched the whole filesystem for
+references to iPhone identifiers. I was trying to find the whitelist for
+supported devices somewhere, but I just couldn’t find it.</p>
+
+<p>So I dropped down to lowest common denominator in GDB. “What if I just print
+every string that iTunes makes and see if I can find the whitelist in there?”
+The short answer is I did not find the whitelist, but when observing the strings
+flowing through the system, I noticed a lot of XML. Especially after I plugged
+in my phone. Perhaps this XML contained something interesting; perhaps indeed 
+<i class="fa-regular fa-face-smile-beam"></i></p>
+
+<!-- upgrade fontawesome to get get hugging face <i class="fa-brands fa-hugging-face"></i> -->
+
+<pre><code class="language-gdb">break ptrace
+commands
+  silent
+  return 0
+  continue
+end
+
+# Set a breakpoint on Core Foundation function that creates strings
+fb CFStringCreateWithBytes
+commands
+  # Print register 4 which contains the raw data bytes
+  x/s $r4
+  continue
+end
+
+run
+</code></pre>
+
+<h3 id="3-inspect-every-dictionary-created">3. Inspect Every Dictionary Created</h3>
+
+<p>Now that I was seeing XML get passed around, I thought this could be the key.
+What is in all of this XML? I decided I would inspect it and see if there was
+anything interesting. It turned out to be insanely interesting because once I 
+plugged in any iPhone, iTunes and the iPhone would immediately start an
+elaborate handshake via property lists. A ton of information was exchanged 
+between them. This included the most critical piece!</p>
+
+<p>It turns out that the iPhone was the one telling iTunes which version of iTunes
+was required. <strong>THERE WAS NO WHITELIST!</strong> <i class="fa-solid fa-spoon"></i></p>
+
+<blockquote>
+  <p>Note this file introduces a new GDB technique that Gemini showed me. When you
+start printing all of these strings to the console, the app slows down
+significantly. So at the beginning of the file, we set all the breakpoints we
+need. Then at the end, we disable the one we don’t want (Breakpoint 2). Then
+in a different breakpoint we re-enable that breakpoint.</p>
+
+  <p>With this technique we don’t need to print every XML iTunes creates when it
+boots up. Rather, we wait until the iPhone is plugged in <code class="language-plaintext highlighter-rouge">AMDeviceConnect</code> and
+then enable the XML printing breakpoint.</p>
+</blockquote>
+
+<pre><code class="language-gdb">
+break ptrace
+commands
+  silent
+  return 0
+  continue
+end
+
+# Set a breakpoint on Core Foundation function that 
+# creates a dictionary from property list data
+fb CFPropertyListCreateFromXMLData
+commands
+  # Get a pointer to the data (TODO: Is this needed???)
+  set $bytes = (char*)CFDataGetBytePtr($r4)
+  printf "%s\n", $bytes
+  continue
+end
+
+# Set a breakpoint on the MobileDevice.framework function that 
+# starts the iTunes &lt;-&gt; iPhone Handshake to enable the 
+# CFPropertyListCreateFromXMLData breakpoint
+fb AMDeviceConnect
+commands
+  # Re-enable breakpoint on CFPropertyListCreateFromXMLData
+  enable 2
+  continue
+end
+
+# Disable breakpoint on CFPropertyListCreateFromXMLData to improve performance. 
+# Once AMDeviceConnect is hit, the breakpoint will be re-enabled
+disable 2
+
+run
+</code></pre>
+
+<p>The XML is huge, so I won’t put it all in here. But below is a sample, 
+including the key we are interested in <code class="language-plaintext highlighter-rouge">MinITunesVersion</code>. Also, if you notice,
+it says <code class="language-plaintext highlighter-rouge">MinMacOSVersion</code> is 10.5.8 which means if Apple had released iTunes
+10.7 for 10.5.8, it would have worked without hacking. But I suppose what this
+means is you might be able to sync with iTunes running on 10.4 if you also 
+changed the <code class="language-plaintext highlighter-rouge">MinMacOSVersion</code> key in the iTunes binary. Of course, I have not
+tried this so it might not work.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;key&gt;</span>GeniusConfigMaxVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>20<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>GeniusConfigMinVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>GeniusMetadataMaxVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>20<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>GeniusMetadataMinVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>GeniusSimilaritiesMaxVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>20<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>GeniusSimilaritiesMinVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>HomeScreenIconColumns<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>4<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>HomeScreenIconDockMaxCount<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>4<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>HomeScreenIconHeight<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>57<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>HomeScreenIconRows<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>5<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>HomeScreenIconWidth<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>57<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>HomeScreenNewsstand<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>IconFolderColumns<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>4<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>IconFolderMaxPages<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>IconFolderRows<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>4<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>IconStateSaves<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>KeyTypeSupportVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>492<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>MinITunesVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;string&gt;</span>10.7.0<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;key&gt;</span>MinMacOSVersion<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;string&gt;</span>10.5.8<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;key&gt;</span>NeedsAntiPhishingDB<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>OEMA<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>OEMID<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>0<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>PhotoEventsSupported<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>PhotoFacesSupported<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>PhotoVideosSupported<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>PlaylistFoldersSupported<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>PodcastsSupported<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>RentalsSupported<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>Ringtones<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;true/&gt;</span>
+  <span class="nt">&lt;key&gt;</span>ScreenHeight<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>1136<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>ScreenScaleFactor<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>2<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>ScreenWidth<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;integer&gt;</span>640<span class="nt">&lt;/integer&gt;</span>
+  <span class="nt">&lt;key&gt;</span>SupportedKeyboards<span class="nt">&lt;/key&gt;</span>
+  <span class="nt">&lt;array&gt;</span>
+    <span class="nt">&lt;string&gt;</span>ar<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>bg_BG<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>bo<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>ca_ES<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>chr<span class="nt">&lt;/string&gt;</span>
+</code></pre></div></div>
+
+<h3 id="4-failed-use-gdb-to-replace-the-minitunesversion">4. [Failed] Use GDB to Replace the MinITunesVersion</h3>
+
+<p>Now that I knew exactly where the XML data was flowing through the system, I
+thought I would try to change it in-flight with GDB and iTunes would be none the
+wiser. However, this proved to be extremely difficult. Gemini walked me through
+all sorts of possibilities. The one I thought would be the most straightforward
+was setting a breakpoint on <code class="language-plaintext highlighter-rouge">CFDictionaryGetValue</code> and
+<code class="language-plaintext highlighter-rouge">CFDictionaryGetValueIfPresent</code>. I could then check if the key was
+<code class="language-plaintext highlighter-rouge">MinITunesVersion</code> and either return <code class="language-plaintext highlighter-rouge">10.6.3</code> or <code class="language-plaintext highlighter-rouge">null</code>. However, this turned
+out to be very complex because CFString/NSString are a <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/ClassClusters/ClassClusters.html">class cluster</a> 
+and have many underlying data types. From a developers perspective there is no
+difference, but when you are in GDB, you need to account for every possibility
+in order to compare the string data. Also, if you use a high level compare or
+print function like <code class="language-plaintext highlighter-rouge">CFShow</code> or <code class="language-plaintext highlighter-rouge">CFStringCompare</code>, that allocates new memory
+and that would cause iTunes to crash randomly as its not really safe to do that
+in the debugger.</p>
+
+<p>Note that even though the code snippet below is small, at this stage I spent
+so many hours with Gemini trying to get a working solution. A solution that
+would patch the <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> in flight using GDB.</p>
+
+<pre><code class="language-gdb">
+break ptrace
+commands
+  silent
+  return 0
+  continue
+end
+
+# Set a breakpoint on Core Foundation function that 
+# fetches the values from a dictionary using a key
+fb CFDictionaryGetValue
+commands
+  # Even this simple command to print the key would eventually crash iTunes
+  call (void)CFShow($r4)
+  continue
+end
+
+fb AMDeviceConnect
+commands
+  enable 2
+  continue
+end
+
+disable 2
+
+run
+</code></pre>
+
+<h3 id="5-replace-the-key-directly-in-the-itunes-binary">5. Replace the Key Directly in the iTunes Binary</h3>
+
+<p>It was only when this solution was not working that I started to use 
+plain-old-fashioned <code class="language-plaintext highlighter-rouge">grep</code> to search not only the entire filesystem on my
+iMac G4 but also on my iPhone 5 for the key <code class="language-plaintext highlighter-rouge">MinITunesVersion</code>. I actually found
+several interesting binaries on the iPhone 5 this way, but I have yet to look 
+into them.</p>
+
+<p>But on the iMac G4, it of course showed the plain-old iTunes binary contained
+this key. That is when I thought, perhaps I can just change the key in binary
+and call it a day. Then iTunes would just use the wrong key when querying the
+Property List provided by the iPhone. This could of course cause a crash if
+the key was required and expected by iTunes. However, I found that when I 
+watched the XML handshake between iTunes and my iPhone 4s, that 
+<code class="language-plaintext highlighter-rouge">MinITunesVersion</code> was not present. Which meant that iTunes was probably 
+considering this key as optional, which meant it was safe to change it 
+<i class="fa-solid fa-microscope"></i></p>
+
+<p>And thats exactly what happened. I opened the iTunes binary in a Hex Editor,
+searched for <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> and changed it to <code class="language-plaintext highlighter-rouge">MinITuMesVersion</code> and clicked “Save.”
+After relaunching iTunes, I plugged in my iPhone 5 and it just showed up in 
+iTunes with no fuss at all. Everything syncs just fine. I couldn’t believe it! 
+<i class="fa-regular fa-face-surprise"></i></p>
+
+<p><a href="/assets/images/retro-tech/reverse-itunes-1/hex-1.png"><img src="/assets/images/retro-tech/reverse-itunes-1/hex-1.png" alt="Hex Editor" /></a></p>
+
+<h3 id="6-future-work-iphone-artwork">6. [Future Work] iPhone Artwork</h3>
+
+<p>I want to get the correct artwork showing for the iPhone model in iTunes but
+right now it shows a blank. I tried manually installing the artwork files from
+iTunes 10.7 but that did not work (it also did not break anything). After doing
+some digging in Hopper, it looks like iTunes has a huge function that was
+probably code-generated where it selects the images. I tried for a bit to get
+it working, but I had to stop as its low priority.</p>
+
+<p>But maybe one of these days…</p>
+
+<p><a href="/assets/images/retro-tech/reverse-itunes-1/missing-artwork-1.png"><img src="/assets/images/retro-tech/reverse-itunes-1/missing-artwork-1.png" alt="Missing iPhone Artwork" /></a></p>
+
+  </div>
+
+  <a class="u-url" href="/retro-tech/2026/02/16/Reverse-iTunes-1.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="Github">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,116 +1,162 @@
----
-layout: post
-title: "QoS Redesign"
-titleAccessory: "[![WaterMe Icon](/assets/images/design/qos/profiles-600.png)](/assets/images/design/qos/profiles-2k.png){: .reflect .below-xl .round-sm }"
-excerpt: |
-  Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility
-  and improved simplicity.
-categories: [Design]
-tags: [Design, Professional]
----
+  ---
+  layout: post
+  title: "QoS Redesign"
+  titleAccessory: "[![WaterMe Icon](/assets/images/design/qos/profiles-600.png)](/assets/images/design/qos/profiles-2k.png){: .reflect .below-xl .round-sm }"
+  excerpt: |
+    Redesign QoS on SteelHead and SteelCentral Controller so network admins could
+    manage traffic with more power, less pain, and fewer tiny configuration crimes.
+  categories: [Design]
+  tags: [Design, Professional]
+  ---
 
-## Project
-The QoS feature of the SteelHead was being re-implemented and so it was due for
-a redesign. QoS is extremely complex and the design process was long. But it was
-an incredible success. Through extensive UX research and design, we proposed a
-new mental model for QoS in the SteelHead.
+  ## Project
 
-* TOC
-{:toc}
+  SteelHead QoS was being rebuilt, which meant the design could finally stop
+  pretending the old model was cute. It was powerful, yes. Understandable? Mmm,
+  let's not lie in public.
 
-### Feature Research
-[![Screenshot](/assets/images/design/qos/feature-600.png)](/assets/images/design/qos/feature-2k.png){: .thumbnail }
-QoS is an enormously complex feature. The first step in the process was to fully
-understand how QoS works, what its intended to do, and what is needed to make it
-do that. I learned everything from the HFSC algorithm, QoS classes, deep packet
-inspection, latency priority, minimum and maximum bandwidth, etc. It got to the
-point where the questions I asked of the engineers couldn't be answered without
-looking into their source code.
+  QoS is a lot: bandwidth, latency, classes, DPI, priorities, network topology,
+  failure states, and the brutal truth that giving one thing more priority means
+  taking it from something else. There is no magic bandwidth purse, darling.
 
-### User Research
-[![Screenshot](/assets/images/design/qos/user-600.png)](/assets/images/design/qos/user-2k.png){: .thumbnail }
-After learning everything there is to know about how QoS works, it was time to
-speak with network administrators to see how they actually use it. I went onsite
-at several companies in Illinois, Montreal, and the UK. The user researcher and
-I also conducted remote interviews of many more firms. We learned what they used
-QoS for, what issues they had with the current version of QoS, and what they
-wanted to do with the QoS feature in the future.
+  So we did the work. We researched the feature, interviewed real network admins,
+  mapped the mess, and designed a cleaner mental model for managing QoS across
+  SteelHead and SteelCentral Controller.
 
-### Sites
-[![Screenshot](/assets/images/design/qos/sites-600.png)](/assets/images/design/qos/sites-2k.png){: .thumbnail }
-QoS needs to know the speeds of every network connection in the system. It needs
-to know this so it can adequately divide up resources. Network administrators
-have hundreds, or even thousands of locations. And each location can have
-multiple network connections. So I created an entire concept around this called
-'Sites.' Each site has any number of uplinks (network connections) and each
-uplink has upstream and downstream bandwidths associated with them. This gives
-the QoS system the information it needs on bandwidth restrictions across the
-entire network.
+  * TOC
+  {:toc}
 
-### Classes
-[![Screenshot](/assets/images/design/qos/classes-600.png)](/assets/images/design/qos/classes-2k.png){: .thumbnail }
-QoS systems usually have the concept of classes. Classes are sort of like
-buckets. The network administrator puts certain applications into certain
-buckets, then the system treats each bucket with a certain level of importance.
-The most important thing to remember about these buckets, is that giving one
-more resources, necessarily gives the others less. Also, putting all traffic
-into an important bucket may not be desirable. QoS works by prioritizing
-important traffic over less important traffic. If all traffic is marked as
-important, it can't do that. Concerns like this were common from network
-administrators. I attempted to produce UI's that could show some of this
-information in a visual way, but in the end, we settled for a fairly simple tree
-visualization. A few slides after this, there are some concepts I made for
-visually showing class information.
+  ### Feature Research
 
-### Rules
-[![Screenshot](/assets/images/design/qos/classes-600.png)](/assets/images/design/qos/classes-2k.png){: .thumbnail }
-QoS classes are like buckets you put Apps into that then get managed by the QoS
-system. Rules are the mechanism by which the network administrator puts apps
-into the classes. Because SteelHead has incredibly powerful Deep Packet
-Inspection (DPI) technology. Specifying apps is very easy. Users can search for
-commonly known app names, as opposed to intricate IP address and port mappings.
-Also, our team pre-grouped the apps into about 8 groups. Each group contains
-approximately 800 applications. The rules can be specified with an individual
-app or an individual app group. This makes configuring QoS extremely fast.
+  [![Screenshot](/assets/images/design/qos/feature-600.png)](/assets/images/design/qos/feature-2k.png){: .thumbnail }
 
-### Profiles
-[![Screenshot](/assets/images/design/qos/profiles-600.png)](/assets/images/design/qos/profiles-2k.png){: .thumbnail }
-QoS profiles are how you connect QoS Classes and Rules and Sites. The
-SteelCentral Controller has a birds-eye view of all the SteelHeads on a
-customer's network. We designed the profiles UI to take advantage of this extra
-knowledge. We did this by having the network administrator choose a source and
-destination site, or group of sites, that each profile applies to. With this
-information, the SteelCentral Controller knows how to distribute the QoS
-Profiles to all appliances automatically. This simplification makes QoS
-configuration far more declarative. This is something we strive for. We call it
-'intent' based management. Where the network administrator specifies **what**
-they want, rather than **how** to make it happen. This is an incredibly powerful
-paradigm for the new QoS feature.
+  First, I had to understand the beast. HFSC, QoS classes, deep packet inspection,
+  latency priority, minimum bandwidth, maximum bandwidth. The whole technical
+  pageant.
 
-## Experimentation
-As with all products and features, not everything the design team makes, makes
-it into the product. Sometimes they're features that are not needed, sometimes
-they are too complex, and sometimes they are just way too cool. Below are some
-experiments that I made that never shipped.
+  I got deep enough that some engineering questions could not be answered from
+  memory. People had to go read the source code. That is when you know the design
+  research has arrived wearing boots.
 
-### QoS Class Feedback
-[![Screenshot](/assets/images/design/qos/profile-experiment1-600.png)](/assets/images/design/qos/profile-experiment1-2k.png){: .thumbnail }
-Setting the min and max bandwidth allocations for a QoS class is kind of a
-guessing game. Set the numbers and see how it goes. In order to alleviate
-this, I attempted to create some mockups with configurations that would
-advise the user of issues with the classes and tried to summarize their
-congestion over time in a visual way.
+  ### User Research
 
-### Uplink Variations
-[![Screenshot](/assets/images/design/qos/profile-experiment2-600.png)](/assets/images/design/qos/profile-experiment2-2k.png){: .thumbnail }
-Uplink Variations are a system where the network admin could select
-different QoS Class min and max assignments based on the Uplink that was
-being used. This is important when one or more network connections fail at a
-site. In those conditions, critical traffic needs a higher priority.
+  [![Screenshot](/assets/images/design/qos/user-600.png)](/assets/images/design/qos/user-2k.png){: .thumbnail }
 
-### Dashboard Widget
-[![Screenshot](/assets/images/design/qos/dashboard-experiment-600.png)](/assets/images/design/qos/dashboard-experiment-2k.png){: .thumbnail }
-SteelCentral Controller has really great dashboards that give an overview of
-what is going on on your network. This is one mockups I made of what a QoS
-widget could have looked at. It shows the QoS classes. When a class is
-expanded, it shows relevant errors and warnings.
+  After learning how QoS worked internally, we talked to the people actually
+  responsible for making it behave: network administrators.
+
+  I went onsite in Illinois, Montreal, and the UK, and worked with a researcher on
+  remote interviews with more firms. We learned what admins used QoS for, where
+  the current product made them suffer, and what they needed next.
+
+  The answer was not "give me 900 more settings and a migraine." They wanted
+  control, confidence, and a model that matched how their networks actually worked.
+
+  ### Sites
+
+  [![Screenshot](/assets/images/design/qos/sites-600.png)](/assets/images/design/qos/sites-2k.png){: .thumbnail }
+
+  QoS needs to know the speed of every network connection so it can divide
+  resources intelligently. Simple sentence. Extremely rude problem.
+
+  Customers can have hundreds or thousands of locations, and each location can
+  have multiple uplinks. So I created the concept of **Sites**.
+
+  A site contained uplinks. Each uplink had upstream and downstream bandwidth.
+  Clean. Concrete. No spreadsheet séance required.
+
+  This gave QoS the bandwidth constraints it needed while giving admins a model
+  that matched the way they already thought about their network.
+
+  ### Classes
+
+  [![Screenshot](/assets/images/design/qos/classes-600.png)](/assets/images/design/qos/classes-2k.png){: .thumbnail }
+
+  QoS classes are buckets for traffic. Put applications into a class, then tell
+  the system how important that class is.
+
+  But priority is not a tiara everyone gets to wear. If one class gets more
+  resources, another gets less. And if every app is marked critical, then nothing
+  is critical. Congratulations, you made a very expensive shrug.
+
+  Admins understood this tension, but the UI needed to help them see it. I explored
+  ways to visualize those tradeoffs and show class behavior more clearly. The
+  final direction used a simpler tree visualization because sometimes the best
+  design is the one that does not make users file a support ticket with their
+  therapist.
+
+  ### Rules
+
+  [![Screenshot](/assets/images/design/qos/classes-600.png)](/assets/images/design/qos/classes-2k.png){: .thumbnail }
+
+  Rules are how admins put applications into QoS classes.
+
+  Because SteelHead had strong deep packet inspection, admins could search for
+  applications by name instead of lovingly handcrafting IP and port mappings like
+  it was 2003 and nobody had feelings.
+
+  We also grouped applications into about eight larger categories, each with
+  hundreds of apps. Rules could target a single app or a whole app group, which
+  made configuration much faster and much less cursed.
+
+  ### Profiles
+
+  [![Screenshot](/assets/images/design/qos/profiles-600.png)](/assets/images/design/qos/profiles-2k.png){: .thumbnail }
+
+  Profiles connected Sites, Classes, and Rules.
+
+  SteelCentral Controller had a network-wide view of all the SteelHeads in a
+  customer environment, so we used that knowledge. Admins could choose source and
+  destination sites, or groups of sites, and define the QoS behavior for that
+  relationship.
+
+  Then SteelCentral Controller could distribute the right profiles to the right
+  appliances automatically. Imagine that: the computer doing the computer work.
+
+  This moved QoS toward intent-based management. Admins specified **what** they
+  wanted, and the system handled more of **how** to make it happen. Less manual
+  wiring. More strategy. Very correct.
+
+  ## Experimentation
+
+  Not every concept ships. Some ideas are unnecessary. Some are too complex. Some
+  are gorgeous little divas that need to leave the stage.
+
+  These are a few explorations that did not make it into the product.
+
+  ### QoS Class Feedback
+
+  [![Screenshot](/assets/images/design/qos/profile-experiment1-600.png)](/assets/images/design/qos/profile-experiment1-2k.png){: .thumbnail }
+
+  Setting minimum and maximum bandwidth for a QoS class can become a guessing
+  game: pick numbers, wait, squint at the results, repeat until morale improves.
+
+  I explored designs that warned admins about class issues and summarized
+  congestion over time. The goal was to make QoS less mysterious and help admins
+  catch bad configurations before production started sending smoke signals.
+
+  ### Uplink Variations
+
+  [![Screenshot](/assets/images/design/qos/profile-experiment2-600.png)](/assets/images/design/qos/profile-experiment2-2k.png){: .thumbnail }
+
+  Uplink variations let admins define different class allocations depending on
+  which uplink was active.
+
+  That matters when connections fail. In a degraded state, critical traffic may
+  need different treatment than it gets during normal operation. This concept let
+  admins design for reality instead of pretending the network would always behave.
+  Adorable fantasy, but no.
+
+  ### Dashboard Widget
+
+  [![Screenshot](/assets/images/design/qos/dashboard-experiment-600.png)](/assets/images/design/qos/dashboard-experiment-2k.png){: .thumbnail }
+
+  SteelCentral Controller already had strong dashboards, so I explored what a QoS
+  widget could look like.
+
+  The widget showed QoS classes at a glance. Expanding a class revealed relevant
+  errors and warnings, giving admins a fast way to see where policy or performance
+  needed attention.
+
+  Because if something is on fire, the UI should say so clearly. Preferably before
+  everyone is in a conference room pretending this was unforeseeable.

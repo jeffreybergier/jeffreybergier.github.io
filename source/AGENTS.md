@@ -4,9 +4,9 @@
 
 This is Jeffrey Bergier's personal website and blog, a [Jekyll](https://jekyllrb.com/) static site hosted on GitHub Pages at [jeffburg.com](https://jeffburg.com). The Jekyll source lives entirely in the `source/` directory.
 
-- **Ruby version**: 3.3 (pinned in CI and Docker)
+- **Ruby version**: CI uses Ruby 3.3; the Altivec Compose workflow uses Ruby 3.0-compatible locked gems
 - **Jekyll version**: `~> 4.4.1`
-- **Bundler version**: 2.7.2 (as recorded in `Gemfile.lock`)
+- **Bundler version**: 2.5.23 (as recorded in `Gemfile.lock`)
 - **Theme**: [minima](https://github.com/jekyll/minima) (pinned to commit `c27c54a`)
 - **Skin**: dark
 - **CI/CD**: GitHub Actions (`.github/workflows/gh-pages.yml`) builds and deploys on push to `main`
@@ -16,16 +16,16 @@ This is Jeffrey Bergier's personal website and blog, a [Jekyll](https://jekyllrb
 ### Option 1: Docker (recommended for consistency)
 
 ```bash
-docker build -t ruby-container .
-docker-compose up -d
-docker exec -it jekyll-environment bash
-# Inside the container:
-cd /source
-bundle install
-bundle exec jekyll serve --host 0.0.0.0 --port 8080
+docker compose up serve
 ```
 
 Then open `http://localhost:8080`.
+
+For an interactive Altivec shell:
+
+```bash
+docker compose run --rm altivec-intelligence
+```
 
 ### Option 2: Local Ruby
 

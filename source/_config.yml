@@ -31,6 +31,7 @@ plugins:
 sass:
   load_paths:
     - _sass
+    - assets/css
 minima:
   skin: dark
   show_excerpts: true

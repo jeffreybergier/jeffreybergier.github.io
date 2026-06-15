@@ -207,7 +207,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif;
-  color: rgb(148.75, 148.75, 148.75);
+  color: #959595;
   background-color: #181818;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -294,7 +294,7 @@ a:visited {
   color: #80bbff;
 }
 a:hover {
-  color: rgb(148.75, 148.75, 148.75);
+  color: #959595;
   text-decoration: underline #999999;
   text-underline-offset: 3px;
 }
@@ -310,7 +310,7 @@ a:hover {
  */
 blockquote {
   color: #999999;
-  border-left: 4px solid rgb(43.35, 43.35, 43.35);
+  border-left: 4px solid #2b2b2b;
   padding-left: 15px;
   font-size: 1.05rem;
   font-style: italic;
@@ -350,7 +350,7 @@ pre > code {
 }
 
 div.highlight, figure.highlight {
-  border: 1px solid rgb(43.35, 43.35, 43.35);
+  border: 1px solid #2b2b2b;
   border-radius: 3px;
 }
 div.highlight pre, figure.highlight pre {
@@ -369,7 +369,7 @@ figure.highlight table {
   margin: -8px -12px -14px;
 }
 figure.highlight td.gutter {
-  border-right: 1px solid rgb(43.35, 43.35, 43.35);
+  border-right: 1px solid #2b2b2b;
 }
 figure.highlight td.code {
   width: 100%;
@@ -378,7 +378,7 @@ figure.highlight td.code {
 code.highlighter-rouge {
   padding: 1px 5px;
   font-size: 14px;
-  border: 1px solid rgb(43.35, 43.35, 43.35);
+  border: 1px solid #2b2b2b;
   border-radius: 3px;
 }
 
@@ -433,22 +433,22 @@ table {
   margin-bottom: 30px;
   width: 100%;
   text-align: left;
-  color: rgb(148.75, 148.75, 148.75);
+  color: #959595;
   border-collapse: collapse;
-  border: 1px solid rgb(43.35, 43.35, 43.35);
+  border: 1px solid #2b2b2b;
 }
 table tr:nth-child(even) {
-  background-color: rgb(34.2, 34.2, 34.2);
+  background-color: #222222;
 }
 table th, table td {
   padding: 10px 15px;
 }
 table th {
-  background-color: rgb(49.5, 49.5, 49.5);
-  border: 1px solid rgb(62.25, 62.25, 62.25);
+  background-color: #323232;
+  border: 1px solid #3e3e3e;
 }
 table td {
-  border: 1px solid rgb(43.35, 43.35, 43.35);
+  border: 1px solid #2b2b2b;
 }
 @media screen and (max-width: 800px) {
   table {
@@ -469,7 +469,7 @@ table td {
   line-height: 54px;
   background-color: #181818;
   border-top: 5px solid #999999;
-  border-bottom: 1px solid rgb(43.35, 43.35, 43.35);
+  border-bottom: 1px solid #2b2b2b;
 }
 
 .site-title {
@@ -485,7 +485,7 @@ table td {
   }
 }
 .site-title, .site-title:visited {
-  color: rgb(165.75, 165.75, 165.75);
+  color: #a6a6a6;
 }
 
 .site-nav {
@@ -497,7 +497,7 @@ table td {
   display: none;
 }
 .site-nav .nav-item {
-  color: rgb(148.75, 148.75, 148.75);
+  color: #959595;
 }
 .site-nav .nav-item:not(:last-child) {
   margin-right: 15px;
@@ -508,7 +508,7 @@ table td {
     top: 9px;
     right: 18px;
     background-color: #181818;
-    border: 1px solid rgb(43.35, 43.35, 43.35);
+    border: 1px solid #2b2b2b;
     border-radius: 5px;
     text-align: right;
   }
@@ -557,7 +557,7 @@ table td {
   .site-nav .nav-item {
     display: block;
     padding: 5px 0;
-    color: rgb(148.75, 148.75, 148.75);
+    color: #959595;
     line-height: 1.5;
   }
 }
@@ -566,7 +566,7 @@ table td {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid rgb(43.35, 43.35, 43.35);
+  border-top: 1px solid #2b2b2b;
   padding: 30px 0;
 }
 
@@ -588,7 +588,7 @@ table td {
 .footer-col-wrapper,
 .social-links {
   font-size: 0.9375rem;
-  color: rgb(132.6, 132.6, 132.6);
+  color: #858585;
 }
 
 .footer-col {
@@ -658,7 +658,7 @@ table td {
 
 .post-meta {
   font-size: 14px;
-  color: rgb(132.6, 132.6, 132.6);
+  color: #858585;
 }
 
 .post-link {
@@ -673,7 +673,7 @@ table td {
   margin-bottom: 30px;
   padding-bottom: 18px;
   text-align: center;
-  border-bottom: 1px solid rgb(43.35, 43.35, 43.35);
+  border-bottom: 1px solid #2b2b2b;
 }
 
 .post-meta .bullet-divider {
@@ -762,10 +762,10 @@ table td {
 .social-media-list li a {
   display: block;
   padding: 10px 12px;
-  border: 1px solid rgb(43.35, 43.35, 43.35);
+  border: 1px solid #2b2b2b;
 }
 .social-media-list li a:hover {
-  border-color: rgb(165.75, 165.75, 165.75);
+  border-color: #a6a6a6;
 }
 
 /**
@@ -786,10 +786,10 @@ table td {
 .pagination li a {
   display: block;
   text-decoration: none;
-  border: 1px solid rgb(43.35, 43.35, 43.35);
+  border: 1px solid #2b2b2b;
 }
 .pagination li a:hover {
-  border-color: rgb(165.75, 165.75, 165.75);
+  border-color: #a6a6a6;
 }
 .pagination li a, .pagination li div {
   min-width: 41px;
@@ -801,7 +801,7 @@ table td {
   border: 1px solid transparent;
 }
 .pagination li div.pager-edge {
-  color: rgb(43.35, 43.35, 43.35);
+  color: #2b2b2b;
   border: 1px dashed;
 }
 .pagination li div.current-page {
@@ -824,7 +824,7 @@ table td {
   margin-right: 9px;
   margin-left: -15px;
   appearance: none;
-  border: 8px solid rgb(43.35, 43.35, 43.35);
+  border: 8px solid #2b2b2b;
   vertical-align: text-top;
   z-index: -1;
 }

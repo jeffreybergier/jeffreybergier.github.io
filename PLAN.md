@@ -23,25 +23,25 @@ site into the new dark-mode Jekyll site.
 - New image root: `source/assets/images`
 - New download root: `source/assets/downloads`
 
-## Content Still To Migrate
+## Migration Checklist
 
-These old pages appear to be real project/article content and do not yet have
-matching posts in the new site.
+These old pages appear to be real project/article content. Check them off as
+they are migrated into new Jekyll posts.
 
-| Old content | Old file | Suggested category | Notes |
-| --- | --- | --- | --- |
-| Change Management Rapid Prototype | `web-root/changes.html` | Design | 2016 Riverbed/professional UX project |
-| Rule Icon System | `web-root/iconsys.html` | Design | Current `source/_drafts/IconSystem.md` is a duplicate of QoS, not this article |
-| SteelReserve Design | `web-root/srdesign.html` | Design | 2015 app/product design project |
-| Topology Eyewear | section in `web-root/cocoa.html` | Design or Apps | Only exists as a section inside the old Cocoa landing page |
-| WeatherMe | `web-root/weather.html` | Design | 2011 student mobile app concept |
-| Design for Manufacture | `web-root/penpot.html` | Design | 2010 product design project |
-| Innovative Kitchenware / Intelligent Kitchen | `web-root/ikb.html` | Design | Old hub says "Intelligent Kitchen"; detail page says "Innovative Kitchenware" |
-| Architectural Lighting | `web-root/lighting.html` | Design | 2009 product/lighting project |
-| Electronics | `web-root/electronics.html` | Design | 2010 student electronics project |
-| Surface Modeling | `web-root/surface.html` | Design | 2010 Alias Studio / Surface Mouse modeling |
-| Workshop Experience | `web-root/workshop.html` | Design | 2010 workshop/process page |
-| `[REDACTED] Project` | `web-root/redacted.html` | Design | Small placeholder page; migrate only if full parity is desired |
+| Status | Old content | Old file | Suggested category | Notes |
+| --- | --- | --- | --- | --- |
+| [x] | Change Management Rapid Prototype | `web-root/changes.html` | Design | Migrated to `source/_posts/2016-01-01-Change-Management.md` |
+| [x] | Rule Icon System | `web-root/iconsys.html` | Design | Migrated to `source/_posts/2016-01-01-Rule-Icon-System.md` |
+| [ ] | SteelReserve Design | `web-root/srdesign.html` | Design | 2015 app/product design project |
+| [ ] | Topology Eyewear | section in `web-root/cocoa.html` | Design or Apps | Only exists as a section inside the old Cocoa landing page |
+| [ ] | WeatherMe | `web-root/weather.html` | Design | 2011 student mobile app concept |
+| [ ] | Design for Manufacture | `web-root/penpot.html` | Design | 2010 product design project |
+| [ ] | Innovative Kitchenware / Intelligent Kitchen | `web-root/ikb.html` | Design | Old hub says "Intelligent Kitchen"; detail page says "Innovative Kitchenware" |
+| [ ] | Architectural Lighting | `web-root/lighting.html` | Design | 2009 product/lighting project |
+| [ ] | Electronics | `web-root/electronics.html` | Design | 2010 student electronics project |
+| [ ] | Surface Modeling | `web-root/surface.html` | Design | 2010 Alias Studio / Surface Mouse modeling |
+| [ ] | Workshop Experience | `web-root/workshop.html` | Design | 2010 workshop/process page |
+| [ ] | `[REDACTED] Project` | `web-root/redacted.html` | Design | Small placeholder page; migrate only if full parity is desired |
 
 These old items already have new posts and should not be duplicated:
 

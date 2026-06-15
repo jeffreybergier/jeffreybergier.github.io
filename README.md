@@ -1,28 +1,13 @@
 # jeffreybergier.github.io
 
-Basic but wrong instructions are from https://dev.to/cuongnp/setting-up-a-local-development-environment-for-jekyll-with-docker-d8k
+Jekyll source lives in `source/`.
 
-### Build New Docker Container
+### Open an Altivec Shell
 
-`cd ~/Developer/My\ Github/jeffreybergier.github.io `
-`docker build -t ruby-container .`
-
-### Launch Docker Compose
-
-`docker-compose up -d`
-`docker exec -it jekyll-environment bash`
-
-### Set up new jekyll site
-
-`jekyll new temp`
-
-Then move everything from temp into the parent (jekyll) folder
+`docker compose run --rm altivec-intelligence`
 
 ### Serve Jekyll
 
-`bundle install`
-`bundle exec jekyll serve --host 0.0.0.0 --port 8080`
+`docker compose up serve`
 
-### Open In Your Browser
-
-`http://localhost:8080`
+Open `http://localhost:8080`.

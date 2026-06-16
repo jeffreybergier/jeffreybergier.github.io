@@ -13,9 +13,11 @@ My workshop experience includes basic woodworking, metal machining and metal fab
 
 ---
 
-[![Workshop Experience](/assets/images/design/workshop-experience/workshop-tb2-300.png)](/assets/images/design/workshop-experience/workshop-tb2-1k.png){: .thumbnail }
-[![Workshop Experience](/assets/images/design/workshop-experience/workshop-tb3-300.png)](/assets/images/design/workshop-experience/workshop-tb3-1k.png){: .thumbnail }
-[![Workshop Experience](/assets/images/design/workshop-experience/workshop-table2-300.png)](/assets/images/design/workshop-experience/workshop-table2-1k.png){: .thumbnail }
-[![Workshop Experience](/assets/images/design/workshop-experience/workshop-table1-300.png)](/assets/images/design/workshop-experience/workshop-table1-1k.png){: .thumbnail }
-[![Workshop Experience](/assets/images/design/workshop-experience/workshop-tea1-300.png)](/assets/images/design/workshop-experience/workshop-tea1-1k.png){: .thumbnail }
-[![Workshop Experience](/assets/images/design/workshop-experience/workshop-tea2-300.png)](/assets/images/design/workshop-experience/workshop-tea2-1k.png){: .thumbnail }
+<div class="image-gallery-wide">
+  <a href="/assets/images/design/workshop-experience/workshop-tb2-1k.png"><img src="/assets/images/design/workshop-experience/workshop-tb2-300.png" alt="Workshop Experience"></a>
+  <a href="/assets/images/design/workshop-experience/workshop-tb3-1k.png"><img src="/assets/images/design/workshop-experience/workshop-tb3-300.png" alt="Workshop Experience"></a>
+  <a href="/assets/images/design/workshop-experience/workshop-table2-1k.png"><img src="/assets/images/design/workshop-experience/workshop-table2-300.png" alt="Workshop Experience"></a>
+  <a href="/assets/images/design/workshop-experience/workshop-table1-1k.png"><img src="/assets/images/design/workshop-experience/workshop-table1-300.png" alt="Workshop Experience"></a>
+  <a href="/assets/images/design/workshop-experience/workshop-tea1-1k.png"><img src="/assets/images/design/workshop-experience/workshop-tea1-300.png" alt="Workshop Experience"></a>
+  <a href="/assets/images/design/workshop-experience/workshop-tea2-1k.png"><img src="/assets/images/design/workshop-experience/workshop-tea2-300.png" alt="Workshop Experience"></a>
+</div>

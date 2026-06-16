@@ -123,9 +123,44 @@ a.thumbnail img {
 
 /* Title Accessory + Header Layout */
 
+.page-content {
+  padding-top: 0;
+}
+
+.post-header {
+  padding-top: 30px;
+}
+
+.post-header-wide {
+  padding-top: 0;
+}
+
 .title-accessory {
   max-width: 256px;
   margin: 0 auto 0rem;
+}
+
+.title-accessory-wide {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 1.5rem;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 800px) {

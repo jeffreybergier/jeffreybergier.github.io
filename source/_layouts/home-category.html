@@ -5,9 +5,9 @@ layout: base
 ---
 
   <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
-  <header class="post-header">
+  <header class="post-header{% if page.titleAccessoryStyle %} post-header-{{ page.titleAccessoryStyle }}{% endif %}">
     {% if page.titleAccessory %}
-      <div class="title-accessory">
+      <div class="title-accessory{% if page.titleAccessoryStyle %} title-accessory-{{ page.titleAccessoryStyle }}{% endif %}">
         {{ page.titleAccessory | markdownify }}
       </div>
     {% endif %}

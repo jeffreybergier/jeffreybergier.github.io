@@ -36,12 +36,16 @@ they are migrated into new Jekyll posts.
 | [ ] | Topology Eyewear | section in `web-root/cocoa.html` | Design or Apps | Only exists as a section inside the old Cocoa landing page |
 | [x] | WeatherMe | `web-root/weather.html` | Design | Migrated to `source/_posts/2011-01-01-WeatherMe.md` |
 | [x] | Design for Manufacture | `web-root/penpot.html` | Design | Migrated to `source/_posts/2010-01-01-Design-for-Manufacture.md` |
-| [ ] | Innovative Kitchenware / Intelligent Kitchen | `web-root/ikb.html` | Design | Old hub says "Intelligent Kitchen"; detail page says "Innovative Kitchenware" |
+| [x] | Innovative Kitchenware / Intelligent Kitchen | `web-root/ikb.html` | Design | Migrated to `source/_posts/2010-01-01-Innovative-Kitchenware.md`; old hub says "Intelligent Kitchen"; detail page says "Innovative Kitchenware" |
 | [ ] | Architectural Lighting | `web-root/lighting.html` | Design | 2009 product/lighting project |
 | [ ] | Electronics | `web-root/electronics.html` | Design | 2010 student electronics project |
 | [ ] | Surface Modeling | `web-root/surface.html` | Design | 2010 Alias Studio / Surface Mouse modeling |
 | [ ] | Workshop Experience | `web-root/workshop.html` | Design | 2010 workshop/process page |
 | [ ] | `[REDACTED] Project` | `web-root/redacted.html` | Design | Small placeholder page; migrate only if full parity is desired |
+
+Category decision: migrate Innovative Kitchenware, Architectural Lighting,
+Electronics, Surface Modeling, Workshop Experience, and `[REDACTED] Project`
+under `categories: [Design]` if/when they are ported.
 
 These old items already have new posts and should not be duplicated:
 

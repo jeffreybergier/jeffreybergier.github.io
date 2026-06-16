@@ -32,10 +32,10 @@ they are migrated into new Jekyll posts.
 | --- | --- | --- | --- | --- |
 | [x] | Change Management Rapid Prototype | `web-root/changes.html` | Design | Migrated to `source/_posts/2016-01-01-Change-Management.md` |
 | [x] | Rule Icon System | `web-root/iconsys.html` | Design | Migrated to `source/_posts/2016-01-01-Rule-Icon-System.md` |
-| [ ] | SteelReserve Design | `web-root/srdesign.html` | Design | 2015 app/product design project |
+| [x] | SteelReserve Design | `web-root/srdesign.html` | Design | Migrated to `source/_posts/2015-01-01-SteelReserve-Design.md` |
 | [ ] | Topology Eyewear | section in `web-root/cocoa.html` | Design or Apps | Only exists as a section inside the old Cocoa landing page |
-| [ ] | WeatherMe | `web-root/weather.html` | Design | 2011 student mobile app concept |
-| [ ] | Design for Manufacture | `web-root/penpot.html` | Design | 2010 product design project |
+| [x] | WeatherMe | `web-root/weather.html` | Design | Migrated to `source/_posts/2011-01-01-WeatherMe.md` |
+| [x] | Design for Manufacture | `web-root/penpot.html` | Design | Migrated to `source/_posts/2010-01-01-Design-for-Manufacture.md` |
 | [ ] | Innovative Kitchenware / Intelligent Kitchen | `web-root/ikb.html` | Design | Old hub says "Intelligent Kitchen"; detail page says "Innovative Kitchenware" |
 | [ ] | Architectural Lighting | `web-root/lighting.html` | Design | 2009 product/lighting project |
 | [ ] | Electronics | `web-root/electronics.html` | Design | 2010 student electronics project |

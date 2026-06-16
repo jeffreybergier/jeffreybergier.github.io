@@ -37,11 +37,11 @@ they are migrated into new Jekyll posts.
 | [x] | WeatherMe | `web-root/weather.html` | Design | Migrated to `source/_posts/2011-01-01-WeatherMe.md` |
 | [x] | Design for Manufacture | `web-root/penpot.html` | Design | Migrated to `source/_posts/2010-01-01-Design-for-Manufacture.md` |
 | [x] | Innovative Kitchenware / Intelligent Kitchen | `web-root/ikb.html` | Design | Migrated to `source/_posts/2010-01-01-Innovative-Kitchenware.md`; old hub says "Intelligent Kitchen"; detail page says "Innovative Kitchenware" |
-| [ ] | Architectural Lighting | `web-root/lighting.html` | Design | 2009 product/lighting project |
-| [ ] | Electronics | `web-root/electronics.html` | Design | 2010 student electronics project |
-| [ ] | Surface Modeling | `web-root/surface.html` | Design | 2010 Alias Studio / Surface Mouse modeling |
-| [ ] | Workshop Experience | `web-root/workshop.html` | Design | 2010 workshop/process page |
-| [ ] | `[REDACTED] Project` | `web-root/redacted.html` | Design | Small placeholder page; migrate only if full parity is desired |
+| [x] | Architectural Lighting | `web-root/lighting.html` | Design | Migrated to `source/_posts/2009-01-01-Architectural-Lighting.md` |
+| [x] | Electronics | `web-root/electronics.html` | Design | Migrated to `source/_posts/2010-01-01-Electronics.md` |
+| [x] | Surface Modeling | `web-root/surface.html` | Design | Migrated to `source/_posts/2010-01-01-Surface-Modeling.md` |
+| [x] | Workshop Experience | `web-root/workshop.html` | Design | Migrated to `source/_posts/2010-01-01-Workshop-Experience.md` |
+| [x] | `[REDACTED] Project` | `web-root/redacted.html` | Design | Migrated to `source/_posts/2009-01-01-Redacted-Project.md` |
 
 Category decision: migrate Innovative Kitchenware, Architectural Lighting,
 Electronics, Surface Modeling, Workshop Experience, and `[REDACTED] Project`

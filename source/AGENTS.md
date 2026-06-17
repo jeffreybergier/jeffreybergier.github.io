@@ -27,6 +27,22 @@ For an interactive Altivec shell:
 docker compose run --rm altivec-intelligence
 ```
 
+### Required Altivec/Bundler Environment
+
+The Compose `serve` service sets Bundler paths and a specific `PATH` ordering.
+Use the same environment when running `bundle install`, `bundle exec jekyll
+build`, or `bundle exec jekyll serve` manually inside Codex/Altivec:
+
+```bash
+export BUNDLE_APP_CONFIG=/root/.bundle/jeffreybergier.github.io/config
+export BUNDLE_PATH=/root/.bundle/jeffreybergier.github.io
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/altivec/bin:/osxcross/target/bin
+```
+
+This ordering is important. `/osxcross/target/bin` contains a macOS linker named
+`ld`; if it appears before `/usr/bin`, native Ruby gems can fail to compile with
+errors such as `ld: unknown option: -plugin`.
+
 ### Option 2: Local Ruby
 
 ```bash
@@ -49,9 +65,10 @@ bundle exec jekyll build
 
 There are no automated tests. To verify changes:
 
-1. Run `bundle exec jekyll build` — ensure no build errors.
+1. Run `bundle exec jekyll build` — ensure no build errors. Inside Altivec/Codex,
+   set the required Bundler environment above first.
 2. Run `bundle exec jekyll serve` and manually inspect pages in a browser.
-3. Check that all layout variants render correctly: home page, category pages (`/apps/`, `/design/`, `/retro-tech/`), individual posts (standard, accessory, and with title accessories), and the 404 page.
+3. Check that all layout variants render correctly: home page, category pages (`/apps/`, `/design/`, `/retro-tech/`, `/unenshittification/`), individual posts (standard, accessory, and with title accessories), and the 404 page.
 
 ## Theme: Minima with Heavy Customization
 
@@ -99,7 +116,7 @@ Configured in `_config.yml` under `minima.social_links`: GitHub, Mastodon, and L
 
 ## Data Files
 
-- **`source/_data/constants.yml`**: Defines the three content categories (retro-tech, design, apps) with Font Awesome icon markup, titles, and URLs.
+- **`source/_data/constants.yml`**: Defines the content categories with Font Awesome icon markup, titles, and URLs.
 
 ## Blog Post Structure
 
@@ -117,7 +134,7 @@ layout: post          # or post-accessory
 title: "Post Title"
 titleAccessory: ""    # Optional: HTML/markdown shown above the title (usually an icon or image)
 excerpt: ""           # Optional: shown in the header and on category index pages
-categories: [Apps]    # Must match one of: Apps, Design, Retro-Tech
+categories: [Apps]    # Must match one of the category tags listed below
 tags: [tag1, tag2]    # Free-form tags
 author: Jeffrey Bergier # Auto-populated by the post layout
 ---
@@ -216,13 +233,14 @@ Standard fenced code blocks with language identifiers (`bash`, `xml`, `gdb`, etc
 
 ## Content Categories
 
-Three content categories, each with a landing page:
+Content categories, each with a landing page:
 
 | Category | URL | Tag | Description |
 |----------|-----|-----|-------------|
 | Apps | `/apps/` | `Apps` | Jeffrey's self-built applications |
 | Design | `/design/` | `Design` | UX design work (QoS redesign) |
 | Retro-Tech | `/retro-tech/` | `Retro-Tech` | Vintage Mac/iPhone hacking projects |
+| Unenshittification | `/unenshittification/` | `Unenshittification` | AI-assisted personal software and service reclamation projects |
 
 Each category page uses the `home-category` layout and lists all posts in that category. The `titleAccessory` on each category page shows a large reflecting icon.
 

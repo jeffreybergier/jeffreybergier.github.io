@@ -21,7 +21,7 @@ new mental model for QoS in the SteelHead.
 ### Feature Research
 [![Screenshot](/assets/images/design/qos/feature-600.png)](/assets/images/design/qos/feature-2k.png){: .thumbnail }
 QoS is an enormously complex feature. The first step in the process was to fully
-understand how QoS works, what its intended to do, and what is needed to make it
+understand how QoS works, what it's intended to do, and what is needed to make it
 do that. I learned everything from the HFSC algorithm, QoS classes, deep packet
 inspection, latency priority, minimum and maximum bandwidth, etc. It got to the
 point where the questions I asked of the engineers couldn't be answered without
@@ -57,7 +57,7 @@ more resources, necessarily gives the others less. Also, putting all traffic
 into an important bucket may not be desirable. QoS works by prioritizing
 important traffic over less important traffic. If all traffic is marked as
 important, it can't do that. Concerns like this were common from network
-administrators. I attempted to produce UI's that could show some of this
+administrators. I attempted to produce UIs that could show some of this
 information in a visual way, but in the end, we settled for a fairly simple tree
 visualization. A few slides after this, there are some concepts I made for
 visually showing class information.
@@ -111,6 +111,6 @@ site. In those conditions, critical traffic needs a higher priority.
 ### Dashboard Widget
 [![Screenshot](/assets/images/design/qos/dashboard-experiment-600.png)](/assets/images/design/qos/dashboard-experiment-2k.png){: .thumbnail }
 SteelCentral Controller has really great dashboards that give an overview of
-what is going on on your network. This is one mockups I made of what a QoS
-widget could have looked at. It shows the QoS classes. When a class is
+what is going on in your network. This is one mockup I made of what a QoS
+widget could have looked like. It shows the QoS classes. When a class is
 expanded, it shows relevant errors and warnings.

@@ -15,8 +15,8 @@ accessory: |
 ## Overview
 
 Hipstapaper is an app I built for myself to save links to web pages similar to 
-Instapaper which was popular in the 2012's or so. But as Instapaper was losing
-traction, I didn't want to lose the functionality
+Instapaper, which was popular in the early 2010s or so. But as Instapaper was losing
+traction, I didn't want to lose the functionality.
 
 - Basic CRUD management of websites
 - Tagging, Filtering, Sorting
@@ -29,7 +29,7 @@ traction, I didn't want to lose the functionality
 
 ### Download
 
-I never release Hipstapaper on the AppStore but you can always use Hipstaper
+I never released Hipstapaper on the App Store but you can always use Hipstapaper
 on your iOS and macOS devices using the links below:
 
 - [<i class="fa-regular fa-circle-down"></i>macOS Downloads](https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS)
@@ -43,16 +43,16 @@ on your iOS and macOS devices using the links below:
 
 ## Development
 
-Hipstapaper was a learning exercise I wanted to learn how to make a
+Hipstapaper was a learning exercise. I wanted to learn how to make a
 cross-platform application that worked on all of Apple's platforms, including
-macOS. This was a big learning opportunity as I had never made an AppKit based
+macOS. This was a big learning opportunity as I had never made an AppKit-based
 app before. The TL;DR is that I ended up liking AppKit even more than UIKit and
 most of the toy apps I make now are either AppKit or SwiftUI.
 
 ### Phase 1 (2016-2018)
 
 During this phase, there were no cross-platform UI frameworks from Apple and
-there was no Database that had online syncing from Apple. Thus the technologies 
+there was no database that had online syncing from Apple. Thus the technologies
 I chose were not ideal, but they were the only way to get the job done:
 
 1. Cross-Platform: UIKit and AppKit UI implementations
@@ -74,23 +74,23 @@ published was so quick, and so information dense that it was hard to follow.
 As well, the feature has fundamental limitations, that I think have prevented
 it from being very successful.
 
-But with the introduction of Core Data syncing, I worked in Hipstapaper to 
-swap out Realm with Core Data. This was no easy task as I had not wrapped
-Realm in its own wrapper and Realm headers and tokens needs to be removed
-from hundreds of UI files... two times for UIKit and AppKit.
+But with the introduction of Core Data syncing, I worked on Hipstapaper to
+swap out Realm for Core Data. This was no easy task as I had not wrapped
+Realm in its own wrapper and Realm headers and tokens needed to be removed
+from hundreds of UI files... twice for UIKit and AppKit.
 
 ### Phase 3 (2022-Current)
 
 I wanted to learn SwiftUI and because SwiftUI was finally becoming full-featured
 enough to support apps with complex navigation for both iOS and macOS, I decided
-to take on the challenge. This required significant updates to the Database
+to take on the challenge. This required significant updates to the database
 wrapper to support SwiftUI's dynamic data model. However, it worked. I was able
 to delete thousands of lines of platform specific UI code and replace it with
 just one SwiftUI codebase. As well, I learned to love SwiftUI. If you can figure
 out how to let go and let the data drive your application, SwiftUI is simply
-amazing. The way the it dynamically updates when there are literally hudreds
+amazing. The way it dynamically updates when there are literally hundreds
 of database changes happening every second \(such as during a sync operation\)
-is incredible. SwiftUI is truly a gamechanger
+is incredible. SwiftUI is truly a game changer.
 
 ## Current Status
 
@@ -99,4 +99,3 @@ on the App Store or anything like that as I know it is missing key features
 that people will want such as offline reading of webpages. Yes, the link to
 the web page is stored offline in the database, but to actually open the web
 page you will need an internet connection.
-

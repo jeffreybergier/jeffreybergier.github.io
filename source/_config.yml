@@ -36,7 +36,7 @@ minima:
   skin: dark
   show_excerpts: true
   social_links:
-    - title: Github
+    - title: GitHub
       icon: github
       url: "https://github.com/jeffreybergier"
     - title: Mastodon

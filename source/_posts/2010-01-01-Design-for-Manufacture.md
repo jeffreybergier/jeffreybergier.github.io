@@ -2,7 +2,7 @@
 layout: post
 title: "Design for Manufacture"
 titleAccessory: "[![Design for Manufacture](/assets/images/design/design-for-manufacture/penpot-render-300.png)](/assets/images/design/design-for-manufacture/penpot-render-1k.png){: .reflect .below-xl .round-sm }"
-excerpt: "The only module that regularly led to to fistfights in the School of Engineering and Design."
+excerpt: "The only module that regularly led to fistfights in the School of Engineering and Design."
 categories: [Design]
 tags: [Design, Student]
 ---
@@ -34,4 +34,4 @@ Next, we switched assembly drawings with the other team and headed to the worksh
 
 ### Manufacturing Complete
 [![Manufacturing Complete](/assets/images/design/design-for-manufacture/penpot-finished-300.jpg)](/assets/images/design/design-for-manufacture/penpot-finished-1k.jpg){: .thumbnail }
-Finally, we get to enojy the finished product.
+Finally, we get to enjoy the finished product.

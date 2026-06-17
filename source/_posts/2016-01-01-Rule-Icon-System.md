@@ -8,10 +8,10 @@ tags: [Design, Professional]
 ---
 
 ## The Project
-Network devices have many rules in them. Generally, these rules are painstakingly typed in via command line. They need to be deployed to every device on the network manually. If a rule that is shared on 1,000 devices needs to be changed, it needs to be changed 1,000 times. The goal with this project was to explore what a 'global' view of network rules would look like. Could a rule be made once and, instantly, be applied everywhere. But more importantly, how could a network admin troubleshoot rules and see the effect of rules on their network.
+Network devices have many rules in them. Generally, these rules are painstakingly typed in via command line. They need to be deployed to every device on the network manually. If a rule that is shared on 1,000 devices needs to be changed, it needs to be changed 1,000 times. The goal with this project was to explore what a 'global' view of network rules would look like. Could a rule be made once and instantly applied everywhere? But more importantly, how could a network admin troubleshoot rules and see the effect of rules on their network?
 
 ### Author's Note
-Normally, its really scary to share Balsamiq mockups because they don't look refined. But I love this project because it highlights how visual hierarchy and white space are more important to an understandable design than really polished artwork. This icon system could be implemented in any design style and it would still work.
+Normally, it's really scary to share Balsamiq mockups because they don't look refined. But I love this project because it highlights how visual hierarchy and white space are more important to an understandable design than really polished artwork. This icon system could be implemented in any design style and it would still work.
 
 ---
 
@@ -29,12 +29,12 @@ Three slides that go through every possible icon that can be on every rule and e
 
 ### Rules Table
 [![Rules Table](/assets/images/design/rule-icon-system/is-list-600.png)](/assets/images/design/rule-icon-system/is-list-2k.png){: .thumbnail }
-This is the rules table where all the rules get stacked together. This slides attempts to highlight the importance of the vertical alignment. Because the icons are always aligned, it is really easy to glance through the rules and see which rules affect which parts of the network and what kind of actions the rule are performing on the network. Also, because of the "success" indicator, it is easy to see which rules are doing well and when.
+This is the rules table where all the rules get stacked together. This slide attempts to highlight the importance of the vertical alignment. Because the icons are always aligned, it is really easy to glance through the rules and see which rules affect which parts of the network and what kind of actions the rules are performing on the network. Also, because of the "success" indicator, it is easy to see which rules are doing well and when.
 
 ### Impact
 [![Impact](/assets/images/design/rule-icon-system/is-impact-600.png)](/assets/images/design/rule-icon-system/is-impact-2k.png){: .thumbnail }
-Rules can affect Sites, Users, and Applications. However, not all rules affect all of those things and even if they do, they may affect 1 user or 10,000 users. Impact is a concept that attempts to quantify how many of each of these subjects are affected by a rule. Also, how does that change over time. This is incredibly useful for what network administrators call "change management." If a rule only affects 10 users its easy to change or delete. If a rule affects 10,000 users, more work needs to be done before changing it.
+Rules can affect Sites, Users, and Applications. However, not all rules affect all of those things and even if they do, they may affect 1 user or 10,000 users. Impact is a concept that attempts to quantify how many of each of these subjects are affected by a rule. It also shows how that changes over time. This is incredibly useful for what network administrators call "change management." If a rule only affects 10 users, it's easy to change or delete. If a rule affects 10,000 users, more work needs to be done before changing it.
 
 ### QoS Action
 [![QoS Action](/assets/images/design/rule-icon-system/is-qos-600.png)](/assets/images/design/rule-icon-system/is-qos-2k.png){: .thumbnail }
-Each rule can have one of many actions applied to it. QoS is one of those actions, its also my [party trick]({% post_url 2014-01-01-QoS %}) because I've spent so much time on it. This slide shows how QoS can be applied in a rule.
+Each rule can have one of many actions applied to it. QoS is one of those actions; it's also my [party trick]({% post_url 2014-01-01-QoS %}) because I've spent so much time on it. This slide shows how QoS can be applied in a rule.

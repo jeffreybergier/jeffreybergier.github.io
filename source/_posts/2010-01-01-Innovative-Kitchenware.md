@@ -17,7 +17,7 @@ tags: [Design, Student]
 
 ### Create a Brand
 [![Create a Brand](/assets/images/design/innovative-kitchenware/ikb-brand-300.png)](/assets/images/design/innovative-kitchenware/ikb-brand-1k.png){: .thumbnail }
-As a group, we created a brand with a product strategy and identity. Our brand was called Citrus. Our intended customer base was not university students, but instead we targeted student's mothers. This allowed us to create better designed products because parents can spend more than students can. Creating the brand was the only group activity. From this point on, the project was individual.
+As a group, we created a brand with a product strategy and identity. Our brand was called Citrus. Our intended customer base was not university students, but instead we targeted students' mothers. This allowed us to create better designed products because parents can spend more than students can. Creating the brand was the only group activity. From this point on, the project was individual.
 
 ### Research
 [![Research](/assets/images/design/innovative-kitchenware/ikb-research-300.png)](/assets/images/design/innovative-kitchenware/ikb-research-1k.png){: .thumbnail }
@@ -25,7 +25,7 @@ I researched the amount of storage space students have available to them in the 
 
 ### Human Factors
 [![Human Factors](/assets/images/design/innovative-kitchenware/ikb-human-300.png)](/assets/images/design/innovative-kitchenware/ikb-human-1k.png){: .thumbnail }
-Using published Anthropometric and Strength Data along with handle prototyping, I was able to devise a different shape for the panhandle. This shape improved the ergonomics of the pan. It allowed the wrist to stay straight while lifting the pan. The shape of the handle also made it small enough to be removed from the pan and fit inside for compact storage. I made several iterations of the handle in foam. They are shown above.
+Using published Anthropometric and Strength Data along with handle prototyping, I was able to devise a different shape for the pan handle. This shape improved the ergonomics of the pan. It allowed the wrist to stay straight while lifting the pan. The shape of the handle also made it small enough to be removed from the pan and fit inside for compact storage. I made several iterations of the handle in foam. They are shown above.
 
 ### Foam Modeling
 [![Foam Modeling](/assets/images/design/innovative-kitchenware/ikb-foam-300.png)](/assets/images/design/innovative-kitchenware/ikb-foam-1k.png){: .thumbnail }
@@ -33,7 +33,7 @@ Using the lathe and other machine tools, I made a precise scale model of the pan
 
 ### CAD Modeling
 [![CAD Modeling](/assets/images/design/innovative-kitchenware/ikb-cad-300.png)](/assets/images/design/innovative-kitchenware/ikb-cad-1k.png){: .thumbnail }
-Working with Solidworks, I crafted each part and created an assembly drawing. This drawing shows the detachable handle. The detachable handle is designed to fit inside the pan and save space in a student's cupboard.
+Working with SolidWorks, I crafted each part and created an assembly drawing. This drawing shows the detachable handle. The detachable handle is designed to fit inside the pan and save space in a student's cupboard.
 
 ### Mass Manufacture
 [![Mass Manufacture](/assets/images/design/innovative-kitchenware/ikb-mass-300.png)](/assets/images/design/innovative-kitchenware/ikb-mass-1k.png){: .thumbnail }

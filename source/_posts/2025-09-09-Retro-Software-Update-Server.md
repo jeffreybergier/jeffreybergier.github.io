@@ -17,7 +17,7 @@ If you have an interest in retro Macs, this may be something you would like to
 set up in case something bad were to happen. This approach works because these
 servers are still online and still work. If you happen to be reading this 10
 years in the future (2035) because Apple shut down the software update servers
-for PowerPC Macs, then its too late. Sorry.
+for PowerPC Macs, then it's too late. Sorry.
 
 ## Table of Contents
 
@@ -51,21 +51,21 @@ fail to scale.
 
 So what did they change? Well, in 10.4 and later, the Software Update Server is
 nothing more than a huge set of files and a few Update catalogs... one for each
-version of the OS. These sucatalog files listed every update available as well
-as "distribution" files. These distribution are available in for every supported
-language they contain the localized description but also they contain inline
-javascript that will be executed by the client to determine if the update is
+version of the OS. These sucatalog files list every update available as well
+as "distribution" files. These distributions are available for every supported
+language. They contain the localized description, but they also contain inline
+JavaScript that will be executed by the client to determine if the update is
 needed.
 
 What this means is Apple offloaded all of the work of determining which updates
 it needs from the server to the client. This is great for Apple's server load,
 but it also explains why checking for updates can take so long the first time.
 The client literally needs to download hundreds of distribution files. Yes, they
-are only a few K each, but then the client also needs to execute the javascript
+are only a few K each, but then the client also needs to execute the JavaScript
 for each one.
 
 The other side-effect of this system is that now it is easy to mirror the
-software update server as there is no server side logic
+software update server as there is no server-side logic.
 
 **Enter Mac OS X Server Software Update Server**
 
@@ -73,7 +73,8 @@ Back in the day, Apple included a Software Update Server as part of Mac OS X
 Server. Apple intended companies to use this to mirror the software updates
 internally in a company to do 2 things:
 
-1. Save bandwidth when updating a fleet of Macs 1. Control which updates were
+1. Save bandwidth when updating a fleet of Macs
+1. Control which updates were
 available to the Macs in your company to ensure that you could test
 compatibility first
 
@@ -90,7 +91,7 @@ about 1/3 of the updates which is not enough for success. I don't know why it
 refused to download them. All it said was there was a suspected security problem
 and so it refused. ChatGPT suggested that the Apple Software Update Server
 distributed with their OS had very picky client-side URL validation and if the
-URL's failed these basic checks, it would not even start the download.
+URLs failed these basic checks, it would not even start the download.
 
 **Enter [Reposado](https://github.com/wdas/reposado/blob/main/docs/getting_started.md)**
 
@@ -121,7 +122,7 @@ Apple shuts down these old software updates \(which may never come\).
      software update server and it can't be changed
 1. A normal home network
    - This guide assumes you connect all your Macs to the internet with ethernet 
-     or WiFi and they can find eachother and connect to eachother using Bonjour 
+     or WiFi and they can find each other and connect to each other using Bonjour
      names.
 
 **Retro Mac**
@@ -140,22 +141,22 @@ Any text `in this special format` is a terminal command you can copy and paste.
 
 ### 1. Install Git, Homebrew, Python2
 
-- Git is included as part of the Xcode command line utilities AND these utilties
+- Git is included as part of the Xcode command line utilities AND these utilities
 are required for Homebrew anyway.
 
 `xcodeselect --install`
 
-- HomeBrew is a simple package manager for macOS. Its easy to install. 
+- Homebrew is a simple package manager for macOS. It's easy to install.
 Just follow the guide on [https://brew.sh](https://brew.sh). Make sure to 
-follow the instructions in the Terminal after installing HomeBrew.
-They are required to make sure that commands you install via homebrew are
+follow the instructions in the Terminal after installing Homebrew.
+They are required to make sure that commands you install via Homebrew are
 easily launchable from the Terminal.
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 #### Python2
 
-This is the difficult one. Python2 is far out of date and HomeBrew no longer
+This is the difficult one. Python2 is far out of date and Homebrew no longer
 has an easy installer for it. We have to use PyEnv and this basically seemed
 to build Python2 from source, which is never fun.
 
@@ -229,15 +230,15 @@ structure
 
 ### 3. Configure the Web Server on your server Mac
 
-Mac OS X has always included Apache as a web server, its just disabled by 
-default. Its nothing fancy, but it will work for our retro Mac.
+Mac OS X has always included Apache as a web server; it's just disabled by
+default. It's nothing fancy, but it will work for our retro Mac.
 
 **Set DocumentRoot to the directory you selected above**
 
 `sudo vi /etc/apache2/httpd.conf`
 
 This file is pretty long so you have to scroll down to find the DocumentRoot
-setting. I don't think you need to change other options, but I here are the key
+setting. I don't think you need to change other options, but here are the key
 ones.
 
 ```
@@ -251,7 +252,7 @@ DocumentRoot "/Volumes/Data/Virtualization/SUS/www"
 
 **Give the webserver full disk access**
 
-This might not be needed if you your directory root is on the boot drive
+This might not be needed if your directory root is on the boot drive
 but I definitely needed it because mine is on an external drive.
 
 1. Open System Settings→Privacy→Full Disk Access
@@ -275,7 +276,7 @@ Retro Mac you won't be able to update from it either.
 
 ### 4. Configure Reposado on your server Mac
 
-Ok, Reposado is where all the magic happens, so lets get started!
+Ok, Reposado is where all the magic happens, so let's get started!
 
 **Clone the [Reposado](https://github.com/wdas/reposado) Repository**
 
@@ -296,7 +297,7 @@ of Reposado says this will cause errors.
 Filesystem path to store replicated catalogs and updates [None]: /Volumes/Data/Virtualization/SUS/www
 Filesystem path to store Reposado metadata [None]: /Volumes/Data/Virtualization/SUS/reposado/code/metadata 
 Base URL for your local Software Update Service
-(Example: http://su.your.org -- leave empty if you are not replicating updates) [None]: Server-Bonjou-Name.local
+(Example: http://su.your.org -- leave empty if you are not replicating updates) [None]: Server-Bonjour-Name.local
 ```
 
 **Configure Reposado (Continued)**
@@ -312,7 +313,7 @@ all modern Macs when you could use less than 100GB to support updating 10.6,
 Your configuration file will look something like this. Copy and paste the keys
 listed below into your configuration and then customize them as you like:
 
-- **AppleCatalogURLs** to the bare minimum for 10.4 Tiger only (we will expand later after we confirm its working)
+- **AppleCatalogURLs** to the bare minimum for 10.4 Tiger only (we will expand later after we confirm it's working)
 - **PreferredLocalizations** to include the languages you care about
 - **RepoSyncLogFile** so you can see sync progress and verify everything is working
 
@@ -350,7 +351,7 @@ listed below into your configuration and then customize them as you like:
 **Create the Log File**
 
 Create the log file and make it readable and writable by all users. Normally it
-would be better to make it readable and writable by the right people, but its a
+would be better to make it readable and writable by the right people, but it's a
 single log file. Not really security critical.
 
 `sudo touch /var/log/reposado_sync.log`
@@ -381,7 +382,7 @@ gets updated.
 
 `/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync`
 
-Thats it. Now you have to wait for it to download 20GB or so. You should be able
+That's it. Now you have to wait for it to download 20GB or so. You should be able
 to see progress in the other terminal window with the tailed log file.
 
 **What Success Looks Like**
@@ -427,7 +428,7 @@ This is a personal choice based on what Macs you are interested in, how much
 space you have to dedicate to this, and what Macs you think Apple will remove
 from the update servers soonest.
 
-You can see all the catalogs in this [Reposado file.](https://github.com/wdas/reposado/blob/main/docs/reposado_preferences.md)
+You can see all the catalogs in this [Reposado file](https://github.com/wdas/reposado/blob/main/docs/reposado_preferences.md).
 They are named in a pretty orderly way, so select which OS you want to support
 and then put in the catalog file for that one and all the versions lower. So if
 you want to support 10.10 Yosemite and lower, your Preferences.plist would look
@@ -451,13 +452,13 @@ After you add the new catalogs, run sync again
 
 `/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync`
 
-Note that supporting up to 10.10 Yosemite takes abut 300GB of space
+Note that supporting up to 10.10 Yosemite takes about 300GB of space
 
 ![Retro Software Update Server](/assets/images/retro-tech/software-update-server/003-Reposado.png)
 
 **Some Final Things**
 
-Basically, after you complete the sync, you never need to Reposado again. The
+Basically, after you complete the sync, you never need to run Reposado again. The
 webserver and the `www` folder are all you need. The Software Update server is
 based off of a completely static system, which is super nice and reliable.
 
@@ -468,14 +469,14 @@ hostname which is fantastic.
 
 ### 6. Configure the retro Mac to fetch updates from your server Mac
 
-So this is a bit tricky, because its likely that your retro Mac(s) have already
+So this is a bit tricky, because it's likely that your retro Mac(s) have already
 run all of their software updates. So when you tell them to check for updates
 from your new Software Update Server Mirror, the retro Mac will still tell you
 there are no updates available. So how do you test?
 
-- If you don't mind erasing your retro Mac you could just reinstall the OS -
-Install a fresh OS to an external firewire hard drive and boot from that -
-Install and old version of OSX in a Virtual Machine and try that
+- If you don't mind erasing your retro Mac, you could just reinstall the OS.
+- Install a fresh OS to an external FireWire hard drive and boot from that.
+- Install an old version of OS X in a Virtual Machine and try that.
 
 **Configure the Retro Mac**
 
@@ -496,7 +497,7 @@ Tailing these logs will show you the retro Mac is checking all the updates.
 
 **Check for Updates on the Retro Mac**
 
-Check for updates on your retro Mac and install them. If its a fresh install, it
+Check for updates on your retro Mac and install them. If it's a fresh install, it
 may take several reboots to get through all the updates.
 
 `Apple Menu→Software Update`
@@ -515,7 +516,7 @@ the screenshot below.
 In the real software update server, Apache rewrite rules are used so any version
 can fetch index.sucatalog and the server will smartly rewrite the URL to be the
 correct one. You can add these if you like, but since you're probably not
-running an army of retro Macs, its probably easier to just do it on the retro
+running an army of retro Macs, it's probably easier to just do it on the retro
 Mac instead. Here are the rewrite rules if you are interested.
 
 ```

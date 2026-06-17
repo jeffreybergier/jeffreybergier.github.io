@@ -17,7 +17,7 @@ I think this has happened to everyone that has worked in corporate America. You'
 
 ### Storyboard
 [![Storyboard](/assets/images/design/steelreserve-design/srd-storyboard-600.png)](/assets/images/design/steelreserve-design/srd-storyboard-2k.png){: .thumbnail }
-Prototyping UI workflows in Xcode in Storyboards is fantastic. Its really fast, easy, and doesn't require code. Once a workflow is made in Storyboards, its really easy to demo on device. Its also really easy to make videos to send around to people to sell them on the concept. Plus, any iOS developer could take the Xcode project and open it without needing a bunch of tools only designers have. Lastly, an iOS developer could reuse a lot of the work in an actual iOS App project.
+Prototyping UI workflows in Xcode in Storyboards is fantastic. It's really fast, easy, and doesn't require code. Once a workflow is made in Storyboards, it's really easy to demo on device. It's also really easy to make videos to send around to people to sell them on the concept. Plus, any iOS developer could take the Xcode project and open it without needing a bunch of tools only designers have. Lastly, an iOS developer could reuse a lot of the work in an actual iOS App project.
 
 ### Primary Workflow
 [![Primary Workflow](/assets/images/design/steelreserve-design/srd-mainflow-600.png)](/assets/images/design/steelreserve-design/srd-mainflow-2k.png){: .thumbnail }
@@ -29,6 +29,6 @@ I also added a prototype of how it might be possible to book a full meeting, in 
 
 ### Final Result
 [![Final Result](/assets/images/design/steelreserve-design/srd-walkthrough-1k.png)](/assets/images/design/steelreserve-design/srd-walkthrough-2k.png){: .thumbnail }
-During a hackathon at work, a coworker and I implemented this app in Python using the CherryPy web server. It was super hacked together, but it worked! The flow was slightly different. Instead of the user choosing the size of the group and the floor they are on, the app displays a list the rooms available for the time duration the user chose. This list has separates the rooms by floor and also shows the size of the room. This change made it easier to implement. However, I like to think that people have their favorite rooms and now they can pick them every time, rather than the computer picking a random room.
+During a hackathon at work, a coworker and I implemented this app in Python using the CherryPy web server. It was super hacked together, but it worked! The flow was slightly different. Instead of the user choosing the size of the group and the floor they are on, the app displays a list of the rooms available for the time duration the user chose. This list separates the rooms by floor and also shows the size of the room. This change made it easier to implement. However, I like to think that people have their favorite rooms and now they can pick them every time, rather than the computer picking a random room.
 
 SteelReserve makes it possible to easily see which rooms are available, right now, and pick one in less than 10 seconds. I later threw away the hacky Python I wrote and rebuilt it in server side Swift. That took much longer because it was in my spare time and it was not hacked together. But it was worth it because SteelReserve still runs in production at work.

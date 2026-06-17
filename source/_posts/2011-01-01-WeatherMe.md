@@ -8,7 +8,7 @@ tags: [Design, Student]
 ---
 
 ## WeatherMe
-A mobile application concept to help San Franciscans find more sunshine. This was the final project for my Industrial Design degree. It is a research and development project. The end result is a stunning design process book. This concept was also a Finalist in the [Core77 Fast Track Mobile App contest.](http://fasttrackapp.core77.com){: target="_blank" }
+A mobile application concept to help San Franciscans find more sunshine. This was the final project for my Industrial Design degree. It is a research and development project. The end result is a stunning design process book. This concept was also a Finalist in the [Core77 Fast Track Mobile App contest](http://fasttrackapp.core77.com){: target="_blank" }.
 
 When I started this project, I lived in San Francisco's Sunset district. At the time, I was unhappy with how poor weather reporting was for the City. The microclimates in San Francisco are such that it can be overcast and 50&deg;F in one part of the city and at the same time 75&deg;F and sunny in another part. At the time, there was no reliable way to get this information.
 
@@ -24,7 +24,7 @@ Research began with problem statement, needs analysis and product comparison. Th
 
 ### Development
 [![Development](/assets/images/design/weatherme/weather-development-600.png)](/assets/images/design/weatherme/weather-development-1k.png){: .thumbnail }
-Development began with ideation sessions. Refining ideas and then examining the feasibility of top ideas. Once it was clear that some sort of social networking system would be needed, I started evaluating other issues such as location accuracy, human ability to report weather and visual style of maps when temperature is the key visual item, not geograhic features.
+Development began with ideation sessions. Refining ideas and then examining the feasibility of top ideas. Once it was clear that some sort of social networking system would be needed, I started evaluating other issues such as location accuracy, human ability to report weather and visual style of maps when temperature is the key visual item, not geographic features.
 
 ### Execution
 [![Execution](/assets/images/design/weatherme/weather-execution-600.png)](/assets/images/design/weatherme/weather-execution-1k.png){: .thumbnail }

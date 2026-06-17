@@ -2,13 +2,13 @@
 layout: post
 title: "Change Management Rapid Prototype"
 titleAccessory: "[![Change Management](/assets/images/design/change-management/cm-visual-600.png)](/assets/images/design/change-management/cm-visual-2k.png){: .reflect .below-xl .round-sm }"
-excerpt: "What if global network configuration was more like GIT?"
+excerpt: "What if global network configuration was more like Git?"
 categories: [Design]
 tags: [Design, Professional]
 ---
 
 ## The Project
-One of the main problems network operators have is managing change on their network. The problem is change commonly breaks things, so the established rule is to change as little as possible as rarely as possible. I wanted to try something better. Where all changes can be seen, where approvals can be granted, and where one can blame.
+One of the main problems network operators have is managing change on their network. The problem is change commonly breaks things, so the established rule is to change as little as possible as rarely as possible. I wanted to try something better: where all changes can be seen, where approvals can be granted, and where accountability is clear.
 
 ---
 
@@ -26,7 +26,7 @@ This mockup and the previous one both show what it could look like when a differ
 
 ### Full Diff
 [![Full Diff](/assets/images/design/change-management/cm-diff-600.png)](/assets/images/design/change-management/cm-diff-2k.png){: .thumbnail }
-It may be necessary to dive deep into the changes made. This could be changes made in the past, or changes that have no yet been rolled out. This is a concept screen showing Application definition changes. This also features my favorite pet feature, impact. Impact shows the network admin approximately how many sites, users, etc this change will effect when it is rolled out.
+It may be necessary to dive deep into the changes made. This could be changes made in the past, or changes that have not yet been rolled out. This is a concept screen showing Application definition changes. This also features my favorite pet feature, impact. Impact shows the network admin approximately how many sites, users, etc this change will affect when it is rolled out.
 
 ### Pixel Perfect Mockup
 [![Pixel Perfect Mockup](/assets/images/design/change-management/cm-visual-600.png)](/assets/images/design/change-management/cm-visual-2k.png){: .thumbnail }

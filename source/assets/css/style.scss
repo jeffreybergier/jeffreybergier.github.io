@@ -260,15 +260,15 @@ a.thumbnail img {
    --------------------------------------------
    Usage Examples in HTML:
      <img src="/assets/images/photo.jpg" class="reflect below-md round-md">
-     <a href="#" class="reflect below-sm round-lg"><img src="..."></a>
+     <a href="#" class="reflect below-sm round-md"><img src="..."></a>
 
    Usage Examples in Markdown (Kramdown):
      ![Photo](/assets/images/photo.jpg){: .reflect .below-md .round-md }
-     [![App Icon](/assets/images/appicon.png){: .reflect .below-sm .round-lg }](/some-link)
+     [![App Icon](/assets/images/appicon.png){: .reflect .below-sm .round-md }](/some-link)
 
    Notes:
      - Distance modifiers: below-xl, below-lg, below-md, below-sm, below-xs
-     - Radius modifiers: round-none, round-sm, round-md, round-lg
+     - Radius modifiers: round-none, round-sm, round-md
      - Apply classes to <img> or <a> wrapping <img> for reflections
    ============================================ */
 
@@ -295,4 +295,4 @@ a.reflect img {
 .round-none { --reflect-radius: 0;     }
 .round-sm   { --reflect-radius: 0.5em; }
 .round-md   { --reflect-radius: 1em;   }
-.round-lg   { --reflect-radius: 2em;   }
+

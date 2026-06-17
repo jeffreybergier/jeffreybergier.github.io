@@ -125,27 +125,27 @@ restricted the iPhone 5 to Mac OS X 10.6.8 or higher.</p>
 
 <h2 id="tldr">TL;DR</h2>
 
-<p>When the iPhone and iTunes communicate with each-other they do a handshake
+<p>When the iPhone and iTunes communicate with each other they do a handshake
 involving a lot of Property List (PLIST) XML passing. iTunes will start key
 exchanges and then the iPhone will send a large PLIST payload that explains the
 capabilities of the device such as the supported languages/regions, sync
 features, and most importantly the minimum version of iTunes required by this
 iPhone. This part of the PLIST is stored in the key “MinITunesVersion.” iTunes
 then checks this key and if the value is larger than the current version, iTunes
-will display an error saying which version of of iTunes is required. What is
+will display an error saying which version of iTunes is required. What is
 most important, is this key is not present when the iPhone 4s and iTunes do
 their handshake.</p>
 
 <p>So to bypass this check, all we need to do is change the “MinITunesVersion”
 string hardcoded into the iTunes binary to anything else and iTunes will then
 check for a key that does not exist in the PLIST XML provided by the iPhone
-and then iTunes will happily not display an error and bring your straight to the
+and then iTunes will happily not display an error and bring you straight to the
 normal syncing screen in iTunes.</p>
 
 <h3 id="tutorial">Tutorial</h3>
 
 <ol>
-  <li>Download your favorite Binary HEX editor for your PowerPC Mac such as Hex Feind 
+  <li>Download your favorite Binary HEX editor for your PowerPC Mac such as Hex Fiend
 (<a href="https://www.macintoshrepository.org/25974-hex-fiend">Macintosh Repository</a>, <a href="https://macintoshgarden.org/apps/hex-fiend">Macintosh Garden</a>)</li>
   <li>In Finder, click Go→Go to Folder and type in <code class="language-plaintext highlighter-rouge">/Applications/iTunes.app/Contents/MacOS</code></li>
   <li>Backup the iTunes binary by right clicking on it and choosing “Compress”</li>
@@ -204,8 +204,8 @@ from the 30-pin dock connector to the lightning connector. However, I was
 extremely suspicious of this because when I open iTunes 10.6.3 and plug in the
 iPhone 5, iTunes immediately shows a very nice error that says iTunes 10.7 is
 required. Furthermore, the iPhone 5 shows up in Xcode! Xcode won’t deploy to the
-device because iOS is too new, but it shows up and it can see its an iPhone 5
-and which iOS version its running. So I knew that this lightning issue was not
+device because iOS is too new, but it shows up and it can see it’s an iPhone 5
+and which iOS version it’s running. So I knew that this lightning issue was not
 true; clearly, the iPhone was communicating with the Mac even over lightning.</p>
 
 <p>Given that my iPhone 5 and my iPhone 4s were both running iOS 6.1.3 and one of
@@ -215,19 +215,21 @@ this artificial limitation and eliminate it.</p>
 
 <h3 id="but-why">But Why</h3>
 
-<p>Why did you I spend so much time getting my iMac G4 to sync to with an iPhone 5?
-The answer is that I want to try to use an iOS 6 iPhone as my main iPhone in
-\2026. What does that mean? Does that mean I won’t have a backup, modern,
-iPhone? No, of course I will. Its not possible to survive in the world without a
+<p>Why did I spend so much time getting my iMac G4 to sync with an iPhone 5?
+The answer is that I want to try to use an iOS 6 iPhone as my main iPhone in</p>
+<ol>
+  <li>What does that mean? Does that mean I won’t have a backup, modern,
+iPhone? No, of course I will. It’s not possible to survive in the world without a
 semi-modern mobile phone. But it will be my backup. I only have a few apps I use
 on my iPhone and I think I can recreate them for iOS 6 without much issue. But
-more on that later.</p>
+more on that later.</li>
+</ol>
 
-<p>But why not use my iPhone 4s; its running iOS 6 as well. Well, the iPhone 5 is
+<p>But why not use my iPhone 4s; it’s running iOS 6 as well. Well, the iPhone 5 is
 the newest iPhone that can run iOS 6 so the performance is much better and 1GB
 of RAM <i class="fa-regular fa-face-surprise"></i> which seems insane to me. But
 more important than that, the iPhone 5 has a widescreen display. Given so much
-of what I do on the iPhone is Youtube, the lack of widescreen is kind of killer.
+of what I do on the iPhone is YouTube, the lack of widescreen is kind of killer.
 Also, the iPhone 5 can join 5GHz WiFi networks and it has a lightning connector.
 The lightning connector is so important because they are plentiful and I can
 charge anywhere, even in 2026.</p>
@@ -238,13 +240,13 @@ full retro sync solution for all of my music, photos, podcasts, etc.</p>
 <h2 id="approach">Approach</h2>
 
 <p>At first, I thought the mechanism that prevented syncing with the iPhone 5 was
-a whitelist in iTunes or in MobileDevice.framework. However, after many many
+a whitelist in iTunes or in MobileDevice.framework. However, after many
 hours searching both the disk and the iTunes and MobileDevice binaries in
 Hopper, I was totally failing to find a whitelist of supported devices 
 (Spoiler Alert: There isn’t one). So I had to change techniques, I had to
 try to debug iTunes live in GDB.</p>
 
-<p>I had never done disassembly or GDB on an app I did’t make before. Its
+<p>I had never done disassembly or GDB on an app I didn’t make before. It’s
 definitely an interesting process. I used a ton of Gemini to get this done 
 (But I assume any AI will work). Gemini can’t think for you. But it can help
 you with syntax and with knowing which functions in Core Foundation to set 
@@ -268,13 +270,13 @@ it works. To use the file, use the -x command in GDB.</p>
 
 <h3 id="1-defeat-ptrace">1. Defeat PTRACE</h3>
 
-<p>iTunes operates in a very defensive way. Its not surprising given this is one
+<p>iTunes operates in a very defensive way. It’s not surprising given this is one
 massively complex codebase and it deals with a lot of DRM content, purchasing,
-etc. For this reason, iTunes does frequently use <code class="language-plaintext highlighter-rouge">ptrace</code> to check if its
+etc. For this reason, iTunes does frequently use <code class="language-plaintext highlighter-rouge">ptrace</code> to check if it’s
 connected to a debugger, and if so, it just quits. So the first thing I had to
 figure out how to do was bypass this check.</p>
 
-<p>It turns out its pretty easy. I set a breakpoint on the <code class="language-plaintext highlighter-rouge">ptrace</code> function and
+<p>It turns out it’s pretty easy. I set a breakpoint on the <code class="language-plaintext highlighter-rouge">ptrace</code> function and
 then forcefully return 0. With that simple trick, it worked. With this in place,
 iTunes happily runs while connected to the debugger <i class="fa-solid fa-user-ninja"></i></p>
 
@@ -308,7 +310,7 @@ flowing through the system, I noticed a lot of XML. Especially after I plugged
 in my phone. Perhaps this XML contained something interesting; perhaps indeed 
 <i class="fa-regular fa-face-smile-beam"></i></p>
 
-<!-- upgrade fontawesome to get get hugging face <i class="fa-brands fa-hugging-face"></i> -->
+<!-- upgrade fontawesome to get hugging face <i class="fa-brands fa-hugging-face"></i> -->
 
 <pre><code class="language-gdb">break ptrace
 commands
@@ -478,11 +480,11 @@ was setting a breakpoint on <code class="language-plaintext highlighter-rouge">C
 <code class="language-plaintext highlighter-rouge">CFDictionaryGetValueIfPresent</code>. I could then check if the key was
 <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> and either return <code class="language-plaintext highlighter-rouge">10.6.3</code> or <code class="language-plaintext highlighter-rouge">null</code>. However, this turned
 out to be very complex because CFString/NSString are a <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/ClassClusters/ClassClusters.html">class cluster</a> 
-and have many underlying data types. From a developers perspective there is no
+and have many underlying data types. From a developer’s perspective there is no
 difference, but when you are in GDB, you need to account for every possibility
 in order to compare the string data. Also, if you use a high level compare or
 print function like <code class="language-plaintext highlighter-rouge">CFShow</code> or <code class="language-plaintext highlighter-rouge">CFStringCompare</code>, that allocates new memory
-and that would cause iTunes to crash randomly as its not really safe to do that
+and that would cause iTunes to crash randomly as it’s not really safe to do that
 in the debugger.</p>
 
 <p>Note that even though the code snippet below is small, at this stage I spent
@@ -535,7 +537,7 @@ watched the XML handshake between iTunes and my iPhone 4s, that
 considering this key as optional, which meant it was safe to change it 
 <i class="fa-solid fa-microscope"></i></p>
 
-<p>And thats exactly what happened. I opened the iTunes binary in a Hex Editor,
+<p>And that’s exactly what happened. I opened the iTunes binary in a Hex Editor,
 searched for <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> and changed it to <code class="language-plaintext highlighter-rouge">MinITuMesVersion</code> and clicked “Save.”
 After relaunching iTunes, I plugged in my iPhone 5 and it just showed up in 
 iTunes with no fuss at all. Everything syncs just fine. I couldn’t believe it! 
@@ -550,7 +552,7 @@ right now it shows a blank. I tried manually installing the artwork files from
 iTunes 10.7 but that did not work (it also did not break anything). After doing
 some digging in Hopper, it looks like iTunes has a huge function that was
 probably code-generated where it selects the images. I tried for a bit to get
-it working, but I had to stop as its low priority.</p>
+it working, but I had to stop as it’s low priority.</p>
 
 <p>But maybe one of these days…</p>
 
@@ -578,7 +580,7 @@ it working, but I had to stop as its low priority.</p>
     </div>
 
     <div class="social-links"><ul class="social-media-list"><li>
-    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="Github">
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
       <span class="grey fa-brands fa-github fa-lg"></span>
     </a>
   </li><li>

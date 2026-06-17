@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>SteelReserve Design | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="SteelReserve Design" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reserving a conference room, at the last minute, shouldn’t be hard." />
+<meta name="twitter:description" property="og:description" content="Reserving a conference room, at the last minute, shouldn’t be hard." />
+<link rel="canonical" href="https://jeffburg.com/design/2015/01/01/SteelReserve-Design.html" />
+<meta property="og:url" content="https://jeffburg.com/design/2015/01/01/SteelReserve-Design.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-01-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SteelReserve Design" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2015-01-01T00:00:00+00:00","datePublished":"2015-01-01T00:00:00+00:00","description":"Reserving a conference room, at the last minute, shouldn’t be hard.","headline":"SteelReserve Design","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/design/2015/01/01/SteelReserve-Design.html"},"url":"https://jeffburg.com/design/2015/01/01/SteelReserve-Design.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header post-header-wide">
+  <!-- Custom Layout Starts Here -->
+    
+    <div class="title-accessory title-accessory-wide">
+      <p><a href="/assets/images/design/steelreserve-design/srd-walkthrough-2k.png"><img src="/assets/images/design/steelreserve-design/srd-walkthrough-2k.png" alt="SteelReserve Design" /></a></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">SteelReserve Design</h1><p><p>Reserving a conference room, at the last minute, shouldn’t be hard.</p>
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2015-01-01T00:00:00+00:00" itemprop="datePublished">
+        Jan 1, 2015
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="the-project">The Project</h2>
+<p>I think this has happened to everyone that has worked in corporate America. You’re in a meeting with a bunch of people and the meeting goes over. Then another meeting needs the room you’re in. So now your meeting needs to reserve a new room so everything can keep going. This usually involves someone opening their laptop, without a desk, and going through Outlook to try and find a room while everyone stands around aimlessly. SteelReserve was a design prototype I made to solve this problem. Later, I implemented this in Python and then again server side Swift. I learned a lot while doing the Swift version. I later gave a talk at a Swift meetup about what I learned.</p>
+
+<h3 id="watch-my-server-side-swift-talk"><a href="https://realm.io/news/slug-jeff-bergier-building-production-server-swift-app/" target="_blank">Watch My Server Side Swift Talk</a></h3>
+
+<hr />
+
+<h3 id="storyboard">Storyboard</h3>
+<p><a href="/assets/images/design/steelreserve-design/srd-storyboard-2k.png" class="thumbnail"><img src="/assets/images/design/steelreserve-design/srd-storyboard-600.png" alt="Storyboard" /></a>
+Prototyping UI workflows in Xcode in Storyboards is fantastic. It’s really fast, easy, and doesn’t require code. Once a workflow is made in Storyboards, it’s really easy to demo on device. It’s also really easy to make videos to send around to people to sell them on the concept. Plus, any iOS developer could take the Xcode project and open it without needing a bunch of tools only designers have. Lastly, an iOS developer could reuse a lot of the work in an actual iOS App project.</p>
+
+<h3 id="primary-workflow">Primary Workflow</h3>
+<p><a href="/assets/images/design/steelreserve-design/srd-mainflow-2k.png" class="thumbnail"><img src="/assets/images/design/steelreserve-design/srd-mainflow-600.png" alt="Primary Workflow" /></a>
+This is the primary workflow of the app. On the first screen the user chooses how long they need the meeting to be. In step 2, they choose which office their group is in right now. In step 3, the user chooses which floor they are on. This is really more of a preference. If there are no rooms on their current floor, the app should find a room on other floors. Also, in this step, they choose how many people are in the group. The app needs this so it doesn’t reserve a room that is too small. Lastly, the user is shown a confirmation screen, or an error screen if something went wrong. The confirmation screen tells them the final reservation details like the room and the floor. But it also includes the reservation beginning and end times. It also has a button to share the details with other people in the meeting.</p>
+
+<h3 id="extra-workflow">Extra Workflow</h3>
+<p><a href="/assets/images/design/steelreserve-design/srd-extraflow-2k.png" class="thumbnail"><img src="/assets/images/design/steelreserve-design/srd-extraflow-600.png" alt="Extra Workflow" /></a>
+I also added a prototype of how it might be possible to book a full meeting, in the future, with multiple participants. This flow would include the ability to see when they can meet. This was a nice idea, but so much more complex than the original idea. So only the primary workflow got turned into a full app.</p>
+
+<h3 id="final-result">Final Result</h3>
+<p><a href="/assets/images/design/steelreserve-design/srd-walkthrough-2k.png" class="thumbnail"><img src="/assets/images/design/steelreserve-design/srd-walkthrough-1k.png" alt="Final Result" /></a>
+During a hackathon at work, a coworker and I implemented this app in Python using the CherryPy web server. It was super hacked together, but it worked! The flow was slightly different. Instead of the user choosing the size of the group and the floor they are on, the app displays a list of the rooms available for the time duration the user chose. This list separates the rooms by floor and also shows the size of the room. This change made it easier to implement. However, I like to think that people have their favorite rooms and now they can pick them every time, rather than the computer picking a random room.</p>
+
+<p>SteelReserve makes it possible to easily see which rooms are available, right now, and pick one in less than 10 seconds. I later threw away the hacky Python I wrote and rebuilt it in server side Swift. That took much longer because it was in my spare time and it was not hacked together. But it was worth it because SteelReserve still runs in production at work.</p>
+
+  </div>
+
+  <a class="u-url" href="/design/2015/01/01/SteelReserve-Design.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -87,7 +87,7 @@
 <p><a href="/assets/images/apps/teskemon/02-full.png" class="thumbnail"><img src="/assets/images/apps/teskemon/02-thumb.png" alt="Teskemon About Window" /></a>
 Teskemon is a SwiftUI application built to monitor Tailscale networks. 
 It is provided under the <a href="LICENSE">GPLv3 open source license</a> and without any warranty or liability. 
-If this application is useful for you, please use as you wish and provide feedback. 
+If this application is useful for you, please use it as you wish and provide feedback.
 And yes, I do accept pull requests.</p>
 
 <h3 id="download">Download</h3>
@@ -106,8 +106,8 @@ And yes, I do accept pull requests.</p>
 <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/">Swift Concurrency</a> 
 system. Concurrency is used to ping and check open ports on many network
 endpoints at once. That said, Teskemon uses a standard (boring) Model View
-Controller approach. There are 3 Swift Packages, Model, Controller, View. When I
-make big changes I usually post about it on Mastodon. Following along
+Controller approach. There are 3 Swift packages: Model, Controller, and View. When I
+make big changes I usually post about it on Mastodon. Follow along at
 <a href="https://jeffburg.social/tags/Tailscale">jeffburg.social/tags/Tailscale</a> if you
 are curious.</p>
 
@@ -127,7 +127,7 @@ Process, and Presentation complexity into simple types the views can read from
 and write to</li>
 </ol>
 
-<p>In order to ensure consistency and live updating across all screens all the time
+<p>In order to ensure consistency and live updating across all screens all the time,
 either AppStorage or SceneStorage are used as an underlying storage primitive.
 AppStorage stores settings like custom names and the list of services.
 SceneStorage stores temporary information like the list of Machines from
@@ -136,11 +136,11 @@ the views.</p>
 
 <h3 id="view">View</h3>
 <p>This layer contains all of the views for the application. They are all fairly
-simply and mostly consist of Tables or Forms.</p>
+simple and mostly consist of Tables or Forms.</p>
 
 <h3 id="privacy">Privacy</h3>
 <p>Teskemon does not access the internet or use any analytics service. There is no 
-login or other user information stored. The tailscale CLI does provide your 
+login or other user information stored. The Tailscale CLI does provide your
 name, but it is only stored in SceneStorage and never uploaded anywhere. 
 Passwords are stored in the keychain but they are cached in memory 
 for performance reasons.</p>
@@ -177,7 +177,7 @@ automatic refresh of Services, which is the default setting.</p>
     </div>
 
     <div class="social-links"><ul class="social-media-list"><li>
-    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="Github">
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
       <span class="grey fa-brands fa-github fa-lg"></span>
     </a>
   </li><li>

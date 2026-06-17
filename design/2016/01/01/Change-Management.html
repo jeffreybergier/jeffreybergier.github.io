@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Change Management Rapid Prototype | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Change Management Rapid Prototype" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What if global network configuration was more like Git?" />
+<meta name="twitter:description" property="og:description" content="What if global network configuration was more like Git?" />
+<link rel="canonical" href="https://jeffburg.com/design/2016/01/01/Change-Management.html" />
+<meta property="og:url" content="https://jeffburg.com/design/2016/01/01/Change-Management.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-01-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Change Management Rapid Prototype" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2016-01-01T00:00:00+00:00","datePublished":"2016-01-01T00:00:00+00:00","description":"What if global network configuration was more like Git?","headline":"Change Management Rapid Prototype","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/design/2016/01/01/Change-Management.html"},"url":"https://jeffburg.com/design/2016/01/01/Change-Management.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+  <!-- Custom Layout Starts Here -->
+    
+    <div class="title-accessory">
+      <p><a href="/assets/images/design/change-management/cm-visual-2k.png" class="reflect below-xl round-sm"><img src="/assets/images/design/change-management/cm-visual-600.png" alt="Change Management" /></a></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">Change Management Rapid Prototype</h1><p><p>What if global network configuration was more like Git?</p>
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2016-01-01T00:00:00+00:00" itemprop="datePublished">
+        Jan 1, 2016
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="the-project">The Project</h2>
+<p>One of the main problems network operators have is managing change on their network. The problem is change commonly breaks things, so the established rule is to change as little as possible as rarely as possible. I wanted to try something better: where all changes can be seen, where approvals can be granted, and where accountability is clear.</p>
+
+<hr />
+
+<h3 id="change-timeline">Change Timeline</h3>
+<p><a href="/assets/images/design/change-management/cm-now-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-now-600.png" alt="Change Timeline" /></a>
+Given a time period, the operator should be able to see when changes were saved in the system. They should also be able to see who made the changes and what changes were made. Also, depending on how the Role Based Management system works, changes might need to be submitted for approval before being put into effect. This is shown in the middle of this mockup.</p>
+
+<h3 id="new-changes">New Changes</h3>
+<p><a href="/assets/images/design/change-management/cm-newchanges-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-newchanges-600.png" alt="New Changes" /></a>
+Another really important feature of a change management system is rolling out changes to affected hardware. This does not happen instantly. It also needs to be scheduled as there are “maintenance windows” that can vary from location to location. In the mockup above, the time between starting a rollout to finishing it is shown in light gray. At the end, the operator would be able to click on that and get a status report on how the rollout went. Where did it fail and why?</p>
+
+<h3 id="summary-of-changes">Summary of Changes</h3>
+<p><a href="/assets/images/design/change-management/cm-changes-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-changes-600.png" alt="Summary of Changes" /></a>
+This mockup and the previous one both show what it could look like when a different operator makes a change and it appears in the timeline for this operator to see. This operator can click on the event on the timeline to see what was changed. Depending on how Role Based Management is configured, an operator may need to approve the changes before a rollout can be started.</p>
+
+<h3 id="full-diff">Full Diff</h3>
+<p><a href="/assets/images/design/change-management/cm-diff-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-diff-600.png" alt="Full Diff" /></a>
+It may be necessary to dive deep into the changes made. This could be changes made in the past, or changes that have not yet been rolled out. This is a concept screen showing Application definition changes. This also features my favorite pet feature, impact. Impact shows the network admin approximately how many sites, users, etc this change will affect when it is rolled out.</p>
+
+<h3 id="pixel-perfect-mockup">Pixel Perfect Mockup</h3>
+<p><a href="/assets/images/design/change-management/cm-visual-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-visual-600.png" alt="Pixel Perfect Mockup" /></a>
+All the mockups up to this point were done super quickly in Balsamiq. Rapid prototypes like this are not worth spending a lot of time on until you know the idea is worth investigating. After I made these basic mockups, the rest of the UX team thought it looked concrete enough to make a pixel perfect mockup. This mockup is the same timeline. I love seeing the transformation of a structural idea, into something that is just as useful, but also pleasing to the eye.</p>
+
+  </div>
+
+  <a class="u-url" href="/design/2016/01/01/Change-Management.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -10771,6 +10771,28 @@ a.thumbnail img {
     margin: 0 auto 1em;
   }
 }
+.image-gallery-wide {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+.image-gallery-wide a {
+  display: block;
+  text-decoration: none;
+}
+.image-gallery-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .image-gallery-wide {
+    grid-template-columns: 1fr;
+  }
+}
 /* Accessory Layout */
 .accessory-layout {
   display: flex;
@@ -10804,9 +10826,46 @@ a.thumbnail img {
 }
 
 /* Title Accessory + Header Layout */
+.page-content {
+  padding-top: 0;
+}
+
+.post-header {
+  padding-top: 30px;
+}
+
+.post-header-wide {
+  padding-top: 0;
+}
+
 .title-accessory {
   max-width: 256px;
   margin: 0 auto 0rem;
+}
+
+.title-accessory-wide {
+  width: 100vw;
+  max-width: none;
+  max-height: 400px;
+  overflow: hidden;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 1.5rem;
+}
+.title-accessory-wide p {
+  width: 100%;
+  margin: 0;
+}
+.title-accessory-wide a {
+  display: block;
+  width: 100%;
+}
+.title-accessory-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  transform: translateY(min(0px, 400px - 100%));
 }
 
 @media (max-width: 800px) {
@@ -10873,15 +10932,15 @@ a.thumbnail img {
    --------------------------------------------
    Usage Examples in HTML:
      <img src="/assets/images/photo.jpg" class="reflect below-md round-md">
-     <a href="#" class="reflect below-sm round-lg"><img src="..."></a>
+     <a href="#" class="reflect below-sm round-md"><img src="..."></a>
 
    Usage Examples in Markdown (Kramdown):
      ![Photo](/assets/images/photo.jpg){: .reflect .below-md .round-md }
-     [![App Icon](/assets/images/appicon.png){: .reflect .below-sm .round-lg }](/some-link)
+     [![App Icon](/assets/images/appicon.png){: .reflect .below-sm .round-md }](/some-link)
 
    Notes:
      - Distance modifiers: below-xl, below-lg, below-md, below-sm, below-xs
-     - Radius modifiers: round-none, round-sm, round-md, round-lg
+     - Radius modifiers: round-none, round-sm, round-md
      - Apply classes to <img> or <a> wrapping <img> for reflections
    ============================================ */
 /* Base reflection style */
@@ -10923,10 +10982,6 @@ a.reflect img {
 
 .round-md {
   --reflect-radius: 1em;
-}
-
-.round-lg {
-  --reflect-radius: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */

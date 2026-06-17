@@ -117,18 +117,18 @@
 but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing 
 Original iPhone and iPhone 3G apps on your PowerPC Mac. This builds upon the
 work of whoever in the community created the custom installers and scripts found
-on <a href="https://www.macintoshrepository.org/1090-iphone-os-2-2-1-sdk-for-ppc">Macintosh Repository.</a>
+on <a href="https://www.macintoshrepository.org/1090-iphone-os-2-2-1-sdk-for-ppc">Macintosh Repository</a>.
 This hack relied on the fact that even though Apple required Intel Macs for
 iPhone development, they actually shipped universal binaries for the iPhone
 SDK up until iPhone OS 2.2.1 SDK.</p>
 
 <p>But the 2.2.1 SDK is quite limited and the iPhone really started to come into
-its own with the 3.0 and higher SDK’s. These included critical improvements
+its own with the 3.0 and higher SDKs. These included critical improvements
 like Core Data, AVFoundation, MediaPlayer, and others. So I started to look
 into if it was possible to get the new SDK on a PowerPC Mac as well. And to my
 surprise, it is possible! And will even deploy to a real iPhone running 3.1.3.</p>
 
-<p>In this document you I will walk you through how I did it.</p>
+<p>In this document I will walk you through how I did it.</p>
 
 <h3 id="caveats">Caveats</h3>
 
@@ -239,7 +239,7 @@ the Mac via AFP or SCP.</p>
 <p>Mount the <code class="language-plaintext highlighter-rouge">iphone_sdk_3.1.3_with_xcode_3.1.4__leopard__9m2809a.dmg</code> and open
 the installer file to do a normal install of Xcode. I selected all possible 
 options, but you should only need the basic developer tools package. The 
-installer WILL NOT let you select the iPhone SDK packages. Thats OK, we will
+installer WILL NOT let you select the iPhone SDK packages. That’s OK, we will
 do that in the next step. This took about 30 minutes on my 1.25GHz iMac G4 
 with 1TB SSD, so please be patient if your system is slower and/or does not 
 have an SSD.</p>
@@ -255,7 +255,7 @@ have an SSD.</p>
     <ol>
       <li>Open terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
       <li>You should see <code class="language-plaintext highlighter-rouge">iPhone SDK</code>, not <code class="language-plaintext highlighter-rouge">iPhone SDK 2</code> or some other name. If
-its not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
+it’s not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
     </ol>
   </li>
   <li>Open <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.mpkg</code> and run the installer
@@ -268,7 +268,7 @@ on a PowerPC Mac.</li>
   <li>Unmount the iPhone SDK disk image</li>
 </ol>
 
-<p>At this point you will have a fully working Xcode install and if you will even
+<p>At this point you will have a fully working Xcode install and you will even
 be able to create new iPhone projects. However, there are 3 problems that need 
 to be fixed:</p>
 
@@ -295,7 +295,7 @@ universal.</p>
 <p>One of the included files is <code class="language-plaintext highlighter-rouge">iPhone221PPCInstaller.mpkg</code>. This file was 
 originally provided on Macintosh Repository but I customized it to only install
 one small part of the iPhone OS 2.2.1 SDK instead of the whole thing. It only
-install the <code class="language-plaintext highlighter-rouge">iPhoneSimulatorPlatform.pkg</code> which installs the Universal binary
+installs the <code class="language-plaintext highlighter-rouge">iPhoneSimulatorPlatform.pkg</code> which installs the Universal binary
 version of the iPhone Simulator as well as the Interface Builder plugin for
 iPhone XIBs.</p>
 
@@ -306,7 +306,7 @@ iPhone XIBs.</p>
     <ol>
       <li>Open terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
       <li>You should see <code class="language-plaintext highlighter-rouge">iPhone SDK</code>, not <code class="language-plaintext highlighter-rouge">iPhone SDK 2</code> or some other name. If
-its not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
+it’s not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
     </ol>
   </li>
   <li>Open <code class="language-plaintext highlighter-rouge">iPhone221PPCInstaller.mpkg</code> and run the installer. This installs:
@@ -339,13 +339,13 @@ ichigodaifuku:~ me<span class="nv">$ </span>
 </code></pre></div></div>
 
 <p>The normal version of <code class="language-plaintext highlighter-rouge">ld</code> that comes with Xcode is a universal binary but the
-the version that comes with the iPhone SDK is Intel only (for some reason). 
-Its the only Intel-only part of the SDK, as far as I can tell. I provided a 
+version that comes with the iPhone SDK is Intel only (for some reason).
+It’s the only Intel-only part of the SDK, as far as I can tell. I provided a
 script to patch <code class="language-plaintext highlighter-rouge">ld</code> to make it easy, but all it does is backup the original 
 and then copy the version from Xcode into the place the iPhone SDK is.</p>
 
 <p>I wanted to make the script run automatically at the end of Step 2 but I could 
-not  figure out how to insert the script into the installer. If you know how, 
+not figure out how to insert the script into the installer. If you know how,
 please let me know and I will improve <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.mpkg</code></p>
 
 <ol>
@@ -437,7 +437,7 @@ you will need to do it the old fashioned way <i class="fa-solid fa-hand-peace"><
     </div>
 
     <div class="social-links"><ul class="social-media-list"><li>
-    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="Github">
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
       <span class="grey fa-brands fa-github fa-lg"></span>
     </a>
   </li><li>

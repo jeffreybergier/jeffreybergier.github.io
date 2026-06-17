@@ -7,3 +7,6 @@ design:
 apps:
   title: '<i class="fa-solid fa-compass-drafting"></i>Apps'
   url: "/apps/"
+unenshittification:
+  title: '<i class="fa-solid fa-trash"></i>Unenshittification'
+  url: "/unenshittification/"

@@ -1,0 +1,56 @@
+{% assign restaurants = site.data.restaurants %}
+{% if include.status %}
+  {% assign restaurants = restaurants | where: "status", include.status %}
+{% endif %}
+{% assign sort_by = include.sort_by | default: "name" %}
+{% assign sort_direction = include.sort_direction | default: "ascending" %}
+{% assign restaurants = restaurants | sort: sort_by %}
+{% if sort_direction == "descending" %}
+  {% assign restaurants = restaurants | reverse %}
+{% endif %}
+{% assign group_by = include.group_by %}
+{% assign heading_prefix = include.heading_prefix | default: "###" %}
+
+{% if include.title %}
+{{ heading_prefix }} {{ include.title }}
+{% endif %}
+
+{% if group_by %}
+  {% if group_by == "status" %}
+    {% assign status_order = "love|have_been|not_been" | split: "|" %}
+    {% for status in status_order %}
+      {% assign items = restaurants | where: "status", status | sort: sort_by %}
+      {% if sort_direction == "descending" %}
+        {% assign items = items | reverse %}
+      {% endif %}
+      {% if items.size > 0 %}
+        {% case status %}
+        {% when "love" %}{% assign group_name = "Love" %}
+        {% when "have_been" %}{% assign group_name = "Have been" %}
+        {% when "not_been" %}{% assign group_name = "Not been" %}
+        {% endcase %}
+
+{{ heading_prefix }} {{ group_name }}
+
+{% include restaurants-list.html restaurants=items group_by=group_by %}
+
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% assign groups = restaurants | group_by: group_by | sort: "name" %}
+    {% for group in groups %}
+    {% assign group_name = group.name %}
+
+{{ heading_prefix }} {% if group_name == "" %}Unspecified{% else %}{{ group_name }}{% endif %}
+
+      {% assign items = group.items | sort: sort_by %}
+      {% if sort_direction == "descending" %}
+        {% assign items = items | reverse %}
+      {% endif %}
+{% include restaurants-list.html restaurants=items group_by=group_by %}
+
+    {% endfor %}
+  {% endif %}
+{% else %}
+{% include restaurants-list.html restaurants=restaurants %}
+{% endif %}

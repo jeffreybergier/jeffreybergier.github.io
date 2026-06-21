@@ -1,0 +1,25 @@
+<ul class="restaurant-list">
+{%- for restaurant in include.restaurants %}
+  <li>
+    {%- if restaurant.url -%}
+      <a href="{{ restaurant.url }}">{{ restaurant.name }}</a>
+    {%- else -%}
+      <strong>{{ restaurant.name }}</strong>
+    {%- endif -%}
+    <span class="restaurant-meta">
+      {%- if restaurant.tabelog_score %} · 食べログ {{ restaurant.tabelog_score }}{% endif -%}
+      {%- if include.group_by != "area" and restaurant.area %} · {{ restaurant.area }}{% endif -%}
+      {%- if restaurant.tabelog_area %} · {{ restaurant.tabelog_area }}{% endif -%}
+      {%- if restaurant.cuisine %} · {{ restaurant.cuisine }}{% endif -%}
+      {%- if restaurant.status and restaurant.status != "have_been" %}
+        {%- case restaurant.status %}
+        {%- when "not_been" %} · 未訪問
+        {%- when "love" %} · おすすめ
+        {%- else %} · {{ restaurant.status | replace: "_", " " }}
+        {%- endcase %}
+      {%- endif -%}
+      {%- if restaurant.tags and restaurant.tags.size > 0 %} · {{ restaurant.tags | join: ", " }}{% endif -%}
+    </span>
+  </li>
+{%- endfor %}
+</ul>

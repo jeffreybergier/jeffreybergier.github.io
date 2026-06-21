@@ -204,6 +204,28 @@ a.thumbnail img {
   text-align: center;
 }
 
+/* Restaurant database */
+
+.restaurant-list {
+  margin-left: 0;
+  padding-left: 1.25rem;
+}
+
+.restaurant-list li {
+  margin: 0.45rem 0;
+}
+
+.restaurant-meta,
+.restaurant-note {
+  color: #A8A8A8;
+  font-size: 0.92em;
+}
+
+.restaurant-note {
+  display: inline-block;
+  margin-top: 0.1rem;
+}
+
 /* Prompt styling */
 
 .prompt-info,
@@ -295,4 +317,3 @@ a.reflect img {
 .round-none { --reflect-radius: 0;     }
 .round-sm   { --reflect-radius: 0.5em; }
 .round-md   { --reflect-radius: 1em;   }
-

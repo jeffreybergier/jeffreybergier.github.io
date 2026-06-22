@@ -16,13 +16,17 @@ services:
     image: ghcr.io/jeffreybergier/altivec-intelligence:latest
     working_dir: /repo/jeffreybergier.github.io/source
     environment:
-      - BUNDLE_APP_CONFIG=/root/.bundle/jeffreybergier.github.io/config
-      - BUNDLE_PATH=/root/.bundle/jeffreybergier.github.io
+      - BUNDLE_APP_CONFIG=/bundle/config
+      - BUNDLE_PATH=/bundle
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/altivec/bin:/osxcross/target/bin
     volumes:
+      - bundle:/bundle
       - ~/.altivec:/root
       - .:/repo/jeffreybergier.github.io
     ports:
       - "0.0.0.0:8080:8080"
     entrypoint: /bin/bash
     command: -lc "bundle install && bundle exec jekyll serve --host 0.0.0.0 --port 8080"
+
+volumes:
+  bundle:

@@ -32,7 +32,7 @@
 
 {{ heading_prefix }} {{ group_name }}
 
-{% include restaurants-list.html restaurants=items group_by=group_by section_status=include.status %}
+{% include restaurants-list.html restaurants=items group_by=group_by section_status=include.status show_cards=include.show_cards %}
 
       {% endif %}
     {% endfor %}
@@ -47,10 +47,10 @@
       {% if sort_direction == "descending" %}
         {% assign items = items | reverse %}
       {% endif %}
-{% include restaurants-list.html restaurants=items group_by=group_by section_status=include.status %}
+{% include restaurants-list.html restaurants=items group_by=group_by section_status=include.status show_cards=include.show_cards %}
 
     {% endfor %}
   {% endif %}
 {% else %}
-{% include restaurants-list.html restaurants=restaurants section_status=include.status %}
+{% include restaurants-list.html restaurants=restaurants section_status=include.status show_cards=include.show_cards %}
 {% endif %}

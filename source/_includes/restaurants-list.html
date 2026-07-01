@@ -1,60 +1,101 @@
-<ul class="restaurant-list">
+<ul class="restaurant-list{% if include.show_cards %} restaurant-list--cards{% endif %}">
 {%- for restaurant in include.restaurants %}
+  {%- assign restaurant_card = nil -%}
+  {%- if include.show_cards and site.data.restaurant_cards -%}
+    {%- assign restaurant_card_matches = site.data.restaurant_cards | where: "id", restaurant.id -%}
+    {%- assign restaurant_card = restaurant_card_matches | first -%}
+  {%- endif -%}
+  {%- assign restaurant_title = restaurant_card.title | default: restaurant.name -%}
+  {%- assign restaurant_image = restaurant_card.image -%}
+  {%- capture restaurant_badges -%}
+    {%- if restaurant.tabelog_score -%}
+      <span class="restaurant-badge">食べログ {{ restaurant.tabelog_score }}</span>
+    {%- endif -%}
+    {%- if restaurant.status and restaurant.status != "have_been" and restaurant.status != include.section_status -%}
+      {%- case restaurant.status -%}
+      {%- when "not_been" -%}
+        <span class="restaurant-badge">未訪問</span>
+      {%- when "love" -%}
+        <span class="restaurant-badge">おすすめ</span>
+      {%- else -%}
+        <span class="restaurant-badge">{{ restaurant.status | replace: "_", " " }}</span>
+      {%- endcase -%}
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- assign restaurant_badges = restaurant_badges | strip -%}
+  {%- assign has_meta = false -%}
+  {%- capture restaurant_meta -%}
+    {%- if include.group_by != "area" and restaurant.area -%}
+      {{ restaurant.area }}{%- assign has_meta = true -%}
+    {%- endif -%}
+    {%- if restaurant.tabelog_area -%}
+      {%- if has_meta %} · {% endif -%}{{ restaurant.tabelog_area }}{%- assign has_meta = true -%}
+    {%- endif -%}
+    {%- if restaurant.cuisine -%}
+      {%- if has_meta %} · {% endif -%}{{ restaurant.cuisine }}{%- assign has_meta = true -%}
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- assign restaurant_meta = restaurant_meta | strip -%}
+  {%- assign visible_tags = "" -%}
+  {%- if restaurant.tags and restaurant.tags.size > 0 -%}
+    {%- assign rendered_tag = false -%}
+    {%- capture visible_tags -%}
+      {%- for tag in restaurant.tags -%}
+        {%- unless include.section_status == "not_been" and tag == "行きたい" -%}
+          {%- if rendered_tag %} · {% endif -%}{{ tag }}{%- assign rendered_tag = true -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign visible_tags = visible_tags | strip -%}
+  {%- endif -%}
   <li>
-    <div class="restaurant-main">
-      <div class="restaurant-heading">
-        {%- if restaurant.url -%}
-          <a class="restaurant-name" href="{{ restaurant.url }}">{{ restaurant.name }}</a>
-        {%- else -%}
-          <strong class="restaurant-name">{{ restaurant.name }}</strong>
-        {%- endif -%}
-        <span class="restaurant-badges">
-          {%- if restaurant.tabelog_score -%}
-            <span class="restaurant-badge">食べログ {{ restaurant.tabelog_score }}</span>
-          {%- endif -%}
-          {%- if restaurant.status and restaurant.status != "have_been" and restaurant.status != include.section_status -%}
-            {%- case restaurant.status -%}
-            {%- when "not_been" -%}
-              <span class="restaurant-badge">未訪問</span>
-            {%- when "love" -%}
-              <span class="restaurant-badge">おすすめ</span>
-            {%- else -%}
-              <span class="restaurant-badge">{{ restaurant.status | replace: "_", " " }}</span>
-            {%- endcase -%}
-          {%- endif -%}
-        </span>
-      </div>
-      {%- assign has_meta = false -%}
-      {%- capture restaurant_meta -%}
-        {%- if include.group_by != "area" and restaurant.area -%}
-          {{ restaurant.area }}{%- assign has_meta = true -%}
-        {%- endif -%}
-        {%- if restaurant.tabelog_area -%}
-          {%- if has_meta %} · {% endif -%}{{ restaurant.tabelog_area }}{%- assign has_meta = true -%}
-        {%- endif -%}
-        {%- if restaurant.cuisine -%}
-          {%- if has_meta %} · {% endif -%}{{ restaurant.cuisine }}
-        {%- endif -%}
-      {%- endcapture -%}
-      {%- assign restaurant_meta = restaurant_meta | strip -%}
-      {%- if restaurant_meta != "" -%}
-        <div class="restaurant-meta">{{ restaurant_meta }}</div>
+    {%- if include.show_cards and restaurant_image -%}
+      {%- if restaurant.url -%}
+        <a class="restaurant-card" href="{{ restaurant.url }}">
+      {%- else -%}
+        <div class="restaurant-card">
       {%- endif -%}
-      {%- if restaurant.tags and restaurant.tags.size > 0 -%}
-        {%- assign rendered_tag = false -%}
-        {%- capture visible_tags -%}
-          {%- for tag in restaurant.tags -%}
-            {%- unless include.section_status == "not_been" and tag == "行きたい" -%}
-              {%- if rendered_tag %} · {% endif -%}{{ tag }}{%- assign rendered_tag = true -%}
-            {%- endunless -%}
-          {%- endfor -%}
-        {%- endcapture -%}
-        {%- assign visible_tags = visible_tags | strip -%}
+          <span class="restaurant-card-media">
+            <img src="{{ restaurant_image }}" alt="" loading="lazy">
+          </span>
+          <span class="restaurant-card-body">
+            <span class="restaurant-card-source">食べログ</span>
+            <span class="restaurant-card-title">{{ restaurant_title }}</span>
+            {%- if restaurant_meta != "" -%}
+              <span class="restaurant-card-meta">{{ restaurant_meta }}</span>
+            {%- endif -%}
+            {%- if restaurant_badges != "" -%}
+              <span class="restaurant-badges">{{ restaurant_badges }}</span>
+            {%- endif -%}
+            {%- if visible_tags != "" -%}
+              <span class="restaurant-card-tags">{{ visible_tags }}</span>
+            {%- endif -%}
+          </span>
+      {%- if restaurant.url -%}
+        </a>
+      {%- else -%}
+        </div>
+      {%- endif -%}
+    {%- else -%}
+      <div class="restaurant-main">
+        <div class="restaurant-heading">
+          {%- if restaurant.url -%}
+            <a class="restaurant-name" href="{{ restaurant.url }}">{{ restaurant.name }}</a>
+          {%- else -%}
+            <strong class="restaurant-name">{{ restaurant.name }}</strong>
+          {%- endif -%}
+          {%- if restaurant_badges != "" -%}
+            <span class="restaurant-badges">{{ restaurant_badges }}</span>
+          {%- endif -%}
+        </div>
+        {%- if restaurant_meta != "" -%}
+          <div class="restaurant-meta">{{ restaurant_meta }}</div>
+        {%- endif -%}
         {%- if visible_tags != "" -%}
           <div class="restaurant-tags">{{ visible_tags }}</div>
         {%- endif -%}
-      {%- endif -%}
-    </div>
+      </div>
+    {%- endif -%}
   </li>
 {%- endfor %}
 </ul>

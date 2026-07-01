@@ -14,7 +14,7 @@ exclude: true
 
 ## おすすめ
 
-{% include restaurants.html status="love" group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" %}
+{% include restaurants.html status="love" group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
 
 ## 行きたい
 

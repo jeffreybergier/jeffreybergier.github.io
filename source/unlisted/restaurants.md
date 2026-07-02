@@ -8,7 +8,7 @@ exclude: true
 
 **目次**
 
-{::options toc_levels="2,3,4" /}
+{::options toc_levels="2,3" /}
 * TOC
 {:toc}
 
@@ -18,8 +18,8 @@ exclude: true
 
 ## 行きたい
 
-{% include restaurants.html status="not_been" group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" %}
+{% include restaurants.html status="not_been" group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
 
 ## 全て
 
-{% include restaurants.html group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" %}
+{% include restaurants.html group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}

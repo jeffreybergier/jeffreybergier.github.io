@@ -10,13 +10,16 @@ require "time"
 require "uri"
 require "yaml"
 
+$stdout.sync = true
+$stderr.sync = true
+
 ROOT_DIR = File.expand_path("..", __dir__)
 SOURCE_DIR = File.join(ROOT_DIR, "source")
 
 options = {
   input: File.join(SOURCE_DIR, "_data", "restaurants.yml"),
   output: File.join(SOURCE_DIR, "_data", "restaurant_cards.yml"),
-  status: "love",
+  status: nil,
   refresh: false,
   quiet: false
 }
@@ -26,7 +29,7 @@ OptionParser.new do |parser|
 
   parser.on("--input PATH", "Restaurant YAML input") { |path| options[:input] = path }
   parser.on("--output PATH", "Card cache YAML output") { |path| options[:output] = path }
-  parser.on("--status STATUS", "Restaurant status to cache") { |status| options[:status] = status }
+  parser.on("--status STATUS", "Only cache a single restaurant status") { |status| options[:status] = status }
   parser.on("--refresh", "Refetch existing cache entries") { options[:refresh] = true }
   parser.on("--quiet", "Only print warnings") { options[:quiet] = true }
 end.parse!
@@ -90,7 +93,7 @@ def meta_content(html, key)
   nil
 end
 
-def restaurant_jsonld_image(html)
+def restaurant_jsonld(html)
   html.scan(%r{<script\b[^>]*type\s*=\s*(['"])application/ld\+json\1[^>]*>(.*?)</script>}mi).each do |_, raw_json|
     parsed = JSON.parse(raw_json.strip)
     candidates = parsed.is_a?(Array) ? parsed : [parsed]
@@ -99,13 +102,24 @@ def restaurant_jsonld_image(html)
 
       type = candidate["@type"]
       types = type.is_a?(Array) ? type : [type]
-      return candidate["image"] if types.include?("Restaurant") && candidate["image"]
+      return candidate if types.include?("Restaurant")
     end
   rescue JSON::ParserError
     next
   end
 
-  nil
+  {}
+end
+
+def image_url(value)
+  case value
+  when Array
+    value.find { |item| item.to_s != "" }
+  when Hash
+    value["url"] || value["@id"]
+  else
+    value
+  end
 end
 
 def card_title(html, fallback)
@@ -114,49 +128,120 @@ def card_title(html, fallback)
   title.sub(/\s+\([^)]*\)\z/, "")
 end
 
+def area_from_title(html)
+  title = meta_content(html, "og:title").to_s.strip
+  match = title.match(/\s+\(([^\/)]+)\/[^)]*\)\z/)
+  match && match[1]
+end
+
+def rating_value(jsonld)
+  value = jsonld.dig("aggregateRating", "ratingValue").to_s.strip
+  return nil if value.empty?
+
+  Float(value)
+rescue ArgumentError
+  nil
+end
+
+def address_text(jsonld)
+  address = jsonld["address"]
+  return nil unless address.is_a?(Hash)
+
+  [
+    address["addressRegion"],
+    address["addressLocality"],
+    address["streetAddress"]
+  ].compact.join
+end
+
+def short_description(html)
+  description = meta_content(html, "description").to_s.strip
+  return nil if description.empty?
+
+  description = description.sub(/\A.*?の店舗情報は食べログでチェック！/m, "")
+  description = description.sub(/口コミや評価.*\z/m, "")
+  description = description.gsub(/\s+/, " ").strip
+  return nil if description.empty?
+  return nil if description.match?(/\A(?:【[^】]+】\s*)+\z/)
+
+  max_length = 90
+  description.length > max_length ? "#{description[0, max_length]}..." : description
+end
+
+def enriched_restaurant(restaurant, html)
+  jsonld = restaurant_jsonld(html)
+  title = card_title(html, restaurant["url"])
+  name = jsonld["name"].to_s.strip
+  name = title if name.empty?
+  image = image_url(jsonld["image"]) || meta_content(html, "og:image")
+  score = rating_value(jsonld)
+  area = area_from_title(html)
+  address = address_text(jsonld)
+  description = short_description(html)
+
+  enriched = {}
+  %w[url status chain urls tags].each do |key|
+    enriched[key] = restaurant[key] if restaurant.key?(key)
+  end
+
+  enriched["source_url"] = restaurant["url"]
+  enriched["name"] = name
+  enriched["title"] = title
+  enriched["image"] = image if image.to_s != ""
+  enriched["tabelog_score"] = score if score
+  enriched["area"] = area if area.to_s != ""
+  enriched["cuisine"] = jsonld["servesCuisine"] if jsonld["servesCuisine"].to_s != ""
+  enriched["description"] = description if description.to_s != ""
+  enriched["price_range"] = jsonld["priceRange"] if jsonld["priceRange"].to_s != ""
+  enriched["address"] = address if address.to_s != ""
+  enriched["telephone"] = jsonld["telephone"] if jsonld["telephone"].to_s != ""
+  enriched["cached_at"] = Time.now.utc.iso8601
+  enriched
+end
+
 restaurants = read_yaml(options[:input], [])
 existing_cards = read_yaml(options[:output], [])
-existing_by_id = existing_cards.each_with_object({}) do |card, lookup|
-  lookup[card["id"]] = card if card.is_a?(Hash) && card["id"]
+existing_by_url = existing_cards.each_with_object({}) do |card, lookup|
+  next unless card.is_a?(Hash)
+
+  url = card["url"] || card["source_url"]
+  lookup[url] = card if url
 end
 
 targets = restaurants.select do |restaurant|
-  restaurant["status"] == options[:status] && tabelog_url?(restaurant["url"])
+  (options[:status].nil? || restaurant["status"] == options[:status]) &&
+    tabelog_url?(restaurant["url"])
 end
+log("Caching #{targets.size} restaurants", options)
 
-generated_cards = targets.filter_map do |restaurant|
-  id = restaurant["id"]
-  existing = existing_by_id[id]
+generated_cards = targets.each_with_index.filter_map do |restaurant, index|
+  url = restaurant["url"]
+  existing = existing_by_url[url]
   existing_current = existing &&
-                     existing["source_url"] == restaurant["url"] &&
+                     existing["url"] == url &&
+                     existing["name"].to_s != "" &&
                      existing["title"].to_s != "" &&
-                     existing["image"].to_s != ""
+                     existing["area"].to_s != "" &&
+                     existing["cuisine"].to_s != "" &&
+                     existing["description"].to_s != ""
 
   if existing_current && !options[:refresh]
-    log("Using cached card for #{restaurant["name"]}", options)
+    log("Using cached data for #{existing["name"]}", options)
     next existing
   end
 
   begin
-    log("Fetching card for #{restaurant["name"]}", options)
-    html = fetch_html(restaurant["url"])
-    image = restaurant_jsonld_image(html) || meta_content(html, "og:image")
-
-    if image.to_s.empty?
-      warn "No card image found for #{restaurant["name"]}"
-      next existing
-    end
-
-    {
-      "id" => id,
-      "source_url" => restaurant["url"],
-      "title" => card_title(html, restaurant["name"]),
-      "image" => image,
-      "cached_at" => Time.now.utc.iso8601
-    }
+    log("Fetching data #{index + 1}/#{targets.size}: #{url}", options)
+    html = fetch_html(url)
+    enriched_restaurant(restaurant, html)
   rescue StandardError => error
-    warn "Could not cache #{restaurant["name"]}: #{error.message}"
-    existing
+    warn "Could not cache #{url}: #{error.message}"
+    existing || restaurant.merge(
+      "source_url" => url,
+      "name" => url,
+      "title" => url,
+      "cached_at" => Time.now.utc.iso8601
+    )
   end
 end
 

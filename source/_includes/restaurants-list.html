@@ -1,15 +1,16 @@
 <ul class="restaurant-list{% if include.show_cards %} restaurant-list--cards{% endif %}">
 {%- for restaurant in include.restaurants %}
-  {%- assign restaurant_card = nil -%}
-  {%- if include.show_cards and site.data.restaurant_cards -%}
-    {%- assign restaurant_card_matches = site.data.restaurant_cards | where: "id", restaurant.id -%}
-    {%- assign restaurant_card = restaurant_card_matches | first -%}
-  {%- endif -%}
-  {%- assign restaurant_title = restaurant_card.title | default: restaurant.name -%}
-  {%- assign restaurant_image = restaurant_card.image -%}
-  {%- capture restaurant_badges -%}
+  {%- assign restaurant_title = restaurant.title | default: restaurant.name | default: restaurant.url -%}
+  {%- assign restaurant_image = restaurant.image -%}
+  {%- capture restaurant_score_badge -%}
     {%- if restaurant.tabelog_score -%}
       <span class="restaurant-badge">食べログ {{ restaurant.tabelog_score }}</span>
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- assign restaurant_score_badge = restaurant_score_badge | strip -%}
+  {%- capture restaurant_badges -%}
+    {%- if restaurant.chain -%}
+      <span class="restaurant-badge">チェーン</span>
     {%- endif -%}
     {%- if restaurant.status and restaurant.status != "have_been" and restaurant.status != include.section_status -%}
       {%- case restaurant.status -%}
@@ -59,10 +60,15 @@
             <img src="{{ restaurant_image }}" alt="" loading="lazy">
           </span>
           <span class="restaurant-card-body">
-            <span class="restaurant-card-source">食べログ</span>
+            {%- if restaurant_score_badge != "" -%}
+              <span class="restaurant-card-score">{{ restaurant_score_badge }}</span>
+            {%- endif -%}
             <span class="restaurant-card-title">{{ restaurant_title }}</span>
             {%- if restaurant_meta != "" -%}
               <span class="restaurant-card-meta">{{ restaurant_meta }}</span>
+            {%- endif -%}
+            {%- if restaurant.description -%}
+              <span class="restaurant-card-description">{{ restaurant.description }}</span>
             {%- endif -%}
             {%- if restaurant_badges != "" -%}
               <span class="restaurant-badges">{{ restaurant_badges }}</span>
@@ -80,12 +86,12 @@
       <div class="restaurant-main">
         <div class="restaurant-heading">
           {%- if restaurant.url -%}
-            <a class="restaurant-name" href="{{ restaurant.url }}">{{ restaurant.name }}</a>
+            <a class="restaurant-name" href="{{ restaurant.url }}">{{ restaurant_title }}</a>
           {%- else -%}
-            <strong class="restaurant-name">{{ restaurant.name }}</strong>
+            <strong class="restaurant-name">{{ restaurant_title }}</strong>
           {%- endif -%}
-          {%- if restaurant_badges != "" -%}
-            <span class="restaurant-badges">{{ restaurant_badges }}</span>
+          {%- if restaurant_score_badge != "" or restaurant_badges != "" -%}
+            <span class="restaurant-badges">{{ restaurant_score_badge }}{{ restaurant_badges }}</span>
           {%- endif -%}
         </div>
         {%- if restaurant_meta != "" -%}

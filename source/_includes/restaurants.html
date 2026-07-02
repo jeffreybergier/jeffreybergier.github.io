@@ -1,4 +1,7 @@
-{% assign restaurants = site.data.restaurants %}
+{% assign restaurants = site.data.restaurant_cards %}
+{% unless restaurants %}
+  {% assign restaurants = site.data.restaurants %}
+{% endunless %}
 {% if include.status %}
   {% assign restaurants = restaurants | where: "status", include.status %}
 {% endif %}

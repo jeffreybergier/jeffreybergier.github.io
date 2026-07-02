@@ -1,447 +1,254 @@
 # source/unlisted/restaurants.md 用のレストランデータ。
-# 食べログの点数は取得時点の目安です。
-- id: ginza-una-1f1a360e
-  name: ぴょんぴょん舎 GINZA UNA
-  url: https://tabelog.com/tokyo/A1301/A130101/13048942/
-  tabelog_score: 3.47
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 焼肉
+# url is the canonical Tabelog URL and acts as the stable identifier.
+# Tabelog-derived fields such as name, score, station, area, cuisine, and image are generated.
+- url: https://tabelog.com/tokyo/A1301/A130101/13048942/
   status: love
-- id: tata-f01fc4d7
-  name: TATA
-  url: https://tabelog.com/tokyo/A1302/A130201/13260081/dtlphotolst/1/smp2/D-normal/2/
-  tabelog_score: 3.49
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: バル
+- url: https://tabelog.com/tokyo/A1302/A130201/13260081/
   status: not_been
   tags:
   - 行きたい
-- id: cafe-dining-ballo-ballo-ec05353c
-  name: Cafe＆Dining ballo ballo 銀座店
-  url: https://tabelog.com/tokyo/A1301/A130101/13148124/
-  tabelog_score: 3.37
-  area: 銀座・汐留
-  tabelog_area: 有楽町
-  cuisine: ダイニングバー
+- url: https://tabelog.com/tokyo/A1301/A130101/13148124/
   status: not_been
   tags:
   - 行きたい
-- id: 1660086b
-  name: 回転寿司 函館まるかつ水産 本店
-  url: https://tabelog.com/hokkaido/A0105/A010501/1002369/
-  tabelog_score: 3.47
-  area: 北海道
-  tabelog_area: 魚市場通
-  cuisine: 回転寿司
+- url: https://tabelog.com/hokkaido/A0105/A010501/1002369/
   status: love
-- id: 749ca500
-  name: 渋谷 きんぼし
-  url: https://tabelog.com/tokyo/A1303/A130301/13298044/
-  tabelog_score: 3.57
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1303/A130301/13298044/
   status: love
-- id: o-denbar-abb45aff
-  name: O'denbar うまみ 表参道
-  url: https://tabelog.com/tokyo/A1306/A130602/13264343/
-  tabelog_score: 3.42
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 表参道
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1306/A130602/13264343/
   status: not_been
   tags:
   - 行きたい
-- id: 15f0c62c
-  name: 七宝麻辣湯 店舗一覧
-  url: https://maratan.com/shops
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1309/A130905/13194968/
   status: not_been
+  chain: true
+  urls:
+  - https://maratan.com/shops
   tags:
   - 行きたい
-- id: c51f63ef
-  name: サルサカバナ メサ 中野店
-  url: https://maps.app.goo.gl/HUB5XfqcR2YF2hDH9?g_st=ic
-  tabelog_score: null
-  area: 中野・東中野・吉祥寺
-  tabelog_area: 中野
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1319/A131902/13177744/
   status: not_been
+  urls:
+  - https://maps.app.goo.gl/HUB5XfqcR2YF2hDH9?g_st=ic
   tags:
   - 行きたい
-- id: 1499d5d9
-  name: レストランあづま
-  url: https://tabelog.com/tokyo/A1301/A130101/13002548/
-  tabelog_score: 3.49
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 洋食
+- url: https://tabelog.com/tokyo/A1301/A130101/13002548/
   status: love
-- id: e6bd368f
-  name: 海底撈火鍋 秋葉原店
-  url: https://tabelog.com/tokyo/A1310/A131001/13260426/
-  tabelog_score: 3.47
-  area: チェーン店
-  tabelog_area: 秋葉原
-  cuisine: 火鍋
+- url: https://tabelog.com/tokyo/A1310/A131001/13260426/
   status: have_been
-- id: ea42d3f0
-  name: 目利きの銀次 東京ミッドタウン八重洲店
-  url: https://tabelog.com/tokyo/A1302/A130201/13282420/
-  tabelog_score: 3.08
-  area: チェーン店
-  tabelog_area: 東京
-  cuisine: 海鮮
+  chain: true
+- url: https://tabelog.com/tokyo/A1302/A130201/13282420/
   status: love
+  chain: true
   tags:
   - 東京ミッドタウン八重洲
   - いつも行く店舗
-- id: izakaya-ginza-34013e0b
-  name: izakaya東京 Ginza
-  url: https://tabelog.com/tokyo/A1301/A130103/13276893/
-  tabelog_score: 3.09
-  area: 銀座・汐留
-  tabelog_area: 新橋
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130103/13276893/
   status: not_been
   tags:
   - 行きたい
-- id: 992a25fb
-  name: 串八 烏丸店
-  url: https://tabelog.com/kyoto/A2601/A260201/26003180/
-  tabelog_score: 3.2
-  area: 京都
-  tabelog_area: 烏丸
-  cuisine: 串揚げ
+- url: https://tabelog.com/kyoto/A2601/A260201/26003180/
   status: have_been
-- id: ginza-seamon-bb34617a
-  name: 銀座 鰤門 Ginza Seamon
-  url: https://www.seamon.jp/
-  tabelog_score: null
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1301/A130101/13004881/
   status: not_been
   tags:
   - 行きたい
   - 高級そう
-- id: 027b9af0
-  name: まかないきいち
-  url: https://tabelog.com/tokyo/A1301/A130103/13127871/
-  tabelog_score: 3.43
-  area: 銀座・汐留
-  tabelog_area: 新橋
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130103/13127871/
   status: not_been
   tags:
   - 行きたい
-- id: c8345bae
-  name: 東京 芝 とうふ屋うかい
-  url: https://tabelog.com/tokyo/A1314/A131401/13019665/
-  tabelog_score: 3.66
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤羽橋
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1314/A131401/13019665/
   status: not_been
   tags:
   - 行きたい
-- id: 598de698
-  name: 新宿立吉 日比谷店
-  url: https://tabelog.com/tokyo/A1301/A130102/13219599/
-  tabelog_score: 3.48
-  area: 銀座・汐留
-  tabelog_area: 日比谷
-  cuisine: 串揚げ
+- url: https://tabelog.com/tokyo/A1301/A130102/13219599/
   status: not_been
   tags:
   - 行きたい
-- id: 5da4ff0c
-  name: モリタ屋 東京 丸の内店
-  url: https://moritaya-kyoto.co.jp/restaurant/marunouchi/menu/
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13006083/
   status: not_been
+  urls:
+  - https://moritaya-kyoto.co.jp/restaurant/marunouchi/menu/
   tags:
   - 行きたい
-- id: 6576ff5c
-  name: 五代目 花山うどん 日本橋店
-  url: https://tabelog.com/tokyo/A1302/A130202/13266849/
-  tabelog_score: 3.59
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: うどん
+- url: https://tabelog.com/tokyo/A1302/A130202/13266849/
   status: not_been
   tags:
   - 行きたい
   - 美味しそう
-- id: yamagata-daedoko-ac449a2a
-  name: YAMAGATA おさけとおりょうり DAEDOKO
-  url: https://tabelog.com/tokyo/A1302/A130201/13126132/
-  tabelog_score: 3.47
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 二重橋前
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1302/A130201/13126132/
   status: not_been
   tags:
   - 行きたい
-- id: ricolo-12caebd2
-  name: 熟成和牛と旬菜 RICOLO
-  url: https://tabelog.com/tokyo/A1302/A130201/13046225/
-  tabelog_score: 3.38
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: 鉄板焼き
+- url: https://tabelog.com/tokyo/A1302/A130201/13046225/
   status: have_been
   tags:
   - 大丸東京店
   - いまいち
   - 別名：リコロ 大丸東京店
-- id: 7c1196c2
-  name: 和食･焼きとり一鶏
-  url: https://tabelog.com/tokyo/A1302/A130201/13223252/
-  tabelog_score: 3.36
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: 鉄板焼き
+- url: https://tabelog.com/tokyo/A1302/A130201/13223252/
   status: not_been
   tags:
   - 行きたい
   - 東京駅一番街
   - 良さそう
   - 別名：カジュアル 鉄板 伊達
-- id: 00b0a62c
-  name: ねぎし
-  url: https://www.negishi.co.jp/location/index.html
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131002/13250328/
   status: have_been
+  chain: true
+  urls:
+  - https://www.negishi.co.jp/location/index.html
   tags:
   - 定食
-- id: e8e6d867
-  name: タパス＆タパス
-  url: http://www.tapas-tapas.com/shop/index.html
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1305/A130501/13152960/
   status: have_been
+  chain: true
+  urls:
+  - http://www.tapas-tapas.com/shop/index.html
   tags:
   - 定食
-- id: 24ecb058
-  name: 大戸屋
-  url: https://www.ootoya.com/store/
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13035658/
   status: have_been
+  chain: true
+  urls:
+  - https://www.ootoya.com/store/
   tags:
   - 定食
-- id: 66b15532
-  name: やよい軒
-  url: https://shop.yayoiken.com/stores
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13050384/
   status: have_been
+  chain: true
+  urls:
+  - https://shop.yayoiken.com/stores
   tags:
   - 定食
-- id: eea42814
-  name: 小諸そば
-  url: http://www.k-mitsuwa.co.jp/business/komoro/tenpo.html
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13050320/
   status: have_been
+  chain: true
+  urls:
+  - http://www.k-mitsuwa.co.jp/business/komoro/tenpo.html
   tags:
   - 定食
-- id: 8130271b
-  name: 五右衛門
-  url: https://www.yomenya-goemon.com/store/
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13254839/
   status: have_been
+  chain: true
+  urls:
+  - https://www.yomenya-goemon.com/store/
   tags:
   - 定食
   - "（洋麺屋ようめんや・ごえもん）"
-- id: 4fb90dcd
-  name: 天ぷらつな八
-  url: null
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13031392/
   status: have_been
+  chain: true
   tags:
   - 定食
-- id: 84ed573b
-  name: つばめグリル
-  url: https://www.tsubame-grill.co.jp/
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13152354/
   status: have_been
+  chain: true
+  urls:
+  - https://www.tsubame-grill.co.jp/
   tags:
   - ファミレス
-- id: 8833ca62
-  name: グリル満天星
-  url: http://www.manten-boshi.com/
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13004160/
   status: have_been
+  chain: true
+  urls:
+  - http://www.manten-boshi.com/
   tags:
   - ファミレス
-- id: 4b9fe31a
-  name: 魚民
-  url: https://www.monteroza.co.jp/shop/index.html
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131002/13129798/
   status: have_been
+  chain: true
+  urls:
+  - https://www.monteroza.co.jp/shop/index.html
   tags:
   - 居酒屋
-- id: 34ff45d3
-  name: 鳥貴族
-  url: https://map.torikizoku.co.jp/store
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13202526/
   status: have_been
+  chain: true
+  urls:
+  - https://map.torikizoku.co.jp/store
   tags:
   - 居酒屋
-- id: 5400e2a5
-  name: てけてけ
-  url: https://www.teke-teke.com/shoplist
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13196538/
   status: have_been
+  chain: true
+  urls:
+  - https://www.teke-teke.com/shoplist
   tags:
   - 居酒屋
-- id: 3d2ac04f
-  name: しゃぶしゃぶ温野菜
-  url: https://map.reins.co.jp/onyasai
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131002/13159384/
   status: have_been
+  chain: true
+  urls:
+  - https://map.reins.co.jp/onyasai
   tags:
   - 居酒屋
-- id: 3b5165dc
-  name: 珈琲館
-  url: https://c-united.co.jp/search/khk/
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13087126/
   status: have_been
+  chain: true
+  urls:
+  - https://c-united.co.jp/search/khk/
   tags:
   - コーヒー
-- id: 10c3740a
-  name: ドトール
-  url: null
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13060188/
   status: have_been
+  chain: true
   tags:
   - コーヒー
-- id: a7834a55
-  name: 上島
-  url: null
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131002/13154441/
   status: have_been
+  chain: true
   tags:
   - コーヒー
-- id: '16258982'
-  name: コメダ
-  url: null
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13251336/
   status: have_been
+  chain: true
   tags:
   - コーヒー
-- id: da7befb4
-  name: サンマルク
-  url: https://www.saint-marc-hd.com/b/saintmarc/?brand_type=CFE
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13136579/
   status: have_been
+  chain: true
+  urls:
+  - https://www.saint-marc-hd.com/b/saintmarc/?brand_type=CFE
   tags:
   - コーヒー
-- id: 275ee381
-  name: 星乃珈琲店
-  url: https://hoshinocoffee.com/shop.html
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131002/13226133/
   status: have_been
+  chain: true
+  urls:
+  - https://hoshinocoffee.com/shop.html
   tags:
   - コーヒー
-- id: 94e4efd0
-  name: カフェルノアール
-  url: https://www.ginza-renoir.co.jp/shopsearch/?brands%5B%5D=3
-  tabelog_score: null
-  area: チェーン店
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13087024/
   status: have_been
+  chain: true
+  urls:
+  - https://www.ginza-renoir.co.jp/shopsearch/?brands%5B%5D=3
   tags:
   - コーヒー
-- id: a3ef8cd7
-  name: 響バー（ひびき）
-  url: https://tabelog.com/tokyo/A1301/A130103/13005660/
-  tabelog_score: 3.38
-  area: 銀座・汐留
-  tabelog_area: 汐留
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130103/13005660/
   status: have_been
   tags:
   - 良かった
   - カレッタ汐留（良いビュー）
   - 良いビュー
   - 別名：ダイナミックキッチン＆バー 響 カレッタ汐留店
-- id: a6812b88
-  name: ミスジ（すし）
-  url: https://tabelog.com/tokyo/A1301/A130103/13126134/
-  tabelog_score: 3.47
-  area: 銀座・汐留
-  tabelog_area: 汐留
-  cuisine: 寿司
+- url: https://tabelog.com/tokyo/A1301/A130103/13126134/
   status: have_been
   tags:
   - 良かった
   - カレッタ汐留（良いビュー）
   - 良いビュー
   - 別名：美寿思
-- id: 799bea01
-  name: 北海道居酒屋
-  url: https://tabelog.com/tokyo/A1301/A130103/13132703/
-  tabelog_score: 3.18
-  area: 銀座・汐留
-  tabelog_area: 汐留
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130103/13132703/
   status: have_been
   tags:
   - 良かった
   - カレッタ汐留（良いビュー）
   - 良いビュー
   - 別名：北の味紀行と地酒 北海道 カレッタ汐留店
-- id: 94187ff9
-  name: 萬鉄ばんてつ・鉄板焼き
-  url: https://tabelog.com/tokyo/A1301/A130103/13216976/
-  tabelog_score: 3.51
-  area: 銀座・汐留
-  tabelog_area: 汐留
-  cuisine: 鉄板焼き
+- url: https://tabelog.com/tokyo/A1301/A130103/13216976/
   status: not_been
   tags:
   - 行きたい
@@ -449,1842 +256,977 @@
   - カレッタ汐留（良いビュー）
   - 良いビュー
   - 別名：鉄板和食とワイン 萬鉄
-- id: a56be015
-  name: "「風花」"
-  url: https://tabelog.com/tokyo/A1301/A130103/13020226/
-  tabelog_score: 3.46
-  area: 銀座・汐留
-  tabelog_area: 汐留
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130103/13020226/
   status: have_been
   tags:
   - コンラッドホテル
   - コンラッド東京(かざはな)・鉄板焼き
   - 別名：日本料理 「風花」 コンラッド東京
-- id: ristorante-e-volta-il-cielo-34af35a9
-  name: RISTORANTE E'VOLTA il cielo
-  url: https://tabelog.com/tokyo/A1301/A130101/13265371/
-  tabelog_score: 3.52
-  area: 銀座・汐留
-  tabelog_area: 築地市場
-  cuisine: イタリアン
+- url: https://tabelog.com/tokyo/A1301/A130101/13265371/
   status: not_been
   tags:
   - 行きたい
   - 三井ガーデンホテル銀座プレミア
-- id: ginza-5505a16e
-  name: てんぷら山の上 Ginza
-  url: https://tabelog.com/tokyo/A1301/A130101/13207702/
-  tabelog_score: 3.69
-  area: 銀座・汐留
-  tabelog_area: 東銀座
-  cuisine: 天ぷら
+- url: https://tabelog.com/tokyo/A1301/A130101/13207702/
   status: have_been
   tags:
   - 銀座シックス
-- id: 8100f1a1
-  name: シセイドウ ザ テーブルズ
-  url: https://tabelog.com/tokyo/A1301/A130101/13217830/
-  tabelog_score: 3.37
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: カフェ
+- url: https://tabelog.com/tokyo/A1301/A130101/13217830/
   status: not_been
   tags:
   - 行きたい
   - 銀座シックス
-- id: '95245925'
-  name: 銀座 花りん
-  url: https://tabelog.com/tokyo/A1301/A130101/13282758/
-  tabelog_score: 3.32
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130101/13282758/
   status: not_been
   tags:
   - 行きたい
   - 銀座シックス
-- id: e49fec1f
-  name: 恵亭松屋銀座店・豚カツ
-  url: https://tabelog.com/tokyo/A1301/A130101/13019458/
-  tabelog_score: 3.3
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: とんかつ
+- url: https://tabelog.com/tokyo/A1301/A130101/13019458/
   status: have_been
   tags:
   - 銀座松屋
   - "（けいてい）"
   - 別名：恵亭 松屋銀座店
-- id: italiana-tavola-d-oro-5d53968f
-  name: Italiana Tavola D’oro 銀座三越店
-  url: https://tabelog.com/tokyo/A1301/A130101/13230875/
-  tabelog_score: 3.42
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: イタリアン
+- url: https://tabelog.com/tokyo/A1301/A130101/13230875/
   status: have_been
   tags:
   - 良かった
   - 銀座三越
   - 美味しい
   - ピザとチーズ美味しい
-- id: cba6a9ac
-  name: 中国菜老四川飄香銀座三越店
-  url: https://tabelog.com/tokyo/A1301/A130101/13115780/
-  tabelog_score: 3.6
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 四川料理
+- url: https://tabelog.com/tokyo/A1301/A130101/13115780/
   status: have_been
   tags:
   - 銀座三越
   - 別名：中国菜 老四川 飄香 銀座三越店
-- id: 5fb48edd
-  name: パエリア
-  url: null
-  tabelog_score: null
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: null
-  status: have_been
-  tags:
-  - 銀座三越
-- id: 959b0e1c
-  name: 回転寿司 根室花まる
-  url: https://tabelog.com/tokyo/A1301/A130101/13193771/
-  tabelog_score: 3.45
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 回転寿司
+- url: https://tabelog.com/tokyo/A1301/A130101/13193771/
   status: have_been
   tags:
   - 銀座東急プラザ
   - 別名：回転寿司 根室花まる 銀座店
-- id: fe77200d
-  name: イル・バロッコ 有楽町店
-  url: https://tabelog.com/tokyo/A1301/A130102/13100445/
-  tabelog_score: 3.46
-  area: 銀座・汐留
-  tabelog_area: 有楽町
-  cuisine: イタリアン
+- url: https://tabelog.com/tokyo/A1301/A130102/13100445/
   status: have_been
   tags:
   - その他
   - ヒビパ
-- id: 40f3bdfc
-  name: 廻転とやま鮨 銀座
-  url: https://tabelog.com/tokyo/A1301/A130103/13242663/
-  tabelog_score: 3.49
-  area: 銀座・汐留
-  tabelog_area: 内幸町
-  cuisine: 回転寿司
+- url: https://tabelog.com/tokyo/A1301/A130103/13242663/
   status: have_been
   tags:
   - その他
-- id: e5f86d62
-  name: わらやき屋
-  url: https://tabelog.com/tokyo/A1301/A130101/13017714/
-  tabelog_score: 3.19
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130101/13017714/
   status: have_been
   tags:
   - その他
   - かつお・居酒屋
   - 別名：わらやき屋 銀座
-- id: e028e8fb
-  name: カフェコムサ
-  url: https://tabelog.com/tokyo/A1301/A130102/13163159/
-  tabelog_score: 3.21
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: カフェ
+- url: https://tabelog.com/tokyo/A1301/A130102/13163159/
   status: have_been
   tags:
   - その他
   - 別名：カフェコムサ コムサステージ銀座店
-- id: 452c0bac
-  name: 田中屋 銀座本店
-  url: https://tabelog.com/tokyo/A1301/A130101/13002617/
-  tabelog_score: 3.49
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: そば
+- url: https://tabelog.com/tokyo/A1301/A130101/13002617/
   status: have_been
   tags:
   - その他
   - 別名：明月庵 ぎんざ 田中屋 銀座本店
-- id: a4e09c3a
-  name: 鮮魚 日本酒 えどわん
-  url: https://tabelog.com/tokyo/A1301/A130101/13213162/dtlphotolst/4/smp2/
-  tabelog_score: 3.41
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130101/13213162/
   status: have_been
   tags:
   - その他
-- id: kan-3d01ed86
-  name: 銀座 KAN
-  url: https://tabelog.com/tokyo/A1301/A130101/13038540/
-  tabelog_score: 3.59
-  area: 銀座・汐留
-  tabelog_area: 銀座一丁目
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130101/13038540/
   status: not_been
   tags:
   - 行きたい
   - その他
   - 居酒屋
-- id: 18dec0f9
-  name: 鳥番屋 銀座本店
-  url: https://tabelog.com/tokyo/A1301/A130101/13259421/
-  tabelog_score: 3.43
-  area: 銀座・汐留
-  tabelog_area: 銀座一丁目
-  cuisine: 焼き鳥
+- url: https://tabelog.com/tokyo/A1301/A130101/13259421/
   status: not_been
   tags:
   - 行きたい
   - その他
-- id: cbae3544
-  name: 原始炭焼 いろり家
-  url: https://tabelog.com/tokyo/A1301/A130101/13032924/
-  tabelog_score: 3.47
-  area: 銀座・汐留
-  tabelog_area: 東銀座
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130101/13032924/
   status: not_been
   tags:
   - 行きたい
   - その他
   - "(げんしすみやき いろりや)"
   - 別名：原始炭焼 いろり家 東銀座店
-- id: 867ea31e
-  name: 焼肉 冷麺 ユッチャン
-  url: https://tabelog.com/tokyo/A1301/A130101/13261510/
-  tabelog_score: 3.54
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 焼肉
+- url: https://tabelog.com/tokyo/A1301/A130101/13261510/
   status: not_been
   tags:
   - 行きたい
   - その他
   - 別名：焼肉 冷麺 ユッチャン。 銀座店
-- id: c46bc3aa
-  name: むとう六丁目鯛茶膳
-  url: https://www.ginza-mutou.com/
-  tabelog_score: null
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1301/A130101/13002553/
+  status: not_been
+  urls:
+  - https://www.ginza-mutou.com/
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13014913/
   status: not_been
   tags:
   - 行きたい
   - その他
-- id: 61ff14b6
-  name: 銀座 岩戸
-  url: https://tabelog.com/tokyo/A1301/A130101/13014913/
-  tabelog_score: 3.51
-  area: 銀座・汐留
-  tabelog_area: 銀座一丁目
-  cuisine: 海鮮
-  status: not_been
-  tags:
-  - 行きたい
-  - その他
-- id: 1350d69c
-  name: 三州屋 銀座本店
-  url: https://tabelog.com/tokyo/A1301/A130101/13002473/
-  tabelog_score: 3.51
-  area: 銀座・汐留
-  tabelog_area: 銀座一丁目
-  cuisine: 食堂
+- url: https://tabelog.com/tokyo/A1301/A130101/13002473/
   status: not_been
   tags:
   - 行きたい
   - その他
   - 別名：大衆割烹 三州屋 銀座本店
-- id: 2c838d60
-  name: 銀座 圓
-  url: https://tabelog.com/tokyo/A1301/A130101/13160854/
-  tabelog_score: 3.52
-  area: 銀座・汐留
-  tabelog_area: 東銀座
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130101/13160854/
   status: not_been
   tags:
   - 行きたい
   - その他
-- id: e811051e
-  name: 銀座 菊正
-  url: https://tabelog.com/tokyo/A1301/A130101/13012780/
-  tabelog_score: 3.38
-  area: 銀座・汐留
-  tabelog_area: 銀座一丁目
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130101/13012780/
   status: not_been
   tags:
   - 行きたい
   - その他
-- id: 5-1e17f26a
-  name: 銀座 竹の庵 5丁目本店
-  url: https://tabelog.com/tokyo/A1301/A130101/13014394/
-  tabelog_score: 3.4
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1301/A130101/13014394/
   status: not_been
   tags:
   - 行きたい
   - その他
-- id: b000435e
-  name: ハイアット セントリック 銀座
-  url: https://www.hyatt.com/ja-JP/hotel/japan/hyatt-centric-ginza-tokyo/tyoct/dining
-  tabelog_score: null
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1301/A130101/13234093/
   status: not_been
+  urls:
+  - https://www.hyatt.com/ja-JP/hotel/japan/hyatt-centric-ginza-tokyo/tyoct/dining
   tags:
   - 行きたい
   - その他
-- id: e5c99488
-  name: 梅の花
-  url: https://umenohana-restaurant.co.jp/shop-list/info.php?id=910
-  tabelog_score: null
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1301/A130101/13012786/
   status: not_been
+  urls:
+  - https://umenohana-restaurant.co.jp/shop-list/info.php?id=910
   tags:
   - 行きたい
   - その他
-- id: anchor-tokyo-the-gate-hotel-8590194f
-  name: Anchor Tokyo・The Gate Hotel
-  url: https://www.gate-hotel.jp/tokyo/rb/atokyo.html
-  tabelog_score: null
-  area: 銀座・汐留
-  tabelog_area: 銀座
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1301/A130102/13229621/
   status: not_been
+  urls:
+  - https://www.gate-hotel.jp/tokyo/rb/atokyo.html
   tags:
   - 行きたい
   - おすすめ
   - その他
-- id: f81c1602
-  name: ひとりしゃぶしゃぶ 七代目 松五郎
-  url: https://tabelog.com/tokyo/A1308/A130801/13247290/
-  tabelog_score: 3.46
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤坂見附
-  cuisine: しゃぶしゃぶ
+- url: https://tabelog.com/tokyo/A1308/A130801/13247290/
   status: have_been
   tags:
   - 赤坂見附駅
-- id: da3b499d
-  name: わらやき屋 赤坂
-  url: https://tabelog.com/tokyo/A1308/A130801/13151433/
-  tabelog_score: 3.23
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤坂
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1308/A130801/13151433/
   status: have_been
   tags:
   - 赤坂見附駅
   - かつお・居酒屋
-- id: 8cb3713d
-  name: 虎屋菓寮 赤坂店
-  url: https://tabelog.com/tokyo/A1308/A130801/13000002/
-  tabelog_score: 3.5
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤坂見附
-  cuisine: 甘味処
+- url: https://tabelog.com/tokyo/A1308/A130801/13000002/
   status: not_been
   tags:
   - 行きたい
   - 赤坂見附駅
-- id: 78d25077
-  name: ワイン食堂 ＴＡＫＥＷＡＫＡ
-  url: https://tabelog.com/tokyo/A1308/A130801/13191917/
-  tabelog_score: 3.32
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤坂
-  cuisine: ビストロ
+- url: https://tabelog.com/tokyo/A1308/A130801/13191917/
   status: not_been
   tags:
   - 行きたい
   - 赤坂見附駅
-- id: 3eb687bb
-  name: 赤坂ビズタワー
-  url: https://mitsui-shopping-park.com/urban/akasakabiztower-sd/storeguide/index.html
-  tabelog_score: null
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤坂
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1308/A130801/13217714/
   status: have_been
-- id: 71adc75a
-  name: やぶそば
-  url: https://mitsui-shopping-park.com/urban/akasakabiztower-sd/store/600166.html
-  tabelog_score: null
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 赤坂
-  cuisine: null
-  status: have_been
+  urls:
+  - https://mitsui-shopping-park.com/urban/akasakabiztower-sd/store/600166.html
   tags:
   - 赤坂ビズタワー
-- id: 6e83770b
-  name: やさい家めい 表参道ヒルズ本家
-  url: https://tabelog.com/tokyo/A1306/A130602/13021167/
-  tabelog_score: 3.28
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 明治神宮前
-  cuisine: 野菜料理
+- url: https://tabelog.com/tokyo/A1306/A130602/13021167/
   status: have_been
   tags:
   - 表参道ヒルズ
   - 別名：やさい家めい 表参道ヒルズ店
-- id: 1e70131e
-  name: ザベルコモ
-  url: https://tabelog.com/tokyo/A1306/A130603/13249631/
-  tabelog_score: 3.58
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 外苑前
-  cuisine: カフェ
+- url: https://tabelog.com/tokyo/A1306/A130603/13249631/
   status: not_been
   tags:
   - 行きたい
   - 外苑前
   - ザベルコモ
-- id: 44c28861
-  name: 六本木ヒルズ
-  url: https://www.roppongihills.com/gourmet_shops/shops_list.html
-  tabelog_score: null
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 六本木
-  cuisine: null
-  status: have_been
-- id: fiorentina-42dc655f
-  name: フィオレンティーナ（Fiorentina）
-  url: https://tabelog.com/tokyo/A1307/A130701/13009015/
-  tabelog_score: 3.49
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 六本木
-  cuisine: イタリアン
+- url: https://tabelog.com/tokyo/A1307/A130701/13009015/
   status: have_been
   tags:
   - 六本木ヒルズ
   - 別名：フィオレンティーナ
-- id: 210119a4
-  name: 東京ミッドタウン
-  url: https://www.tokyo-midtown.com/jp/restaurants/
-  tabelog_score: null
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 六本木
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1307/A130701/13037362/
   status: have_been
-- id: c8b023ad
-  name: 喜扇亭人形町今半
-  url: https://restaurant.imahan.com/menu-kisentei-midtown/
-  tabelog_score: null
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 六本木
-  cuisine: null
-  status: have_been
+  urls:
+  - https://restaurant.imahan.com/menu-kisentei-midtown/
   tags:
   - 東京ミッドタウン
-- id: f99fc56f
-  name: キタノアームスラウンジ
-  url: https://tabelog.com/tokyo/A1308/A130803/13250053/
-  tabelog_score: 3.09
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 永田町
-  cuisine: バー
+- url: https://tabelog.com/tokyo/A1308/A130803/13250053/
   status: have_been
-- id: 86644d3a
-  name: シャングリラズシークレット 六本木店
-  url: https://tabelog.com/tokyo/A1307/A130701/13175214/
-  tabelog_score: 3.54
-  area: 赤坂・六本木・青山・表参道
-  tabelog_area: 六本木
-  cuisine: しゃぶしゃぶ
+- url: https://tabelog.com/tokyo/A1307/A130701/13175214/
   status: not_been
   tags:
   - 行きたい
   - "（きのこ鍋）"
   - 別名：シャングリラズシークレット 六本木店
-- id: osaka-b34277a6
-  name: OSAKAきっちん コレド室町店
-  url: https://tabelog.com/tokyo/A1302/A130202/13239413/
-  tabelog_score: 3.41
-  area: 日本橋
-  tabelog_area: 新日本橋
-  cuisine: お好み焼き
+- url: https://tabelog.com/tokyo/A1302/A130202/13239413/
   status: have_been
   tags:
   - 三越前駅・室町
-- id: caffe-di-festa-2bb6a3fd
-  name: 千疋屋日本橋Caffe di FESTA
-  url: https://www.sembikiya.co.jp/shop-list/caffe-difesta
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13000308/
   status: have_been
+  urls:
+  - https://www.sembikiya.co.jp/shop-list/caffe-difesta
   tags:
   - 三越前駅・室町
-- id: abe1b476
-  name: 堂島ロール
-  url: null
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13058319/
   status: have_been
   tags:
   - 三越前駅・室町 > 三越デパ地下
-- id: 24e1daeb
-  name: おはぎ
-  url: null
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13145027/
   status: have_been
   tags:
   - 三越前駅・室町 > 三越デパ地下
-- id: f2d9157a
-  name: 絵太郎・苺大福
-  url: null
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13006473/
   status: have_been
   tags:
   - 三越前駅・室町 > 三越デパ地下
-- id: 22a00bb2
-  name: サンフルーツ
-  url: null
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13093041/
   status: have_been
   tags:
   - 三越前駅・室町 > 三越デパ地下
-- id: 747779da
-  name: グリル満天星
-  url: https://nihonbashi-mitsukoshi.manten-boshi.com/
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13025634/
   status: have_been
+  urls:
+  - https://nihonbashi-mitsukoshi.manten-boshi.com/
   tags:
   - 三越前駅・室町
-- id: a676b172
-  name: イル バーカロ アルマ
-  url: https://tabelog.com/tokyo/A1302/A130202/13167366/
-  tabelog_score: 3.43
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: イタリアン
+- url: https://tabelog.com/tokyo/A1302/A130202/13167366/
   status: have_been
   tags:
   - 三越前駅・室町
   - "（東北イタリアン）"
-- id: 85471f16
-  name: 日本橋だし場 はなれ
-  url: https://tabelog.com/tokyo/A1302/A130202/13166510/
-  tabelog_score: 3.48
-  area: 日本橋
-  tabelog_area: 三越前
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1302/A130202/13166510/
   status: have_been
   tags:
   - 三越前駅・室町
-- id: thong-3ee1afc7
-  name: タイ料理THONG
-  url: https://www.thongjapan.com/index.php/shop/coredo
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13108338/
   status: have_been
+  urls:
+  - https://www.thongjapan.com/index.php/shop/coredo
   tags:
   - 日本橋駅・高島屋前 > コレド日本橋
-- id: d0f7e12c
-  name: 糖朝
-  url: https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103013
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13006196/
   status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103013
   tags:
   - 日本橋駅・高島屋前 > 高島屋日本橋店
   - "（香港料理）"
-- id: d2c0a110
-  name: 鼎泰豐・ディンタイフォン
-  url: https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103015
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13000130/
   status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103015
   tags:
   - 日本橋駅・高島屋前 > 高島屋日本橋店
   - "（台北料理）"
-- id: f0c92b08
-  name: そば処 萱場
-  url: https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103014
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13043634/
   status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103014
   tags:
   - 日本橋駅・高島屋前 > 高島屋日本橋店
-- id: 1eef428f
-  name: 天一
-  url: https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/176902
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13247938/
   status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/176902
   tags:
   - 日本橋駅・高島屋前 > 高島屋日本橋店
   - 天ぷら
-- id: edb0e6ea
-  name: 鳥かく
-  url: https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/237501
-  tabelog_score: null
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130202/13274531/
   status: not_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/237501
   tags:
   - 行きたい
   - 日本橋駅・高島屋前 > 高島屋日本橋店
   - そば・焼き鳥
-- id: 15c0e741
-  name: 日本橋榮太郎カフェ
-  url: https://tabelog.com/tokyo/A1302/A130202/13006483/
-  tabelog_score: 3.5
-  area: 日本橋
-  tabelog_area: 日本橋
-  cuisine: 和菓子
+- url: https://tabelog.com/tokyo/A1302/A130202/13006483/
   status: have_been
   tags:
   - 日本橋駅・高島屋前 > その他
   - 別名：ニホンバシ イーチャヤ
-- id: '35297396'
-  name: 串カツあらた
-  url: https://tabelog.com/tokyo/A1310/A131002/13219534/
-  tabelog_score: 3.45
-  area: 日本橋
-  tabelog_area: 神田
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131002/13219534/
   status: have_been
   tags:
   - 神田駅
   - 別名：串カツあらた 神田店
-- id: garlic-x-garlic-kitchen-fc9b3ac4
-  name: Garlic x Garlic Kitchen
-  url: https://tabelog.com/tokyo/A1302/A130204/13228336/
-  tabelog_score: 3.44
-  area: 日本橋
-  tabelog_area: 水天宮前
-  cuisine: にんにく料理
+- url: https://tabelog.com/tokyo/A1302/A130204/13228336/
   status: not_been
   tags:
   - 行きたい
   - 水天宮前駅
-- id: 2500cae1
-  name: 日本橋そのじ
-  url: https://tabelog.com/tokyo/A1302/A130204/13201969/
-  tabelog_score: 4.45
-  area: 日本橋
-  tabelog_area: 人形町
-  cuisine: 天ぷら
+- url: https://tabelog.com/tokyo/A1302/A130204/13201969/
   status: not_been
   tags:
   - 行きたい
   - 水天宮前駅
   - 別名：日本橋 蕎ノ字
-- id: 81a16baa
-  name: おこわ
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13281475/
   status: have_been
   tags:
   - 新宿高島屋 > デパ地下
-- id: 1cfdc2e0
-  name: たこめし弁当
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13201017/
   status: have_been
   tags:
   - 新宿高島屋 > デパ地下
-- id: 9a7ab9c1
-  name: ねぎし（アボカドサラダある）
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13140402/
   status: have_been
   tags:
   - 良かった
   - 新宿高島屋
   - アボカドサラダある
-- id: 2bbd7c73
-  name: 総本家 小松庵
-  url: https://www.restaurants-park.jp/restaurant/?id=22
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13017380/
   status: have_been
+  urls:
+  - https://www.restaurants-park.jp/restaurant/?id=22
   tags:
   - 良かった
   - 新宿高島屋
   - 良いビュー
   - "（良いビューそば）"
-- id: ab8fec0d
-  name: 今半
-  url: https://restaurant.imahan.com/shinjyuku-takashimaya/
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13004274/
   status: have_been
+  urls:
+  - https://restaurant.imahan.com/shinjyuku-takashimaya/
   tags:
   - 新宿高島屋
-- id: 3800c42c
-  name: ハンバーグ＆ステーキ 黒毛和牛 腰塚
-  url: https://tabelog.com/tokyo/A1304/A130403/13230084/
-  tabelog_score: 3.39
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: ハンバーグ
+- url: https://tabelog.com/tokyo/A1304/A130403/13230084/
   status: have_been
   tags:
   - 新宿高島屋
   - 別名：ハンバーグ＆ステーキ 黒毛和牛 腰塚 新宿髙島屋店
-- id: 5b32c11f
-  name: 名代とんかつ かつくら
-  url: https://tabelog.com/tokyo/A1304/A130401/13004277/
-  tabelog_score: 3.35
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: とんかつ
+- url: https://tabelog.com/tokyo/A1304/A130401/13004277/
   status: have_been
   tags:
   - 新宿高島屋
   - 別名：名代とんかつ かつくら 新宿髙島屋店
-- id: 86afcb33
-  name: 天ぷら新宿つな八
-  url: https://tabelog.com/tokyo/A1304/A130401/13017378/
-  tabelog_score: 3.27
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: 天ぷら
+- url: https://tabelog.com/tokyo/A1304/A130401/13017378/
   status: have_been
   tags:
   - 新宿高島屋
   - 別名：天ぷら新宿つな八 新宿高島屋店
-- id: 4bfbec84
-  name: 中村屋 オリーブハウス
-  url: https://www.restaurants-park.jp/restaurant/?id=12
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13030980/
   status: have_been
+  urls:
+  - https://www.restaurants-park.jp/restaurant/?id=12
   tags:
   - 新宿高島屋
-- id: 19-35c61143
-  name: サザンタワーダイニング
-  url: https://tabelog.com/tokyo/A1304/A130401/13004255/
-  tabelog_score: 3.45
-  area: 新宿
-  tabelog_area: 代々木
-  cuisine: 洋食
+- url: https://tabelog.com/tokyo/A1304/A130401/13004255/
   status: love
   tags:
   - 小田急ホテル センチュリーサザンタワー
   - 別名：19階 スカイ レストラン デコレーション キッチン
-- id: 468c28e1
-  name: 海鮮三崎港
-  url: https://tabelog.com/tokyo/A1304/A130401/13245844/
-  tabelog_score: 3.01
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: 回転寿司
+- url: https://tabelog.com/tokyo/A1304/A130401/13245844/
   status: have_been
   tags:
   - 新宿三丁目
   - 回転寿司
   - 別名：海鮮三崎港 新宿三丁目店
-- id: 95bae913
-  name: 叙々苑 ・新宿中央東口店
-  url: https://goo.gl/maps/RcBtbaMYygg2Tgxv7
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13017369/
   status: have_been
+  urls:
+  - https://goo.gl/maps/RcBtbaMYygg2Tgxv7
   tags:
   - 新宿三丁目
-- id: 788df78b
-  name: 茶茶 白雨
-  url: https://tabelog.com/tokyo/A1304/A130401/13021121/
-  tabelog_score: 3.49
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1304/A130401/13021121/
   status: have_been
   tags:
   - 新宿三丁目
   - "（チャチャ ユウダチ）"
-- id: c4c88dd5
-  name: ＤＥＮ アクアルーム 新宿
-  url: https://tabelog.com/tokyo/A1304/A130401/13004303/
-  tabelog_score: 3.41
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: ダイニングバー
+- url: https://tabelog.com/tokyo/A1304/A130401/13004303/
   status: not_been
   tags:
   - 行きたい
   - 新宿三丁目
-- id: 6d45c357
-  name: スカイラウンジオーロラ
-  url: https://www.keioplaza.co.jp/restaurant/list/aurora
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 西新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13202070/
   status: have_been
+  urls:
+  - https://www.keioplaza.co.jp/restaurant/list/aurora
   tags:
   - 都庁前駅・西新宿
   - 京王プラザホテル
-- id: e8280971
-  name: ピークラウンジ
-  url: https://restaurants.tokyo.park.hyatt.co.jp/plb.html
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 西新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13004207/
   status: have_been
+  urls:
+  - https://restaurants.tokyo.park.hyatt.co.jp/plb.html
   tags:
   - 都庁前駅・西新宿
   - パークハイアット
-- id: 30add515
-  name: コメダコーヒー
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 西新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13276239/
   status: have_been
   tags:
   - 都庁前駅・西新宿
-- id: f786368a
-  name: 鉄板二百℃
-  url: https://www.google.com/maps/place/%E3%80%92160-0023+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%91%EF%BC%98+%E5%B0%8F%E6%BB%9D%E6%A9%8B%E3%83%91%E3%82%B7%E3%83%95%E3%82%A3%E3%82%AB%E3%83%93%E3%83%AB+3F+%E9%89%84%E6%9D%BF%E4%BA%8C%E7%99%BE%E2%84%83+%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97/@35.6944905,139.6986151,12z/data=!4m6!3m5!1s0x60188cd6358f55c7:0xf9ca79631a9a6105!8m2!3d35.6944905!4d139.6986151!16s%2Fg%2F1xpwjsd1?hl=ja-JP&gl=jp
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 西新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13075579/
   status: have_been
+  urls:
+  - https://www.google.com/maps/place/%E3%80%92160-0023+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%91%EF%BC%98+%E5%B0%8F%E6%BB%9D%E6%A9%8B%E3%83%91%E3%82%B7%E3%83%95%E3%82%A3%E3%82%AB%E3%83%93%E3%83%AB+3F+%E9%89%84%E6%9D%BF%E4%BA%8C%E7%99%BE%E2%84%83+%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97/@35.6944905,139.6986151,12z/data=!4m6!3m5!1s0x60188cd6358f55c7:0xf9ca79631a9a6105!8m2!3d35.6944905!4d139.6986151!16s%2Fg%2F1xpwjsd1?hl=ja-JP&gl=jp
   tags:
   - 都庁前駅・西新宿
-- id: kimpton-dabda399
-  name: KIMPTONホテルバー
-  url: https://www.kimptonshinjuku.com/jp/tokyo-restaurants/rooftop-bar-86/
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 西新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13279736/
   status: not_been
+  urls:
+  - https://www.kimptonshinjuku.com/jp/tokyo-restaurants/rooftop-bar-86/
   tags:
   - 行きたい
   - 都庁前駅・西新宿
-- id: wa-dinner-b24040d9
-  name: WA-DINNER き （ワダイナー・キ）
-  url: https://tabelog.com/tokyo/A1304/A130401/13032487/
-  tabelog_score: 3.44
-  area: 新宿
-  tabelog_area: 新宿西口
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1304/A130401/13032487/
   status: not_been
   tags:
   - 行きたい
   - おすすめ
   - 都庁前駅・西新宿
   - 別名：ワダイナー き
-- id: 6c8abe76
-  name: 伊勢丹
-  url: https://www.mistore.jp/store/shinjuku/restaurant_search.html
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: null
-  status: have_been
-- id: 7a0c2377
-  name: 苺大福
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13006772/
   status: have_been
   tags:
   - 伊勢丹 > デパ地下
-- id: a4bdb7bd
-  name: ヘルシー弁
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13040134/
   status: have_been
-  tags:
-  - 伊勢丹 > デパ地下
-- id: d68f0407
-  name: 南国酒家
-  url: https://nangokusyuka.co.jp/store/vege_china.html
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: null
-  status: have_been
+  urls:
+  - https://nangokusyuka.co.jp/store/vege_china.html
   tags:
   - 伊勢丹
   - ベジチャイナ
-- id: d57eb36f
-  name: 銀座アスター
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿三丁目
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13041958/
   status: have_been
   tags:
   - 伊勢丹
-- id: 4cd3cfc9
-  name: 叙々苑 ・新宿小田急ハルク店
-  url: https://goo.gl/maps/rNEsjv4KtbU7L8Ra7
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13011894/
   status: have_been
+  urls:
+  - https://goo.gl/maps/rNEsjv4KtbU7L8Ra7
   tags:
   - 小田急
-- id: 8110112b
-  name: 龍門・中華料理・良い定食のランチ
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13011946/
   status: have_been
   tags:
   - 良かった
   - 小田急
   - 良い定食のランチ
-- id: 0e511df7
-  name: つゞらお本店
-  url: https://www.odakyu-restaurant.jp/shop/tsudurao/honten.html
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13110889/
   status: have_been
+  urls:
+  - https://www.odakyu-restaurant.jp/shop/tsudurao/honten.html
   tags:
   - 小田急
   - そば ・居酒屋
-- id: 2e5a1b46
-  name: レーメンセット
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13223518/
   status: have_been
   tags:
   - 小田急 > 和牛一頭焼肉 牛兵衛 草庵
-- id: 81a16baa-5b9a
-  name: おこわ
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13281494/
   status: have_been
   tags:
   - 小田急 > デパ地下
-- id: 56605f3f
-  name: 牛タン弁当
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13195128/
   status: have_been
   tags:
   - 小田急 > デパ地下
-- id: good-chinese-bento-46ae249b
-  name: 中華弁当
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13281004/
   status: have_been
   tags:
   - 小田急 > デパ地下
-- id: 923ca8a6
-  name: 千疋屋、マンプリ
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13200858/
   status: have_been
   tags:
   - 小田急 > デパ地下
-- id: dojima-roll-3ae8439d
-  name: 堂島ロール
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1304/A130401/13091890/
   status: have_been
   tags:
   - 小田急 > デパ地下
-- id: gyoza-not-bento-028f5752
-  name: しそ餃子（弁当ではない）
-  url: null
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 新宿
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1318/A131807/13004248/
   status: have_been
-  tags:
-  - 小田急 > デパ地下
-- id: 4aa6b2e1
-  name: オペラシティー
-  url: http://www.tokyooperacity.co.jp/shops/sky_restaurant/
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 初台
-  cuisine: null
-  status: have_been
-- id: 9fb7504e
-  name: 叙々苑
-  url: https://www.jojoen.co.jp/shop/jojoen/operacity/
-  tabelog_score: null
-  area: 新宿
-  tabelog_area: 初台
-  cuisine: null
-  status: have_been
+  urls:
+  - https://www.jojoen.co.jp/shop/jojoen/operacity/
   tags:
   - オペラシティー
   - 53階
-- id: ba17691f
-  name: プロント信濃町
-  url: https://tabelog.com/tokyo/A1309/A130901/13255121/
-  tabelog_score: 3.29
-  area: 新宿
-  tabelog_area: 信濃町
-  cuisine: カフェ
+- url: https://tabelog.com/tokyo/A1309/A130901/13255121/
   status: have_been
   tags:
   - 信濃町
   - 別名：プロント アトレ信濃町店
-- id: 73a4446c
-  name: 為治郎(ためじろう)
-  url: https://tabelog.com/tokyo/A1302/A130201/13137848/
-  tabelog_score: 3.49
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: そば
+- url: https://tabelog.com/tokyo/A1302/A130201/13137848/
   status: have_been
   tags:
   - 東京駅
   - 駅そば
   - 別名：そば処 為治郎
-- id: 289fe5ea
-  name: 神座・かむくらラーメン
-  url: null
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13253583/
   status: have_been
   tags:
   - 東京駅
-- id: shangri-la-50d36b8d
-  name: ザ・ロビーラウンジ・Shangri-la
-  url: https://www.shangri-la.com/jp/tokyo/shangrila/dining/bars-lounges/lobby-lounge/
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13072553/
+  status: have_been
+  urls:
+  - https://www.shangri-la.com/jp/tokyo/shangrila/dining/bars-lounges/lobby-lounge/
+  tags:
+  - 東京駅
+- url: https://tabelog.com/tokyo/A1302/A130201/13320088/
   status: have_been
   tags:
   - 東京駅
-- id: jr-2e747c1b
-  name: ＪＲステーションカフェ
-  url: null
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13189541/
   status: have_been
   tags:
   - 東京駅
-- id: 524889b1
-  name: サラベス
-  url: null
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13219122/
   status: have_been
   tags:
   - 東京駅
-- id: 352239da
-  name: ルノアール
-  url: null
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13050213/
   status: have_been
   tags:
   - 東京駅
-- id: 33d6d33e
-  name: エクセルシオールカフェ
-  url: null
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13147493/
   status: have_been
-  tags:
-  - 東京駅
-- id: 8ae1fc62
-  name: 東京ステーションホテル、虎屋、ロビーラウンジ
-  url: https://www.tokyostationhotel.jp/restaurants/torayatokyo/
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
-  status: have_been
+  urls:
+  - https://www.tokyostationhotel.jp/restaurants/torayatokyo/
   tags:
   - 東京駅
   - 東京コトブキ・居酒屋
-- id: d3decad3
-  name: 東京コトブキ
-  url: https://www.dynacjapan.com/brands/kotobuki/
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13221765/
   status: have_been
+  urls:
+  - https://www.dynacjapan.com/brands/kotobuki/
   tags:
   - 東京駅
   - 東京ステーションホテル、虎屋、ロビーラウンジ / ・居酒屋
-- id: 7ad87760
-  name: 新橋鶏繁
-  url: https://www.daimaru.co.jp/tokyo/restaurant/12f_tk_torishige.html
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13146635/
   status: have_been
+  urls:
+  - https://www.daimaru.co.jp/tokyo/restaurant/12f_tk_torishige.html
   tags:
   - 大丸東京店
   - とりしげ・焼き鳥
-- id: 52fec6ce
-  name: 布屋太兵衛
-  url: https://www.daimaru.co.jp/tokyo/restaurant/12f_edo_nunoyatahei.html
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13046509/
   status: have_been
+  urls:
+  - https://www.daimaru.co.jp/tokyo/restaurant/12f_edo_nunoyatahei.html
   tags:
   - 大丸東京店
   - ぬのやたへい・そば
-- id: e348cd96
-  name: 千疋屋
-  url: https://www.daimaru.co.jp/tokyo/restaurant/3f_cafe_sembikiya.html
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13154437/
   status: have_been
+  urls:
+  - https://www.daimaru.co.jp/tokyo/restaurant/3f_cafe_sembikiya.html
   tags:
   - 大丸東京店
   - フルーツパーラー
-- id: aaeaf163
-  name: やきとり・かまめし・ワイン 鳥勘助 大手町店
-  url: https://tabelog.com/tokyo/A1302/A130201/13160937/
-  tabelog_score: 3.41
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 大手町
-  cuisine: 焼き鳥
+- url: https://tabelog.com/tokyo/A1302/A130201/13160937/
   status: have_been
   tags:
   - 大手町
   - ザ・ラウンジ・バイ・アマン
-- id: by-104ad9be
-  name: ザ・ラウンジ by アマン
-  url: https://www.aman.com/ja-jp/hotels/aman-tokyo/dining/lounge-aman
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 大手町
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13180843/
   status: have_been
+  urls:
+  - https://www.aman.com/ja-jp/hotels/aman-tokyo/dining/lounge-aman
   tags:
   - 大手町
   - やきとり・かまめし・ワイン 鳥勘助 大手町店
-- id: four-seasons-bab30e86
-  name: バー・ヴェルテュ・Four Seasons
-  url: https://www.fourseasons.com/jp/otemachi/dining/restaurants/virtu/
-  tabelog_score: null
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 大手町
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1302/A130201/13249495/
+  status: have_been
+  urls:
+  - https://www.fourseasons.com/jp/otemachi/dining/restaurants/virtu/
+  tags:
+  - 大手町
+- url: https://tabelog.com/tokyo/A1302/A130201/13136061/
   status: have_been
   tags:
   - 大手町
-- id: b3869933
-  name: なかめのてっぺん 丸の内
-  url: https://tabelog.com/tokyo/A1302/A130201/13136061/
-  tabelog_score: 3.42
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 大手町
-  cuisine: 居酒屋
-  status: have_been
-  tags:
-  - 大手町
-- id: c960dd41
-  name: 鉄板焼 天 本丸(てっぱんやき てん ほんまる)
-  url: https://tabelog.com/tokyo/A1302/A130201/13038489/
-  tabelog_score: 3.37
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 東京
-  cuisine: 鉄板焼き
+- url: https://tabelog.com/tokyo/A1302/A130201/13038489/
   status: have_been
   tags:
   - 丸ビル
   - 別名：鉄板焼 天 本丸
-- id: 41d57c15
-  name: 酢重(すじゅう)
-  url: https://tabelog.com/tokyo/A1302/A130201/13038480/
-  tabelog_score: 3.54
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 二重橋前
-  cuisine: 日本料理
+- url: https://tabelog.com/tokyo/A1302/A130201/13038480/
   status: have_been
   tags:
   - 丸ビル
   - 居酒屋
   - 別名：酢重ダイニング 新丸の内ビル
-- id: e3bead24
-  name: まんてん鮨 丸の内
-  url: https://tabelog.com/tokyo/A1302/A130201/13096429/
-  tabelog_score: 3.62
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 二重橋前
-  cuisine: 寿司
+- url: https://tabelog.com/tokyo/A1302/A130201/13096429/
   status: not_been
   tags:
   - 行きたい
   - 丸ビル
-- id: morton-s-the-steakhouse-4b6adf14
-  name: Morton's The Steakhouse 丸の内
-  url: https://tabelog.com/tokyo/A1301/A130102/13226598/
-  tabelog_score: 3.63
-  area: 東京駅・丸の内・大手町
-  tabelog_area: 二重橋前
-  cuisine: ステーキ
+- url: https://tabelog.com/tokyo/A1301/A130102/13226598/
   status: have_been
-- id: 82a00239
-  name: ヒカリエ・レストラン街
-  url: https://www.hikarie.jp/cafe_restaurant/
-  tabelog_score: null
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: null
-  status: have_been
-- id: f7ebb879
-  name: 宮崎料理 万作
-  url: https://tabelog.com/tokyo/A1303/A130301/13188242/
-  tabelog_score: 3.47
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1303/A130301/13188242/
   status: have_been
   tags:
   - ヒカリエ・レストラン街
   - 別名：宮崎料理 万作 渋谷ヒカリエ店
-- id: 0e8d186d
-  name: 渋谷スクランブルスクエア - ショップ & レストラン
-  url: https://www.shibuya-scramble-square.com/shops_restaurants/
-  tabelog_score: null
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: null
-  status: have_been
-- id: 5aca8dd6
-  name: しゃぶしゃぶつかだ
-  url: https://tabelog.com/tokyo/A1303/A130301/13240513/
-  tabelog_score: 3.47
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: しゃぶしゃぶ
+- url: https://tabelog.com/tokyo/A1303/A130301/13240513/
   status: have_been
   tags:
   - 渋谷スクランブルスクエア - ショップ & レストラン
   - 別名：しゃぶしゃぶつかだ 渋谷スクランブルスクエア
-- id: a3bef640
-  name: 鉄板焼き１０
-  url: https://teppan-yaki10shibuya.com/
-  tabelog_score: null
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1303/A130301/13239293/
   status: have_been
+  urls:
+  - https://teppan-yaki10shibuya.com/
   tags:
   - 渋谷スクランブルスクエア - ショップ & レストラン
-- id: falo-87508f91
-  name: falo
-  url: https://tabelog.com/tokyo/A1303/A130303/13197255/
-  tabelog_score: 3.72
-  area: 渋谷
-  tabelog_area: 代官山
-  cuisine: イタリアン
+- url: https://tabelog.com/tokyo/A1303/A130303/13197255/
   status: not_been
   tags:
   - 行きたい
   - 代官山
   - 別名：ファロ
-- id: b281a03d
-  name: どうとんぼり神座 渋谷店
-  url: https://tabelog.com/tokyo/A1303/A130301/13018962/
-  tabelog_score: 3.29
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: ラーメン
+- url: https://tabelog.com/tokyo/A1303/A130301/13018962/
   status: have_been
   tags:
   - 道の店
-- id: shibuya-e500fa72
-  name: 八百屋カフェ SHIBUYA
-  url: https://tabelog.com/tokyo/A1303/A130301/13173001/
-  tabelog_score: 3.08
-  area: 渋谷
-  tabelog_area: 渋谷
-  cuisine: 野菜料理
+- url: https://tabelog.com/tokyo/A1303/A130301/13173001/
   status: not_been
   tags:
   - 行きたい
   - 道の店
-- id: bafecdf3
-  name: どうとんぼり神座
-  url: https://tabelog.com/tokyo/A1310/A131003/13173052/
-  tabelog_score: 3.22
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 水道橋
-  cuisine: ラーメン
+- url: https://tabelog.com/tokyo/A1310/A131003/13173052/
   status: have_been
   tags:
   - 東京ドームシティー
   - 別名：どうとんぼり神座 東京ドームシティ店
-- id: 2e5a1b46-c4d8
-  name: レーメンセット
-  url: null
-  tabelog_score: null
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 水道橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13156119/
   status: have_been
   tags:
   - 東京ドームシティー > 和牛一頭焼肉 牛兵衛 草庵
-- id: 89a0464e
-  name: えん
-  url: https://tabelog.com/tokyo/A1310/A131003/13048861/
-  tabelog_score: 3.46
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 水道橋
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131003/13048861/
   status: have_been
   tags:
   - 東京ドームシティー
   - 居酒屋
   - 別名：和食 えん 東京ドームシティミーツポート店
-- id: 5493051c
-  name: 鮨・酒・肴 杉玉 神楽坂
-  url: https://tabelog.com/tokyo/A1309/A130905/13219049/
-  tabelog_score: 3.47
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 牛込神楽坂
-  cuisine: 寿司
+- url: https://tabelog.com/tokyo/A1309/A130905/13219049/
   status: have_been
   tags:
   - 神楽坂
-- id: e29d9751
-  name: メナムのほとりのタイ料理
-  url: https://tabelog.com/tokyo/A1310/A131003/13000282/
-  tabelog_score: 3.49
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: タイ料理
+- url: https://tabelog.com/tokyo/A1310/A131003/13000282/
   status: have_been
   tags:
   - 道の店
   - 別名：メナムのほとり 神保町本店
-- id: 3b-723de73e
-  name: 焼き鳥とワイン＋ビストロおでん 3B 神保町
-  url: https://tabelog.com/tokyo/A1310/A131003/13241579/
-  tabelog_score: 3.42
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131003/13241579/
   status: have_been
   tags:
   - 道の店
-- id: ee2d8f3f
-  name: １
-  url: https://tabelog.com/tokyo/A1310/A131003/13029964/dtlmap/
-  tabelog_score: 3.48
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: ハンバーグ
+- url: https://tabelog.com/tokyo/A1310/A131003/13029964/
   status: have_been
   tags:
   - 道の店
   - アルカサール・ハンバーグ・ ・２
   - '別名：地図 : アルカサール 神保町店'
-- id: db855fbd
-  name: ２
-  url: https://tabelog.com/tokyo/A1310/A131003/13270147/dtlmap/
-  tabelog_score: 3.34
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: ハンバーグ
+- url: https://tabelog.com/tokyo/A1310/A131003/13270147/
   status: have_been
   tags:
   - 道の店
   - アルカサール・ハンバーグ・１
   - '別名：地図 : 肉バル アルカサール'
-- id: b482e015
-  name: はちまき・天丼
-  url: https://tabelog.com/tokyo/A1310/A131003/13022740/
-  tabelog_score: 3.49
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: 天ぷら
+- url: https://tabelog.com/tokyo/A1310/A131003/13022740/
   status: have_been
   tags:
   - 道の店
   - 別名：はちまき
-- id: '70337160'
-  name: とんかつおりべ
-  url: https://tabelog.com/tokyo/A1310/A131003/13255025/
-  tabelog_score: 3.43
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: とんかつ
+- url: https://tabelog.com/tokyo/A1310/A131003/13255025/
   status: have_been
   tags:
   - 道の店
   - 別名：とんかつおりべ 神田神保町店
-- id: 892fc9ee
-  name: ホテルの庭
-  url: https://www.hotelniwa.jp/hospitality/restaurant/
-  tabelog_score: null
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 水道橋
-  cuisine: null
+- url: https://tabelog.com/tokyo/A1310/A131003/13095234/
   status: have_been
+  urls:
+  - https://www.hotelniwa.jp/hospitality/restaurant/
   tags:
   - 道の店
-- id: ab118c0b
-  name: わらやき屋
-  url: https://tabelog.com/tokyo/A1309/A130906/13174419/
-  tabelog_score: 3.29
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 九段下
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1309/A130906/13174419/
   status: have_been
   tags:
   - 道の店
   - かつお・居酒屋
   - 別名：わらやき屋 九段下
-- id: '03989d1d'
-  name: もり一 神保町店
-  url: https://tabelog.com/tokyo/A1310/A131003/13042316/
-  tabelog_score: 3.49
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 神保町
-  cuisine: 回転寿司
+- url: https://tabelog.com/tokyo/A1310/A131003/13042316/
   status: have_been
   tags:
   - 道の店
   - 寿司
-- id: f9147776
-  name: 松榮亭(しょうえいてい)
-  url: https://tabelog.com/tokyo/A1310/A131002/13000349/
-  tabelog_score: 3.44
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 淡路町
-  cuisine: 洋食
+- url: https://tabelog.com/tokyo/A1310/A131002/13000349/
   status: not_been
   tags:
   - 行きたい
   - 道の店
   - 別名：松榮亭
-- id: 9380956b
-  name: みますや
-  url: https://tabelog.com/tokyo/A1310/A131002/13000630/
-  tabelog_score: 3.49
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 小川町
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131002/13000630/
   status: not_been
   tags:
   - 行きたい
   - 道の店
-- id: 07f56de6
-  name: 神田志乃多寿司(しのだすし)
-  url: https://tabelog.com/tokyo/A1310/A131002/13006360/
-  tabelog_score: 3.48
-  area: 神保町・水道橋・御茶ノ水・神楽坂・九段下
-  tabelog_area: 淡路町
-  cuisine: 寿司
+- url: https://tabelog.com/tokyo/A1310/A131002/13006360/
   status: not_been
   tags:
   - 行きたい
   - 道の店
   - 別名：神田志乃多寿司
-- id: 42f4df07
-  name: 鳥光國
-  url: https://tabelog.com/tokyo/A1310/A131001/13237878/
-  tabelog_score: 3.28
-  area: 秋葉原
-  tabelog_area: 秋葉原
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131001/13237878/
   status: have_been
   tags:
   - 焼き鳥
   - 別名：鳥光國 秋葉原アキバトリム店
-- id: ff3439f9
-  name: ヨドバシカメラレストラン街
-  url: http://www.yodobashi-akiba.com/restaurant/
-  tabelog_score: null
-  area: 秋葉原
-  tabelog_area: 秋葉原
-  cuisine: null
-  status: have_been
-- id: udx-6e88dcdb
-  name: UDXレストラン街
-  url: https://udx.jp/
-  tabelog_score: null
-  area: 秋葉原
-  tabelog_area: 秋葉原
-  cuisine: null
-  status: have_been
-- id: d4d388df
-  name: 米久牛鍋
-  url: https://tabelog.com/tokyo/A1311/A131102/13003667/
-  tabelog_score: 3.65
-  area: 上野・浅草・押上
-  tabelog_area: 浅草（つくばＥＸＰ）
-  cuisine: すき焼き
+- url: https://tabelog.com/tokyo/A1311/A131102/13003667/
   status: have_been
   tags:
   - 別名：米久本店
-- id: lounge-top-of-tree-e90aad5b
-  name: 天空LOUNGE TOP of TREE
-  url: https://tabelog.com/tokyo/A1312/A131203/13140977/
-  tabelog_score: 3.46
-  area: 上野・浅草・押上
-  tabelog_area: 押上
-  cuisine: ダイニングバー
+- url: https://tabelog.com/tokyo/A1312/A131203/13140977/
   status: not_been
   tags:
   - 行きたい
   - そらまち
   - 別名：天空ラウンジ トップ オブ ツリー 東京スカイツリータウン・ソラマチ店
-- id: 7aaea5ef
-  name: 東天紅 上野店
-  url: https://tabelog.com/tokyo/A1311/A131101/13021434/
-  tabelog_score: 3.26
-  area: 上野・浅草・押上
-  tabelog_area: 湯島
-  cuisine: 中華料理
+- url: https://tabelog.com/tokyo/A1311/A131101/13021434/
   status: have_been
   tags:
   - 道の店
-- id: 865ee003
-  name: 天ぷら下村
-  url: https://tabelog.com/tokyo/A1311/A131101/13213663/
-  tabelog_score: 3.79
-  area: 上野・浅草・押上
-  tabelog_area: 新御徒町
-  cuisine: 天ぷら
+- url: https://tabelog.com/tokyo/A1311/A131101/13213663/
   status: have_been
   tags:
   - 道の店
   - 別名：てんぷら 下村
-- id: f452e70f
-  name: 寿司大
-  url: https://tabelog.com/tokyo/A1313/A131307/13227096/
-  tabelog_score: 3.64
-  area: 豊洲
-  tabelog_area: 市場前
-  cuisine: 寿司
+- url: https://tabelog.com/tokyo/A1313/A131307/13227096/
   status: not_been
   tags:
   - 行きたい
-- id: 357e83e5
-  name: 西武ダイニングパーク
-  url: https://www.sogo-seibu.jp/ikebukuro/diningpark/
-  tabelog_score: null
-  area: 池袋
-  tabelog_area: 池袋
-  cuisine: null
-  status: have_been
-- id: b5eaef61
-  name: 東武レストラン街
-  url: https://www.tobu-dept.jp/ikebukuro/
-  tabelog_score: null
-  area: 池袋
-  tabelog_area: 池袋
-  cuisine: null
-  status: have_been
-- id: 80a53a0e
-  name: てしごとや
-  url: https://tabelog.com/tokyo/A1305/A130501/13003948/
-  tabelog_score: 3.48
-  area: 池袋
-  tabelog_area: 池袋
-  cuisine: 居酒屋
+- url: https://tabelog.com/tokyo/A1305/A130501/13003948/
   status: have_been
   tags:
   - 道の店
   - 居酒屋
-- id: 819dd6dc
-  name: すしざんまい
-  url: https://tabelog.com/tokyo/A1319/A131902/13198976/
-  tabelog_score: 3.1
-  area: 中野・東中野・吉祥寺
-  tabelog_area: 中野
-  cuisine: 寿司
+- url: https://tabelog.com/tokyo/A1319/A131902/13198976/
   status: have_been
   tags:
   - 道の店
   - 別名：すしざんまい 中野店
-- id: 157ead42
-  name: 真希 中野北口店
-  url: https://tabelog.com/tokyo/A1319/A131902/13030601/
-  tabelog_score: 3.4
-  area: 中野・東中野・吉祥寺
-  tabelog_area: 中野
-  cuisine: そば
+- url: https://tabelog.com/tokyo/A1319/A131902/13030601/
   status: have_been
   tags:
   - 良かった
   - 道の店
   - ねばねばそば
   - "（しんき）・ねばねばそば"
-- id: bb907fcc
-  name: タパス＆タパス 中野店
-  url: https://tabelog.com/tokyo/A1319/A131902/13026961/
-  tabelog_score: 3.08
-  area: 中野・東中野・吉祥寺
-  tabelog_area: 中野
-  cuisine: パスタ
+- url: https://tabelog.com/tokyo/A1319/A131902/13026961/
   status: have_been
   tags:
   - 道の店
-- id: '48452013'
-  name: 棊子麺茶寮 いしこん
-  url: https://tabelog.com/aichi/A2301/A230101/23079423/
-  tabelog_score: 3.59
-  area: 名古屋
-  tabelog_area: 名鉄名古屋
-  cuisine: うどん
+- url: https://tabelog.com/aichi/A2301/A230101/23079423/
   status: have_been
   tags:
   - "(キシメンサリョウイシコン)"
-- id: d518bc42
-  name: 矢場とん
-  url: https://tabelog.com/aichi/A2301/A230103/23000134/
-  tabelog_score: 3.46
-  area: 名古屋
-  tabelog_area: 矢場町
-  cuisine: とんかつ
+- url: https://tabelog.com/aichi/A2301/A230103/23000134/
   status: have_been
   tags:
   - 別名：名古屋名物 みそかつ 矢場とん 矢場町本店
-- id: e3028de1
-  name: 竜むら
-  url: https://tabelog.com/aichi/A2301/A230101/23045792/
-  tabelog_score: 3.43
-  area: 名古屋
-  tabelog_area: 名鉄名古屋
-  cuisine: 日本料理
+- url: https://tabelog.com/aichi/A2301/A230101/23045792/
   status: have_been
   tags:
   - "(たつむら)・ひつまぶし"
-- id: fc9b88cd
-  name: 鳥開
-  url: https://www.tori-kai.com/shop/unimall.html
-  tabelog_score: null
-  area: 名古屋
-  tabelog_area: 名古屋
-  cuisine: null
+- url: https://tabelog.com/aichi/A2301/A230101/23076285/
   status: have_been
+  urls:
+  - https://www.tori-kai.com/shop/unimall.html
   tags:
   - "(とりかい)"
-- id: 4f8ca31e
-  name: 世界の山ちゃん
-  url: https://www.yamachan.co.jp/
-  tabelog_score: null
-  area: 名古屋
-  cuisine: null
+- url: https://tabelog.com/aichi/A2301/A230101/23081170/
   status: not_been
+  urls:
+  - https://www.yamachan.co.jp/
   tags:
   - 行きたい
-- id: jr-edc4d39c
-  name: 味仙 JR名古屋駅店（ミセン）
-  url: https://tabelog.com/aichi/A2301/A230101/23058422/
-  tabelog_score: 3.52
-  area: 名古屋
-  tabelog_area: 名古屋
-  cuisine: ラーメン
+- url: https://tabelog.com/aichi/A2301/A230101/23058422/
   status: not_been
   tags:
   - 行きたい
   - おすすめ
   - 別名：味仙 ＪＲ名古屋駅店
-- id: 0b40a7d7
-  name: 寿司酒場さしす
-  url: https://tabelog.com/osaka/A2701/A270101/27121470/
-  tabelog_score: 3.46
-  area: 大阪
-  tabelog_area: 梅田
-  cuisine: 寿司
+- url: https://tabelog.com/osaka/A2701/A270101/27121470/
   status: have_been
   tags:
   - 別名：すし酒場 さしす ホワイティうめだ店
-- id: el-poniente-gozo-b1bf7b61
-  name: エル・ポニエンテ・ゴソ（EL PONIENTE GOZO）
-  url: https://tabelog.com/osaka/A2701/A270102/27000116/
-  tabelog_score: 3.45
-  area: 大阪
-  tabelog_area: 北浜
-  cuisine: スペイン料理
+- url: https://tabelog.com/osaka/A2701/A270102/27000116/
   status: not_been
   tags:
   - 行きたい
   - おすすめ
   - 別名：エル・ポニエンテ・ゴソ
-- id: 23beeb78
-  name: ヨネヤ 梅田本店
-  url: https://tabelog.com/osaka/A2701/A270101/27001902/
-  tabelog_score: 3.49
-  area: 大阪
-  tabelog_area: 梅田
-  cuisine: 串揚げ
+- url: https://tabelog.com/osaka/A2701/A270101/27001902/
   status: have_been
-- id: 1d602add
-  name: 鮨酒場てっぺい
-  url: https://tabelog.com/osaka/A2701/A270101/27129935/
-  tabelog_score: 3.53
-  area: 大阪
-  tabelog_area: 東梅田
-  cuisine: 寿司
+- url: https://tabelog.com/osaka/A2701/A270101/27129935/
   status: not_been
   tags:
   - 行きたい
-- id: f0989d9b
-  name: マカウダ
-  url: https://tabelog.com/osaka/A2701/A270104/27112899/
-  tabelog_score: 3.68
-  area: 大阪
-  tabelog_area: 谷町四丁目
-  cuisine: イタリアン
+- url: https://tabelog.com/osaka/A2701/A270104/27112899/
   status: not_been
   tags:
   - 行きたい
   - おすすめ
-- id: libert-b5ccab13
-  name: Liberté
-  url: https://libertejapon.com/kyoto/
-  tabelog_score: null
-  area: 京都
-  tabelog_area: 京都
-  cuisine: null
+- url: https://tabelog.com/kyoto/A2601/A260201/26031295/
   status: have_been
-- id: fc9b239e
-  name: まめはち
-  url: https://tabelog.com/kyoto/A2601/A260201/26021180/
-  tabelog_score: 3.44
-  area: 京都
-  tabelog_area: 祇園四条
-  cuisine: 日本料理
+  urls:
+  - https://libertejapon.com/kyoto/
+- url: https://tabelog.com/kyoto/A2601/A260201/26021180/
   status: have_been
   tags:
   - 別名：豆腐料理とおばんざい まるたけえびす豆八 京都 先斗町
-- id: 5b29ab5b
-  name: 叙々苑
-  url: https://tabelog.com/kyoto/A2601/A260101/26036089/dtlphotolst/smp2/
-  tabelog_score: 3.21
-  area: 京都
-  tabelog_area: 京都
-  cuisine: 焼肉
+- url: https://tabelog.com/kyoto/A2601/A260101/26036089/
   status: have_been
   tags:
   - 別名：叙々苑 ジェイアール京都伊勢丹店
-- id: 245e65df
-  name: せいろ料理 葵茶屋
-  url: https://tabelog.com/kyoto/A2601/A260101/26003760/
-  tabelog_score: 3.4
-  area: 京都
-  tabelog_area: 京都
-  cuisine: 日本料理
+- url: https://tabelog.com/kyoto/A2601/A260101/26003760/
   status: have_been
-- id: 3f3811db
-  name: 牡鹿半島 朝市店
-  url: https://tabelog.com/miyagi/A0401/A040101/4019641/
-  tabelog_score: 3.43
-  area: 仙台
-  tabelog_area: あおば通
-  cuisine: 海鮮
+- url: https://tabelog.com/miyagi/A0401/A040101/4019641/
   status: love
   tags:
   - やばい美味しかった
   - "（やばい美味しかった魚の居酒屋）"
+
+# Not found / needs a manually chosen Tabelog restaurant URL.
+#
+# id: 5fb48edd
+# name: パエリア
+# url: 
+# tabelog_score: 
+# area: 銀座・汐留
+# tabelog_area: 銀座
+# cuisine: 
+# status: have_been
+# tags:
+# - 銀座三越
+#
+# id: 3eb687bb
+# name: 赤坂ビズタワー
+# url: https://mitsui-shopping-park.com/urban/akasakabiztower-sd/storeguide/index.html
+# tabelog_score: 
+# area: 赤坂・六本木・青山・表参道
+# tabelog_area: 赤坂
+# cuisine: 
+# status: have_been
+#
+# id: 44c28861
+# name: 六本木ヒルズ
+# url: https://www.roppongihills.com/gourmet_shops/shops_list.html
+# tabelog_score: 
+# area: 赤坂・六本木・青山・表参道
+# tabelog_area: 六本木
+# cuisine: 
+# status: have_been
+#
+# id: 210119a4
+# name: 東京ミッドタウン
+# url: https://www.tokyo-midtown.com/jp/restaurants/
+# tabelog_score: 
+# area: 赤坂・六本木・青山・表参道
+# tabelog_area: 六本木
+# cuisine: 
+# status: have_been
+#
+# id: 6c8abe76
+# name: 伊勢丹
+# url: https://www.mistore.jp/store/shinjuku/restaurant_search.html
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 新宿三丁目
+# cuisine: 
+# status: have_been
+#
+# id: a4bdb7bd
+# name: ヘルシー弁
+# url: 
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 新宿三丁目
+# cuisine: 
+# status: have_been
+# tags:
+# - 伊勢丹 > デパ地下
+#
+# id: good-chinese-bento-46ae249b
+# name: 中華弁当
+# url: 
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 新宿
+# cuisine: 
+# status: have_been
+# tags:
+# - 小田急 > デパ地下
+#
+# id: 4aa6b2e1
+# name: オペラシティー
+# url: http://www.tokyooperacity.co.jp/shops/sky_restaurant/
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 初台
+# cuisine: 
+# status: have_been
+#
+# id: 82a00239
+# name: ヒカリエ・レストラン街
+# url: https://www.hikarie.jp/cafe_restaurant/
+# tabelog_score: 
+# area: 渋谷
+# tabelog_area: 渋谷
+# cuisine: 
+# status: have_been
+#
+# id: 0e8d186d
+# name: 渋谷スクランブルスクエア - ショップ & レストラン
+# url: https://www.shibuya-scramble-square.com/shops_restaurants/
+# tabelog_score: 
+# area: 渋谷
+# tabelog_area: 渋谷
+# cuisine: 
+# status: have_been
+#
+# id: ff3439f9
+# name: ヨドバシカメラレストラン街
+# url: http://www.yodobashi-akiba.com/restaurant/
+# tabelog_score: 
+# area: 秋葉原
+# tabelog_area: 秋葉原
+# cuisine: 
+# status: have_been
+#
+# id: udx-6e88dcdb
+# name: UDXレストラン街
+# url: https://udx.jp/
+# tabelog_score: 
+# area: 秋葉原
+# tabelog_area: 秋葉原
+# cuisine: 
+# status: have_been
+#
+# id: 357e83e5
+# name: 西武ダイニングパーク
+# url: https://www.sogo-seibu.jp/ikebukuro/diningpark/
+# tabelog_score: 
+# area: 池袋
+# tabelog_area: 池袋
+# cuisine: 
+# status: have_been
+#
+# id: b5eaef61
+# name: 東武レストラン街
+# url: https://www.tobu-dept.jp/ikebukuro/
+# tabelog_score: 
+# area: 池袋
+# tabelog_area: 池袋
+# cuisine: 
+# status: have_been

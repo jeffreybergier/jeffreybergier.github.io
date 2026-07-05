@@ -65,9 +65,23 @@
   {% elsif group_by == "addressRegion" %}
     {% assign subgroup_by = include.subgroup_by | default: "addressLocality" %}
     {% assign subheading_prefix = include.subheading_prefix | default: heading_prefix | append: "#" %}
-    {% assign region_groups = restaurants | group_by: group_by | sort: "name" %}
+    {% assign chain_items = restaurants | where: "chain", true %}
+    {% if chain_items.size > 0 %}
+
+{{ heading_prefix }} チェーン
+
+      {% assign items = chain_items | sort: sort_by %}
+      {% if sort_direction == "descending" %}
+        {% assign items = items | reverse %}
+      {% endif %}
+{% include restaurants-list.html restaurants=items section_status=include.status show_cards=include.show_cards %}
+
+    {% endif %}
+    {% assign region_restaurants = restaurants | where_exp: "restaurant", "restaurant.chain != true" %}
+    {% assign region_groups = region_restaurants | group_by: group_by | sort: "name" %}
     {% for region_group in region_groups %}
     {% assign region_name = region_group.name %}
+    {% if region_name == "東京都" or region_name == "東京" or region_name == "Tokyo" %}
 
 {{ heading_prefix }} {% if region_name == "" %}Unspecified{% else %}{{ region_name }}{% endif %}
 
@@ -84,6 +98,28 @@
 {% include restaurants-list.html restaurants=items group_by=subgroup_by section_status=include.status show_cards=include.show_cards %}
 
       {% endfor %}
+    {% endif %}
+    {% endfor %}
+    {% for region_group in region_groups %}
+    {% assign region_name = region_group.name %}
+    {% unless region_name == "東京都" or region_name == "東京" or region_name == "Tokyo" %}
+
+{{ heading_prefix }} {% if region_name == "" %}Unspecified{% else %}{{ region_name }}{% endif %}
+
+      {% assign locality_groups = region_group.items | group_by: subgroup_by | sort: "name" %}
+      {% for locality_group in locality_groups %}
+      {% assign locality_name = locality_group.name %}
+
+{{ subheading_prefix }} {% if locality_name == "" %}Unspecified{% else %}{{ locality_name }}{% endif %}
+
+        {% assign items = locality_group.items | sort: sort_by %}
+        {% if sort_direction == "descending" %}
+          {% assign items = items | reverse %}
+        {% endif %}
+{% include restaurants-list.html restaurants=items group_by=subgroup_by section_status=include.status show_cards=include.show_cards %}
+
+      {% endfor %}
+    {% endunless %}
     {% endfor %}
   {% else %}
     {% assign groups = restaurants | group_by: group_by | sort: "name" %}

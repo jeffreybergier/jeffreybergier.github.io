@@ -4,8 +4,6 @@ title: レストラン
 exclude: true
 ---
 
-[元データ](/unlisted/restaurants-import.html)
-
 **目次**
 
 {::options toc_levels="2,3" /}
@@ -20,6 +18,6 @@ exclude: true
 
 {% include restaurants.html status="not_been" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
 
-## もう行った？
+## もう行った
 
 {% include restaurants.html status="have_been" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}

@@ -10,9 +10,6 @@
   {%- endcapture -%}
   {%- assign restaurant_score_badge = restaurant_score_badge | strip -%}
   {%- capture restaurant_badges -%}
-    {%- if restaurant.chain -%}
-      <span class="restaurant-badge">チェーン</span>
-    {%- endif -%}
     {%- if restaurant.status and restaurant.status != "have_been" and restaurant.status != include.section_status -%}
       {%- case restaurant.status -%}
       {%- when "not_been" -%}

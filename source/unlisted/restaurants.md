@@ -14,12 +14,12 @@ exclude: true
 
 ## おすすめ
 
-{% include restaurants.html status="love" group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
+{% include restaurants.html status="love" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
 
 ## 行きたい
 
-{% include restaurants.html status="not_been" group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
+{% include restaurants.html status="not_been" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
 
-## 全て
+## もう行った？
 
-{% include restaurants.html group_by="area" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
+{% include restaurants.html status="have_been" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}

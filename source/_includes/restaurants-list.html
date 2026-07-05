@@ -2,6 +2,7 @@
 {%- for restaurant in include.restaurants %}
   {%- assign restaurant_title = restaurant.title | default: restaurant.name | default: restaurant.url -%}
   {%- assign restaurant_image = restaurant.image -%}
+  {%- assign restaurant_street_address = restaurant.streetAddress | default: restaurant.addressStreet | default: "" | strip -%}
   {%- capture restaurant_score_badge -%}
     {%- if restaurant.tabelog_score -%}
       <span class="restaurant-badge">食べログ {{ restaurant.tabelog_score }}</span>
@@ -66,6 +67,9 @@
             <span class="restaurant-card-title">{{ restaurant_title }}</span>
             {%- if restaurant_meta != "" -%}
               <span class="restaurant-card-meta">{{ restaurant_meta }}</span>
+            {%- endif -%}
+            {%- if restaurant_street_address != "" -%}
+              <span class="restaurant-card-address">{{ restaurant_street_address }}</span>
             {%- endif -%}
             {%- if restaurant.description -%}
               <span class="restaurant-card-description">{{ restaurant.description }}</span>

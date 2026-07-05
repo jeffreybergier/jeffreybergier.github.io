@@ -143,15 +143,18 @@ rescue ArgumentError
   nil
 end
 
-def address_text(jsonld)
+def address_parts(jsonld)
   address = jsonld["address"]
-  return nil unless address.is_a?(Hash)
+  return {} unless address.is_a?(Hash)
 
-  [
-    address["addressRegion"],
-    address["addressLocality"],
-    address["streetAddress"]
-  ].compact.join
+  %w[addressRegion addressLocality streetAddress].each_with_object({}) do |key, parts|
+    value = address[key].to_s.strip
+    parts[key] = value unless value.empty?
+  end
+end
+
+def address_text(parts)
+  %w[addressRegion addressLocality streetAddress].filter_map { |key| parts[key] }.join
 end
 
 def short_description(html)
@@ -176,7 +179,8 @@ def enriched_restaurant(restaurant, html)
   image = image_url(jsonld["image"]) || meta_content(html, "og:image")
   score = rating_value(jsonld)
   area = area_from_title(html)
-  address = address_text(jsonld)
+  address_parts = address_parts(jsonld)
+  address = address_text(address_parts)
   description = short_description(html)
 
   enriched = {}
@@ -193,6 +197,9 @@ def enriched_restaurant(restaurant, html)
   enriched["cuisine"] = jsonld["servesCuisine"] if jsonld["servesCuisine"].to_s != ""
   enriched["description"] = description if description.to_s != ""
   enriched["price_range"] = jsonld["priceRange"] if jsonld["priceRange"].to_s != ""
+  %w[addressRegion addressLocality streetAddress].each do |key|
+    enriched[key] = address_parts[key] if address_parts[key].to_s != ""
+  end
   enriched["address"] = address if address.to_s != ""
   enriched["telephone"] = jsonld["telephone"] if jsonld["telephone"].to_s != ""
   enriched["cached_at"] = Time.now.utc.iso8601
@@ -223,6 +230,9 @@ generated_cards = targets.each_with_index.filter_map do |restaurant, index|
                      existing["title"].to_s != "" &&
                      existing["area"].to_s != "" &&
                      existing["cuisine"].to_s != "" &&
+                     existing["addressRegion"].to_s != "" &&
+                     existing["addressLocality"].to_s != "" &&
+                     existing["streetAddress"].to_s != "" &&
                      existing["description"].to_s != ""
 
   if existing_current && !options[:refresh]

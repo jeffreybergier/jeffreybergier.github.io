@@ -1,0 +1,1162 @@
+# source/unlisted/restaurants.md 用のレストランデータ。
+# url is the canonical Tabelog URL and acts as the stable identifier.
+# Tabelog-derived fields such as name, score, station, area, cuisine, and image are generated.
+- url: https://tabelog.com/tokyo/A1301/A130101/13048942/
+  status: love
+- url: https://tabelog.com/tokyo/A1302/A130201/13260081/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1301/A130101/13148124/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/hokkaido/A0105/A010501/1002369/
+  status: love
+- url: https://tabelog.com/tokyo/A1303/A130301/13298044/
+  status: love
+- url: https://tabelog.com/tokyo/A1306/A130602/13264343/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1309/A130905/13194968/
+  status: not_been
+  urls:
+  - https://maratan.com/shops
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1319/A131902/13177744/
+  status: not_been
+  urls:
+  - https://maps.app.goo.gl/HUB5XfqcR2YF2hDH9?g_st=ic
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1301/A130101/13002548/
+  status: love
+- url: https://tabelog.com/tokyo/A1310/A131001/13260426/
+  status: have_been
+  chain: true
+- url: https://tabelog.com/tokyo/A1302/A130201/13282420/
+  status: love
+  chain: true
+  tags:
+  - 東京ミッドタウン八重洲
+  - いつも行く店舗
+- url: https://tabelog.com/tokyo/A1301/A130103/13276893/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/kyoto/A2601/A260201/26003180/
+  status: have_been
+- url: https://tabelog.com/tokyo/A1301/A130101/13004881/
+  status: not_been
+  tags:
+  - 行きたい
+  - 高級そう
+- url: https://tabelog.com/tokyo/A1301/A130103/13127871/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1314/A131401/13019665/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1301/A130102/13219599/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1302/A130201/13006083/
+  status: not_been
+  urls:
+  - https://moritaya-kyoto.co.jp/restaurant/marunouchi/menu/
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1302/A130202/13266849/
+  status: not_been
+  tags:
+  - 行きたい
+  - 美味しそう
+- url: https://tabelog.com/tokyo/A1302/A130201/13126132/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1302/A130201/13046225/
+  status: not_been
+  tags:
+  - 行きたい
+  - 大丸東京店
+  - いまいち
+  - 別名：リコロ 大丸東京店
+- url: https://tabelog.com/tokyo/A1302/A130201/13223252/
+  status: not_been
+  tags:
+  - 行きたい
+  - 東京駅一番街
+  - 良さそう
+  - 別名：カジュアル 鉄板 伊達
+- url: https://tabelog.com/tokyo/A1310/A131002/13250328/
+  status: love
+  chain: true
+  urls:
+  - https://www.negishi.co.jp/location/index.html
+  tags:
+  - 定食
+- url: https://tabelog.com/tokyo/A1305/A130501/13152960/
+  status: have_been
+  chain: true
+  urls:
+  - http://www.tapas-tapas.com/shop/index.html
+  tags:
+  - 定食
+- url: https://tabelog.com/tokyo/A1310/A131003/13035658/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.ootoya.com/store/
+  tags:
+  - 定食
+- url: https://tabelog.com/tokyo/A1310/A131003/13050384/
+  status: have_been
+  chain: true
+  urls:
+  - https://shop.yayoiken.com/stores
+  tags:
+  - 定食
+- url: https://tabelog.com/tokyo/A1310/A131003/13050320/
+  status: have_been
+  chain: true
+  urls:
+  - http://www.k-mitsuwa.co.jp/business/komoro/tenpo.html
+  tags:
+  - 定食
+- url: https://tabelog.com/tokyo/A1310/A131003/13254839/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.yomenya-goemon.com/store/
+  tags:
+  - 定食
+  - "（洋麺屋ようめんや・ごえもん）"
+- url: https://tabelog.com/tokyo/A1302/A130201/13031392/
+  status: have_been
+  chain: true
+  tags:
+  - 定食
+- url: https://tabelog.com/tokyo/A1302/A130201/13152354/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.tsubame-grill.co.jp/
+  tags:
+  - ファミレス
+- url: https://tabelog.com/tokyo/A1310/A131002/13129798/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.monteroza.co.jp/shop/index.html
+  tags:
+  - 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131003/13202526/
+  status: have_been
+  chain: true
+  urls:
+  - https://map.torikizoku.co.jp/store
+  tags:
+  - 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131003/13196538/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.teke-teke.com/shoplist
+  tags:
+  - 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131002/13159384/
+  status: have_been
+  chain: true
+  urls:
+  - https://map.reins.co.jp/onyasai
+  tags:
+  - 居酒屋
+- url: https://tabelog.com/tokyo/A1310/A131003/13087126/
+  status: have_been
+  chain: true
+  urls:
+  - https://c-united.co.jp/search/khk/
+  tags:
+  - コーヒー
+- url: https://tabelog.com/tokyo/A1310/A131003/13060188/
+  status: have_been
+  chain: true
+  tags:
+  - コーヒー
+- url: https://tabelog.com/tokyo/A1310/A131002/13154441/
+  status: have_been
+  chain: true
+  tags:
+  - コーヒー
+- url: https://tabelog.com/hokkaido/A0105/A010501/1063921/
+  status: love
+  chain: true
+  tags:
+  - コーヒー
+  - 函館
+- url: https://tabelog.com/tokyo/A1310/A131003/13136579/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.saint-marc-hd.com/b/saintmarc/?brand_type=CFE
+  tags:
+  - コーヒー
+- url: https://tabelog.com/tokyo/A1310/A131002/13226133/
+  status: have_been
+  chain: true
+  urls:
+  - https://hoshinocoffee.com/shop.html
+  tags:
+  - コーヒー
+- url: https://tabelog.com/tokyo/A1309/A130905/13106935/
+  status: have_been
+  chain: true
+  urls:
+  - https://www.ginza-renoir.co.jp/shopsearch/?brands%5B%5D=3
+  tags:
+  - コーヒー
+- url: https://tabelog.com/tokyo/A1301/A130103/13005660/
+  status: have_been
+  tags:
+  - 良かった
+  - カレッタ汐留（良いビュー）
+  - 良いビュー
+  - 別名：ダイナミックキッチン＆バー 響 カレッタ汐留店
+- url: https://tabelog.com/tokyo/A1301/A130103/13126134/
+  status: not_been
+  tags:
+  - 行きたい
+  - 良かった
+  - カレッタ汐留（良いビュー）
+  - 良いビュー
+  - 別名：美寿思
+- url: https://tabelog.com/tokyo/A1301/A130103/13132703/
+  status: love
+  tags:
+  - 良かった
+  - カレッタ汐留（良いビュー）
+  - 良いビュー
+  - 別名：北の味紀行と地酒 北海道 カレッタ汐留店
+- url: https://tabelog.com/tokyo/A1301/A130103/13216976/
+  status: not_been
+  tags:
+  - 行きたい
+  - 良かった
+  - カレッタ汐留（良いビュー）
+  - 良いビュー
+  - 別名：鉄板和食とワイン 萬鉄
+- url: https://tabelog.com/tokyo/A1301/A130103/13020226/
+  status: love
+  tags:
+  - コンラッドホテル
+  - コンラッド東京(かざはな)・鉄板焼き
+  - 別名：日本料理 「風花」 コンラッド東京
+- url: https://tabelog.com/tokyo/A1301/A130101/13265371/
+  status: not_been
+  tags:
+  - 行きたい
+  - 三井ガーデンホテル銀座プレミア
+- url: https://tabelog.com/tokyo/A1301/A130101/13207702/
+  status: love
+  tags:
+  - 銀座シックス
+- url: https://tabelog.com/tokyo/A1301/A130101/13217830/
+  status: not_been
+  tags:
+  - 行きたい
+  - 銀座シックス
+- url: https://tabelog.com/tokyo/A1301/A130101/13282758/
+  status: not_been
+  tags:
+  - 行きたい
+  - 銀座シックス
+- url: https://tabelog.com/tokyo/A1301/A130101/13019458/
+  status: love
+  tags:
+  - 銀座松屋
+  - "（けいてい）"
+  - 別名：恵亭 松屋銀座店
+- url: https://tabelog.com/tokyo/A1301/A130101/13230875/
+  status: have_been
+  tags:
+  - 良かった
+  - 銀座三越
+  - 美味しい
+  - ピザとチーズ美味しい
+- url: https://tabelog.com/tokyo/A1301/A130101/13115780/
+  status: have_been
+  tags:
+  - 銀座三越
+  - 別名：中国菜 老四川 飄香 銀座三越店
+- url: https://tabelog.com/tokyo/A1301/A130101/13193771/
+  status: have_been
+  tags:
+  - 銀座東急プラザ
+  - 別名：回転寿司 根室花まる 銀座店
+- url: https://tabelog.com/tokyo/A1301/A130102/13100445/
+  status: have_been
+  tags:
+  - その他
+  - ヒビパ
+- url: https://tabelog.com/tokyo/A1301/A130102/13312205/
+  status: love
+  chain: true
+  tags:
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130102/13163159/
+  status: love
+  tags:
+  - その他
+  - 別名：カフェコムサ コムサステージ銀座店
+- url: https://tabelog.com/tokyo/A1301/A130101/13002617/
+  status: love
+  tags:
+  - その他
+  - 別名：明月庵 ぎんざ 田中屋 銀座本店
+- url: https://tabelog.com/tokyo/A1301/A130101/13213162/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13038540/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+  - 居酒屋
+- url: https://tabelog.com/tokyo/A1301/A130101/13259421/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13032924/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+  - "(げんしすみやき いろりや)"
+  - 別名：原始炭焼 いろり家 東銀座店
+- url: https://tabelog.com/tokyo/A1301/A130101/13261510/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+  - 別名：焼肉 冷麺 ユッチャン。 銀座店
+- url: https://tabelog.com/tokyo/A1301/A130101/13002553/
+  status: not_been
+  urls:
+  - https://www.ginza-mutou.com/
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13014913/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13002473/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+  - 別名：大衆割烹 三州屋 銀座本店
+- url: https://tabelog.com/tokyo/A1301/A130101/13160854/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13012780/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13014394/
+  status: not_been
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13234093/
+  status: not_been
+  urls:
+  - https://www.hyatt.com/ja-JP/hotel/japan/hyatt-centric-ginza-tokyo/tyoct/dining
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130101/13012786/
+  status: not_been
+  urls:
+  - https://umenohana-restaurant.co.jp/shop-list/info.php?id=910
+  tags:
+  - 行きたい
+  - その他
+- url: https://tabelog.com/tokyo/A1301/A130102/13229621/
+  status: not_been
+  urls:
+  - https://www.gate-hotel.jp/tokyo/rb/atokyo.html
+  tags:
+  - 行きたい
+  - おすすめ
+  - その他
+- url: https://tabelog.com/tokyo/A1308/A130801/13247290/
+  status: have_been
+  tags:
+  - 赤坂見附駅
+- url: https://tabelog.com/tokyo/A1308/A130801/13151433/
+  status: love
+  tags:
+  - 赤坂見附駅
+  - かつお・居酒屋
+- url: https://tabelog.com/tokyo/A1308/A130801/13000002/
+  status: not_been
+  tags:
+  - 行きたい
+  - 赤坂見附駅
+- url: https://tabelog.com/tokyo/A1308/A130801/13191917/
+  status: not_been
+  tags:
+  - 行きたい
+  - 赤坂見附駅
+- url: https://tabelog.com/tokyo/A1308/A130801/13217714/
+  status: have_been
+  urls:
+  - https://mitsui-shopping-park.com/urban/akasakabiztower-sd/store/600166.html
+  tags:
+  - 赤坂ビズタワー
+- url: https://tabelog.com/tokyo/A1306/A130602/13021167/
+  status: have_been
+  tags:
+  - 表参道ヒルズ
+  - 別名：やさい家めい 表参道ヒルズ店
+- url: https://tabelog.com/tokyo/A1306/A130603/13249631/
+  status: not_been
+  tags:
+  - 行きたい
+  - 外苑前
+  - ザベルコモ
+- url: https://tabelog.com/tokyo/A1307/A130701/13009015/
+  status: have_been
+  tags:
+  - 六本木ヒルズ
+  - 別名：フィオレンティーナ
+- url: https://tabelog.com/tokyo/A1307/A130701/13037362/
+  status: not_been
+  urls:
+  - https://restaurant.imahan.com/menu-kisentei-midtown/
+  tags:
+  - 行きたい
+  - 東京ミッドタウン
+- url: https://tabelog.com/tokyo/A1308/A130803/13250053/
+  status: have_been
+- url: https://tabelog.com/tokyo/A1307/A130701/13175214/
+  status: not_been
+  tags:
+  - 行きたい
+  - "（きのこ鍋）"
+  - 別名：シャングリラズシークレット 六本木店
+- url: https://tabelog.com/tokyo/A1302/A130202/13239413/
+  status: have_been
+  tags:
+  - 三越前駅・室町
+- url: https://tabelog.com/tokyo/A1302/A130202/13000308/
+  status: love
+  urls:
+  - https://www.sembikiya.co.jp/shop-list/caffe-difesta
+  tags:
+  - 三越前駅・室町
+- url: https://tabelog.com/tokyo/A1302/A130202/13058319/
+  status: love
+  chain: true
+  tags:
+  - 三越前駅・室町 > 三越デパ地下
+- url: https://tabelog.com/tokyo/A1302/A130202/13145027/
+  status: love
+  tags:
+  - 三越前駅・室町 > 三越デパ地下
+- url: https://tabelog.com/tokyo/A1302/A130202/13006473/
+  status: have_been
+  tags:
+  - 三越前駅・室町 > 三越デパ地下
+- url: https://tabelog.com/tokyo/A1302/A130202/13025634/
+  status: love
+  chain: true
+  urls:
+  - https://nihonbashi-mitsukoshi.manten-boshi.com/
+  tags:
+  - 三越前駅・室町
+- url: https://tabelog.com/tokyo/A1302/A130202/13167366/
+  status: love
+  tags:
+  - 三越前駅・室町
+  - "（東北イタリアン）"
+- url: https://tabelog.com/tokyo/A1302/A130202/13166510/
+  status: love
+  tags:
+  - 三越前駅・室町
+- url: https://tabelog.com/tokyo/A1302/A130202/13108338/
+  status: have_been
+  urls:
+  - https://www.thongjapan.com/index.php/shop/coredo
+  tags:
+  - 日本橋駅・高島屋前 > コレド日本橋
+- url: https://tabelog.com/tokyo/A1302/A130202/13006196/
+  status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103013
+  tags:
+  - 日本橋駅・高島屋前 > 高島屋日本橋店
+  - "（香港料理）"
+- url: https://tabelog.com/tokyo/A1302/A130202/13000130/
+  status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103015
+  tags:
+  - 日本橋駅・高島屋前 > 高島屋日本橋店
+  - "（台北料理）"
+- url: https://tabelog.com/tokyo/A1302/A130202/13043634/
+  status: not_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103014
+  tags:
+  - 行きたい
+  - 日本橋駅・高島屋前 > 高島屋日本橋店
+- url: https://tabelog.com/tokyo/A1302/A130202/13247938/
+  status: have_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/176902
+  tags:
+  - 日本橋駅・高島屋前 > 高島屋日本橋店
+  - 天ぷら
+- url: https://tabelog.com/tokyo/A1302/A130202/13274531/
+  status: not_been
+  urls:
+  - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/237501
+  tags:
+  - 行きたい
+  - 日本橋駅・高島屋前 > 高島屋日本橋店
+  - そば・焼き鳥
+- url: https://tabelog.com/tokyo/A1302/A130202/13006483/
+  status: not_been
+  tags:
+  - 行きたい
+  - 日本橋駅・高島屋前 > その他
+  - 別名：ニホンバシ イーチャヤ
+- url: https://tabelog.com/tokyo/A1310/A131002/13219534/
+  status: love
+  tags:
+  - 神田駅
+  - 別名：串カツあらた 神田店
+- url: https://tabelog.com/tokyo/A1302/A130204/13228336/
+  status: not_been
+  tags:
+  - 行きたい
+  - 水天宮前駅
+- url: https://tabelog.com/tokyo/A1302/A130204/13201969/
+  status: not_been
+  tags:
+  - 行きたい
+  - 水天宮前駅
+  - 別名：日本橋 蕎ノ字
+- url: https://tabelog.com/tokyo/A1302/A130201/13164545/
+  status: love
+  chain: true
+  tags:
+  - 東京駅
+  - 大丸東京店
+- url: https://tabelog.com/tokyo/A1304/A130401/13017380/
+  status: have_been
+  urls:
+  - https://www.restaurants-park.jp/restaurant/?id=22
+  tags:
+  - 良かった
+  - 新宿高島屋
+  - 良いビュー
+  - "（良いビューそば）"
+- url: https://tabelog.com/tokyo/A1308/A130803/13199422/
+  status: love
+  chain: true
+  urls:
+  - https://restaurant.imahan.com/kioicho/
+  tags:
+  - 永田町
+  - 東京ガーデンテラス紀尾井町
+- url: https://tabelog.com/tokyo/A1304/A130403/13230084/
+  status: have_been
+  tags:
+  - 新宿高島屋
+  - 別名：ハンバーグ＆ステーキ 黒毛和牛 腰塚 新宿髙島屋店
+- url: https://tabelog.com/tokyo/A1304/A130401/13004277/
+  status: have_been
+  tags:
+  - 新宿高島屋
+  - 別名：名代とんかつ かつくら 新宿髙島屋店
+- url: https://tabelog.com/tokyo/A1304/A130401/13017378/
+  status: have_been
+  tags:
+  - 新宿高島屋
+  - 別名：天ぷら新宿つな八 新宿高島屋店
+- url: https://tabelog.com/tokyo/A1304/A130401/13030980/
+  status: have_been
+  urls:
+  - https://www.restaurants-park.jp/restaurant/?id=12
+  tags:
+  - 新宿高島屋
+- url: https://tabelog.com/tokyo/A1304/A130401/13004255/
+  status: love
+  tags:
+  - 小田急ホテル センチュリーサザンタワー
+  - 別名：19階 スカイ レストラン デコレーション キッチン
+- url: https://tabelog.com/tokyo/A1304/A130401/13021121/
+  status: have_been
+  tags:
+  - 新宿三丁目
+  - "（チャチャ ユウダチ）"
+- url: https://tabelog.com/tokyo/A1304/A130401/13004303/
+  status: not_been
+  tags:
+  - 行きたい
+  - 新宿三丁目
+- url: https://tabelog.com/tokyo/A1304/A130401/13202070/
+  status: love
+  urls:
+  - https://www.keioplaza.co.jp/restaurant/list/aurora
+  tags:
+  - 都庁前駅・西新宿
+  - 京王プラザホテル
+- url: https://tabelog.com/tokyo/A1304/A130401/13004207/
+  status: love
+  urls:
+  - https://restaurants.tokyo.park.hyatt.co.jp/plb.html
+  tags:
+  - 都庁前駅・西新宿
+  - パークハイアット
+- url: https://tabelog.com/tokyo/A1304/A130401/13075579/
+  status: love
+  urls:
+  - https://www.google.com/maps/place/%E3%80%92160-0023+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%91%EF%BC%98+%E5%B0%8F%E6%BB%9D%E6%A9%8B%E3%83%91%E3%82%B7%E3%83%95%E3%82%A3%E3%82%AB%E3%83%93%E3%83%AB+3F+%E9%89%84%E6%9D%BF%E4%BA%8C%E7%99%BE%E2%84%83+%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97/@35.6944905,139.6986151,12z/data=!4m6!3m5!1s0x60188cd6358f55c7:0xf9ca79631a9a6105!8m2!3d35.6944905!4d139.6986151!16s%2Fg%2F1xpwjsd1?hl=ja-JP&gl=jp
+  tags:
+  - 都庁前駅・西新宿
+- url: https://tabelog.com/tokyo/A1304/A130401/13279736/
+  status: not_been
+  urls:
+  - https://www.kimptonshinjuku.com/jp/tokyo-restaurants/rooftop-bar-86/
+  tags:
+  - 行きたい
+  - 都庁前駅・西新宿
+- url: https://tabelog.com/tokyo/A1304/A130401/13032487/
+  status: not_been
+  tags:
+  - 行きたい
+  - おすすめ
+  - 都庁前駅・西新宿
+  - 別名：ワダイナー き
+- url: https://tabelog.com/tokyo/A1304/A130401/13006772/
+  status: have_been
+  tags:
+  - 伊勢丹 > デパ地下
+- url: https://tabelog.com/tokyo/A1304/A130401/13040134/
+  status: love
+  urls:
+  - https://nangokusyuka.co.jp/store/vege_china.html
+  tags:
+  - 伊勢丹
+  - ベジチャイナ
+- url: https://tabelog.com/tokyo/A1302/A130201/13255204/
+  status: love
+  chain: true
+  tags:
+  - 東京駅
+  - 大丸東京店
+- url: https://tabelog.com/tokyo/A1304/A130401/13110889/
+  status: have_been
+  urls:
+  - https://www.odakyu-restaurant.jp/shop/tsudurao/honten.html
+  tags:
+  - 小田急
+  - そば ・居酒屋
+- url: https://tabelog.com/tokyo/A1304/A130401/13223518/
+  status: have_been
+  tags:
+  - 小田急 > 和牛一頭焼肉 牛兵衛 草庵
+- url: https://tabelog.com/tokyo/A1304/A130401/13195128/
+  status: have_been
+  tags:
+  - 小田急 > デパ地下
+- url: https://tabelog.com/tokyo/A1304/A130401/13281004/
+  status: have_been
+  tags:
+  - 小田急 > デパ地下
+- url: https://tabelog.com/tokyo/A1304/A130401/13200858/
+  status: have_been
+  tags:
+  - 小田急 > デパ地下
+- url: https://tabelog.com/tokyo/A1304/A130401/13091890/
+  status: have_been
+  tags:
+  - 小田急 > デパ地下
+- url: https://tabelog.com/tokyo/A1318/A131807/13004248/
+  status: love
+  chain: true
+  urls:
+  - https://www.jojoen.co.jp/shop/jojoen/operacity/
+  tags:
+  - オペラシティー
+  - 53階
+- url: https://tabelog.com/tokyo/A1301/A130101/13025594/
+  status: love
+  chain: true
+  tags:
+  - 銀座・コリドー通り
+- url: https://tabelog.com/tokyo/A1302/A130201/13137848/
+  status: love
+  tags:
+  - 東京駅
+  - 駅そば
+  - 別名：そば処 為治郎
+- url: https://tabelog.com/tokyo/A1302/A130201/13072553/
+  status: have_been
+  urls:
+  - https://www.shangri-la.com/jp/tokyo/shangrila/dining/bars-lounges/lobby-lounge/
+  tags:
+  - 東京駅
+- url: https://tabelog.com/tokyo/A1302/A130201/13320088/
+  status: not_been
+  tags:
+  - 行きたい
+  - 東京駅
+- url: https://tabelog.com/tokyo/A1302/A130201/13189541/
+  status: have_been
+  tags:
+  - 東京駅
+- url: https://tabelog.com/tokyo/A1302/A130201/13050213/
+  status: have_been
+  chain: true
+  tags:
+  - 東京駅
+- url: https://tabelog.com/tokyo/A1302/A130201/13147493/
+  status: not_been
+  urls:
+  - https://www.tokyostationhotel.jp/restaurants/torayatokyo/
+  tags:
+  - 行きたい
+  - 東京駅
+  - 東京コトブキ・居酒屋
+- url: https://tabelog.com/tokyo/A1302/A130201/13221765/
+  status: have_been
+  urls:
+  - https://www.dynacjapan.com/brands/kotobuki/
+  tags:
+  - 東京駅
+  - 東京ステーションホテル、虎屋、ロビーラウンジ / ・居酒屋
+- url: https://tabelog.com/tokyo/A1302/A130201/13146635/
+  status: have_been
+  urls:
+  - https://www.daimaru.co.jp/tokyo/restaurant/12f_tk_torishige.html
+  tags:
+  - 大丸東京店
+  - とりしげ・焼き鳥
+- url: https://tabelog.com/tokyo/A1302/A130201/13046509/
+  status: have_been
+  urls:
+  - https://www.daimaru.co.jp/tokyo/restaurant/12f_edo_nunoyatahei.html
+  tags:
+  - 大丸東京店
+  - ぬのやたへい・そば
+- url: https://tabelog.com/tokyo/A1302/A130201/13154437/
+  status: have_been
+  urls:
+  - https://www.daimaru.co.jp/tokyo/restaurant/3f_cafe_sembikiya.html
+  tags:
+  - 大丸東京店
+  - フルーツパーラー
+- url: https://tabelog.com/tokyo/A1302/A130201/13160937/
+  status: love
+  tags:
+  - 大手町
+  - ザ・ラウンジ・バイ・アマン
+- url: https://tabelog.com/tokyo/A1302/A130201/13180843/
+  status: have_been
+  urls:
+  - https://www.aman.com/ja-jp/hotels/aman-tokyo/dining/lounge-aman
+  tags:
+  - 大手町
+  - やきとり・かまめし・ワイン 鳥勘助 大手町店
+- url: https://tabelog.com/tokyo/A1302/A130201/13249495/
+  status: love
+  urls:
+  - https://www.fourseasons.com/jp/otemachi/dining/restaurants/virtu/
+  tags:
+  - 大手町
+- url: https://tabelog.com/tokyo/A1302/A130201/13136061/
+  status: love
+  tags:
+  - 大手町
+- url: https://tabelog.com/tokyo/A1302/A130201/13038489/
+  status: love
+  tags:
+  - 丸ビル
+  - 別名：鉄板焼 天 本丸
+- url: https://tabelog.com/tokyo/A1302/A130201/13038480/
+  status: love
+  tags:
+  - 丸ビル
+  - 居酒屋
+  - 別名：酢重ダイニング 新丸の内ビル
+- url: https://tabelog.com/tokyo/A1302/A130201/13096429/
+  status: not_been
+  tags:
+  - 行きたい
+  - 丸ビル
+- url: https://tabelog.com/tokyo/A1301/A130102/13226598/
+  status: have_been
+- url: https://tabelog.com/tokyo/A1303/A130301/13188242/
+  status: have_been
+  tags:
+  - ヒカリエ・レストラン街
+  - 別名：宮崎料理 万作 渋谷ヒカリエ店
+- url: https://tabelog.com/tokyo/A1303/A130301/13240513/
+  status: have_been
+  tags:
+  - 渋谷スクランブルスクエア - ショップ & レストラン
+  - 別名：しゃぶしゃぶつかだ 渋谷スクランブルスクエア
+- url: https://tabelog.com/tokyo/A1303/A130301/13239293/
+  status: have_been
+  urls:
+  - https://teppan-yaki10shibuya.com/
+  tags:
+  - 渋谷スクランブルスクエア - ショップ & レストラン
+- url: https://tabelog.com/tokyo/A1303/A130303/13197255/
+  status: not_been
+  tags:
+  - 行きたい
+  - 代官山
+  - 別名：ファロ
+- url: https://tabelog.com/tokyo/A1303/A130301/13018962/
+  status: have_been
+  chain: true
+  tags:
+  - 道の店
+- url: https://tabelog.com/tokyo/A1303/A130301/13173001/
+  status: not_been
+  tags:
+  - 行きたい
+  - 道の店
+- url: https://tabelog.com/tokyo/A1310/A131003/13156119/
+  status: have_been
+  tags:
+  - 東京ドームシティー > 和牛一頭焼肉 牛兵衛 草庵
+- url: https://tabelog.com/tokyo/A1310/A131003/13048861/
+  status: have_been
+  tags:
+  - 東京ドームシティー
+  - 居酒屋
+  - 別名：和食 えん 東京ドームシティミーツポート店
+- url: https://tabelog.com/tokyo/A1309/A130905/13219049/
+  status: love
+  tags:
+  - 神楽坂
+- url: https://tabelog.com/tokyo/A1310/A131003/13000282/
+  status: have_been
+  tags:
+  - 道の店
+  - 別名：メナムのほとり 神保町本店
+- url: https://tabelog.com/tokyo/A1310/A131003/13241579/
+  status: have_been
+  tags:
+  - 道の店
+- url: https://tabelog.com/tokyo/A1310/A131003/13029964/
+  status: love
+  tags:
+  - 道の店
+  - アルカサール・ハンバーグ・ ・２
+  - '別名：地図 : アルカサール 神保町店'
+- url: https://tabelog.com/tokyo/A1310/A131003/13022740/
+  status: have_been
+  tags:
+  - 道の店
+  - 別名：はちまき
+- url: https://tabelog.com/tokyo/A1310/A131003/13255025/
+  status: have_been
+  tags:
+  - 道の店
+  - 別名：とんかつおりべ 神田神保町店
+- url: https://tabelog.com/tokyo/A1310/A131003/13095234/
+  status: have_been
+  urls:
+  - https://www.hotelniwa.jp/hospitality/restaurant/
+  tags:
+  - 道の店
+- url: https://tabelog.com/tokyo/A1310/A131003/13042316/
+  status: have_been
+  tags:
+  - 道の店
+  - 寿司
+- url: https://tabelog.com/tokyo/A1310/A131002/13000349/
+  status: not_been
+  tags:
+  - 行きたい
+  - 道の店
+  - 別名：松榮亭
+- url: https://tabelog.com/tokyo/A1310/A131002/13000630/
+  status: not_been
+  tags:
+  - 行きたい
+  - 道の店
+- url: https://tabelog.com/tokyo/A1310/A131002/13006360/
+  status: not_been
+  tags:
+  - 行きたい
+  - 道の店
+  - 別名：神田志乃多寿司
+- url: https://tabelog.com/tokyo/A1310/A131001/13237878/
+  status: not_been
+  tags:
+  - 行きたい
+  - 焼き鳥
+  - 別名：鳥光國 秋葉原アキバトリム店
+- url: https://tabelog.com/tokyo/A1311/A131102/13003667/
+  status: not_been
+  tags:
+  - 行きたい
+  - 別名：米久本店
+- url: https://tabelog.com/tokyo/A1312/A131203/13140977/
+  status: not_been
+  tags:
+  - 行きたい
+  - そらまち
+  - 別名：天空ラウンジ トップ オブ ツリー 東京スカイツリータウン・ソラマチ店
+- url: https://tabelog.com/tokyo/A1311/A131101/13021434/
+  status: love
+  tags:
+  - 道の店
+- url: https://tabelog.com/tokyo/A1311/A131101/13213663/
+  status: love
+  tags:
+  - 道の店
+  - 別名：てんぷら 下村
+- url: https://tabelog.com/tokyo/A1313/A131307/13227096/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1305/A130501/13003948/
+  status: have_been
+  tags:
+  - 道の店
+  - 居酒屋
+- url: https://tabelog.com/tokyo/A1319/A131902/13030601/
+  status: have_been
+  tags:
+  - 良かった
+  - 道の店
+  - ねばねばそば
+  - "（しんき）・ねばねばそば"
+- url: https://tabelog.com/tokyo/A1303/A130301/13013728/
+  status: love
+  chain: true
+  tags:
+  - 道の店
+- url: https://tabelog.com/aichi/A2301/A230101/23079423/
+  status: love
+  tags:
+  - "(キシメンサリョウイシコン)"
+- url: https://tabelog.com/aichi/A2301/A230103/23000134/
+  status: love
+  tags:
+  - 別名：名古屋名物 みそかつ 矢場とん 矢場町本店
+- url: https://tabelog.com/aichi/A2301/A230101/23045792/
+  status: have_been
+  tags:
+  - "(たつむら)・ひつまぶし"
+- url: https://tabelog.com/aichi/A2301/A230101/23076285/
+  status: love
+  urls:
+  - https://www.tori-kai.com/shop/unimall.html
+  tags:
+  - "(とりかい)"
+- url: https://tabelog.com/aichi/A2301/A230101/23081170/
+  status: not_been
+  urls:
+  - https://www.yamachan.co.jp/
+  tags:
+  - 行きたい
+- url: https://tabelog.com/aichi/A2301/A230101/23058422/
+  status: not_been
+  tags:
+  - 行きたい
+  - おすすめ
+  - 別名：味仙 ＪＲ名古屋駅店
+- url: https://tabelog.com/osaka/A2701/A270101/27121470/
+  status: love
+  tags:
+  - 別名：すし酒場 さしす ホワイティうめだ店
+- url: https://tabelog.com/osaka/A2701/A270102/27000116/
+  status: not_been
+  tags:
+  - 行きたい
+  - おすすめ
+  - 別名：エル・ポニエンテ・ゴソ
+- url: https://tabelog.com/osaka/A2701/A270101/27001902/
+  status: love
+- url: https://tabelog.com/osaka/A2701/A270101/27129935/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/osaka/A2701/A270104/27112899/
+  status: not_been
+  tags:
+  - 行きたい
+  - おすすめ
+- url: https://tabelog.com/kyoto/A2601/A260201/26031295/
+  status: love
+  urls:
+  - https://libertejapon.com/kyoto/
+- url: https://tabelog.com/kyoto/A2601/A260201/26021180/
+  status: love
+  tags:
+  - 別名：豆腐料理とおばんざい まるたけえびす豆八 京都 先斗町
+- url: https://tabelog.com/kyoto/A2601/A260101/26003760/
+  status: love
+- url: https://tabelog.com/miyagi/A0401/A040101/4019641/
+  status: love
+  tags:
+  - やばい美味しかった
+  - "（やばい美味しかった魚の居酒屋）"
+
+# Not found / needs a manually chosen Tabelog restaurant URL.
+#
+# id: 5fb48edd
+# name: パエリア
+# url: 
+# tabelog_score: 
+# area: 銀座・汐留
+# tabelog_area: 銀座
+# cuisine: 
+# status: have_been
+# tags:
+# - 銀座三越
+#
+# id: 3eb687bb
+# name: 赤坂ビズタワー
+# url: https://mitsui-shopping-park.com/urban/akasakabiztower-sd/storeguide/index.html
+# tabelog_score: 
+# area: 赤坂・六本木・青山・表参道
+# tabelog_area: 赤坂
+# cuisine: 
+# status: have_been
+#
+# id: 44c28861
+# name: 六本木ヒルズ
+# url: https://www.roppongihills.com/gourmet_shops/shops_list.html
+# tabelog_score: 
+# area: 赤坂・六本木・青山・表参道
+# tabelog_area: 六本木
+# cuisine: 
+# status: have_been
+#
+# id: 210119a4
+# name: 東京ミッドタウン
+# url: https://www.tokyo-midtown.com/jp/restaurants/
+# tabelog_score: 
+# area: 赤坂・六本木・青山・表参道
+# tabelog_area: 六本木
+# cuisine: 
+# status: have_been
+#
+# id: 6c8abe76
+# name: 伊勢丹
+# url: https://www.mistore.jp/store/shinjuku/restaurant_search.html
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 新宿三丁目
+# cuisine: 
+# status: have_been
+#
+# id: a4bdb7bd
+# name: ヘルシー弁
+# url: 
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 新宿三丁目
+# cuisine: 
+# status: have_been
+# tags:
+# - 伊勢丹 > デパ地下
+#
+# id: good-chinese-bento-46ae249b
+# name: 中華弁当
+# url: 
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 新宿
+# cuisine: 
+# status: have_been
+# tags:
+# - 小田急 > デパ地下
+#
+# id: 4aa6b2e1
+# name: オペラシティー
+# url: http://www.tokyooperacity.co.jp/shops/sky_restaurant/
+# tabelog_score: 
+# area: 新宿
+# tabelog_area: 初台
+# cuisine: 
+# status: have_been
+#
+# id: 82a00239
+# name: ヒカリエ・レストラン街
+# url: https://www.hikarie.jp/cafe_restaurant/
+# tabelog_score: 
+# area: 渋谷
+# tabelog_area: 渋谷
+# cuisine: 
+# status: have_been
+#
+# id: 0e8d186d
+# name: 渋谷スクランブルスクエア - ショップ & レストラン
+# url: https://www.shibuya-scramble-square.com/shops_restaurants/
+# tabelog_score: 
+# area: 渋谷
+# tabelog_area: 渋谷
+# cuisine: 
+# status: have_been
+#
+# id: ff3439f9
+# name: ヨドバシカメラレストラン街
+# url: http://www.yodobashi-akiba.com/restaurant/
+# tabelog_score: 
+# area: 秋葉原
+# tabelog_area: 秋葉原
+# cuisine: 
+# status: have_been
+#
+# id: udx-6e88dcdb
+# name: UDXレストラン街
+# url: https://udx.jp/
+# tabelog_score: 
+# area: 秋葉原
+# tabelog_area: 秋葉原
+# cuisine: 
+# status: have_been
+#
+# id: 357e83e5
+# name: 西武ダイニングパーク
+# url: https://www.sogo-seibu.jp/ikebukuro/diningpark/
+# tabelog_score: 
+# area: 池袋
+# tabelog_area: 池袋
+# cuisine: 
+# status: have_been
+#
+# id: b5eaef61
+# name: 東武レストラン街
+# url: https://www.tobu-dept.jp/ikebukuro/
+# tabelog_score: 
+# area: 池袋
+# tabelog_area: 池袋
+# cuisine: 
+# status: have_been

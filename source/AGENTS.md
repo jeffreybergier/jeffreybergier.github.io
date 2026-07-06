@@ -101,7 +101,7 @@ Four custom layouts override/extend minima's default `base` layout:
   - **Accessory layout**: Two-column flex layout (30%/65%) that stacks vertically on mobile
   - **Title accessory**: Centers a decorative element above the title (max 256px)
   - **Prompt callouts**: `.prompt-info`, `.prompt-warning`, `.prompt-error` — colored boxes with Font Awesome icons and colored left borders
-  - **Reflection utilities**: `.reflect` applies `-webkit-box-reflect` for a mirror/reflection effect. Modifier classes control distance (`.below-xl` through `.below-xs`) and corner radius (`.round-none` through `.round-lg`)
+  - **Reflection utilities**: `.reflect` applies `-webkit-box-reflect` for a mirror/reflection effect. Modifier classes control distance (`.below-xl` through `.below-xs`) and corner radius (`.round-none` through `.round-md`)
   - **`.continued`**: Removes the clearfix on floated content so text continues to wrap around thumbnails
 
 - **`_icons.scss`**: Auto-generated CSS classes for inline icon rendering. Each icon has classes at multiple sizes (`-8`, `-16`, `-32`, `-64`, `-128`, `-256`). Icons are rendered as `inline-block` elements with `background-image` pointing to PNG files. Two namespaces: `apl-*` (Apple system icons) and `jsb-*` (Jeff's custom app icons).

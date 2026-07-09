@@ -4,139 +4,87 @@ title: "RSS-THE-PLANET"
 titleAccessoryStyle: wide
 titleAccessory: "[![RSS-THE-PLANET title artwork](/assets/images/unenshittification/rss-the-planet/rss-the-planet-thumb.png)](/assets/images/unenshittification/rss-the-planet/rss-the-planet-full.png){: .reflect .below-xl .round-sm }"
 excerpt: |
-  Make your favorite doomscrolling apps work on any device by converting their 
-  simple JSON-based API into an old fashioned RSS feed
+  Make your favorite doomscrolling apps work on any device by converting their
+  simple JSON-based API into an old-fashioned RSS feed
 categories: [Unenshittification]
 tags: [Apple, Retro-Tech, Cloudflare, Serverless, iOS, Mac-OS-X]
 ---
 
-## Outline
+## The Primary Feature: Doomscrolling
 
-### The Doomscrolling Problem
+The dark secret of the vast majority of mobile apps we use, on
+[iOS](https://www.apple.com/os/ios/) and
+[Android](https://www.android.com/), is that they are basically doomscrolling
+apps. Now that does not mean that they are serving you malicious content
+necessarily. But they all have the same basic UX and use the same basic
+implementation details. Whether the app is:
 
-- Open with the basic contradiction:
-  - Mastodon, YouTube, and similar apps are mostly lists of posts, links, videos,
-    comments, dates, authors, and thumbnails.
-  - That information should be simple to move around.
-  - Instead, it usually arrives wrapped in heavyweight apps, tracking, dark
-    patterns, infinite scroll, autoplay, and device requirements that have
-    nothing to do with the content itself.
-- Tie this back to the larger unenshittification project:
-  - I do not want every service to own the entire experience.
-  - I want the data without the slot machine.
-  - I want the same information to work on the devices I actually enjoy using.
+1. [Instagram](https://www.instagram.com/)
+1. [Twitter / X](https://x.com/)
+1. [Tinder](https://tinder.com/)
+1. [New York Times](https://www.nytimes.com/)
+1. [TikTok](https://www.tiktok.com/)
+1. [YouTube](https://www.youtube.com/)
+1. Etc
 
-### The Retro Device Test
+These apps all use the same basic technologies and features which are all really
+simple in principle.
 
-- Explain the concrete goal:
-  - I wanted Mastodon and YouTube to be usable from my iPhone 5 through
-    Reeder.app.
-  - The same idea should also work on other retro devices, old Macs, older RSS
-    readers, and anything else that can still speak normal web standards.
-- Make the point that RSS is the compatibility layer:
-  - RSS is boring in exactly the right way.
-  - Old devices understand it.
-  - Modern devices understand it.
-  - It does not require an app-store account, a modern browser engine, push
-    notifications, background daemons, or a 300 MB client.
+1. Fetch a list of content via [JSON](https://www.rfc-editor.org/rfc/rfc8259)
+1. Save or cache that data in an [SQLite](https://www.sqlite.org/) database
+1. Convert that JSON into a model that is useful for the view (ViewModel)
+1. Display the list of ViewModels as a list in the UI
+   ([UITableView](https://developer.apple.com/documentation/uikit/uitableview))
+1. Asynchronously download related assets such as images and video
 
-### What RSS-THE-PLANET Does
+It is important to point out that all of these capabilities have been built into
+iOS since iOS 5. This is super simple and obvious behavior that all mobile apps
+share.
 
-- Introduce the project:
-  - RSS-THE-PLANET turns modern doomscrolling services back into plain RSS
-    feeds.
-  - The technical deep dive, setup instructions, and source code are on GitHub:
-    <https://github.com/jeffreybergier/RSS-THE-PLANET>
-- Describe the current useful cases without getting too deep:
-  - Mastodon timelines, notifications, and profiles become RSS.
-  - YouTube subscriptions and playlists become RSS.
-  - Existing feeds can be proxied and cleaned up when old readers cannot handle
-    them directly.
-  - The broader pattern is: take the simple JSON/API version of a service and
-    expose the part I care about as a feed.
+## Really Simple Syndication
 
-### Why Not Just Use the Apps?
+You may not know this, but there is a really old technology that enables all
+of this functionality that is used by almost every website AND almost every
+podcast on the internet called [RSS](https://www.rssboard.org/rss-specification).
+RSS uses [XML](https://www.w3.org/XML/) instead of JSON, but it enables the same
+basic functionality using a category of apps called RSS readers. Common examples
+are:
 
-- Contrast the native app experience with the RSS experience:
-  - Native apps are optimized for engagement.
-  - RSS readers are optimized for reading and leaving.
-  - Reeder on iOS 6 feels calmer, faster, and more intentional than opening a
-    modern social app.
-- Emphasize that this is not nostalgia for nostalgia's sake:
-  - The iPhone 5 is perfectly capable of showing text, links, thumbnails, and
-    video links.
-  - The problem is not that the device is too weak.
-  - The problem is that the modern app stack is too heavy and too hostile.
+1. [NetNewsWire](https://netnewswire.com/)
+1. [Vienna](https://www.vienna-rss.com/)
+1. [Reeder](https://reederapp.com/)
 
-### The YouTube Example
+## RSS-THE-PLANET
 
-- Use YouTube as the most obvious example:
-  - I want to know when channels I subscribe to publish something.
-  - I do not necessarily want the full YouTube homepage, recommendations,
-    autoplay, Shorts, comments, notifications, and engagement machinery.
-- Explain what the feed changes:
-  - Videos become entries in a list.
-  - I can scan them alongside everything else.
-  - I can open only the videos I actually want.
-  - Filtering Shorts restores some signal by removing the shortest, most
-    disposable entries.
+RSS-THE-PLANET is a very simple
+[Cloudflare Worker](https://developers.cloudflare.com/workers/) application that
+can encrypt and store your credentials for your doomscrolling apps and then
+fetch their JSON API and convert it into normal RSS. Combine this with an RSS
+reader and now you can enjoy your favorite doomscrolling content on a retro
+device. For me, that retro device is an
+[iPhone 5](https://support.apple.com/en-us/112016) running Reeder on iOS 6.
 
-### The Mastodon Example
+In fact, this improves the experience because these RSS reader apps often
+support offline viewing. So yeah, now I have easy access to all of my
+doomscrolling content even when totally offline:
 
-- Use Mastodon as the friendlier-but-still-doomscrolling example:
-  - Mastodon is better aligned with the open web, but the timeline is still a
-    timeline.
-  - A timeline can still become compulsive if the interface invites endless
-    checking.
-- Explain what RSS changes:
-  - Posts arrive in batches.
-  - Read state belongs to the reader.
-  - The experience becomes closer to email or blogs than a slot-machine feed.
+1. [Mastodon](https://joinmastodon.org/)
+1. [News](https://www.apple.com/apple-news/)
+1. [YouTube](https://www.youtube.com/)
+1. [Podcasts](https://www.apple.com/apple-podcasts/)
 
-### The Privacy and Security Tradeoff
+RSS-THE-PLANET also includes basic features to proxy websites and images through
+Cloudflare to downgrade their TLS restrictions to 1.0 or none at all
+for older devices that do not support 
+[TLS 1.2](https://www.rfc-editor.org/rfc/rfc5246) natively.
 
-- Be clear about the tradeoff:
-  - A private timeline exposed as RSS is only as private as the final feed URL.
-  - This is why the project is designed for self-hosting instead of one public
-    instance everyone uses.
-- Keep this section practical, not scary:
-  - Use read-only tokens.
-  - Use long private feed keys.
-  - Treat generated feed URLs like passwords.
-  - Revoke tokens if a URL leaks.
-- Point readers to GitHub for the exact setup and security details.
+## Caveats
 
-### The Emotional Payoff
+RSS-THE-PLANET is not a hosted service. But the code is MIT licensed and so you
+can run it yourself for free in your Cloudflare account.
 
-- Describe what it feels like when it works:
-  - My iPhone 5 can read modern internet content through a quiet old RSS app.
-  - My old devices feel less like museum pieces and more like computers again.
-  - The services still exist, but they no longer dictate the entire shape of my
-    attention.
-- Connect this to the "bicycle for the mind" idea:
-  - The useful part of the computer is not raw speed.
-  - The useful part is agency.
-  - RSS-THE-PLANET gives some of that agency back.
+[https://github.com/jeffreybergier/RSS-THE-PLANET](https://github.com/jeffreybergier/RSS-THE-PLANET)
 
-### What This Is Not
-
-- Set expectations:
-  - This is not a general-purpose replacement for every social app.
-  - This is not a polished hosted service.
-  - This is not the article where I explain every Cloudflare Worker, API, token,
-    cache, and feed-generation detail.
-- State the intended audience:
-  - People who like old computers.
-  - People who still like RSS.
-  - People who want fewer apps and more control.
-  - People willing to self-host small tools to make their digital life calmer.
-
-### Closing Thought
-
-- End with the core thesis:
-  - A lot of the modern internet is still just lists of things.
-  - If I can turn those lists back into feeds, I can choose the reader, the
-    device, the pace, and the experience.
-  - That is the whole point of RSS-THE-PLANET: take the planet-sized
-    doomscrolling machine and shrink it back down into something my iPhone 5 can
-    read.
+Note that this approach is inherently insecure. While your credentials are
+encrypted in Cloudflare, the generated RSS URLs allow unauthenticated access to 
+your feeds. So please use with caution and keep your RSS feed links secret.

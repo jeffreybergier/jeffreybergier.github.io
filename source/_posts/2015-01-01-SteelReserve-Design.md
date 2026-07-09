@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SteelReserve Design"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![SteelReserve Design](/assets/images/design/steelreserve-design/srd-walkthrough-2k.png)](/assets/images/design/steelreserve-design/srd-walkthrough-2k.png)"
 excerpt: "Reserving a conference room, at the last minute, shouldn't be hard."
 categories: [Design]

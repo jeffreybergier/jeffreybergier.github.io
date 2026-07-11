@@ -6,9 +6,10 @@ layout: home
 Choose the 
 [{{ site.data.constants.apps.title }}]({{ site.data.constants.apps.url }}), 
 [{{ site.data.constants.design.title }}]({{ site.data.constants.design.url }}), 
-and [{{ site.data.constants.retro-tech.title }}]({{ site.data.constants.retro-tech.url }}) 
+[{{ site.data.constants.retro-tech.title }}]({{ site.data.constants.retro-tech.url }}), 
+and [{{ site.data.constants.unenshittification.title }}]({{ site.data.constants.unenshittification.url }}) 
 menu items to browse all articles, but to see more about my currently active
-projects, use the links below \(Updated October 2025\)
+projects, use the links below \(Updated June 2026\)
 - [iMac G4 Project Updates](https://jeffburg.social/tags/iMacG4){: target="_blank" }
 - [Jekyll Website Development Progress](http://jeffburg.social/tags/iWeb){: target="_blank" }
 - [MathEdit for OpenStep App Updates](http://jeffburg.social/tags/OpenStep){: target="_blank" }

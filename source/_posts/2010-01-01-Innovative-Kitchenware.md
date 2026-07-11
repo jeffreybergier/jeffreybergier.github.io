@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Innovative Kitchenware"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![Innovative Kitchenware](/assets/images/design/innovative-kitchenware/ikb-1kbg2.png)](/assets/images/design/innovative-kitchenware/ikb-1kbg2.png)"
 excerpt: "Create a brand and design an entire product line, simple&hellip; right?"
 categories: [Design]

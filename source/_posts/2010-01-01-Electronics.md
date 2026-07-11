@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Electronics"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![Electronics](/assets/images/design/electronics/electronics-1kbg.png)](/assets/images/design/electronics/electronics-1kbg.png)"
 excerpt: "Because a little RISC Assembly never hurt anyone."
 categories: [Design]

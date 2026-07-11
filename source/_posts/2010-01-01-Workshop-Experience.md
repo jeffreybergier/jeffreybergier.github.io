@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Workshop Experience"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![Workshop Experience](/assets/images/design/workshop-experience/workshop-1kbg-2.png)](/assets/images/design/workshop-experience/workshop-1kbg-2.png)"
 excerpt: "My workshop experience includes basic woodworking, metal machining and metal fabrication."
 categories: [Design]

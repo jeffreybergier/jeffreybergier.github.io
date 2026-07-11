@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Architectural Lighting"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![Architectural Lighting](/assets/images/design/architectural-lighting/lighting-1kbg.png)](/assets/images/design/architectural-lighting/lighting-1kbg.png)"
 excerpt: "The design proposal must produce a functional light output. LED mood lights that only 'glow' will not be accepted."
 categories: [Design]

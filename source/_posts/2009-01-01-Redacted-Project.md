@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[REDACTED] Project"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![REDACTED Project](/assets/images/design/redacted-project/redacted-1kbg.png)](/assets/images/design/redacted-project/redacted-1kbg.png)"
 excerpt: "The intellectual property I generated during this project has been sold to the client. Unfortunately, I cannot share this project with you."
 categories: [Design]

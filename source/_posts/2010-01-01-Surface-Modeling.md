@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surface Modeling"
-titleAccessoryStyle: wide
+titleAccessoryStyle: bleed
 titleAccessory: "[![Surface Modeling](/assets/images/design/surface-modeling/surface-1kbg.jpg)](/assets/images/design/surface-modeling/surface-1kbg.jpg)"
 excerpt: "This is an example of surface modeling in Alias Studio."
 categories: [Design]

@@ -27,7 +27,7 @@ favorite retro platforms. I needed this platform to support AI because it
 reduces the pain of writing Objective-C 1.0 code that lacks:
 
 - Automatic Reference Counting
-- Fucking Block Syntax
+- [Fucking Block Syntax](https://github.com/jeffreybergier/AltivecIntelligence)
 - Property Syntax
 - Dot Syntax
 - Grand Central Dispatch

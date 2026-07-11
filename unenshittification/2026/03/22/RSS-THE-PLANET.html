@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>RSS-THE-PLANET | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="RSS-THE-PLANET" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Make your favorite doomscrolling apps work on any device by converting their simple JSON-based API into an old-fashioned RSS feed" />
+<meta name="twitter:description" property="og:description" content="Make your favorite doomscrolling apps work on any device by converting their simple JSON-based API into an old-fashioned RSS feed" />
+<link rel="canonical" href="https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET.html" />
+<meta property="og:url" content="https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-03-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="RSS-THE-PLANET" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-22T00:00:00+00:00","datePublished":"2026-03-22T00:00:00+00:00","description":"Make your favorite doomscrolling apps work on any device by converting their simple JSON-based API into an old-fashioned RSS feed","headline":"RSS-THE-PLANET","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET.html"},"url":"https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/unenshittification/"><i class="fa-solid fa-trash"></i> Unenshittification</a> <!-- Removed | escape -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header post-header-wide">
+  <!-- Custom Layout Starts Here -->
+    
+    <div class="title-accessory title-accessory-wide">
+      <p><a href="/assets/images/unenshittification/rss-the-planet/rss-the-planet-full.png" class="reflect below-xl round-sm"><img src="/assets/images/unenshittification/rss-the-planet/rss-the-planet-thumb.png" alt="RSS-THE-PLANET title artwork" /></a></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">RSS-THE-PLANET</h1><p><p>Make your favorite doomscrolling apps work on any device by converting their
+simple JSON-based API into an old-fashioned RSS feed</p>
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2026-03-22T00:00:00+00:00" itemprop="datePublished">
+        Mar 22, 2026
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="the-primary-feature-doomscrolling">The Primary Feature: Doomscrolling</h2>
+
+<p>The dark secret of the vast majority of mobile apps we use, on
+<a href="https://www.apple.com/os/ios/">iOS</a> and
+<a href="https://www.android.com/">Android</a>, is that they are basically doomscrolling
+apps. Now that does not mean that they are serving you malicious content
+necessarily. But they all have the same basic UX and use the same basic
+implementation details. Whether the app is:</p>
+
+<ol>
+  <li><a href="https://www.instagram.com/">Instagram</a></li>
+  <li><a href="https://x.com/">Twitter / X</a></li>
+  <li><a href="https://tinder.com/">Tinder</a></li>
+  <li><a href="https://www.nytimes.com/">New York Times</a></li>
+  <li><a href="https://www.tiktok.com/">TikTok</a></li>
+  <li><a href="https://www.youtube.com/">YouTube</a></li>
+  <li>Etc</li>
+</ol>
+
+<p>These apps all use the same basic technologies and features which are all really
+simple in principle.</p>
+
+<ol>
+  <li>Fetch a list of content via <a href="https://www.rfc-editor.org/rfc/rfc8259">JSON</a></li>
+  <li>Save or cache that data in an <a href="https://www.sqlite.org/">SQLite</a> database</li>
+  <li>Convert that JSON into a model that is useful for the view (ViewModel)</li>
+  <li>Display the list of ViewModels as a list in the UI
+(<a href="https://developer.apple.com/documentation/uikit/uitableview">UITableView</a>)</li>
+  <li>Asynchronously download related assets such as images and video</li>
+</ol>
+
+<p>It is important to point out that all of these capabilities have been built into
+iOS since iOS 5. This is super simple and obvious behavior that all mobile apps
+share.</p>
+
+<h2 id="really-simple-syndication">Really Simple Syndication</h2>
+
+<p>You may not know this, but there is a really old technology that enables all
+of this functionality that is used by almost every website AND almost every
+podcast on the internet called <a href="https://www.rssboard.org/rss-specification">RSS</a>.
+RSS uses <a href="https://www.w3.org/XML/">XML</a> instead of JSON, but it enables the same
+basic functionality using a category of apps called RSS readers. Common examples
+are:</p>
+
+<ol>
+  <li><a href="https://netnewswire.com/">NetNewsWire</a></li>
+  <li><a href="https://www.vienna-rss.com/">Vienna</a></li>
+  <li><a href="https://reederapp.com/">Reeder</a></li>
+</ol>
+
+<h2 id="rss-the-planet">RSS-THE-PLANET</h2>
+
+<p>RSS-THE-PLANET is a very simple
+<a href="https://developers.cloudflare.com/workers/">Cloudflare Worker</a> application that
+can encrypt and store your credentials for your doomscrolling apps and then
+fetch their JSON API and convert it into normal RSS. Combine this with an RSS
+reader and now you can enjoy your favorite doomscrolling content on a retro
+device. For me, that retro device is an
+<a href="https://support.apple.com/en-us/112016">iPhone 5</a> running Reeder on iOS 6.</p>
+
+<p>In fact, this improves the experience because these RSS reader apps often
+support offline viewing. So yeah, now I have easy access to all of my
+doomscrolling content even when totally offline:</p>
+
+<ol>
+  <li><a href="https://joinmastodon.org/">Mastodon</a></li>
+  <li><a href="https://www.apple.com/apple-news/">News</a></li>
+  <li><a href="https://www.youtube.com/">YouTube</a></li>
+  <li><a href="https://www.apple.com/apple-podcasts/">Podcasts</a></li>
+</ol>
+
+<p>RSS-THE-PLANET also includes basic features to proxy websites and images through
+Cloudflare to downgrade their TLS restrictions to 1.0 or none at all
+for older devices that do not support 
+<a href="https://www.rfc-editor.org/rfc/rfc5246">TLS 1.2</a> natively.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>RSS-THE-PLANET is not a hosted service. But the code is MIT licensed and so you
+can run it yourself for free in your Cloudflare account.</p>
+
+<p><a href="https://github.com/jeffreybergier/RSS-THE-PLANET">https://github.com/jeffreybergier/RSS-THE-PLANET</a></p>
+
+<p>Note that this approach is inherently insecure. While your credentials are
+encrypted in Cloudflare, the generated RSS URLs allow unauthenticated access to 
+your feeds. So please use with caution and keep your RSS feed links secret.</p>
+
+  </div>
+
+  <a class="u-url" href="/unenshittification/2026/03/22/RSS-THE-PLANET.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

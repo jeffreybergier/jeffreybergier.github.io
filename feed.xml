@@ -1,4 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-05T14:37:59+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">How to Sync iPhone 5 with PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html" rel="alternate" type="text/html" title="How to Sync iPhone 5 with PowerPC Macs" /><published>2026-02-16T00:00:00+00:00</published><updated>2026-02-16T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html"><![CDATA[<table>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-11T10:42:41+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Altivec Intelligence</title><link href="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html" rel="alternate" type="text/html" title="Altivec Intelligence" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html"><![CDATA[<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>In 2024 I developed MathEdit for OpenStep. This app was a proof of concept to
+see if I could develop a Cocoa application for OpenStep and then upgrade it to
+work on every version of Mac OS X. The application was a success, but even
+though it was a simple app, it took me exactly 1 year of spare time programming
+to develop and then to upgrade through 20 years of Mac OS X history. The
+primary reasons for this were that Objective-C from 1996 was pretty painful to
+write plus, I was writing it all in real OpenStep and vintage Mac OS X virtual
+machines with ancient tooling.</p>
+
+<p>In the age of AI, this solution was not going to suit me any more. I needed
+a modern environment that could run on any computer and still create apps for my
+favorite retro platforms. I needed this platform to support AI because it
+reduces the pain of writing Objective-C 1.0 code that lacks:</p>
+
+<ul>
+  <li>Automatic Reference Counting</li>
+  <li><a href="https://github.com/jeffreybergier/AltivecIntelligence">Fucking Block Syntax</a></li>
+  <li>Property Syntax</li>
+  <li>Dot Syntax</li>
+  <li>Grand Central Dispatch</li>
+  <li>Collection Literals</li>
+</ul>
+
+<h2 id="altivec-intelligence">Altivec Intelligence</h2>
+
+<p>Altivec Intelligence is all in one integrated development docker container
+that has everything I need to develop Cocoa and Cocoa Touch applications that
+run on <a href="/retro-tech/">PowerPC Macs</a> with Mac OS X Tiger or later and iPhones
+running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal binaries with 4
+slices: PowerPC, x86, x64, and arm64 😎</p>
+
+<p>On top of that Altivec Intelligence includes tooling for web development,
+image manipulation, and ffmpeg plus the most important part: All of the AI
+agent CLIs are baked into the container.</p>
+
+<p>Why is this important? Well, these agents are incredibly powerful and helping
+me to <a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>.
+But they cannot be sandboxed and cannot be trusted as long as they bash access.
+By running them in a Docker container I can safely
+run them in YOLO mode with no risk to my own Mac. They have all the tools they
+need to create great apps all without ever changing my development environment
+or editing files outside of my repositories.</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<p>A modern retro toolchain wouldn’t be complete without modern libraries to help
+these retro system do modern tasks. Altivec Intelligence includes critical 
+libraries bundled into Dynamic Frameworks and Static Libraries.</p>
+
+<ul>
+  <li>AltivecCocoa: Includes FontAwesome and other helper classes that make it easy to build applications that run across 20+ years of Apple history</li>
+  <li>AltivecCore: Includes modern networking and database tooling to interact with modern web APIs
+    <ul>
+      <li>SQLite 3.43.2</li>
+      <li>libcurl 7.88.1</li>
+      <li>OpenSSL 1.1.1w</li>
+      <li>zlib 1.2.13</li>
+      <li>cJSON 1.7.19</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tooling">Tooling</h2>
+
+<p>I will not go into all the details because you can view that on GitHub. But
+Altivec Intelligence includes a lot of basic tooling to make it easy to 
+build, deploy, and debug apps to <a href="/retro-tech/">retro devices</a>. This all relies on SSH key
+authentication which can also be customized because the container mounts the 
+home folder in ~/.altivec. This way you can always control which keys the 
+container (and the agents) have access to. <code class="language-plaintext highlighter-rouge">altivec-deploy</code> is an included
+script that can deploy your apps to Macs and to
+jailbroken iPhones to start
+<a href="/retro-tech/2025/12/09/PPC-iPhone-2.html">debugging sessions with GDB</a> or LLDB.
+<code class="language-plaintext highlighter-rouge">altivec-release</code> automatically bumps
+the versions of the apps in the Info.plist files.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>Altivec Intelligence is offered as a prebuilt Docker container for arm64 and x64
+devices. It supports arm64 and x86-64 computers capable of running Docker.</p>
+
+<p>It does not include Apple proprietary tooling so there is no support for NIBs
+for example. Deploying to an iPhone requires a jailbroken iPhone with SSH
+installed. Supporting Mac OS X Tiger requires using a lowest common denominator
+of Mac OS X API’s. The AI will help you do the runtime introspection, but it
+can be a pain.</p>
+
+<p>For usage instructions and example apps, see the project on GitHub.</p>
+
+<p><a href="https://github.com/jeffreybergier/AltivecIntelligence">https://github.com/jeffreybergier/AltivecIntelligence</a></p>]]></content><author><name></name></author><category term="Unenshittification" /><category term="Apple" /><category term="Retro-Tech" /><category term="Objective-C" /><category term="Mac-OS-X" /><category term="iOS" /><category term="Docker" /><category term="AI" /><summary type="html"><![CDATA[Build small, personal apps for decades of Apple hardware without Xcode, Mac virtual machines, or permission from a platform owner]]></summary></entry><entry><title type="html">RSS-THE-PLANET</title><link href="https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET.html" rel="alternate" type="text/html" title="RSS-THE-PLANET" /><published>2026-03-22T00:00:00+00:00</published><updated>2026-03-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/03/22/RSS-THE-PLANET.html"><![CDATA[<h2 id="the-primary-feature-doomscrolling">The Primary Feature: Doomscrolling</h2>
+
+<p>The dark secret of the vast majority of mobile apps we use, on
+<a href="https://www.apple.com/os/ios/">iOS</a> and
+<a href="https://www.android.com/">Android</a>, is that they are basically doomscrolling
+apps. Now that does not mean that they are serving you malicious content
+necessarily. But they all have the same basic UX and use the same basic
+implementation details. Whether the app is:</p>
+
+<ol>
+  <li><a href="https://www.instagram.com/">Instagram</a></li>
+  <li><a href="https://x.com/">Twitter / X</a></li>
+  <li><a href="https://tinder.com/">Tinder</a></li>
+  <li><a href="https://www.nytimes.com/">New York Times</a></li>
+  <li><a href="https://www.tiktok.com/">TikTok</a></li>
+  <li><a href="https://www.youtube.com/">YouTube</a></li>
+  <li>Etc</li>
+</ol>
+
+<p>These apps all use the same basic technologies and features which are all really
+simple in principle.</p>
+
+<ol>
+  <li>Fetch a list of content via <a href="https://www.rfc-editor.org/rfc/rfc8259">JSON</a></li>
+  <li>Save or cache that data in an <a href="https://www.sqlite.org/">SQLite</a> database</li>
+  <li>Convert that JSON into a model that is useful for the view (ViewModel)</li>
+  <li>Display the list of ViewModels as a list in the UI
+(<a href="https://developer.apple.com/documentation/uikit/uitableview">UITableView</a>)</li>
+  <li>Asynchronously download related assets such as images and video</li>
+</ol>
+
+<p>It is important to point out that all of these capabilities have been built into
+iOS since iOS 5. This is super simple and obvious behavior that all mobile apps
+share.</p>
+
+<h2 id="really-simple-syndication">Really Simple Syndication</h2>
+
+<p>You may not know this, but there is a really old technology that enables all
+of this functionality that is used by almost every website AND almost every
+podcast on the internet called <a href="https://www.rssboard.org/rss-specification">RSS</a>.
+RSS uses <a href="https://www.w3.org/XML/">XML</a> instead of JSON, but it enables the same
+basic functionality using a category of apps called RSS readers. Common examples
+are:</p>
+
+<ol>
+  <li><a href="https://netnewswire.com/">NetNewsWire</a></li>
+  <li><a href="https://www.vienna-rss.com/">Vienna</a></li>
+  <li><a href="https://reederapp.com/">Reeder</a></li>
+</ol>
+
+<h2 id="rss-the-planet">RSS-THE-PLANET</h2>
+
+<p>RSS-THE-PLANET is a very simple
+<a href="https://developers.cloudflare.com/workers/">Cloudflare Worker</a> application that
+can encrypt and store your credentials for your doomscrolling apps and then
+fetch their JSON API and convert it into normal RSS. Combine this with an RSS
+reader and now you can enjoy your favorite doomscrolling content on a retro
+device. For me, that retro device is an
+<a href="https://support.apple.com/en-us/112016">iPhone 5</a> running Reeder on iOS 6.</p>
+
+<p>In fact, this improves the experience because these RSS reader apps often
+support offline viewing. So yeah, now I have easy access to all of my
+doomscrolling content even when totally offline:</p>
+
+<ol>
+  <li><a href="https://joinmastodon.org/">Mastodon</a></li>
+  <li><a href="https://www.apple.com/apple-news/">News</a></li>
+  <li><a href="https://www.youtube.com/">YouTube</a></li>
+  <li><a href="https://www.apple.com/apple-podcasts/">Podcasts</a></li>
+</ol>
+
+<p>RSS-THE-PLANET also includes basic features to proxy websites and images through
+Cloudflare to downgrade their TLS restrictions to 1.0 or none at all
+for older devices that do not support 
+<a href="https://www.rfc-editor.org/rfc/rfc5246">TLS 1.2</a> natively.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>RSS-THE-PLANET is not a hosted service. But the code is MIT licensed and so you
+can run it yourself for free in your Cloudflare account.</p>
+
+<p><a href="https://github.com/jeffreybergier/RSS-THE-PLANET">https://github.com/jeffreybergier/RSS-THE-PLANET</a></p>
+
+<p>Note that this approach is inherently insecure. While your credentials are
+encrypted in Cloudflare, the generated RSS URLs allow unauthenticated access to 
+your feeds. So please use with caution and keep your RSS feed links secret.</p>]]></content><author><name></name></author><category term="Unenshittification" /><category term="Apple" /><category term="Retro-Tech" /><category term="Cloudflare" /><category term="Serverless" /><category term="iOS" /><category term="Mac-OS-X" /><summary type="html"><![CDATA[Make your favorite doomscrolling apps work on any device by converting their simple JSON-based API into an old-fashioned RSS feed]]></summary></entry><entry><title type="html">2026: The Year of Unenshittification</title><link href="https://jeffburg.com/unenshittification/2026/02/22/Unenshittification-101.html" rel="alternate" type="text/html" title="2026: The Year of Unenshittification" /><published>2026-02-22T00:00:00+00:00</published><updated>2026-02-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/02/22/Unenshittification-101</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/02/22/Unenshittification-101.html"><![CDATA[<h1 id="enshittification">Enshittification</h1>
+
+<p>In 2026, I set out on the goal to <a href="https://en.wikipedia.org/wiki/Enshittification">unenshittify</a>
+my digital life. I am old enough at this point that I came of age when the 
+internet was new and exciting and was built with good intentions. But for the
+past 10 years or so, it really has all changed for the worse. I won’t list all
+of my grievances, but I think I can easily argue that the web is mostly dead,
+Apps have turned into cesspools of addictive non-sense, Mac apps are all now
+Electron apps, and the reality is that what we have done with all of the 
+amazing power of our modern computing devices is waste it all on heavy-weight
+frameworks, RAM sucking Javascript apps, and totally unwanted features. I am
+done with this computing contract. This is not what I signed up for.</p>
+
+<p>I am starting to sound like an old man and that is OK because at least luckily
+I still have my Mac. Despite Apple’s best attempts they have not been able to 
+suffocate the Mac like they have all of their other platforms. On my Mac, I am
+in full control of my data, full control of the apps I use, and in full control
+of the services my Mac runs. The iPhone on the other hand, has turned into a
+platform I absolutely despise. The App Store restrictions have turned one of
+the most exciting and powerful computing platforms into an addictive 
+doom-scrolling appliance with little other purpose.</p>
+
+<h1 id="complaints">Complaints</h1>
+
+<p>The thing is that every App for the iPhone has never actually really changed.
+Whether its 2012 or 2026, every app is fundamentally the same:</p>
+
+<ol>
+  <li>Download JSON</li>
+  <li>Store JSON in a SQLite database</li>
+  <li>Parse JSON into a list</li>
+  <li>Fetch media while the list scrolls</li>
+  <li>If I am being generous, on some chat apps there is some cryptography</li>
+</ol>
+
+<p>All of these capabilities are provided by Apple and built into the OS. So all
+of these apps should be simple, small, and efficient. But yet they are not. 
+You can pick your favorite doomscrolling app from the App Store and they are 
+all 300MB+. Why is this? Well it is different for every app. But usually it 
+comes down to</p>
+
+<ol>
+  <li>Tracking frameworks</li>
+  <li>Advertising frameworks</li>
+  <li>Crossplatform UI frameworks</li>
+  <li>Unwanted features</li>
+  <li>etc, etc, etc</li>
+</ol>
+
+<p>This combined with the fact that Apple keeps making the iPhone bigger, more
+powerful, and more power hungry, leaves me in such an awkward position. Since
+the apps are nigh useless for anything except doomscrolling, please tell me
+again why I need an 8” supercomputer with 12GB of RAM in my pocket? All of this
+stuff could be done with an iPhone 5 in 2012 if it wasn’t all enshittified.</p>
+
+<h1 id="reaction">Reaction</h1>
+
+<p>Thats what I am doing. I am switching to using an iPhone 5 as my main iPhone.
+Why the iPhone 5? Well, its the newest iPhone that can run iOS 6 and it has
+a widescreen and a lightning connector unlike the iPhone4s. So I could do a 5s
+or an SE and get the same size, but I thought it would be fun to have that 
+retro design for the OS as well. Of course, I also have my lovely iMac G4
+which would also benefit from the enhancements I made to the iPhone 5. This
+would later turn out to be a bigger challenge that I thought, but I will save 
+for that later.</p>
+
+<p>But the long story short, is my iPhone 5 is my day to day iPhone. I did also
+downgrade my gigantic iPhone 14 Pro to an iPhone 13 mini which serves as my 
+backup iPhone when I need to do things the iPhone 5 can’t… like make calls,
+enable my Apple Watch (with Apple Pay), and use the enshittified apps that I 
+have no choice but to use.</p>
+
+<h1 id="ai-slop">AI Slop</h1>
+
+<p>I will just say it up front. It is not possible for a single person working
+in their spare time to recreate their digital life without AI. I will be
+posting a lot about AI because it has honestly changed my life when it comes to
+programming. But for the doubters out there, what I want to say is something 
+along the lines of the following:</p>
+
+<blockquote>
+  <p>All of our favorite apps and and services were all fully enshittified well
+before AI was a thing. These apps became 300MB bloated behemoths well before
+AI. AI is not going to ruin software; it was already ruined. The software we 
+have to use daily is is 100% human-made slop.</p>
+</blockquote>
+
+<p>But AI will help me fix that, and for that reason, I love it.</p>
+
+<h1 id="invitation">Invitation</h1>
+
+<p>Follow along with me while I unenshittify my life. At the very least you can
+have a good laugh at how much personal time I am <del>wasting</del> spending to 
+recreate experiences that are already free. But don’t doubt too hard. For one,
+they are my experiences created only for me. And two, I think you will be 
+actually shocked what is possible on these retro devices in 2026 when you have
+the right build environments, toolchains, and a little creativity.</p>]]></content><author><name></name></author><category term="Unenshittification" /><category term="AI" /><category term="Apple" /><category term="Retro-Tech" /><category term="Objective-C" /><category term="iOS" /><category term="Mac-OS-X" /><summary type="html"><![CDATA[In 2026, I set out on the goal to unenshittify my digital life. This is the article where I justify my fool-hearted actions]]></summary></entry><entry><title type="html">How to Sync iPhone 5 with PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html" rel="alternate" type="text/html" title="How to Sync iPhone 5 with PowerPC Macs" /><published>2026-02-16T00:00:00+00:00</published><updated>2026-02-16T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html"><![CDATA[<table>
   <thead>
     <tr>
       <th style="width: 50%;">iMac G4 and iPhone 5</th>
@@ -1529,7 +1801,83 @@ a sample app and make sure it launches in the simulator.</p>
 
 <p>In the next episode, we will go through the steps needed to get an app running
 on the device. Remember, this is before Xcode could manage signing for you, so
-you will need to do it the old fashioned way <i class="fa-solid fa-hand-peace"></i></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[Apple always officially required an Intel Mac to do iPhone app development, but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing Original iPhone and iPhone 3G apps on your PowerPC Mac.]]></summary></entry><entry><title type="html">Retro Software Update Server</title><link href="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html" rel="alternate" type="text/html" title="Retro Software Update Server" /><published>2025-09-09T00:00:00+00:00</published><updated>2025-09-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html"><![CDATA[<p>A guide on setting up an Apple Software Update Server Mirror in case Apple ever
+you will need to do it the old fashioned way <i class="fa-solid fa-hand-peace"></i></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[Apple always officially required an Intel Mac to do iPhone app development, but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing Original iPhone and iPhone 3G apps on your PowerPC Mac.]]></summary></entry><entry><title type="html">MathEdit for OpenStep</title><link href="https://jeffburg.com/apps/2025/10/06/MathEdit.html" rel="alternate" type="text/html" title="MathEdit for OpenStep" /><published>2025-10-06T00:00:00+00:00</published><updated>2025-10-06T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2025/10/06/MathEdit</id><content type="html" xml:base="https://jeffburg.com/apps/2025/10/06/MathEdit.html"><![CDATA[<h2 id="ns-is-for-nextstep">NS is for NextStep</h2>
+
+<p>As Cocoa developers we always taught the NS in NSString, NSDictionary, NSArray,
+etc stands for NextStep. So I thought “What is it like to build an application
+for NextStep?” So I decided to try it! I got an 
+<a href="https://previous.nextcommunity.net">OpenStep 4.2 Virtual Machine</a> up and 
+running, installed Project Builder (the precursor to Xcode) and got to work.
+MathEdit is the result.</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<h3 id="the-good">The Good</h3>
+
+<p>OpenStep’s Foundation and AppKit frameworks are remarkable in that they are
+extremely complete even way back in 1996 (remember Mac OS X 10.0 Cheetah was
+released in 2001). If you ignore NIBs, then the code from OpenStep just works
+in OS X even to do this day. Yes, there are many deprecation warnings, but all
+of the API’s work without issue. And yes, it means NSApplication, NSTableView,
+NSWindow, NSButton, NSMenu, the responder chain, etc all work exactly the same
+as they do now.</p>
+
+<h3 id="the-bad">The Bad</h3>
+
+<p>However, there is a lot of core functionality missing. Networking for example.
+NSData will download things for you when you give it an internet path, but
+this has all the pitfalls of modern NSData. Its single threaded, blocking, no
+progress, etc. If you want anything more than that you need to drop down to 
+BSD Sockets. AppKit is missing basics like NSToolbar and NSDocument. Foundation
+is missing basics like NSError and NUSRL which kind of explains why there
+are all those duplicate methods with NSURL and NSString and with NSError and
+without NSError.</p>
+
+<h3 id="the-ugly">The Ugly</h3>
+
+<p>Lastly, there is the really hard stuff. Objective-C before “2.0” as Apple called
+it is pretty painful. That said, Objective-C 2.0 did not come to Mac OS X until
+10.7, so thats pretty late in OS X history. But still, we are talking about
+the most basic features missing:</p>
+
+<ul>
+  <li>Automatic Reference Counting</li>
+  <li><a href="https://github.com/jeffreybergier/AltivecIntelligence">Fucking Block Syntax</a></li>
+  <li>Property Syntax</li>
+  <li>Dot Syntax</li>
+  <li>Grand Central Dispatch</li>
+  <li>Collection Literals</li>
+</ul>
+
+<p>The other major pain point is Nibs. While OpenStep Nibs do work in early 
+versions of OS X, Apple had a bad habit of changing the Nib format, XIB format,
+and then just refusing to load older Nibs for security reasons over the years.
+Sp the only way to make an app that is compatible across history is to not use
+Nibs… and unlike on iOS, AppKit really does not like this. I spent a lot of
+time getting memory management to work properly in early versions of OS X
+that just ABSOLUTELY ASSUMED you were using Nibs. I did get it to work, but this
+was like days and days and days of research. Also, I had to learn 
+<a href="https://lapcatsoftware.com/blog/2007/06/17/working-without-a-nib-part-4-setapplemenu/">the secret trick</a>
+to set the Application Menu which did not exist in OpenStep.</p>
+
+<h2 id="features">Features</h2>
+
+<p>MathEdit is basically like Math Notes from Apple. Its a normal text editor
+like TextEdit, but if you type in a mathematical formula in the text, it 
+automatically parses it and solves it for you. It makes extensive use of
+NSDecimalNumber and NSTextAttachment to do this. NSTextAttachment in particular
+is the star of the show. It still always shocks me that this was missing from 
+iOS until iOS 7 even though it was in Mac OS X and even OpenStep before that.
+It is such a powerful way to enhance your text documents.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>I honestly don’t use MathEdit all that often. It is on all my Macs including
+my vintage ones and I think it is a cool proof of concept. But I don’t think its
+much more than that. But if you want to try it out for yourself, grab a build
+for your favorite Mac and give it a try.</p>
+
+<p><a href="https://github.com/jeffreybergier/MathEdit">https://github.com/jeffreybergier/MathEdit</a></p>]]></content><author><name></name></author><category term="Apps" /><category term="Apple" /><category term="Retro-Tech" /><category term="OpenStep" /><category term="Objective-C" /><category term="Cocoa" /><category term="Mac-OS-X" /><category term="PowerPC" /><summary type="html"><![CDATA[Image Apple's MathNotes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.]]></summary></entry><entry><title type="html">Retro Software Update Server</title><link href="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html" rel="alternate" type="text/html" title="Retro Software Update Server" /><published>2025-09-09T00:00:00+00:00</published><updated>2025-09-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html"><![CDATA[<p>A guide on setting up an Apple Software Update Server Mirror in case Apple ever
 decides to shut down these old update servers. So far software update still
 works on Mac OS X 10.4 and above, but Apple already shut down servers for 10.3,
 10.2, 10.1, and 10.0 and those can’t be recovered.</p>
@@ -2925,332 +3273,4 @@ is only used to run netcat, ping, and the Tailscale CLI.</p>
 <p>Also, if your employer tightly monitors their network, using Netcat 
 to port scan a large number of ports on a large number of machines can cause 
 warnings to go off (ask how I know). In those cases you may want to disable 
-automatic refresh of Services, which is the default setting.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Apps" /><category term="Hobby" /><summary type="html"><![CDATA[In 2024 I started using Tailscale to access my home network remotely. When I noticed Tailscale had a CLI with a JSON interface, I couldn't help myself… I built an app.]]></summary></entry><entry><title type="html">Hipstapaper: Cross Platform Reading List</title><link href="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html" rel="alternate" type="text/html" title="Hipstapaper: Cross Platform Reading List" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2017/01/01/Hipstapaper</id><content type="html" xml:base="https://jeffburg.com/apps/2017/01/01/Hipstapaper.html"><![CDATA[<h2 id="overview">Overview</h2>
-
-<p>Hipstapaper is an app I built for myself to save links to web pages similar to 
-Instapaper, which was popular in the early 2010s or so. But as Instapaper was losing
-traction, I didn’t want to lose the functionality.</p>
-
-<ul>
-  <li>Basic CRUD management of websites</li>
-  <li>Tagging, Filtering, Sorting</li>
-  <li>Bulk editing</li>
-  <li>State restoration</li>
-  <li>iPadOS and macOS Menus</li>
-  <li>iPadOS and macOS “Scenes” for multiple window support</li>
-  <li>Share extension for adding content</li>
-  <li>iCloud Sync</li>
-</ul>
-
-<h3 id="download">Download</h3>
-
-<p>I never released Hipstapaper on the App Store but you can always use Hipstapaper
-on your iOS and macOS devices using the links below:</p>
-
-<ul>
-  <li><a href="https://github.com/jeffreybergier/Hipstapaper/tree/main/Releases/macOS"><i class="fa-regular fa-circle-down"></i>macOS Downloads</a></li>
-  <li><a href="https://testflight.apple.com/join/V1f2j5Jd"><i class="fa-brands fa-app-store"></i>iOS TestFlight</a></li>
-  <li><a href="https://github.com/jeffreybergier/Hipstapaper/"><i class="fa-brands fa-github"></i>Hipstapaper Source Code</a></li>
-</ul>
-
-<h3 id="table-of-contents">Table of Contents</h3>
-
-<ul id="markdown-toc">
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
-      <li><a href="#download" id="markdown-toc-download">Download</a></li>
-      <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
-    </ul>
-  </li>
-  <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
-      <li><a href="#phase-1-2016-2018" id="markdown-toc-phase-1-2016-2018">Phase 1 (2016-2018)</a></li>
-      <li><a href="#phase-2-2019-2021" id="markdown-toc-phase-2-2019-2021">Phase 2 (2019-2021)</a></li>
-      <li><a href="#phase-3-2022-current" id="markdown-toc-phase-3-2022-current">Phase 3 (2022-Current)</a></li>
-    </ul>
-  </li>
-  <li><a href="#current-status" id="markdown-toc-current-status">Current Status</a></li>
-</ul>
-
-<h2 id="development">Development</h2>
-
-<p>Hipstapaper was a learning exercise. I wanted to learn how to make a
-cross-platform application that worked on all of Apple’s platforms, including
-macOS. This was a big learning opportunity as I had never made an AppKit-based
-app before. The TL;DR is that I ended up liking AppKit even more than UIKit and
-most of the toy apps I make now are either AppKit or SwiftUI.</p>
-
-<h3 id="phase-1-2016-2018">Phase 1 (2016-2018)</h3>
-
-<p>During this phase, there were no cross-platform UI frameworks from Apple and
-there was no database that had online syncing from Apple. Thus the technologies
-I chose were not ideal, but they were the only way to get the job done:</p>
-
-<ol>
-  <li>Cross-Platform: UIKit and AppKit UI implementations
-    <ul>
-      <li>Two UI implementations meant everything had to be implemented and updated
- twice. This was a big pain</li>
-    </ul>
-  </li>
-  <li>Realm Database: Realm featured powerful sync capabilities that iCloud could
-not match
-    <ul>
-      <li>Realm was a great database, but it was not the platform standard “Core Data”</li>
-    </ul>
-  </li>
-  <li>Realm Sync Server: Realm-powered server running in Digital Ocean
-    <ul>
-      <li>Running my own server meant that I would never be able to support users for
- free. So this kept the app limited to my own personal use.</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="phase-2-2019-2021">Phase 2 (2019-2021)</h3>
-
-<p>In WWDC 2019, Apple introduced Core Data syncing via CloudKit. While Apple
-pitched this as their final solution to Core Data syncing, the actual
-<a href="https://developer.apple.com/videos/play/wwdc2019/202">session video</a> they
-published was so quick, and so information dense that it was hard to follow.
-As well, the feature has fundamental limitations, that I think have prevented
-it from being very successful.</p>
-
-<p>But with the introduction of Core Data syncing, I worked on Hipstapaper to
-swap out Realm for Core Data. This was no easy task as I had not wrapped
-Realm in its own wrapper and Realm headers and tokens needed to be removed
-from hundreds of UI files… twice for UIKit and AppKit.</p>
-
-<h3 id="phase-3-2022-current">Phase 3 (2022-Current)</h3>
-
-<p>I wanted to learn SwiftUI and because SwiftUI was finally becoming full-featured
-enough to support apps with complex navigation for both iOS and macOS, I decided
-to take on the challenge. This required significant updates to the database
-wrapper to support SwiftUI’s dynamic data model. However, it worked. I was able
-to delete thousands of lines of platform specific UI code and replace it with
-just one SwiftUI codebase. As well, I learned to love SwiftUI. If you can figure
-out how to let go and let the data drive your application, SwiftUI is simply
-amazing. The way it dynamically updates when there are literally hundreds
-of database changes happening every second (such as during a sync operation)
-is incredible. SwiftUI is truly a game changer.</p>
-
-<h2 id="current-status">Current Status</h2>
-
-<p>I still use Hipstapaper across my devices daily. However, I have never put it 
-on the App Store or anything like that as I know it is missing key features
-that people will want such as offline reading of webpages. Yes, the link to
-the web page is stored offline in the database, but to actually open the web
-page you will need an internet connection.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Apps" /><category term="Hobby" /><summary type="html"><![CDATA[Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS]]></summary></entry><entry><title type="html">WaterMe: Gardening Reminders</title><link href="https://jeffburg.com/apps/2016/04/15/WaterMe.html" rel="alternate" type="text/html" title="WaterMe: Gardening Reminders" /><published>2016-04-15T00:00:00+00:00</published><updated>2016-04-15T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2016/04/15/WaterMe</id><content type="html" xml:base="https://jeffburg.com/apps/2016/04/15/WaterMe.html"><![CDATA[<h2 id="table-of-contents">Table of Contents</h2>
-
-<ul id="markdown-toc">
-  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
-      <li><a href="#app-store-description" id="markdown-toc-app-store-description">App Store Description</a></li>
-      <li><a href="#download" id="markdown-toc-download">Download</a></li>
-    </ul>
-  </li>
-  <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
-      <li><a href="#version-1-2016" id="markdown-toc-version-1-2016">Version 1 (2016)</a></li>
-      <li><a href="#version-2-2017" id="markdown-toc-version-2-2017">Version 2 (2017)</a></li>
-      <li><a href="#version-25-2020" id="markdown-toc-version-25-2020">Version 2.5 (2020)</a></li>
-    </ul>
-  </li>
-  <li><a href="#version-3-and-beyond" id="markdown-toc-version-3-and-beyond">Version 3 and Beyond</a></li>
-</ul>
-
-<h2 id="overview">Overview</h2>
-
-<p>WaterMe is the only app that I have released on the App Store that got any sort
-of usage traction at all. It doesn’t have a lot of users, but at the time of
-this writing (September 2025) it had 993K total sessions according to App Store
-Connect analytics. Since these analytics are opt-in I assume that means it’s had
-about 3M total sessions… which is still not a lot, but for a nice little hobby
-app, I think it’s pretty cool <i class="fa-regular fa-hand-peace"></i></p>
-
-<h3 id="app-store-description">App Store Description</h3>
-
-<p>Never let another plant turn brown again. WaterMe reminds you when to tend to
-the plants in your garden:</p>
-
-<ol>
-  <li>Add your plants into the app.</li>
-  <li>Add reminders for watering, fertilizing, etc.</li>
-  <li>Get 1 notification every day reminding you which plants need care.</li>
-  <li>Take care of the plant in real life.</li>
-  <li>Drag and drop the reminder to mark it as complete.</li>
-</ol>
-
-<p>That’s it! Every day you’ll get one, and only one, notification that reminds you
-to take care of your plants.</p>
-
-<ul>
-  <li>Supports multiple kinds of reminders per plant
-    <ul>
-      <li>Water, Fertilize, Trim, and more</li>
-    </ul>
-  </li>
-  <li>Easy to see which plants need to be taken care of and when.</li>
-  <li>Syncs data across all of your iOS devices via iCloud.</li>
-  <li>Supports working quickly with the Drag and Drop interface.</li>
-  <li>Customize the time notifications are sent every day.</li>
-  <li>Care for your garden with your voice using Siri Shortcuts.</li>
-  <li>Tip Jar In-App Purchases allow you to directly support the development of WaterMe.</li>
-  <li>Supports Split Screen and Slide Over iPad Multitasking.</li>
-  <li>Supports Dynamic Type.</li>
-  <li>Supports Voiceover and other iOS accessibility features.</li>
-</ul>
-
-<h3 id="download">Download</h3>
-
-<ul>
-  <li><a href="https://apps.apple.com/us/app/waterme-gardening-reminders/id1089742494" target="_blank"><i class="fa-brands fa-app-store"></i>App Store</a></li>
-  <li><a href="https://github.com/jeffreybergier/WaterMe/" target="_blank"><i class="fa-brands fa-github"></i>WaterMe Source Code</a></li>
-  <li><a href="https://bitbucket.org/saturdayapps/waterme/" target="_blank"><i class="fa-brands fa-bitbucket"></i>WaterMe Source Code (Outdated)</a></li>
-</ul>
-
-<h2 id="development">Development</h2>
-
-<p>WaterMe was the first ever app I wrote that is 100% a <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> 
-app. It’s just a database app with a pretty user interface placed on top of it.
-I also got help from a designer friend to make the watering animation video as
-well as the icon. It’s written entirely in Swift and UIKit but has gone through
-a lot of iterations over the years.</p>
-
-<h3 id="version-1-2016">Version 1 (2016)</h3>
-
-<p>The original version of WaterMe was extremely simple and the Core Data model was
-simple to match. You had a plant with a name, photo, last watered date, and
-watering interval. The app would then sort and categorize them as needing
-“Water Today”, “Water Tomorrow”, or “Water Later.” As this was in the days of iOS
-10, the user interface was also extremely simple.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td><a href="/assets/images/apps/waterme/v1/01-full.png"><img src="/assets/images/apps/waterme/v1/01-thumb.png" alt="WaterMe v1 Screenshot 1" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v1/02-full.png"><img src="/assets/images/apps/waterme/v1/02-thumb.png" alt="WaterMe v1 Screenshot 2" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v1/03-full.png"><img src="/assets/images/apps/waterme/v1/03-thumb.png" alt="WaterMe v1 Screenshot 3" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v1/04-full.png"><img src="/assets/images/apps/waterme/v1/04-thumb.png" alt="WaterMe v1 Screenshot 4" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v1/05-full.png"><img src="/assets/images/apps/waterme/v1/05-thumb.png" alt="WaterMe v1 Screenshot 5" /></a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="version-2-2017">Version 2 (2017)</h3>
-
-<p>This version was a major rewrite where I updated the data model to be more
-sophisticated. In v2.0, the data model included a hierarchy that allowed each
-plant to contain multiple reminders each of which had their own watering
-history. Each plant and each reminder also had a type. For reminders, this
-resulted in watering, trimming, or other. But for the plant this field remains
-unused. But I added it so that theoretically types could be added for other
-household reminders like clothes or something.</p>
-
-<p>This update took advantage of the new drag and drop support that was
-added in iOS 11 to make it possible to perform multiple reminders at once.
-Lastly, I changed the database to Realm in the hopes that I could one day
-add multi-device syncing.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td><a href="/assets/images/apps/waterme/v2.0/01-full.png"><img src="/assets/images/apps/waterme/v2.0/01-thumb.png" alt="WaterMe v2.0 Screenshot 1" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.0/02-full.png"><img src="/assets/images/apps/waterme/v2.0/02-thumb.png" alt="WaterMe v2.0 Screenshot 2" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.0/03-full.png"><img src="/assets/images/apps/waterme/v2.0/03-thumb.png" alt="WaterMe v2.0 Screenshot 3" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.0/04-full.png"><img src="/assets/images/apps/waterme/v2.0/04-thumb.png" alt="WaterMe v2.0 Screenshot 4" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.0/05-full.png"><img src="/assets/images/apps/waterme/v2.0/05-thumb.png" alt="WaterMe v2.0 Screenshot 5" /></a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="version-25-2020">Version 2.5 (2020)</h3>
-
-<p>This version brought few UI changes, but completely changed the database under
-the hood. In 2019 with iOS 13, Apple released
-<a href="https://developer.apple.com/documentation/coredata/nspersistentcloudkitcontainer"><code class="language-plaintext highlighter-rouge">NSPersistentCloudKitContainer</code></a> 
-which allowed syncing Core Data reliably via CloudKit. I really wanted to
-provide syncing to my users so I started the process of swapping the database
-layer. This involved writing a wrapper for Realm and Core Data so the UI would
-not know the difference. As well, I had to write a one-time migration capability
-that would do the terrifying work of performing the migration.</p>
-
-<p>At this time I also added error reporting using a hacked together (but free)
-system built with AWS Simple Email Service. It would just send a JSON payload to
-AWS Lambda, and that would use the Simple Email Service to email me the errors.
-This way I would know if the database migrations were failing.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td><a href="/assets/images/apps/waterme/v2.5/01-full.png"><img src="/assets/images/apps/waterme/v2.5/01-thumb.png" alt="WaterMe Screenshot 1" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.5/02-full.png"><img src="/assets/images/apps/waterme/v2.5/02-thumb.png" alt="WaterMe Screenshot 2" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.5/03-full.png"><img src="/assets/images/apps/waterme/v2.5/03-thumb.png" alt="WaterMe Screenshot 3" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.5/04-full.png"><img src="/assets/images/apps/waterme/v2.5/04-thumb.png" alt="WaterMe Screenshot 4" /></a></td>
-      <td><a href="/assets/images/apps/waterme/v2.5/05-full.png"><img src="/assets/images/apps/waterme/v2.5/05-thumb.png" alt="WaterMe Screenshot 5" /></a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="version-3-and-beyond">Version 3 and Beyond</h2>
-
-<p>In 2024, I worked on a new version of WaterMe with an all new UI in SwiftUI.
-I created it to actually make an Apple Watch version of the app. It’s mostly
-complete but other projects caught my interest and I have yet to finish and
-release it. I would also like to reuse the UI for the iPhone version as I really
-dislike working in UIKit. However, I am not sure if I will get the interest
-again to do this work.</p>
-
-<p>I am at a crossing point where I could just let WaterMe fade away due to updates
-needed for Liquid Glass or inevitable future changes, or I could keep working
-on it. We shall see I suppose.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Apps" /><category term="Hobby" /><summary type="html"><![CDATA[WaterMe was my first app that was 100% a CRUD app and has been on the App Store since 2016.]]></summary></entry><entry><title type="html">Change Management Rapid Prototype</title><link href="https://jeffburg.com/design/2016/01/01/Change-Management.html" rel="alternate" type="text/html" title="Change Management Rapid Prototype" /><published>2016-01-01T00:00:00+00:00</published><updated>2016-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/design/2016/01/01/Change-Management</id><content type="html" xml:base="https://jeffburg.com/design/2016/01/01/Change-Management.html"><![CDATA[<h2 id="the-project">The Project</h2>
-<p>One of the main problems network operators have is managing change on their network. The problem is change commonly breaks things, so the established rule is to change as little as possible as rarely as possible. I wanted to try something better: where all changes can be seen, where approvals can be granted, and where accountability is clear.</p>
-
-<hr />
-
-<h3 id="change-timeline">Change Timeline</h3>
-<p><a href="/assets/images/design/change-management/cm-now-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-now-600.png" alt="Change Timeline" /></a>
-Given a time period, the operator should be able to see when changes were saved in the system. They should also be able to see who made the changes and what changes were made. Also, depending on how the Role Based Management system works, changes might need to be submitted for approval before being put into effect. This is shown in the middle of this mockup.</p>
-
-<h3 id="new-changes">New Changes</h3>
-<p><a href="/assets/images/design/change-management/cm-newchanges-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-newchanges-600.png" alt="New Changes" /></a>
-Another really important feature of a change management system is rolling out changes to affected hardware. This does not happen instantly. It also needs to be scheduled as there are “maintenance windows” that can vary from location to location. In the mockup above, the time between starting a rollout to finishing it is shown in light gray. At the end, the operator would be able to click on that and get a status report on how the rollout went. Where did it fail and why?</p>
-
-<h3 id="summary-of-changes">Summary of Changes</h3>
-<p><a href="/assets/images/design/change-management/cm-changes-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-changes-600.png" alt="Summary of Changes" /></a>
-This mockup and the previous one both show what it could look like when a different operator makes a change and it appears in the timeline for this operator to see. This operator can click on the event on the timeline to see what was changed. Depending on how Role Based Management is configured, an operator may need to approve the changes before a rollout can be started.</p>
-
-<h3 id="full-diff">Full Diff</h3>
-<p><a href="/assets/images/design/change-management/cm-diff-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-diff-600.png" alt="Full Diff" /></a>
-It may be necessary to dive deep into the changes made. This could be changes made in the past, or changes that have not yet been rolled out. This is a concept screen showing Application definition changes. This also features my favorite pet feature, impact. Impact shows the network admin approximately how many sites, users, etc this change will affect when it is rolled out.</p>
-
-<h3 id="pixel-perfect-mockup">Pixel Perfect Mockup</h3>
-<p><a href="/assets/images/design/change-management/cm-visual-2k.png" class="thumbnail"><img src="/assets/images/design/change-management/cm-visual-600.png" alt="Pixel Perfect Mockup" /></a>
-All the mockups up to this point were done super quickly in Balsamiq. Rapid prototypes like this are not worth spending a lot of time on until you know the idea is worth investigating. After I made these basic mockups, the rest of the UX team thought it looked concrete enough to make a pixel perfect mockup. This mockup is the same timeline. I love seeing the transformation of a structural idea, into something that is just as useful, but also pleasing to the eye.</p>]]></content><author><name></name></author><category term="Design" /><category term="Design" /><category term="Professional" /><summary type="html"><![CDATA[What if global network configuration was more like Git?]]></summary></entry><entry><title type="html">Rule Icon System</title><link href="https://jeffburg.com/design/2016/01/01/Rule-Icon-System.html" rel="alternate" type="text/html" title="Rule Icon System" /><published>2016-01-01T00:00:00+00:00</published><updated>2016-01-01T00:00:00+00:00</updated><id>https://jeffburg.com/design/2016/01/01/Rule-Icon-System</id><content type="html" xml:base="https://jeffburg.com/design/2016/01/01/Rule-Icon-System.html"><![CDATA[<h2 id="the-project">The Project</h2>
-<p>Network devices have many rules in them. Generally, these rules are painstakingly typed in via command line. They need to be deployed to every device on the network manually. If a rule that is shared on 1,000 devices needs to be changed, it needs to be changed 1,000 times. The goal with this project was to explore what a ‘global’ view of network rules would look like. Could a rule be made once and instantly applied everywhere? But more importantly, how could a network admin troubleshoot rules and see the effect of rules on their network?</p>
-
-<h3 id="authors-note">Author’s Note</h3>
-<p>Normally, it’s really scary to share Balsamiq mockups because they don’t look refined. But I love this project because it highlights how visual hierarchy and white space are more important to an understandable design than really polished artwork. This icon system could be implemented in any design style and it would still work.</p>
-
-<hr />
-
-<h3 id="intent-based-policy-rules">Intent Based Policy Rules</h3>
-<p><a href="/assets/images/design/rule-icon-system/is-contents-2k.png" class="thumbnail"><img src="/assets/images/design/rule-icon-system/is-contents-600.png" alt="Intent Based Policy Rules" /></a>
-These are a tiny number of slides from a large slide-deck I put together. I was exploring “intent based policy rules.” The goal of these rules is to apply broad policy across a global network from a central management console. On this page, I’m focusing more on the visual system I designed for these rules, rather than the rules themselves.</p>
-
-<h3 id="visual-cues">Visual Cues</h3>
-<p><a href="/assets/images/design/rule-icon-system/is-visuals-2k.png" class="thumbnail"><img src="/assets/images/design/rule-icon-system/is-visuals-600.png" alt="Visual Cues" /></a>
-This slide describes, in text, what the user is meant to see and how. Each rule has set icons for the various kinds of objects the rule can encompass. It also states that horizontal spacing is important. These icons should line up when rules are placed vertically on top of one another.</p>
-
-<h3 id="single-rule">Single Rule</h3>
-<p><a href="/assets/images/design/rule-icon-system/is-breakdown-2k.png" class="thumbnail"><img src="/assets/images/design/rule-icon-system/is-breakdown-600.png" alt="Single Rule" /></a>
-Three slides that go through every possible icon that can be on every rule and explain what they all represent. I think the coolest part of each rule is the success indicator on the bottom. Network admins tell us over and over that “right now” status is useless to them. They need to see the status of everything over time.</p>
-
-<h3 id="rules-table">Rules Table</h3>
-<p><a href="/assets/images/design/rule-icon-system/is-list-2k.png" class="thumbnail"><img src="/assets/images/design/rule-icon-system/is-list-600.png" alt="Rules Table" /></a>
-This is the rules table where all the rules get stacked together. This slide attempts to highlight the importance of the vertical alignment. Because the icons are always aligned, it is really easy to glance through the rules and see which rules affect which parts of the network and what kind of actions the rules are performing on the network. Also, because of the “success” indicator, it is easy to see which rules are doing well and when.</p>
-
-<h3 id="impact">Impact</h3>
-<p><a href="/assets/images/design/rule-icon-system/is-impact-2k.png" class="thumbnail"><img src="/assets/images/design/rule-icon-system/is-impact-600.png" alt="Impact" /></a>
-Rules can affect Sites, Users, and Applications. However, not all rules affect all of those things and even if they do, they may affect 1 user or 10,000 users. Impact is a concept that attempts to quantify how many of each of these subjects are affected by a rule. It also shows how that changes over time. This is incredibly useful for what network administrators call “change management.” If a rule only affects 10 users, it’s easy to change or delete. If a rule affects 10,000 users, more work needs to be done before changing it.</p>
-
-<h3 id="qos-action">QoS Action</h3>
-<p><a href="/assets/images/design/rule-icon-system/is-qos-2k.png" class="thumbnail"><img src="/assets/images/design/rule-icon-system/is-qos-600.png" alt="QoS Action" /></a>
-Each rule can have one of many actions applied to it. QoS is one of those actions; it’s also my <a href="/design/2014/01/01/QoS.html">party trick</a> because I’ve spent so much time on it. This slide shows how QoS can be applied in a rule.</p>]]></content><author><name></name></author><category term="Design" /><category term="Design" /><category term="Professional" /><summary type="html"><![CDATA[At a glance view of all the rules that affect a user's global network.]]></summary></entry></feed>
+automatic refresh of Services, which is the default setting.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Apps" /><category term="Hobby" /><summary type="html"><![CDATA[In 2024 I started using Tailscale to access my home network remotely. When I noticed Tailscale had a CLI with a JSON interface, I couldn't help myself… I built an app.]]></summary></entry></feed>

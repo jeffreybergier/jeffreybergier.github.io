@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Altivec Intelligence | Jeffrey Bergier</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Altivec Intelligence" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Build small, personal apps for decades of Apple hardware without Xcode, Mac virtual machines, or permission from a platform owner" />
+<meta name="twitter:description" property="og:description" content="Build small, personal apps for decades of Apple hardware without Xcode, Mac virtual machines, or permission from a platform owner" />
+<link rel="canonical" href="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html" />
+<meta property="og:url" content="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html" />
+<meta property="og:site_name" content="Jeffrey Bergier" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-04-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Altivec Intelligence" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-04-22T00:00:00+00:00","datePublished":"2026-04-22T00:00:00+00:00","description":"Build small, personal apps for decades of Apple hardware without Xcode, Mac virtual machines, or permission from a platform owner","headline":"Altivec Intelligence","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html"},"url":"https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Jeffrey Bergier</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+        <a class="nav-item" href="/apps/"><i class="fa-solid fa-compass-drafting"></i> Apps</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/design/"><i class="fa-solid fa-swatchbook"></i> Design</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/retro-tech/"><i class="fa-solid fa-microchip"></i> Retro Tech</a> <!-- Removed | escape -->
+        <a class="nav-item" href="/unenshittification/"><i class="fa-solid fa-trash"></i> Unenshittification</a> <!-- Removed | escape -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header post-header-wide">
+  <!-- Custom Layout Starts Here -->
+    
+    <div class="title-accessory title-accessory-wide">
+      <p><a href="/assets/images/unenshittification/altivec-intelligence/altivec-intelligence-full.png" class="reflect below-xl round-sm"><img src="/assets/images/unenshittification/altivec-intelligence/altivec-intelligence-thumb.png" alt="Altivec Intelligence title artwork" /></a></p>
+
+    </div>
+    
+    <div class="post-meta">
+      <h1 class="post-title p-name" itemprop="name headline">Altivec Intelligence</h1><p><p>Build small, personal apps for decades of Apple hardware without Xcode,
+Mac virtual machines, or permission from a platform owner</p>
+</p><!-- Custom Layout Ends Here -->
+      <time class="dt-published" datetime="2026-04-22T00:00:00+00:00" itemprop="datePublished">
+        Apr 22, 2026
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>In 2024 I developed MathEdit for OpenStep. This app was a proof of concept to
+see if I could develop a Cocoa application for OpenStep and then upgrade it to
+work on every version of Mac OS X. The application was a success, but even
+though it was a simple app, it took me exactly 1 year of spare time programming
+to develop and then to upgrade through 20 years of Mac OS X history. The
+primary reasons for this were that Objective-C from 1996 was pretty painful to
+write plus, I was writing it all in real OpenStep and vintage Mac OS X virtual
+machines with ancient tooling.</p>
+
+<p>In the age of AI, this solution was not going to suit me any more. I needed
+a modern environment that could run on any computer and still create apps for my
+favorite retro platforms. I needed this platform to support AI because it
+reduces the pain of writing Objective-C 1.0 code that lacks:</p>
+
+<ul>
+  <li>Automatic Reference Counting</li>
+  <li><a href="https://github.com/jeffreybergier/AltivecIntelligence">Fucking Block Syntax</a></li>
+  <li>Property Syntax</li>
+  <li>Dot Syntax</li>
+  <li>Grand Central Dispatch</li>
+  <li>Collection Literals</li>
+</ul>
+
+<h2 id="altivec-intelligence">Altivec Intelligence</h2>
+
+<p>Altivec Intelligence is all in one integrated development docker container
+that has everything I need to develop Cocoa and Cocoa Touch applications that
+run on <a href="/retro-tech/">PowerPC Macs</a> with Mac OS X Tiger or later and iPhones
+running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal binaries with 4
+slices: PowerPC, x86, x64, and arm64 😎</p>
+
+<p>On top of that Altivec Intelligence includes tooling for web development,
+image manipulation, and ffmpeg plus the most important part: All of the AI
+agent CLIs are baked into the container.</p>
+
+<p>Why is this important? Well, these agents are incredibly powerful and helping
+me to <a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>.
+But they cannot be sandboxed and cannot be trusted as long as they bash access.
+By running them in a Docker container I can safely
+run them in YOLO mode with no risk to my own Mac. They have all the tools they
+need to create great apps all without ever changing my development environment
+or editing files outside of my repositories.</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<p>A modern retro toolchain wouldn’t be complete without modern libraries to help
+these retro system do modern tasks. Altivec Intelligence includes critical 
+libraries bundled into Dynamic Frameworks and Static Libraries.</p>
+
+<ul>
+  <li>AltivecCocoa: Includes FontAwesome and other helper classes that make it easy to build applications that run across 20+ years of Apple history</li>
+  <li>AltivecCore: Includes modern networking and database tooling to interact with modern web APIs
+    <ul>
+      <li>SQLite 3.43.2</li>
+      <li>libcurl 7.88.1</li>
+      <li>OpenSSL 1.1.1w</li>
+      <li>zlib 1.2.13</li>
+      <li>cJSON 1.7.19</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tooling">Tooling</h2>
+
+<p>I will not go into all the details because you can view that on GitHub. But
+Altivec Intelligence includes a lot of basic tooling to make it easy to 
+build, deploy, and debug apps to <a href="/retro-tech/">retro devices</a>. This all relies on SSH key
+authentication which can also be customized because the container mounts the 
+home folder in ~/.altivec. This way you can always control which keys the 
+container (and the agents) have access to. <code class="language-plaintext highlighter-rouge">altivec-deploy</code> is an included
+script that can deploy your apps to Macs and to
+jailbroken iPhones to start
+<a href="/retro-tech/2025/12/09/PPC-iPhone-2.html">debugging sessions with GDB</a> or LLDB.
+<code class="language-plaintext highlighter-rouge">altivec-release</code> automatically bumps
+the versions of the apps in the Info.plist files.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>Altivec Intelligence is offered as a prebuilt Docker container for arm64 and x64
+devices. It supports arm64 and x86-64 computers capable of running Docker.</p>
+
+<p>It does not include Apple proprietary tooling so there is no support for NIBs
+for example. Deploying to an iPhone requires a jailbroken iPhone with SSH
+installed. Supporting Mac OS X Tiger requires using a lowest common denominator
+of Mac OS X API’s. The AI will help you do the runtime introspection, but it
+can be a pain.</p>
+
+<p>For usage instructions and example apps, see the project on GitHub.</p>
+
+<p><a href="https://github.com/jeffreybergier/AltivecIntelligence">https://github.com/jeffreybergier/AltivecIntelligence</a></p>
+
+  </div>
+
+  <a class="u-url" href="/unenshittification/2026/04/22/Altivec-Intelligence.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/jeffreybergier" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://jeffburg.social/@Jeff" target="_blank" title="Mastodon">
+      <span class="grey fa-brands fa-mastodon fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/jeffreybergier" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://jeffburg.com/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

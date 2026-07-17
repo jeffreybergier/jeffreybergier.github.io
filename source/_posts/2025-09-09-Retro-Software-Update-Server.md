@@ -32,7 +32,7 @@ for retro Macs, so please check it out.
 
 - [MathEdit for OpenStep](https://github.com/jeffreybergier/MathEdit)
    - [MathEdit Development Posts on my Mastodon](https://jeffburg.social/tags/OpenStep)
-- [Retro Stream Tutorial](/retro-tech/2025/08/17/Retro-Stream-Tutorial.html)
+- [Retro Stream Tutorial]({% post_url 2025-08-17-Retro-Stream-Tutorial %})
 - [iMac G4 Posts on my Mastodon](https://jeffburg.social/tags/iMacG4)
 - [Homemade iMac 5K Monitor posts on my Mastodon](https://jeffburg.social/tags/iMac5K)
 

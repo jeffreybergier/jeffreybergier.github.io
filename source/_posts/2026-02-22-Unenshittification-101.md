@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2026: The Year of Unenshittification"
-titleAccessory: "<i class='apl-trash-cocoa-256 reflect below-sm round-none'></i>"
+titleAccessory: "<i class='apl-trash-cocoa-256 reflect below-md round-none'></i>"
 excerpt: |
   In 2026, I set out on the goal to unenshittify my digital life. This is the
   article where I justify my fool-hearted actions 
@@ -82,13 +82,18 @@ have no choice but to use.
 I will just say it up front. It is not possible for a single person working
 in their spare time to recreate their digital life without AI. I will be
 posting a lot about AI because it has honestly changed my life when it comes to
-programming. But for the doubters out there, what I want to say is something 
-along the lines of the following: 
+programming. But for the doubters out there, I have 2 primary arguments.
 
-> All of our favorite apps and and services were all fully enshittified well
-> before AI was a thing. These apps became 300MB bloated behemoths well before
-> AI. AI is not going to ruin software; it was already ruined. The software we 
-> have to use daily is is 100% human-made slop.
+1. All of our favorite apps and and services were all fully enshittified well
+   before AI was a thing. These apps became 300MB bloated behemoths well before
+   AI. AI is not going to ruin software; it was already ruined. The software we 
+   have to use daily is is 100% human-made slop.
+1. So much code we write basically does data conversions and data storage 
+   and retrieval; Basically taking JSON and storing it in a database, or 
+   reading from a database and converting data to JSON. This kind of code is 
+   not interesting, not fun to write, and we should not waste human time to
+   write this kind of boiler plate code (or crazy abstractions that attempt
+   to make this task tolerable)
 
 But AI will help me fix that, and for that reason, I love it.
 

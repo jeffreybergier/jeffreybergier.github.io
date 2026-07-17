@@ -28,7 +28,7 @@ for retro Macs, so please check it out.
 
 - [MathEdit for OpenStep](https://github.com/jeffreybergier/MathEdit)
    - [MathEdit Development Posts on my Mastodon](https://jeffburg.social/tags/OpenStep)
-- [Retro Software Update Server](/retro-tech/2025/09/09/Retro-Software-Update-Server.html)
+- [Retro Software Update Server]({% post_url 2025-09-09-Retro-Software-Update-Server %})
 - [iMac G4 Posts on my Mastodon](https://jeffburg.social/tags/iMacG4)
 - [Homemade iMac 5K Monitor posts on my Mastodon](https://jeffburg.social/tags/iMac5K)
 

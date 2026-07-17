@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-11T10:42:41+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Altivec Intelligence</title><link href="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html" rel="alternate" type="text/html" title="Altivec Intelligence" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html"><![CDATA[<h2 id="lessons-learned">Lessons Learned</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-17T16:23:59+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Unenshittification Manifesto</title><link href="https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto.html" rel="alternate" type="text/html" title="Unenshittification Manifesto" /><published>2026-05-22T00:00:00+00:00</published><updated>2026-05-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto.html"><![CDATA[<h2 id="what-i-experience">What I experience</h2>
+
+<p>This manifesto is a reflection of about 5 months of “spare time” effort I
+have spent to <a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>. 
+Without boasting too much, I have had so much success getting “modern
+experiences” to work on my ancient computers like my iPhone 5 and my iMac G4
+that I feel comfortable declaring the things in this manifesto. Basically, if
+our modern software was not so enshittified, our apps would have better
+experiences and work on basically any computer hardware built since 2010.</p>
+
+<p>What is a modern experience? For me, this means a basic native application
+that uses a web api to fetch user data, stores it in a database, and then
+displays it in the UI with other features to allow the data to be changed by
+the user and then transmitted over a web api. This is every chat app, every
+doomscrolling social media app, every “AI” app, and pretty much any other app
+except games or AV content generation apps.</p>
+
+<p>I am pretty confident that 99% of the time you spend on your phone is spent 
+with these kinds of apps.</p>
+
+<h2 id="what-i-refuse">What I refuse</h2>
+
+<ul>
+  <li>I refuse to accept that modern experiences require modern hardware</li>
+  <li>I refuse to accept that modern experiences require 300MB of human-made slop</li>
+  <li>I refuse to accept that my data is inaccessible to me</li>
+  <li>I refuse to allow my experiences to be actively hostile toward my goals</li>
+  <li>I refuse to allow my experiences to be dictated by corporate interests</li>
+  <li>I refuse to carry a 7” supercomputer that has no capabilities beyond simple chat and doomscrolling apps (the iPhone)</li>
+</ul>
+
+<h2 id="what-i-believe">What I believe</h2>
+
+<ul>
+  <li>I believe that modern experiences RUN GREAT on retro hardware</li>
+  <li>I believe that 5MB binaries are more than capable of delivering modern experiences</li>
+  <li>I believe that my data is my data and I can use it where and how I want</li>
+  <li>I believe that GOOD experiences help me achieve my goals</li>
+  <li>I believe that I can create my own GOOD experiences</li>
+</ul>
+
+<h2 id="what-i-accept">What I accept</h2>
+
+<ul>
+  <li>I accept that I cannot fix the modern app and web ecosystems</li>
+  <li>I accept that I cannot force Apple to allow everyone to have access to their own data</li>
+  <li>I accept that the experiences I create are not 100% feature complete</li>
+  <li>I accept that the experiences I create are not 100% bug free</li>
+  <li>I accept that AI slop is not beautiful nor consumable by humans</li>
+  <li>I accept that AI slop is not free</li>
+</ul>
+
+<h2 id="what-i-will-do">What I will do</h2>
+
+<ul>
+  <li>I will create my own experiences for my own devices</li>
+  <li>I will make my data accessible to my own apps</li>
+  <li>I will use the devices I want to use (the iPhone 5)</li>
+  <li>I will make my AI slop more performant than their human slop</li>
+  <li>I will make my AI slop more stable than their human slop</li>
+  <li>I will use AI to help me unenshittify my life</li>
+</ul>
+
+<h3 id="i-will-unenshittify-my-life-">I Will Unenshittify My Life <i class="fa-solid fa-hand-fist"></i></h3>]]></content><author><name></name></author><category term="Unenshittification" /><category term="Unenshittification" /><summary type="html"><![CDATA[A personal manifesto for taking back control of my digital life.]]></summary></entry><entry><title type="html">Altivec Intelligence</title><link href="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html" rel="alternate" type="text/html" title="Altivec Intelligence" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html"><![CDATA[<h2 id="lessons-learned">Lessons Learned</h2>
 
 <p>In 2024 I developed MathEdit for OpenStep. This app was a proof of concept to
 see if I could develop a Cocoa application for OpenStep and then upgrade it to
@@ -16,7 +79,7 @@ reduces the pain of writing Objective-C 1.0 code that lacks:</p>
 
 <ul>
   <li>Automatic Reference Counting</li>
-  <li><a href="https://github.com/jeffreybergier/AltivecIntelligence">Fucking Block Syntax</a></li>
+  <li><a href="https://fuckingblocksyntax.com/">Fucking Block Syntax</a></li>
   <li>Property Syntax</li>
   <li>Dot Syntax</li>
   <li>Grand Central Dispatch</li>
@@ -251,15 +314,20 @@ have no choice but to use.</p>
 <p>I will just say it up front. It is not possible for a single person working
 in their spare time to recreate their digital life without AI. I will be
 posting a lot about AI because it has honestly changed my life when it comes to
-programming. But for the doubters out there, what I want to say is something 
-along the lines of the following:</p>
+programming. But for the doubters out there, I have 2 primary arguments.</p>
 
-<blockquote>
-  <p>All of our favorite apps and and services were all fully enshittified well
+<ol>
+  <li>All of our favorite apps and and services were all fully enshittified well
 before AI was a thing. These apps became 300MB bloated behemoths well before
 AI. AI is not going to ruin software; it was already ruined. The software we 
-have to use daily is is 100% human-made slop.</p>
-</blockquote>
+have to use daily is is 100% human-made slop.</li>
+  <li>So much code we write basically does data conversions and data storage 
+and retrieval; Basically taking JSON and storing it in a database, or 
+reading from a database and converting data to JSON. This kind of code is 
+not interesting, not fun to write, and we should not waste human time to
+write this kind of boiler plate code (or crazy abstractions that attempt
+to make this task tolerable)</li>
+</ol>
 
 <p>But AI will help me fix that, and for that reason, I love it.</p>
 
@@ -822,7 +890,7 @@ it working, but I had to stop as it’s low priority.</p>
 <p>In this article we will cover how to deploy apps from Xcode to an original
 iPhone running iPhone OS 2 or 3 in 2025. This will also work with iPhone 3G,
 iPod Touch (1st Generation), iPod Touch (2nd Generation). This is the 2nd
-article in the <a href="../04/PPC-iPhone-1.html">"Enabling iPhone Development for PowerPC Macs"</a>
+article in the <a href="/retro-tech/2025/12/04/PPC-iPhone-1.html">"Enabling iPhone Development for PowerPC Macs"</a>
 series but this no longer requires a PowerPC Mac. You can use any Mac running
 10.7, 10.6, or 10.5 that has Xcode 3 or 4 with the iPhone SDK installed,
 including a Virtual Machine (if you still have an Intel Mac).</p>
@@ -1842,7 +1910,7 @@ the most basic features missing:</p>
 
 <ul>
   <li>Automatic Reference Counting</li>
-  <li><a href="https://github.com/jeffreybergier/AltivecIntelligence">Fucking Block Syntax</a></li>
+  <li><a href="https://fuckingblocksyntax.com/">Fucking Block Syntax</a></li>
   <li>Property Syntax</li>
   <li>Dot Syntax</li>
   <li>Grand Central Dispatch</li>
@@ -3183,94 +3251,4 @@ available resources to 2 Cores and 3GB of RAM… I found 1 Core caused skipping
 and other problems with the stream. In UTM you can change the settings
 however you like to reduce the burden on your host Mac.</p>
 
-<p><img src="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/19-UTM-Processor.png" alt="UTM System Settings" /></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="PowerPC" /><category term="Video" /><category term="FFMPEG" /><category term="Hobby" /><summary type="html"><![CDATA[A tutorial on how to stream YouTube or any other video content to PowerPC Macs using a Linux VM, FFMPEG, and VLC.]]></summary></entry><entry><title type="html">Teskemon: Tailscale Specialist</title><link href="https://jeffburg.com/apps/2025/02/14/Teskemon.html" rel="alternate" type="text/html" title="Teskemon: Tailscale Specialist" /><published>2025-02-14T00:00:00+00:00</published><updated>2025-02-14T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2025/02/14/Teskemon</id><content type="html" xml:base="https://jeffburg.com/apps/2025/02/14/Teskemon.html"><![CDATA[<p><a href="/assets/images/apps/teskemon/01-full.png"><img src="/assets/images/apps/teskemon/01-thumb.png" alt="Teskemon Main Window" /></a></p>
-
-<h2 id="table-of-contents">Table of Contents</h2>
-
-<ul id="markdown-toc">
-  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a>    <ul>
-      <li><a href="#download" id="markdown-toc-download">Download</a></li>
-    </ul>
-  </li>
-  <li><a href="#development" id="markdown-toc-development">Development</a>    <ul>
-      <li><a href="#model" id="markdown-toc-model">Model</a></li>
-      <li><a href="#controller" id="markdown-toc-controller">Controller</a></li>
-      <li><a href="#view" id="markdown-toc-view">View</a></li>
-      <li><a href="#privacy" id="markdown-toc-privacy">Privacy</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="overview">Overview</h2>
-
-<p><a href="/assets/images/apps/teskemon/02-full.png" class="thumbnail"><img src="/assets/images/apps/teskemon/02-thumb.png" alt="Teskemon About Window" /></a>
-Teskemon is a SwiftUI application built to monitor Tailscale networks. 
-It is provided under the <a href="LICENSE">GPLv3 open source license</a> and without any warranty or liability. 
-If this application is useful for you, please use it as you wish and provide feedback.
-And yes, I do accept pull requests.</p>
-
-<h3 id="download">Download</h3>
-
-<ul>
-  <li><a href="https://github.com/jeffreybergier/Teskemon/tree/main/Builds"><i class="fa-regular fa-circle-down"></i>Teskemon Notarized Builds</a></li>
-  <li><a href="https://github.com/jeffreybergier/Teskemon/" target="_blank"><i class="fa-brands fa-github"></i>Teskemon Source Code</a></li>
-  <li><a href="https://jeffburg.social/tags/Tailscale" target="_blank"><i class="fa-brands fa-mastodon"></i>Teskemon Development Updates</a></li>
-</ul>
-
-<p>Requires macOS 14.4 or later because of <a href="https://developer.apple.com/documentation/swiftui/tablecolumnforeach"><code class="language-plaintext highlighter-rouge">TableColumnForEach</code></a></p>
-
-<h2 id="development">Development</h2>
-
-<p>Teskemon was the first app I developed to make heavy use of the new 
-<a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/">Swift Concurrency</a> 
-system. Concurrency is used to ping and check open ports on many network
-endpoints at once. That said, Teskemon uses a standard (boring) Model View
-Controller approach. There are 3 Swift packages: Model, Controller, and View. When I
-make big changes I usually post about it on Mastodon. Follow along at
-<a href="https://jeffburg.social/tags/Tailscale">jeffburg.social/tags/Tailscale</a> if you
-are curious.</p>
-
-<h3 id="model">Model</h3>
-<p>Contains all the basic model types and the conversion logic from the JSON
-provided by Tailscale <code class="language-plaintext highlighter-rouge">tailscale status --json</code>. These types can all be
-considered View Models if you like… they are all meant for the view.</p>
-
-<h3 id="controller">Controller</h3>
-<p>Controller contains 3 sets of functionality:</p>
-<ol>
-  <li>Keychain access logic</li>
-  <li>Extension to Process (previously NSTask) to execute the CLI commands
-and parse the results. This is all done using <code class="language-plaintext highlighter-rouge">async await</code></li>
-  <li>Property Wrappers that wrap the model complexity as well as the Keychain, 
-Process, and Presentation complexity into simple types the views can read from
-and write to</li>
-</ol>
-
-<p>In order to ensure consistency and live updating across all screens all the time,
-either AppStorage or SceneStorage are used as an underlying storage primitive.
-AppStorage stores settings like custom names and the list of services.
-SceneStorage stores temporary information like the list of Machines from
-Tailscale, the results of the Service scans, and the presentation state of all
-the views.</p>
-
-<h3 id="view">View</h3>
-<p>This layer contains all of the views for the application. They are all fairly
-simple and mostly consist of Tables or Forms.</p>
-
-<h3 id="privacy">Privacy</h3>
-<p>Teskemon does not access the internet or use any analytics service. There is no 
-login or other user information stored. The Tailscale CLI does provide your
-name, but it is only stored in SceneStorage and never uploaded anywhere. 
-Passwords are stored in the keychain but they are cached in memory 
-for performance reasons.</p>
-
-<p>That said, Teskemon is not sandboxed because it uses the Process API (previously
-NSTask). Because Process allows the application to run any executable on the
-machine, it is not possible to use this API in a sandboxed application. Process
-is only used to run netcat, ping, and the Tailscale CLI.</p>
-
-<p>Also, if your employer tightly monitors their network, using Netcat 
-to port scan a large number of ports on a large number of machines can cause 
-warnings to go off (ask how I know). In those cases you may want to disable 
-automatic refresh of Services, which is the default setting.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Apps" /><category term="Hobby" /><summary type="html"><![CDATA[In 2024 I started using Tailscale to access my home network remotely. When I noticed Tailscale had a CLI with a JSON interface, I couldn't help myself… I built an app.]]></summary></entry></feed>
+<p><img src="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/19-UTM-Processor.png" alt="UTM System Settings" /></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="PowerPC" /><category term="Video" /><category term="FFMPEG" /><category term="Hobby" /><summary type="html"><![CDATA[A tutorial on how to stream YouTube or any other video content to PowerPC Macs using a Linux VM, FFMPEG, and VLC.]]></summary></entry></feed>

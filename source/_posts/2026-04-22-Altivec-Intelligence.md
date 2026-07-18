@@ -40,7 +40,7 @@ that has everything I need to develop Cocoa and Cocoa Touch applications that
 run on [PowerPC Macs](/retro-tech/) with Mac OS X Tiger or later and iPhones
 running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal
 binaries with four slices: PowerPC, x86, x64, and arm64
-<i class="fa-regular fa-face-grin-stars"></i>.
+<i class="fa-brands fa-hugging-face"></i>.
 
 On top of that, Altivec Intelligence includes tooling for web development,
 image manipulation, and FFmpeg. Most importantly, all of the AI agent CLIs are

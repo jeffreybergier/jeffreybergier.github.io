@@ -219,10 +219,8 @@ So I dropped down to the lowest common denominator in GDB. "What if I just print
 every string that iTunes makes and see if I can find the whitelist in there?"
 The short answer is I did not find the whitelist, but when observing the strings
 flowing through the system, I noticed a lot of XML, especially after I plugged
-in my phone. Perhaps this XML contained something interesting; perhaps indeed 
-<i class="fa-regular fa-face-smile-beam"></i>
-
-<!-- upgrade Font Awesome to get hugging face <i class="fa-brands fa-hugging-face"></i> -->
+in my phone. Perhaps this XML contained something interesting; perhaps indeed
+<i class="fa-brands fa-hugging-face"></i>
 
 ```gdb
 break ptrace

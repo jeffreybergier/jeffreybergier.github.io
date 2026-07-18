@@ -20,11 +20,11 @@ There still isn't.
 
 ### Research
 [![Research](/assets/images/design/weatherme/weather-research-600.png)](/assets/images/design/weatherme/weather-research-1k.png){: .thumbnail }
-Research began with problem statement, needs analysis and product comparison. The best information came from speaking with a panel of experts in weather and in data collection. I spoke with a meteorologist, an air traffic controller and the VP of Platforms Engineering at Twitter. The conclusion to this research was that there is not enough weather data collection in San Francisco to know where the sun is shining at a district level within the city.
+Research began with a problem statement, needs analysis, and product comparison. The best information came from speaking with a panel of experts in weather and in data collection. I spoke with a meteorologist, an air traffic controller, and the VP of Platforms Engineering at Twitter. The conclusion to this research was that there is not enough weather data collection in San Francisco to know where the sun is shining at a district level within the city.
 
 ### Development
 [![Development](/assets/images/design/weatherme/weather-development-600.png)](/assets/images/design/weatherme/weather-development-1k.png){: .thumbnail }
-Development began with ideation sessions. Refining ideas and then examining the feasibility of top ideas. Once it was clear that some sort of social networking system would be needed, I started evaluating other issues such as location accuracy, human ability to report weather and visual style of maps when temperature is the key visual item, not geographic features.
+Development began with ideation sessions, refining ideas, and then examining the feasibility of top ideas. Once it was clear that some sort of social networking system would be needed, I started evaluating other issues such as location accuracy, human ability to report weather, and the visual style of maps when temperature is the key visual item, not geographic features.
 
 ### Execution
 [![Execution](/assets/images/design/weatherme/weather-execution-600.png)](/assets/images/design/weatherme/weather-execution-1k.png){: .thumbnail }

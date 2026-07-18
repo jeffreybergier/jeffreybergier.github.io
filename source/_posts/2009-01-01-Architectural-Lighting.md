@@ -37,4 +37,4 @@ I made some CAD models of the artifact. The CAD models for this project are not 
 
 ### Summary
 [![Summary](/assets/images/design/architectural-lighting/lighting-06-300.png)](/assets/images/design/architectural-lighting/lighting-06-1k.png){: .thumbnail }
-This project is where I learned the value of Proof of Principle Prototypes. Building these simple prototypes to test each part of the project before progressing further is so important to saving time and iterating quickly.
+This project is where I learned the value of Proof of Principle Prototypes. Building these simple prototypes to test each part of the project before progressing further is so important for saving time and iterating quickly.

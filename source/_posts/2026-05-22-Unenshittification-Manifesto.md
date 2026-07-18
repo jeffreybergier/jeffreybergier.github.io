@@ -20,9 +20,9 @@ our modern software was not so enshittified, our apps would have better
 experiences and work on basically any computer hardware built since 2010.
 
 What is a modern experience? For me, this means a basic native application
-that uses a web api to fetch user data, stores it in a database, and then
+that uses a web API to fetch user data, stores it in a database, and then
 displays it in the UI with other features to allow the data to be changed by
-the user and then transmitted over a web api. This is every chat app, every
+the user and then transmitted over a web API. This is every chat app, every
 doomscrolling social media app, every "AI" app, and pretty much any other app
 except games or AV content generation apps. 
 
@@ -32,7 +32,7 @@ with these kinds of apps.
 ## What I refuse
 
 - I refuse to accept that modern experiences require modern hardware
-- I refuse to accept that modern experiences require 300MB of human-made slop
+- I refuse to accept that modern experiences require 300 MB of human-made slop
 - I refuse to accept that my data is inaccessible to me
 - I refuse to allow my experiences to be actively hostile toward my goals
 - I refuse to allow my experiences to be dictated by corporate interests
@@ -41,7 +41,7 @@ with these kinds of apps.
 ## What I believe
 
 - I believe that modern experiences RUN GREAT on retro hardware
-- I believe that 5MB binaries are more than capable of delivering modern experiences
+- I believe that 5 MB binaries are more than capable of delivering modern experiences
 - I believe that my data is my data and I can use it where and how I want
 - I believe that GOOD experiences help me achieve my goals
 - I believe that I can create my own GOOD experiences
@@ -50,9 +50,9 @@ with these kinds of apps.
 
 - I accept that I cannot fix the modern app and web ecosystems
 - I accept that I cannot force Apple to allow everyone to have access to their own data
-- I accept that the experiences I create are not 100% feature complete
-- I accept that the experiences I create are not 100% bug free
-- I accept that AI slop is not beautiful nor consumable by humans
+- I accept that the experiences I create are not 100% feature-complete
+- I accept that the experiences I create are not 100% bug-free
+- I accept that AI slop is neither beautiful nor consumable by humans
 - I accept that AI slop is not free
 
 ## What I will do

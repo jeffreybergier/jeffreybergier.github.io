@@ -59,7 +59,7 @@ are:
 RSS-THE-PLANET is a very simple
 [Cloudflare Worker](https://developers.cloudflare.com/workers/) application that
 can encrypt and store your credentials for your doomscrolling apps and then
-fetch their JSON API and convert it into normal RSS. Combine this with an RSS
+fetch their JSON APIs and convert them into normal RSS. Combine this with an RSS
 reader and now you can enjoy your favorite doomscrolling content on a retro
 device. For me, that retro device is an
 [iPhone 5](https://support.apple.com/en-us/112016) running Reeder on iOS 6.

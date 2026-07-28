@@ -25,10 +25,8 @@ tags: [LINE, PowerPC, Mac-OS-X, iOS, Objective-C, C, AI]
 
 ENIL is my custom-built LINE companion client for retro Apple devices. It brings
 the core messaging experience to systems that the official LINE apps no longer
-support.
-The Mac app targets Mac OS X
-10.4 Tiger and later, with PowerPC, 32-bit Intel, 64-bit Intel, and Apple
-silicon slices in one
+support. The Mac app targets Mac OS X 10.4 Tiger and later, with PowerPC, 32-bit
+Intel, 64-bit Intel, and Apple silicon slices in one
 [universal binary](https://en.wikipedia.org/wiki/Universal_binary). The iOS app
 targets iOS 4.3 and later and includes armv7 and arm64 slices.
 <i class="fa-regular fa-face-grin-tongue-squint"></i>
@@ -235,7 +233,7 @@ of app is conceptually simple and should not require any modern APIs. Chat apps
 have existed for Mac OS X and iOS for as long as both platforms have existed.
 The only thing I would need is modern networking which is thankfully provided
 by my bedrock development environment
-[Altivec Intelligence](https://github.com/jeffreybergier/AltivecIntelligence).
+[Altivec Intelligence]({% post_url 2026-04-22-Altivec-Intelligence %}).
 This includes all the basics like
 modern OpenSSH, libcurl, and cJSON for modern networking. It also provides a
 modern build of SQLite. With this basic bedrock I can build apps that interact
@@ -253,7 +251,7 @@ complex. They are nice but would I really want to rebuild them myself? Also,
 since old Apple platforms do not have NSJSONSerialization, it means I need a
 C-based JSON parser. So that means that libcurl is in C, cJSON is in C, and
 SQLite is in C… so I just couldn't help but think "Why would I bridge back
-and forth between C and Objective-C if all of these libraries are in C anyway."
+and forth between C and Objective-C if all of these libraries are in C anyway?"
 
 So I asked this question to the AI and it said it had no issues
 writing everything in C… so that’s what we did. And it worked… like super

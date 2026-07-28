@@ -31,7 +31,6 @@ for 99% of the time you spend on your phone.
 - I refuse to accept that everyday apps require 300 MB of human-made slop
 - I refuse to accept being denied access to my own data
 - I refuse to accept digital experiences that are actively hostile to my goals
-- I refuse to let corporate interests dictate my digital experiences
 - I refuse to carry a 7-inch supercomputer merely to chat and doomscroll
 
 ## What I believe

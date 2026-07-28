@@ -11,7 +11,7 @@ tags: [Design, Professional]
 ## The Project
 I think this has happened to everyone who has worked in corporate America. You're in a meeting with a bunch of people and the meeting goes over. Then another meeting needs the room you're in. So now your meeting needs to reserve a new room so everything can keep going. This usually involves someone opening their laptop, without a desk, and going through Outlook to try and find a room while everyone stands around aimlessly. SteelReserve was a design prototype I made to solve this problem. Later, I implemented this in Python and then again in server-side Swift. I learned a lot while doing the Swift version. I later gave a talk at a Swift meetup about what I learned.
 
-### [Watch My Server-Side Swift Talk](https://realm.io/news/slug-jeff-bergier-building-production-server-swift-app/){: target="_blank" }
+### [Watch My Server-Side Swift Talk](https://web.archive.org/web/20190721152745/https://academy.realm.io/posts/slug-jeff-bergier-building-production-server-swift-app/){: target="_blank" }
 
 ---
 

@@ -70,13 +70,13 @@ Mac virtual machines, or permission from a platform owner</p>
 <p>In 2024 I developed MathEdit for OpenStep. This app was a proof of concept to
 see if I could develop a Cocoa application for OpenStep and then upgrade it to
 work on every version of Mac OS X. The application was a success, but even
-though it was a simple app, it took me exactly 1 year of spare time programming
+though it was a simple app, it took me exactly one year of spare-time programming
 to develop and then to upgrade through 20 years of Mac OS X history. The
 primary reasons for this were that Objective-C from 1996 was pretty painful to
-write plus, I was writing it all in real OpenStep and vintage Mac OS X virtual
+write, and I was writing it all in real OpenStep and vintage Mac OS X virtual
 machines with ancient tooling.</p>
 
-<p>In the age of AI, this solution was not going to suit me any more. I needed
+<p>In the age of AI, this solution was not going to suit me anymore. I needed
 a modern environment that could run on any computer and still create apps for my
 favorite retro platforms. I needed this platform to support AI because it
 reduces the pain of writing Objective-C 1.0 code that lacks:</p>
@@ -92,32 +92,33 @@ reduces the pain of writing Objective-C 1.0 code that lacks:</p>
 
 <h2 id="altivec-intelligence">Altivec Intelligence</h2>
 
-<p>Altivec Intelligence is all in one integrated development docker container
+<p>Altivec Intelligence is an all-in-one integrated development Docker container
 that has everything I need to develop Cocoa and Cocoa Touch applications that
 run on <a href="/retro-tech/">PowerPC Macs</a> with Mac OS X Tiger or later and iPhones
-running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal binaries with 4
-slices: PowerPC, x86, x64, and arm64 😎</p>
+running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal
+binaries with four slices: PowerPC, x86, x64, and arm64
+<i class="fa-brands fa-hugging-face"></i>.</p>
 
-<p>On top of that Altivec Intelligence includes tooling for web development,
-image manipulation, and ffmpeg plus the most important part: All of the AI
-agent CLIs are baked into the container.</p>
+<p>On top of that, Altivec Intelligence includes tooling for web development,
+image manipulation, and FFmpeg. Most importantly, all of the AI agent CLIs are
+baked into the container.</p>
 
-<p>Why is this important? Well, these agents are incredibly powerful and helping
+<p>Why is this important? Well, these agents are incredibly powerful and help
 me to <a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>.
-But they cannot be sandboxed and cannot be trusted as long as they bash access.
-By running them in a Docker container I can safely
+But they cannot be sandboxed and cannot be trusted as long as they have Bash access.
+By running them in a Docker container, I can safely
 run them in YOLO mode with no risk to my own Mac. They have all the tools they
-need to create great apps all without ever changing my development environment
+need to create great apps, all without ever changing my development environment
 or editing files outside of my repositories.</p>
 
 <h2 id="libraries">Libraries</h2>
 
 <p>A modern retro toolchain wouldn’t be complete without modern libraries to help
-these retro system do modern tasks. Altivec Intelligence includes critical 
-libraries bundled into Dynamic Frameworks and Static Libraries.</p>
+these retro systems do modern tasks. Altivec Intelligence includes critical
+libraries bundled into dynamic frameworks and static libraries.</p>
 
 <ul>
-  <li>AltivecCocoa: Includes FontAwesome and other helper classes that make it easy to build applications that run across 20+ years of Apple history</li>
+  <li>AltivecCocoa: Includes Font Awesome and other helper classes that make it easy to build applications that run across 20+ years of Apple history</li>
   <li>AltivecCore: Includes modern networking and database tooling to interact with modern web APIs
     <ul>
       <li>SQLite 3.43.2</li>
@@ -131,10 +132,10 @@ libraries bundled into Dynamic Frameworks and Static Libraries.</p>
 
 <h2 id="tooling">Tooling</h2>
 
-<p>I will not go into all the details because you can view that on GitHub. But
+<p>I will not go into all the details because you can view them on GitHub. But
 Altivec Intelligence includes a lot of basic tooling to make it easy to 
 build, deploy, and debug apps to <a href="/retro-tech/">retro devices</a>. This all relies on SSH key
-authentication which can also be customized because the container mounts the 
+authentication, which can also be customized because the container mounts the
 home folder in ~/.altivec. This way you can always control which keys the 
 container (and the agents) have access to. <code class="language-plaintext highlighter-rouge">altivec-deploy</code> is an included
 script that can deploy your apps to Macs and to
@@ -148,10 +149,10 @@ the versions of the apps in the Info.plist files.</p>
 <p>Altivec Intelligence is offered as a prebuilt Docker container for arm64 and x64
 devices. It supports arm64 and x86-64 computers capable of running Docker.</p>
 
-<p>It does not include Apple proprietary tooling so there is no support for NIBs
+<p>It does not include Apple-proprietary tooling, so there is no support for NIBs,
 for example. Deploying to an iPhone requires a jailbroken iPhone with SSH
 installed. Supporting Mac OS X Tiger requires using a lowest common denominator
-of Mac OS X API’s. The AI will help you do the runtime introspection, but it
+of Mac OS X APIs. The AI will help you do the runtime introspection, but it
 can be a pain.</p>
 
 <p>For usage instructions and example apps, see the project on GitHub.</p>
@@ -164,7 +165,8 @@ can be a pain.</p>
 </article>
 
       </div>
-    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    </main><!-- This file only exists to override Minima's footer and increase the Font Awesome version. -->
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 
 <footer class="site-footer h-card">
   <data class="u-url" value="/"></data>

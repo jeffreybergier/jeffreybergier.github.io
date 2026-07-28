@@ -10870,9 +10870,12 @@ a.thumbnail img {
 }
 
 .title-accessory-wide {
+  display: flex;
   width: 100vw;
   max-width: none;
   height: min(400px, 56.25vw);
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -10891,7 +10894,8 @@ a.thumbnail img {
   align-items: center;
   justify-content: center;
 }
-.title-accessory-wide img {
+.title-accessory-wide img,
+.title-accessory-wide video {
   display: block;
   width: auto;
   height: auto;

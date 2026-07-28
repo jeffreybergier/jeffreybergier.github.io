@@ -99,7 +99,7 @@
 <p>WaterMe is the only app that I have released on the App Store that got any sort
 of usage traction at all. It doesn’t have a lot of users, but at the time of
 this writing (September 2025) it had 993K total sessions according to App Store
-Connect analytics. Since these analytics are opt-in I assume that means it’s had
+Connect analytics. Since these analytics are opt-in, I assume that means it’s had
 about 3M total sessions… which is still not a lot, but for a nice little hobby
 app, I think it’s pretty cool <i class="fa-regular fa-hand-peace"></i></p>
 
@@ -133,7 +133,7 @@ to take care of your plants.</p>
   <li>Tip Jar In-App Purchases allow you to directly support the development of WaterMe.</li>
   <li>Supports Split Screen and Slide Over iPad Multitasking.</li>
   <li>Supports Dynamic Type.</li>
-  <li>Supports Voiceover and other iOS accessibility features.</li>
+  <li>Supports VoiceOver and other iOS accessibility features.</li>
 </ul>
 
 <h3 id="download">Download</h3>
@@ -176,7 +176,7 @@ watering interval. The app would then sort and categorize them as needing
 
 <p>This version was a major rewrite where I updated the data model to be more
 sophisticated. In v2.0, the data model included a hierarchy that allowed each
-plant to contain multiple reminders each of which had their own watering
+plant to contain multiple reminders, each of which had its own watering
 history. Each plant and each reminder also had a type. For reminders, this
 resulted in watering, trimming, or other. But for the plant this field remains
 unused. But I added it so that theoretically types could be added for other
@@ -210,7 +210,7 @@ layer. This involved writing a wrapper for Realm and Core Data so the UI would
 not know the difference. As well, I had to write a one-time migration capability
 that would do the terrifying work of performing the migration.</p>
 
-<p>At this time I also added error reporting using a hacked together (but free)
+<p>At this time, I also added error reporting using a hacked-together (but free)
 system built with AWS Simple Email Service. It would just send a JSON payload to
 AWS Lambda, and that would use the Simple Email Service to email me the errors.
 This way I would know if the database migrations were failing.</p>
@@ -229,14 +229,14 @@ This way I would know if the database migrations were failing.</p>
 
 <h2 id="version-3-and-beyond">Version 3 and Beyond</h2>
 
-<p>In 2024, I worked on a new version of WaterMe with an all new UI in SwiftUI.
+<p>In 2024, I worked on a new version of WaterMe with an all-new UI in SwiftUI.
 I created it to actually make an Apple Watch version of the app. It’s mostly
 complete but other projects caught my interest and I have yet to finish and
 release it. I would also like to reuse the UI for the iPhone version as I really
 dislike working in UIKit. However, I am not sure if I will get the interest
 again to do this work.</p>
 
-<p>I am at a crossing point where I could just let WaterMe fade away due to updates
+<p>I am at a crossroads where I could just let WaterMe fade away due to updates
 needed for Liquid Glass or inevitable future changes, or I could keep working
 on it. We shall see I suppose.</p>
 
@@ -249,7 +249,8 @@ on it. We shall see I suppose.</p>
 </article>
 
       </div>
-    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    </main><!-- This file only exists to override Minima's footer and increase the Font Awesome version. -->
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 
 <footer class="site-footer h-card">
   <data class="u-url" value="/"></data>

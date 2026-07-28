@@ -106,9 +106,9 @@ And yes, I do accept pull requests.</p>
 <p>Teskemon was the first app I developed to make heavy use of the new 
 <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/">Swift Concurrency</a> 
 system. Concurrency is used to ping and check open ports on many network
-endpoints at once. That said, Teskemon uses a standard (boring) Model View
-Controller approach. There are 3 Swift packages: Model, Controller, and View. When I
-make big changes I usually post about it on Mastodon. Follow along at
+endpoints at once. That said, Teskemon uses a standard (boring) Model-View-
+Controller approach. There are three Swift packages: Model, Controller, and View. When I
+make big changes, I usually post about them on Mastodon. Follow along at
 <a href="https://jeffburg.social/tags/Tailscale">jeffburg.social/tags/Tailscale</a> if you
 are curious.</p>
 
@@ -122,13 +122,13 @@ considered View Models if you like… they are all meant for the view.</p>
 <ol>
   <li>Keychain access logic</li>
   <li>Extension to Process (previously NSTask) to execute the CLI commands
-and parse the results. This is all done using <code class="language-plaintext highlighter-rouge">async await</code></li>
+and parse the results. This is all done using <code class="language-plaintext highlighter-rouge">async/await</code></li>
   <li>Property Wrappers that wrap the model complexity as well as the Keychain, 
 Process, and Presentation complexity into simple types the views can read from
 and write to</li>
 </ol>
 
-<p>In order to ensure consistency and live updating across all screens all the time,
+<p>In order to ensure consistency and live updates across all screens all the time,
 either AppStorage or SceneStorage are used as an underlying storage primitive.
 AppStorage stores settings like custom names and the list of services.
 SceneStorage stores temporary information like the list of Machines from
@@ -143,7 +143,7 @@ simple and mostly consist of Tables or Forms.</p>
 <p>Teskemon does not access the internet or use any analytics service. There is no 
 login or other user information stored. The Tailscale CLI does provide your
 name, but it is only stored in SceneStorage and never uploaded anywhere. 
-Passwords are stored in the keychain but they are cached in memory 
+Passwords are stored in the keychain, but they are cached in memory
 for performance reasons.</p>
 
 <p>That said, Teskemon is not sandboxed because it uses the Process API (previously
@@ -162,7 +162,8 @@ automatic refresh of Services, which is the default setting.</p>
 </article>
 
       </div>
-    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    </main><!-- This file only exists to override Minima's footer and increase the Font Awesome version. -->
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 
 <footer class="site-footer h-card">
   <data class="u-url" value="/"></data>

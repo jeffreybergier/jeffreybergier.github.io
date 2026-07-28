@@ -1,64 +1,335 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-17T16:23:59+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Unenshittification Manifesto</title><link href="https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto.html" rel="alternate" type="text/html" title="Unenshittification Manifesto" /><published>2026-05-22T00:00:00+00:00</published><updated>2026-05-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto.html"><![CDATA[<h2 id="what-i-experience">What I experience</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-28T10:48:18+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">ENIL: LINE Messenger for Retro Devices</title><link href="https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html" rel="alternate" type="text/html" title="ENIL: LINE Messenger for Retro Devices" /><published>2026-06-22T00:00:00+00:00</published><updated>2026-06-22T00:00:00+00:00</updated><id>https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices</id><content type="html" xml:base="https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html"><![CDATA[<video muted="" playsinline="" controls="" preload="metadata" poster="/assets/images/unenshittification/enil/enil-demonstration-poster.png" aria-label="ENIL exchanging LINE messages between Mac OS X and iOS" style="display: block; width: 100%; height: auto;">
+  <source src="/assets/images/unenshittification/enil/enil-demonstration.mp4" type="video/mp4" />
+  Your browser does not support embedded MP4 video.
+</video>
 
-<p>This manifesto is a reflection of about 5 months of “spare time” effort I
-have spent to <a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>. 
-Without boasting too much, I have had so much success getting “modern
-experiences” to work on my ancient computers like my iPhone 5 and my iMac G4
-that I feel comfortable declaring the things in this manifesto. Basically, if
-our modern software was not so enshittified, our apps would have better
-experiences and work on basically any computer hardware built since 2010.</p>
+<h2 id="what-is-enil">What is ENIL</h2>
 
-<p>What is a modern experience? For me, this means a basic native application
-that uses a web api to fetch user data, stores it in a database, and then
-displays it in the UI with other features to allow the data to be changed by
-the user and then transmitted over a web api. This is every chat app, every
-doomscrolling social media app, every “AI” app, and pretty much any other app
-except games or AV content generation apps.</p>
+<p>ENIL is my custom-built LINE companion client for retro Apple devices. It brings
+the core messaging experience to systems that the official LINE apps no longer
+support. The Mac app targets Mac OS X 10.4 Tiger and later, with PowerPC, 32-bit
+Intel, 64-bit Intel, and Apple silicon slices in one
+<a href="https://en.wikipedia.org/wiki/Universal_binary">universal binary</a>. The iOS app
+targets iOS 4.3 and later and includes armv7 and arm64 slices.
+<i class="fa-regular fa-face-grin-tongue-squint"></i></p>
 
-<p>I am pretty confident that 99% of the time you spend on your phone is spent 
-with these kinds of apps.</p>
+<p>Not having a working LINE application was a real hurdle to
+<a href="/unenshittification/2026/02/22/Unenshittification-101.html">using my iPhone 5 running iOS 6 as my primary iPhone</a>.
+While the old LINE app still exists for iOS 6, it no longer does anything, not
+even present an error. I live in Japan, where LINE Messenger is a huge part of
+daily life. And it was not only my iPhone: I also have a 12-inch Retina MacBook
+Adorable that I use every day. This computer runs Mojave because it is extremely
+fast, but the official LINE Mac application no longer works there either. The
+official clients no longer support either system, which left a significant gap
+in my daily setup.</p>
+
+<p>So I built ENIL so I can use LINE to stay in touch with my friends on my Retro
+Devices that LINE no longer supports. I have been using it daily for a few 
+months now and I am extremely happy with how it has turned out.</p>
+
+<h3 id="what-is-line-messenger">What is LINE Messenger</h3>
+
+<p>If you have lived in Japan, Taiwan, or Thailand, then you probably know
+<a href="https://en.wikipedia.org/wiki/Line_%28software%29">LINE Messenger</a>. It is a
+standard way for people, restaurants, and other businesses to communicate. It
+works similarly to WhatsApp or iMessage, and contacts can be added via QR code.
+It has the usual features of a modern messaging app, including groups, voice
+calls, and video calls. Most importantly for this project, it uses
+<a href="https://help.line.me/line/pc?contentId=50000087&amp;lang=en">Letter Sealing</a>,
+LINE’s branding for end-to-end encryption. Supporting Letter Sealing was
+therefore essential for ENIL.</p>
+
+<h3 id="enil-features">ENIL Features</h3>
+
+<ul>
+  <li>QR code login</li>
+  <li>History sync</li>
+  <li>Purchased Sticker and Emoji sync</li>
+  <li>One-to-one and group chats</li>
+  <li>Sending and receiving stickers, emoji, and photos</li>
+  <li>Separate ‘Seen’ and ‘Read’ states</li>
+  <li>A Mark as Seen button, rather than automatically marking a chat when I
+open it</li>
+  <li>Multiple accounts</li>
+</ul>
+
+<h3 id="caveats">Caveats</h3>
+
+<ul>
+  <li>ENIL depends on a Cloudflare Worker for cryptographic operations.</li>
+  <li>It does not include every LINE feature. Major omissions include voice and
+video calling and interactive features used by LINE Official Accounts.</li>
+  <li>ENIL is an independent personal project and is not affiliated with, endorsed
+by, or supported by LINE. Because it depends on an online service that changes
+over time, future LINE updates may require corresponding ENIL updates.</li>
+  <li>This is a niche app, mainly useful to LINE users who also enjoy retro
+devices.</li>
+  <li>ENIL is a companion client, not a replacement for LINE’s main mobile app. You
+still need a working modern LINE device to scan and approve the login QR code
+and to manage the account.</li>
+  <li>I do not have an iPhone running iOS 4.3. ENIL should work on iOS 4.3, but I 
+have not tested it.</li>
+</ul>
+
+<h3 id="how-can-you-get-it">How Can You Get It</h3>
+
+<p>ENIL is still a personal project, so its repositories remain private for now,
+but I hope to share more in the future. In the meantime, if you are interested
+in testing ENIL, please contact me on Mastodon:</p>
+
+<p><a href="https://jeffburg.social/@jeff">@jeff@jeffburg.social</a></p>
+
+<h3 id="how-does-enil-work">How Does ENIL Work</h3>
+
+<p>After you log in by scanning a QR code with LINE’s main mobile app, ENIL syncs
+the available history, purchased stickers, and emoji. Each account keeps its
+own session state and <a href="https://sqlite.org/about.html">SQLite</a> database. ENIL then
+opens a
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Server-Sent Events (SSE)</a>
+connection through which LINE delivers new messages, read state, and other
+metadata. The client records the last operation revision so it can reconnect
+from that point after a timeout or sleep; if LINE requests a full sync, ENIL
+performs one again.</p>
+
+<p>Account metadata, chat state, original message data, and downloaded asset paths
+are stored in SQLite. When you open a chat, ENIL generates an HTML page in C and
+loads it into a WebView. These WebViews do no networking because retro devices
+have old TLS stacks that do not support TLS 1.1/1.2. Instead ENIL links
+a custom build of <a href="https://curl.se/libcurl/">libcurl</a> provided by
+<a href="/unenshittification/2026/04/22/Altivec-Intelligence.html">Altivec Intelligence</a>. The C
+code in ENIL does all the networking, JSON parsing, and database storage
+directly before handing anything off to Objective-C for showing in the UI.
+Avatars, stickers, emoji, and other assets are first downloaded to disk and
+then the Webviews render them from there.</p>
+
+<p>When an SSE event arrives, ENIL writes it to the database and posts a
+notification through
+<a href="https://developer.apple.com/documentation/foundation/notificationcenter"><code class="language-plaintext highlighter-rouge">NSNotificationCenter</code></a>.
+An open view controller can then append the new message to its WebView with
+JavaScript. On systems that support local notifications, ENIL posts one for a
+new message only while the app is in the background. On iOS, ENIL declares the
+VoIP background mode and embeds the private unlimited-assertions entitlement, so
+it can remain connected to LINE’s SSE stream while running in the background.</p>
+
+<h3 id="encryption-and-letter-sealing">Encryption and Letter Sealing</h3>
+
+<p>Messages protected by Letter Sealing arrive encrypted, whether fetched during
+sync or received over SSE. Before displaying the message, ENIL sends the
+ciphertext to the Cloudflare Worker and receives the decrypted content. When
+sending a message, the Worker performs the reverse operation and ENIL sends the
+resulting ciphertext directly to LINE. The need for the Cloudflare worker is
+described later but I think it is unavoidable on retro devices for now. That
+said, Cloudflare workers have no state and no storage, or at least I do not use
+those features for this worker, so I think we can consider this to be secure.
+But use at your own risk.</p>
+
+<h3 id="ui-structure">UI Structure</h3>
+
+<p>The iOS and Mac apps share the same basic structure. The chat and friends lists
+are native table views. This was a bit tricky because Mac OS X did not get
+view-based table views until 10.7, and I support 10.4. On Tiger, ENIL therefore
+uses a custom <code class="language-plaintext highlighter-rouge">NSCell</code> which draws its contents manually with AppKit. This is
+inconvenient, but it works.</p>
+
+<p>Each individual chat is a WebView. When you receive a new message, JavaScript
+appends it to the open WebView. Sticker and emoji pickers are also WebViews.
+Some of the stickers and emojis use
+<a href="https://en.wikipedia.org/wiki/APNG">animated PNG</a> files. If you are running
+iOS 8 or OS X 10.10 Yosemite or later, then the WebView will animate these
+automatically. On earlier systems they appear as static images.</p>
+
+<p>One main Mac and iOS feature difference is that Mac OS X has supported
+<code class="language-plaintext highlighter-rouge">NSAttributedString</code> and <code class="language-plaintext highlighter-rouge">NSTextAttachment</code> since before Mac OS X even existed.
+Yes, even <a href="/apps/2025/10/06/MathEdit.html">OpenStep 4.2</a> had these features.
+AND YET, iOS lacked them until around iOS 7. On the Mac, a custom emoji
+therefore appears inline in the message text as you type. On iOS, I use a simple
+Unicode placeholder; the custom emoji appears only after you send the message,
+when the WebView can properly render the text and images inline on any platform.</p>
+
+<h2 id="the-game">The Game</h2>
+
+<p>LINE has the concept of a “companion app.” I have used the Mac version of this
+for a long time. For a while I was thinking I would not even need to talk
+directly to LINE because I could just read the data out of the Mac app’s
+database. But it turned out there was also a Chrome extension companion app.</p>
+
+<p>I was super excited when I learned this because browser extensions are just a
+bunch of JavaScript. So yes, it will be minified and obfuscated, but all the
+code is there! No need to decompile or sniff the network traffic. All of the
+code is just sitting there!</p>
+
+<h3 id="webassembly-the-final-boss">WebAssembly: The Final Boss</h3>
+
+<p>So I downloaded the Chrome extension and asked the AI to format the
+minified JavaScript and find the app’s key functionality. When its summary came
+back, my heart sank a bit. These LINE companion apps rely on a large 3 MB
+<a href="https://webassembly.org/">WebAssembly (Wasm)</a> binary blob to do much of their
+work. When I first heard of WebAssembly, I was excited that people could ship
+performant compiled code to the browser. What I had not considered was that now
+vendors could ship “closed source” code to the browser. In other words, it is no
+longer just JavaScript that can be easily read and evaluated. 
+<i class="fa-regular fa-face-surprise"></i></p>
+
+<p>At this point, I thought my journey was dead. There was no practical way to make
+these retro systems run WebAssembly code. My <a href="/retro-tech/2025/08/17/Retro-Stream-Tutorial.html">iMac G4</a> 
+shipped in 2003 and my <a href="/retro-tech/2026/02/16/Reverse-iTunes-1.html">iPhone 5</a> in
+2012, years before WebAssembly even existed. Getting the binary to run on these
+devices would easily exceed any amount of time I could commit to this project,
+with or without AI.</p>
+
+<h3 id="cloudflare-its-highly-effective">Cloudflare: It’s Highly Effective</h3>
+
+<p>At some point, in the shower probably, I realized “Wait! I don’t need to run
+WebAssembly on the device! I only need to run it in Cloudflare!” The Wasm blob
+only did basic cryptographic operations, which meant I could put a simple JSON
+interface in front of it and just use normal HTTPS requests to interact with it.</p>
+
+<p>So I asked the AI to make me a simple
+<a href="https://developers.cloudflare.com/workers/">Cloudflare Worker</a> that “booted up”
+the Wasm blob and exposed its critical functions. The worker and the Wasm binary
+handle a lot of misc cryptographic functionality such as HMAC operations, 
+key generation, keychain unwrapping, and group-key operations. This enables
+ENIL to interact with LINE’s very secure API with full Letter Sealing (E2E 
+Encryption) functionality maintained.</p>
+
+<p>From there, I had the AI cook up a little CLI-based JavaScript app that used the
+LINE API as presented by the Chrome extension and the Cloudflare Worker to
+successfully:</p>
+
+<ol>
+  <li>Log in to the “Chrome extension” by scanning a QR code with the LINE app on
+my phone</li>
+  <li>Download a list of recent chats</li>
+  <li>View a message conversation</li>
+  <li>Send a message</li>
+</ol>
+
+<p>This PoC was extremely important because it proved that I could implement a
+compatible companion client and interact with the LINE API directly. My client
+still needed the Cloudflare Worker for cryptographic operations, but it made
+every LINE request itself. From LINE’s perspective, the requests were coming
+from a client device running Chrome from a normal client IP address.</p>
+
+<p><a href="/assets/images/unenshittification/enil/enil-cli-full.png"><img src="/assets/images/unenshittification/enil/enil-cli-thumb.png" alt="ENIL command-line proof of concept" /></a></p>
+
+<h3 id="cocoa-level-up">Cocoa Level-Up</h3>
+
+<p>So a stupid little JavaScript PoC was fine and all, but it was time to 1-Up this
+bitch and get a real Mac and iPhone app working… for Mac OS X Tiger and iOS
+4.3 <i class="fa-regular fa-face-laugh-squint"></i>. No but really, but this kind
+of app is conceptually simple and should not require any modern APIs. Chat apps
+have existed for Mac OS X and iOS for as long as both platforms have existed.
+The only thing I would need is modern networking which is thankfully provided
+by my bedrock development environment
+<a href="/unenshittification/2026/04/22/Altivec-Intelligence.html">Altivec Intelligence</a>.
+This includes all the basics like
+modern OpenSSH, libcurl, and cJSON for modern networking. It also provides a
+modern build of SQLite. With this basic bedrock I can build apps that interact
+with Modern Web APIs, save the info to the database and display it in the UI.</p>
+
+<h3 id="ai-power-up">AI Power-Up</h3>
+
+<p>When I was originally thinking about
+<a href="/unenshittification/2026/04/22/Altivec-Intelligence.html">Altivec Intelligence</a> and how I
+would write code for retro devices, I thought, “No big deal. I need to use
+libcurl, cJSON, and SQLite, but I can wrap them in little Objective-C wrappers
+and then do normal Cocoa programming.” However, after I thought longer about it,
+I realized that these wrappers provided by Apple are actually quite huge and
+complex. They are nice but would I really want to rebuild them myself? Also, 
+since old Apple platforms do not have NSJSONSerialization, it means I need a
+C-based JSON parser. So that means that libcurl is in C, cJSON is in C, and
+SQLite is in C… so I just couldn’t help but think “Why would I bridge back
+and forth between C and Objective-C if all of these libraries are in C anyway?”</p>
+
+<p>So I asked this question to the AI and it said it had no issues
+writing everything in C… so that’s what we did. And it worked… like super
+well. AI plus the combo of LLVM/GCC -wAll and
+<a href="https://clang.llvm.org/docs/ClangStaticAnalyzer.html">LLVM static analysis</a>
+meant that there was plenty to reason about in terms of the stability and
+correctness of the code. In fact, it’s extremely stable and EXTREMELY fast. Yes
+it’s also insanely verbose… but that’s ok, it’s being generated by a computer.</p>
+
+<p>Basically, I came to the realization that just because my comfort zone is
+Objective-C and Swift, it does not mean I need to do every task in those
+languages. Instead, I could accept the AI’s help and start writing code outside
+my comfort zone. I decided to use AI to help me write the C engine while keeping
+the UI in Objective-C. I ended up with a shared iOS and Mac codebase that is
+about 75% C and 25% Objective-C.</p>
+
+<p>I will post more about this so stay tuned. But this is one of the great powers
+of AI-assisted programming. Instead of trying to do everything in the language
+you personally prefer, use the right language at the right time for the right
+job. AI makes that jump less intimidating, but generated code still requires
+planning, validation, and testing on real devices. Also, producing and
+validating thousands of lines of C also took far more tokens than producing
+something similar in JavaScript. At this point, I had to move from my $20 plan
+to the $100 plan to support this use case without constantly hitting limits.</p>
+
+<h2 id="enil-is-right-for-me">ENIL is Right for Me</h2>
+
+<p>ENIL is my own personal app. It’s made by me, for me, and I use it every day
+and I love it. It means I can
+<a href="/unenshittification/2026/05/22/Unenshittification-Manifesto.html">use the devices I want to use</a>
+when I want to use them and still stay in touch with my friends. It <del>proves</del>
+shows that you don’t need an Apple silicon powerhouse chip with gobs of RAM and
+a 300 MB binary to do simple things like chat apps do. It’s simple, it’s fast, and
+it works, for me.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Retro-Tech" /><category term="Unenshittification" /><category term="LINE" /><category term="PowerPC" /><category term="Mac-OS-X" /><category term="iOS" /><category term="Objective-C" /><category term="C" /><category term="AI" /><summary type="html"><![CDATA[ENIL is my custom-built LINE Messenger companion app, made for old and unsupported devices. It supports Mac OS X 10.4 Tiger and later, as well as iOS 4.3 and later.]]></summary></entry><entry><title type="html">Unenshittification Manifesto</title><link href="https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto.html" rel="alternate" type="text/html" title="Unenshittification Manifesto" /><published>2026-05-22T00:00:00+00:00</published><updated>2026-05-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/05/22/Unenshittification-Manifesto.html"><![CDATA[<h2 id="what-i-have-learned">What I have learned</h2>
+
+<p>This manifesto grew out of about five months of “spare time” spent trying to
+<a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>. I now
+have everyday apps running on ancient computers like my iPhone 5 and iMac G4.
+That success has convinced me that, without enshittification, everyday
+apps could offer better user experiences and run on nearly any computer built
+since 2010.</p>
+
+<p>What is an everyday app? A basic native application that fetches user data
+from a web API, stores it locally, displays it in a UI, and lets the user
+change and synchronize it. That describes every chat app, every doomscrolling
+social media app, every “AI” app, and pretty much any other app except games
+and apps for producing audio or video. I am pretty confident these apps account
+for 99% of the time you spend on your phone.</p>
 
 <h2 id="what-i-refuse">What I refuse</h2>
 
 <ul>
-  <li>I refuse to accept that modern experiences require modern hardware</li>
-  <li>I refuse to accept that modern experiences require 300MB of human-made slop</li>
-  <li>I refuse to accept that my data is inaccessible to me</li>
-  <li>I refuse to allow my experiences to be actively hostile toward my goals</li>
-  <li>I refuse to allow my experiences to be dictated by corporate interests</li>
-  <li>I refuse to carry a 7” supercomputer that has no capabilities beyond simple chat and doomscrolling apps (the iPhone)</li>
+  <li>I refuse to accept that everyday apps require modern hardware</li>
+  <li>I refuse to accept that everyday apps require 300 MB of human-made slop</li>
+  <li>I refuse to accept being denied access to my own data</li>
+  <li>I refuse to accept digital experiences that are actively hostile to my goals</li>
+  <li>I refuse to carry a 7-inch supercomputer merely to chat and doomscroll</li>
 </ul>
 
 <h2 id="what-i-believe">What I believe</h2>
 
 <ul>
-  <li>I believe that modern experiences RUN GREAT on retro hardware</li>
-  <li>I believe that 5MB binaries are more than capable of delivering modern experiences</li>
+  <li>I believe that users should decide what code runs on their computers</li>
+  <li>I believe that everyday apps can run GREAT on retro hardware</li>
+  <li>I believe that a GREAT everyday app can fit in a 5 MB binary</li>
   <li>I believe that my data is my data and I can use it where and how I want</li>
-  <li>I believe that GOOD experiences help me achieve my goals</li>
-  <li>I believe that I can create my own GOOD experiences</li>
+  <li>I believe that GREAT experiences help me achieve my goals</li>
+  <li>I believe that I can create my own GREAT experiences</li>
 </ul>
 
 <h2 id="what-i-accept">What I accept</h2>
 
 <ul>
   <li>I accept that I cannot fix the modern app and web ecosystems</li>
-  <li>I accept that I cannot force Apple to allow everyone to have access to their own data</li>
-  <li>I accept that the experiences I create are not 100% feature complete</li>
-  <li>I accept that the experiences I create are not 100% bug free</li>
-  <li>I accept that AI slop is not beautiful nor consumable by humans</li>
+  <li>I accept that I cannot force Apple to give users control of their own data</li>
+  <li>I accept that the apps I create are not 100% feature-complete</li>
+  <li>I accept that the apps I create are not 100% bug-free</li>
+  <li>I accept that AI slop is neither beautiful nor pleasant for humans to read</li>
   <li>I accept that AI slop is not free</li>
 </ul>
 
 <h2 id="what-i-will-do">What I will do</h2>
 
 <ul>
-  <li>I will create my own experiences for my own devices</li>
+  <li>I will build my own apps for my own devices</li>
   <li>I will make my data accessible to my own apps</li>
-  <li>I will use the devices I want to use (the iPhone 5)</li>
-  <li>I will make my AI slop more performant than their human slop</li>
-  <li>I will make my AI slop more stable than their human slop</li>
-  <li>I will use AI to help me unenshittify my life</li>
+  <li>I will use the devices I want to use</li>
+  <li>I will make AI slop apps outperform human slop apps in speed, stability, and focus</li>
+  <li>I will use AI to write MOST of my code</li>
+  <li>I will compile ALL of my code</li>
 </ul>
 
 <h3 id="i-will-unenshittify-my-life-">I Will Unenshittify My Life <i class="fa-solid fa-hand-fist"></i></h3>]]></content><author><name></name></author><category term="Unenshittification" /><category term="Unenshittification" /><summary type="html"><![CDATA[A personal manifesto for taking back control of my digital life.]]></summary></entry><entry><title type="html">Altivec Intelligence</title><link href="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html" rel="alternate" type="text/html" title="Altivec Intelligence" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/04/22/Altivec-Intelligence.html"><![CDATA[<h2 id="lessons-learned">Lessons Learned</h2>
@@ -66,13 +337,13 @@ with these kinds of apps.</p>
 <p>In 2024 I developed MathEdit for OpenStep. This app was a proof of concept to
 see if I could develop a Cocoa application for OpenStep and then upgrade it to
 work on every version of Mac OS X. The application was a success, but even
-though it was a simple app, it took me exactly 1 year of spare time programming
+though it was a simple app, it took me exactly one year of spare-time programming
 to develop and then to upgrade through 20 years of Mac OS X history. The
 primary reasons for this were that Objective-C from 1996 was pretty painful to
-write plus, I was writing it all in real OpenStep and vintage Mac OS X virtual
+write, and I was writing it all in real OpenStep and vintage Mac OS X virtual
 machines with ancient tooling.</p>
 
-<p>In the age of AI, this solution was not going to suit me any more. I needed
+<p>In the age of AI, this solution was not going to suit me anymore. I needed
 a modern environment that could run on any computer and still create apps for my
 favorite retro platforms. I needed this platform to support AI because it
 reduces the pain of writing Objective-C 1.0 code that lacks:</p>
@@ -88,32 +359,33 @@ reduces the pain of writing Objective-C 1.0 code that lacks:</p>
 
 <h2 id="altivec-intelligence">Altivec Intelligence</h2>
 
-<p>Altivec Intelligence is all in one integrated development docker container
+<p>Altivec Intelligence is an all-in-one integrated development Docker container
 that has everything I need to develop Cocoa and Cocoa Touch applications that
 run on <a href="/retro-tech/">PowerPC Macs</a> with Mac OS X Tiger or later and iPhones
-running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal binaries with 4
-slices: PowerPC, x86, x64, and arm64 😎</p>
+running iOS 4.3 and later. And before you ask, yes, the Mac apps are universal
+binaries with four slices: PowerPC, x86, x64, and arm64
+<i class="fa-brands fa-hugging-face"></i>.</p>
 
-<p>On top of that Altivec Intelligence includes tooling for web development,
-image manipulation, and ffmpeg plus the most important part: All of the AI
-agent CLIs are baked into the container.</p>
+<p>On top of that, Altivec Intelligence includes tooling for web development,
+image manipulation, and FFmpeg. Most importantly, all of the AI agent CLIs are
+baked into the container.</p>
 
-<p>Why is this important? Well, these agents are incredibly powerful and helping
+<p>Why is this important? Well, these agents are incredibly powerful and help
 me to <a href="/unenshittification/2026/02/22/Unenshittification-101.html">unenshittify my life</a>.
-But they cannot be sandboxed and cannot be trusted as long as they bash access.
-By running them in a Docker container I can safely
+But they cannot be sandboxed and cannot be trusted as long as they have Bash access.
+By running them in a Docker container, I can safely
 run them in YOLO mode with no risk to my own Mac. They have all the tools they
-need to create great apps all without ever changing my development environment
+need to create great apps, all without ever changing my development environment
 or editing files outside of my repositories.</p>
 
 <h2 id="libraries">Libraries</h2>
 
 <p>A modern retro toolchain wouldn’t be complete without modern libraries to help
-these retro system do modern tasks. Altivec Intelligence includes critical 
-libraries bundled into Dynamic Frameworks and Static Libraries.</p>
+these retro systems do modern tasks. Altivec Intelligence includes critical
+libraries bundled into dynamic frameworks and static libraries.</p>
 
 <ul>
-  <li>AltivecCocoa: Includes FontAwesome and other helper classes that make it easy to build applications that run across 20+ years of Apple history</li>
+  <li>AltivecCocoa: Includes Font Awesome and other helper classes that make it easy to build applications that run across 20+ years of Apple history</li>
   <li>AltivecCore: Includes modern networking and database tooling to interact with modern web APIs
     <ul>
       <li>SQLite 3.43.2</li>
@@ -127,10 +399,10 @@ libraries bundled into Dynamic Frameworks and Static Libraries.</p>
 
 <h2 id="tooling">Tooling</h2>
 
-<p>I will not go into all the details because you can view that on GitHub. But
+<p>I will not go into all the details because you can view them on GitHub. But
 Altivec Intelligence includes a lot of basic tooling to make it easy to 
 build, deploy, and debug apps to <a href="/retro-tech/">retro devices</a>. This all relies on SSH key
-authentication which can also be customized because the container mounts the 
+authentication, which can also be customized because the container mounts the
 home folder in ~/.altivec. This way you can always control which keys the 
 container (and the agents) have access to. <code class="language-plaintext highlighter-rouge">altivec-deploy</code> is an included
 script that can deploy your apps to Macs and to
@@ -144,10 +416,10 @@ the versions of the apps in the Info.plist files.</p>
 <p>Altivec Intelligence is offered as a prebuilt Docker container for arm64 and x64
 devices. It supports arm64 and x86-64 computers capable of running Docker.</p>
 
-<p>It does not include Apple proprietary tooling so there is no support for NIBs
+<p>It does not include Apple-proprietary tooling, so there is no support for NIBs,
 for example. Deploying to an iPhone requires a jailbroken iPhone with SSH
 installed. Supporting Mac OS X Tiger requires using a lowest common denominator
-of Mac OS X API’s. The AI will help you do the runtime introspection, but it
+of Mac OS X APIs. The AI will help you do the runtime introspection, but it
 can be a pain.</p>
 
 <p>For usage instructions and example apps, see the project on GitHub.</p>
@@ -207,7 +479,7 @@ are:</p>
 <p>RSS-THE-PLANET is a very simple
 <a href="https://developers.cloudflare.com/workers/">Cloudflare Worker</a> application that
 can encrypt and store your credentials for your doomscrolling apps and then
-fetch their JSON API and convert it into normal RSS. Combine this with an RSS
+fetch their JSON APIs and convert them into normal RSS. Combine this with an RSS
 reader and now you can enjoy your favorite doomscrolling content on a retro
 device. For me, that retro device is an
 <a href="https://support.apple.com/en-us/112016">iPhone 5</a> running Reeder on iOS 6.</p>
@@ -239,30 +511,30 @@ can run it yourself for free in your Cloudflare account.</p>
 encrypted in Cloudflare, the generated RSS URLs allow unauthenticated access to 
 your feeds. So please use with caution and keep your RSS feed links secret.</p>]]></content><author><name></name></author><category term="Unenshittification" /><category term="Apple" /><category term="Retro-Tech" /><category term="Cloudflare" /><category term="Serverless" /><category term="iOS" /><category term="Mac-OS-X" /><summary type="html"><![CDATA[Make your favorite doomscrolling apps work on any device by converting their simple JSON-based API into an old-fashioned RSS feed]]></summary></entry><entry><title type="html">2026: The Year of Unenshittification</title><link href="https://jeffburg.com/unenshittification/2026/02/22/Unenshittification-101.html" rel="alternate" type="text/html" title="2026: The Year of Unenshittification" /><published>2026-02-22T00:00:00+00:00</published><updated>2026-02-22T00:00:00+00:00</updated><id>https://jeffburg.com/unenshittification/2026/02/22/Unenshittification-101</id><content type="html" xml:base="https://jeffburg.com/unenshittification/2026/02/22/Unenshittification-101.html"><![CDATA[<h1 id="enshittification">Enshittification</h1>
 
-<p>In 2026, I set out on the goal to <a href="https://en.wikipedia.org/wiki/Enshittification">unenshittify</a>
+<p>In 2026, I set a goal to <a href="https://en.wikipedia.org/wiki/Enshittification">unenshittify</a>
 my digital life. I am old enough at this point that I came of age when the 
 internet was new and exciting and was built with good intentions. But for the
 past 10 years or so, it really has all changed for the worse. I won’t list all
 of my grievances, but I think I can easily argue that the web is mostly dead,
-Apps have turned into cesspools of addictive non-sense, Mac apps are all now
+apps have turned into cesspools of addictive nonsense, Mac apps are all now
 Electron apps, and the reality is that what we have done with all of the 
-amazing power of our modern computing devices is waste it all on heavy-weight
-frameworks, RAM sucking Javascript apps, and totally unwanted features. I am
+amazing power of our modern computing devices is waste it all on heavyweight
+frameworks, RAM-sucking JavaScript apps, and totally unwanted features. I am
 done with this computing contract. This is not what I signed up for.</p>
 
-<p>I am starting to sound like an old man and that is OK because at least luckily
-I still have my Mac. Despite Apple’s best attempts they have not been able to 
+<p>I am starting to sound like an old man, and that is OK because at least
+I still have my Mac. Despite Apple’s best attempts, they have not been able to
 suffocate the Mac like they have all of their other platforms. On my Mac, I am
 in full control of my data, full control of the apps I use, and in full control
-of the services my Mac runs. The iPhone on the other hand, has turned into a
+of the services my Mac runs. The iPhone, on the other hand, has turned into a
 platform I absolutely despise. The App Store restrictions have turned one of
 the most exciting and powerful computing platforms into an addictive 
-doom-scrolling appliance with little other purpose.</p>
+doomscrolling appliance with little other purpose.</p>
 
 <h1 id="complaints">Complaints</h1>
 
-<p>The thing is that every App for the iPhone has never actually really changed.
-Whether its 2012 or 2026, every app is fundamentally the same:</p>
+<p>The thing is that every app for the iPhone has never actually really changed.
+Whether it’s 2012 or 2026, every app is fundamentally the same:</p>
 
 <ol>
   <li>Download JSON</li>
@@ -273,37 +545,37 @@ Whether its 2012 or 2026, every app is fundamentally the same:</p>
 </ol>
 
 <p>All of these capabilities are provided by Apple and built into the OS. So all
-of these apps should be simple, small, and efficient. But yet they are not. 
+of these apps should be simple, small, and efficient. Yet they are not.
 You can pick your favorite doomscrolling app from the App Store and they are 
-all 300MB+. Why is this? Well it is different for every app. But usually it 
-comes down to</p>
+all 300 MB+. Why is this? Well, it is different for every app. But usually it
+comes down to:</p>
 
 <ol>
   <li>Tracking frameworks</li>
   <li>Advertising frameworks</li>
-  <li>Crossplatform UI frameworks</li>
+  <li>Cross-platform UI frameworks</li>
   <li>Unwanted features</li>
-  <li>etc, etc, etc</li>
+  <li>etc., etc., etc.</li>
 </ol>
 
 <p>This combined with the fact that Apple keeps making the iPhone bigger, more
-powerful, and more power hungry, leaves me in such an awkward position. Since
+powerful, and more power-hungry, leaves me in such an awkward position. Since
 the apps are nigh useless for anything except doomscrolling, please tell me
-again why I need an 8” supercomputer with 12GB of RAM in my pocket? All of this
+again why I need an 8” supercomputer with 12 GB of RAM in my pocket? All of this
 stuff could be done with an iPhone 5 in 2012 if it wasn’t all enshittified.</p>
 
 <h1 id="reaction">Reaction</h1>
 
-<p>Thats what I am doing. I am switching to using an iPhone 5 as my main iPhone.
-Why the iPhone 5? Well, its the newest iPhone that can run iOS 6 and it has
-a widescreen and a lightning connector unlike the iPhone4s. So I could do a 5s
+<p>That’s what I am doing. I am switching to using an iPhone 5 as my main iPhone.
+Why the iPhone 5? Well, it’s the newest iPhone that can run iOS 6 and it has
+a widescreen and a Lightning connector, unlike the iPhone 4s. So I could do a 5s
 or an SE and get the same size, but I thought it would be fun to have that 
 retro design for the OS as well. Of course, I also have my lovely iMac G4
 which would also benefit from the enhancements I made to the iPhone 5. This
-would later turn out to be a bigger challenge that I thought, but I will save 
-for that later.</p>
+would later turn out to be a bigger challenge than I thought, but I will save
+that for later.</p>
 
-<p>But the long story short, is my iPhone 5 is my day to day iPhone. I did also
+<p>But long story short, my iPhone 5 is my day-to-day iPhone. I did also
 downgrade my gigantic iPhone 14 Pro to an iPhone 13 mini which serves as my 
 backup iPhone when I need to do things the iPhone 5 can’t… like make calls,
 enable my Apple Watch (with Apple Pay), and use the enshittified apps that I 
@@ -317,16 +589,16 @@ posting a lot about AI because it has honestly changed my life when it comes to
 programming. But for the doubters out there, I have 2 primary arguments.</p>
 
 <ol>
-  <li>All of our favorite apps and and services were all fully enshittified well
-before AI was a thing. These apps became 300MB bloated behemoths well before
+  <li>All of our favorite apps and services were all fully enshittified well
+before AI was a thing. These apps became bloated 300 MB behemoths well before
 AI. AI is not going to ruin software; it was already ruined. The software we 
-have to use daily is is 100% human-made slop.</li>
+have to use daily is 100% human-made slop.</li>
   <li>So much code we write basically does data conversions and data storage 
-and retrieval; Basically taking JSON and storing it in a database, or 
+and retrieval; basically, taking JSON and storing it in a database or
 reading from a database and converting data to JSON. This kind of code is 
 not interesting, not fun to write, and we should not waste human time to
-write this kind of boiler plate code (or crazy abstractions that attempt
-to make this task tolerable)</li>
+write this kind of boilerplate code (or crazy abstractions that attempt
+to make this task tolerable).</li>
 </ol>
 
 <p>But AI will help me fix that, and for that reason, I love it.</p>
@@ -337,8 +609,8 @@ to make this task tolerable)</li>
 have a good laugh at how much personal time I am <del>wasting</del> spending to 
 recreate experiences that are already free. But don’t doubt too hard. For one,
 they are my experiences created only for me. And two, I think you will be 
-actually shocked what is possible on these retro devices in 2026 when you have
-the right build environments, toolchains, and a little creativity.</p>]]></content><author><name></name></author><category term="Unenshittification" /><category term="AI" /><category term="Apple" /><category term="Retro-Tech" /><category term="Objective-C" /><category term="iOS" /><category term="Mac-OS-X" /><summary type="html"><![CDATA[In 2026, I set out on the goal to unenshittify my digital life. This is the article where I justify my fool-hearted actions]]></summary></entry><entry><title type="html">How to Sync iPhone 5 with PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html" rel="alternate" type="text/html" title="How to Sync iPhone 5 with PowerPC Macs" /><published>2026-02-16T00:00:00+00:00</published><updated>2026-02-16T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html"><![CDATA[<table>
+actually shocked at what is possible on these retro devices in 2026 when you have
+the right build environments, toolchains, and a little creativity.</p>]]></content><author><name></name></author><category term="Unenshittification" /><category term="AI" /><category term="Apple" /><category term="Retro-Tech" /><category term="Objective-C" /><category term="iOS" /><category term="Mac-OS-X" /><summary type="html"><![CDATA[In 2026, I set a goal to unenshittify my digital life. This is the article where I justify my foolhardy actions]]></summary></entry><entry><title type="html">How to Sync iPhone 5 with PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html" rel="alternate" type="text/html" title="How to Sync iPhone 5 with PowerPC Macs" /><published>2026-02-16T00:00:00+00:00</published><updated>2026-02-16T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2026/02/16/Reverse-iTunes-1.html"><![CDATA[<table>
   <thead>
     <tr>
       <th style="width: 50%;">iMac G4 and iPhone 5</th>
@@ -399,19 +671,19 @@ restricted the iPhone 5 to Mac OS X 10.6.8 or higher.</p>
 
 <h2 id="tldr">TL;DR</h2>
 
-<p>When the iPhone and iTunes communicate with each other they do a handshake
-involving a lot of Property List (PLIST) XML passing. iTunes will start key
+<p>When the iPhone and iTunes communicate with each other, they do a handshake
+involving a lot of property list (PLIST) XML passing. iTunes will start key
 exchanges and then the iPhone will send a large PLIST payload that explains the
 capabilities of the device such as the supported languages/regions, sync
-features, and most importantly the minimum version of iTunes required by this
+features, and, most importantly, the minimum version of iTunes required by this
 iPhone. This part of the PLIST is stored in the key “MinITunesVersion.” iTunes
 then checks this key and if the value is larger than the current version, iTunes
-will display an error saying which version of iTunes is required. What is
-most important, is this key is not present when the iPhone 4s and iTunes do
+will display an error saying which version of iTunes is required. Most
+importantly, this key is not present when the iPhone 4s and iTunes do
 their handshake.</p>
 
 <p>So to bypass this check, all we need to do is change the “MinITunesVersion”
-string hardcoded into the iTunes binary to anything else and iTunes will then
+string hard-coded into the iTunes binary to anything else and iTunes will then
 check for a key that does not exist in the PLIST XML provided by the iPhone
 and then iTunes will happily not display an error and bring you straight to the
 normal syncing screen in iTunes.</p>
@@ -419,11 +691,11 @@ normal syncing screen in iTunes.</p>
 <h3 id="tutorial">Tutorial</h3>
 
 <ol>
-  <li>Download your favorite Binary HEX editor for your PowerPC Mac such as Hex Fiend
+  <li>Download your favorite binary hex editor for your PowerPC Mac, such as Hex Fiend
 (<a href="https://www.macintoshrepository.org/25974-hex-fiend">Macintosh Repository</a>, <a href="https://macintoshgarden.org/apps/hex-fiend">Macintosh Garden</a>)</li>
   <li>In Finder, click Go→Go to Folder and type in <code class="language-plaintext highlighter-rouge">/Applications/iTunes.app/Contents/MacOS</code></li>
-  <li>Backup the iTunes binary by right clicking on it and choosing “Compress”</li>
-  <li>Open the iTunes binary in the Hex Editor</li>
+  <li>Back up the iTunes binary by right-clicking on it and choosing “Compress”</li>
+  <li>Open the iTunes binary in the hex editor</li>
   <li>Search for the string “MinITunesVersion” (there should only be 1)</li>
   <li>Change it to literally anything else
     <ol>
@@ -431,7 +703,7 @@ normal syncing screen in iTunes.</p>
     </ol>
   </li>
   <li>Save the changes</li>
-  <li>Relaunch iTunes, you’re good to go</li>
+  <li>Relaunch iTunes; you’re good to go</li>
 </ol>
 
 <p>With this approach, I have been able to sync Apps, Music, Podcasts, iPhoto, and
@@ -447,7 +719,7 @@ any video. VLC has way better video playback performance so this is not a
 problem for me.
     <ul>
       <li>I assume there is some sort of checksum iTunes checks before it tries to 
-play video to protect DRM’ed content but I have not tried to troubleshoot 
+play video to protect DRM-protected content, but I have not tried to troubleshoot
 this yet.</li>
     </ul>
   </li>
@@ -456,7 +728,7 @@ this yet.</li>
 iPhone 5 is running a newer version, this may not work.
     <ul>
       <li>I confirmed this does not work if the iPhone is running iOS 10. I have not
-yet tested in iOS 8.</li>
+yet tested on iOS 8.</li>
     </ul>
   </li>
 </ul>
@@ -474,17 +746,17 @@ then.</p>
 <p>If you Google this problem, you will find that there are many people online
 (well, online back in 2012) complaining about this limitation and others
 confidently making the <strong>wrong</strong> assertion that this is because of the switch
-from the 30-pin dock connector to the lightning connector. However, I was
+from the 30-pin dock connector to the Lightning connector. However, I was
 extremely suspicious of this because when I open iTunes 10.6.3 and plug in the
 iPhone 5, iTunes immediately shows a very nice error that says iTunes 10.7 is
 required. Furthermore, the iPhone 5 shows up in Xcode! Xcode won’t deploy to the
 device because iOS is too new, but it shows up and it can see it’s an iPhone 5
-and which iOS version it’s running. So I knew that this lightning issue was not
-true; clearly, the iPhone was communicating with the Mac even over lightning.</p>
+and which iOS version it’s running. So I knew that this Lightning issue was not
+true; clearly, the iPhone was communicating with the Mac even over Lightning.</p>
 
 <p>Given that my iPhone 5 and my iPhone 4s were both running iOS 6.1.3 and one of
-them would happily sync with iTunes 10.6.3 one would not, I knew this limitation
-was artificial. And so began my first reverse engineering project: Figure out
+them would happily sync with iTunes 10.6.3 while one would not, I knew this limitation
+was artificial. And so began my first reverse-engineering project: Figure out
 this artificial limitation and eliminate it.</p>
 
 <h3 id="but-why">But Why</h3>
@@ -492,7 +764,7 @@ this artificial limitation and eliminate it.</p>
 <p>Why did I spend so much time getting my iMac G4 to sync with an iPhone 5?
 The answer is that I want to try to use an iOS 6 iPhone as my main iPhone in</p>
 <ol>
-  <li>What does that mean? Does that mean I won’t have a backup, modern,
+  <li>What does that mean? Does that mean I won’t have a backup modern
 iPhone? No, of course I will. It’s not possible to survive in the world without a
 semi-modern mobile phone. But it will be my backup. I only have a few apps I use
 on my iPhone and I think I can recreate them for iOS 6 without much issue. But
@@ -500,12 +772,12 @@ more on that later.</li>
 </ol>
 
 <p>But why not use my iPhone 4s; it’s running iOS 6 as well. Well, the iPhone 5 is
-the newest iPhone that can run iOS 6 so the performance is much better and 1GB
+the newest iPhone that can run iOS 6, so the performance is much better, and it has 1 GB
 of RAM <i class="fa-regular fa-face-surprise"></i> which seems insane to me. But
-more important than that, the iPhone 5 has a widescreen display. Given so much
+more importantly, the iPhone 5 has a widescreen display. Given so much
 of what I do on the iPhone is YouTube, the lack of widescreen is kind of killer.
-Also, the iPhone 5 can join 5GHz WiFi networks and it has a lightning connector.
-The lightning connector is so important because they are plentiful and I can
+Also, the iPhone 5 can join 5 GHz Wi-Fi networks, and it has a Lightning connector.
+Lightning cables are so important because they are plentiful, and I can
 charge anywhere, even in 2026.</p>
 
 <p>For these reasons I wanted to get my iPhone 5 working on my iMac G4 so I have a
@@ -517,7 +789,7 @@ full retro sync solution for all of my music, photos, podcasts, etc.</p>
 a whitelist in iTunes or in MobileDevice.framework. However, after many
 hours searching both the disk and the iTunes and MobileDevice binaries in
 Hopper, I was totally failing to find a whitelist of supported devices 
-(Spoiler Alert: There isn’t one). So I had to change techniques, I had to
+(Spoiler Alert: There isn’t one). So I had to change techniques. I had to
 try to debug iTunes live in GDB.</p>
 
 <p>I had never done disassembly or GDB on an app I didn’t make before. It’s
@@ -529,7 +801,7 @@ times when I was outright scolding it to try to get it back on the right path.</
 
 <p>In the following few sections, I will walk you through how I defeated the iTunes
 version restriction for the iPhone 5. Considering how simple the fix ended up
-being, there’s probably a lot of people out there wondering why no one did this 
+being, there are probably a lot of people out there wondering why no one did this
 12 years ago when the iPhone 5 was new (me included).</p>
 
 <h3 id="0-run-itunes-with-gdb">0. Run iTunes with GDB</h3>
@@ -540,7 +812,7 @@ breakpoints and inspect the data flow between the iPhone and iTunes.</p>
 <p>In every section below, I will include the GDB file so you get an idea of how
 it works. To use the file, use the -x command in GDB.</p>
 
-<p><code class="language-plaintext highlighter-rouge">gdb -x ~/Desktop/myfile.gdb /Applications/iTunes/Content/MacOS/iTunes</code></p>
+<p><code class="language-plaintext highlighter-rouge">gdb -x ~/Desktop/myfile.gdb /Applications/iTunes.app/Contents/MacOS/iTunes</code></p>
 
 <h3 id="1-defeat-ptrace">1. Defeat PTRACE</h3>
 
@@ -571,20 +843,18 @@ run
 
 <h3 id="2-inspect-every-string-created">2. Inspect Every String Created</h3>
 
-<p>I had very little to go on at this point, I had already searched the binaries in
-Hopper thoroughly and I could not find any hardcoded references to any iPhone
+<p>I had very little to go on at this point. I had already searched the binaries in
+Hopper thoroughly and I could not find any hard-coded references to any iPhone
 identifiers. I had also exhaustively searched the whole filesystem for
 references to iPhone identifiers. I was trying to find the whitelist for
 supported devices somewhere, but I just couldn’t find it.</p>
 
-<p>So I dropped down to lowest common denominator in GDB. “What if I just print
+<p>So I dropped down to the lowest common denominator in GDB. “What if I just print
 every string that iTunes makes and see if I can find the whitelist in there?”
 The short answer is I did not find the whitelist, but when observing the strings
-flowing through the system, I noticed a lot of XML. Especially after I plugged
-in my phone. Perhaps this XML contained something interesting; perhaps indeed 
-<i class="fa-regular fa-face-smile-beam"></i></p>
-
-<!-- upgrade fontawesome to get hugging face <i class="fa-brands fa-hugging-face"></i> -->
+flowing through the system, I noticed a lot of XML, especially after I plugged
+in my phone. Perhaps this XML contained something interesting; perhaps indeed
+<i class="fa-brands fa-hugging-face"></i></p>
 
 <pre><code class="language-gdb">break ptrace
 commands
@@ -617,7 +887,7 @@ between them. This included the most critical piece!</p>
 was required. <strong>THERE WAS NO WHITELIST!</strong> <i class="fa-solid fa-spoon"></i></p>
 
 <blockquote>
-  <p>Note this file introduces a new GDB technique that Gemini showed me. When you
+  <p>Note that this file introduces a new GDB technique that Gemini showed me. When you
 start printing all of these strings to the console, the app slows down
 significantly. So at the beginning of the file, we set all the breakpoints we
 need. Then at the end, we disable the one we don’t want (Breakpoint 2). Then
@@ -754,16 +1024,16 @@ was setting a breakpoint on <code class="language-plaintext highlighter-rouge">C
 <code class="language-plaintext highlighter-rouge">CFDictionaryGetValueIfPresent</code>. I could then check if the key was
 <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> and either return <code class="language-plaintext highlighter-rouge">10.6.3</code> or <code class="language-plaintext highlighter-rouge">null</code>. However, this turned
 out to be very complex because CFString/NSString are a <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/ClassClusters/ClassClusters.html">class cluster</a> 
-and have many underlying data types. From a developer’s perspective there is no
+and have many underlying data types. From a developer’s perspective, there is no
 difference, but when you are in GDB, you need to account for every possibility
-in order to compare the string data. Also, if you use a high level compare or
+in order to compare the string data. Also, if you use a high-level compare or
 print function like <code class="language-plaintext highlighter-rouge">CFShow</code> or <code class="language-plaintext highlighter-rouge">CFStringCompare</code>, that allocates new memory
 and that would cause iTunes to crash randomly as it’s not really safe to do that
 in the debugger.</p>
 
 <p>Note that even though the code snippet below is small, at this stage I spent
-so many hours with Gemini trying to get a working solution. A solution that
-would patch the <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> in flight using GDB.</p>
+so many hours with Gemini trying to get a working solution that would patch
+the <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> in flight using GDB.</p>
 
 <pre><code class="language-gdb">
 break ptrace
@@ -796,23 +1066,23 @@ run
 <h3 id="5-replace-the-key-directly-in-the-itunes-binary">5. Replace the Key Directly in the iTunes Binary</h3>
 
 <p>It was only when this solution was not working that I started to use 
-plain-old-fashioned <code class="language-plaintext highlighter-rouge">grep</code> to search not only the entire filesystem on my
+plain old-fashioned <code class="language-plaintext highlighter-rouge">grep</code> to search not only the entire filesystem on my
 iMac G4 but also on my iPhone 5 for the key <code class="language-plaintext highlighter-rouge">MinITunesVersion</code>. I actually found
 several interesting binaries on the iPhone 5 this way, but I have yet to look 
 into them.</p>
 
 <p>But on the iMac G4, it of course showed the plain-old iTunes binary contained
-this key. That is when I thought, perhaps I can just change the key in binary
+this key. That is when I thought, perhaps I can just change the key in the binary
 and call it a day. Then iTunes would just use the wrong key when querying the
 Property List provided by the iPhone. This could of course cause a crash if
 the key was required and expected by iTunes. However, I found that when I 
-watched the XML handshake between iTunes and my iPhone 4s, that 
-<code class="language-plaintext highlighter-rouge">MinITunesVersion</code> was not present. Which meant that iTunes was probably 
-considering this key as optional, which meant it was safe to change it 
+watched the XML handshake between iTunes and my iPhone 4s,
+<code class="language-plaintext highlighter-rouge">MinITunesVersion</code> was not present. This meant that iTunes was probably
+considering this key optional, so it was safe to change it
 <i class="fa-solid fa-microscope"></i></p>
 
-<p>And that’s exactly what happened. I opened the iTunes binary in a Hex Editor,
-searched for <code class="language-plaintext highlighter-rouge">MinITunesVersion</code> and changed it to <code class="language-plaintext highlighter-rouge">MinITuMesVersion</code> and clicked “Save.”
+<p>And that’s exactly what happened. I opened the iTunes binary in a hex editor,
+searched for <code class="language-plaintext highlighter-rouge">MinITunesVersion</code>, changed it to <code class="language-plaintext highlighter-rouge">MinITuMesVersion</code>, and clicked “Save.”
 After relaunching iTunes, I plugged in my iPhone 5 and it just showed up in 
 iTunes with no fuss at all. Everything syncs just fine. I couldn’t believe it! 
 <i class="fa-regular fa-face-surprise"></i></p>
@@ -826,11 +1096,11 @@ right now it shows a blank. I tried manually installing the artwork files from
 iTunes 10.7 but that did not work (it also did not break anything). After doing
 some digging in Hopper, it looks like iTunes has a huge function that was
 probably code-generated where it selects the images. I tried for a bit to get
-it working, but I had to stop as it’s low priority.</p>
+it working, but I had to stop as it’s a low priority.</p>
 
 <p>But maybe one of these days…</p>
 
-<p><a href="/assets/images/retro-tech/reverse-itunes-1/missing-artwork-1.png"><img src="/assets/images/retro-tech/reverse-itunes-1/missing-artwork-1.png" alt="Missing iPhone Artwork" /></a></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Reverse-Engineer" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><category term="iTunes" /><summary type="html"><![CDATA[Get an iPhone 5 to sync with a Mac running Mac OS X 10.5.8, this was never possible back in the day because Apple restricted the iPhone 5 to syncing only with Mac OS X 10.6.8 or higher.]]></summary></entry><entry><title type="html">How to Develop Original iPhone Apps in 2025</title><link href="https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html" rel="alternate" type="text/html" title="How to Develop Original iPhone Apps in 2025" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html"><![CDATA[<table>
+<p><a href="/assets/images/retro-tech/reverse-itunes-1/missing-artwork-1.png"><img src="/assets/images/retro-tech/reverse-itunes-1/missing-artwork-1.png" alt="Missing iPhone Artwork" /></a></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Reverse-Engineer" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><category term="iTunes" /><summary type="html"><![CDATA[Get an iPhone 5 to sync with a Mac running Mac OS X 10.5.8; this was never possible back in the day because Apple restricted the iPhone 5 to syncing only with Mac OS X 10.6.8 or higher.]]></summary></entry><entry><title type="html">How to Develop Original iPhone Apps in 2025</title><link href="https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html" rel="alternate" type="text/html" title="How to Develop Original iPhone Apps in 2025" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/12/09/PPC-iPhone-2.html"><![CDATA[<table>
   <thead>
     <tr>
       <th style="width: 50%;">PowerPC Setup</th>
@@ -867,12 +1137,12 @@ it working, but I had to stop as it’s low priority.</p>
     </ul>
   </li>
   <li><a href="#tutorial-prepare-the-computer-to-sign-iphone-apps-apple-developer-portal" id="markdown-toc-tutorial-prepare-the-computer-to-sign-iphone-apps-apple-developer-portal">Tutorial: Prepare the Computer to Sign iPhone Apps (Apple Developer Portal)</a>    <ul>
-      <li><a href="#1-authority-install-the-latest-certificate-authorities-into-your-mac" id="markdown-toc-1-authority-install-the-latest-certificate-authorities-into-your-mac">1. Authority: Install the latest Certificate Authorities into your Mac</a></li>
+      <li><a href="#1-authority-install-the-latest-certificate-authorities-on-your-mac" id="markdown-toc-1-authority-install-the-latest-certificate-authorities-on-your-mac">1. Authority: Install the Latest Certificate Authorities on Your Mac</a></li>
       <li><a href="#2-certificate-create-iphone-development-signing-certificate" id="markdown-toc-2-certificate-create-iphone-development-signing-certificate">2. Certificate: Create iPhone Development Signing Certificate</a></li>
       <li><a href="#3-identity-create-wildcard-iphone-app-identity" id="markdown-toc-3-identity-create-wildcard-iphone-app-identity">3. Identity: Create Wildcard iPhone App Identity</a></li>
       <li><a href="#4-device-add-iphone-device-to-portal" id="markdown-toc-4-device-add-iphone-device-to-portal">4. Device: Add iPhone Device to Portal</a></li>
-      <li><a href="#5-provision-create-provisioning-profile-combines-step-2-3-4" id="markdown-toc-5-provision-create-provisioning-profile-combines-step-2-3-4">5. Provision: Create Provisioning Profile (Combines Step 2, 3, 4)</a></li>
-      <li><a href="#6-info-plist-edit-the-infoplist-and-build-settings-of-your-app" id="markdown-toc-6-info-plist-edit-the-infoplist-and-build-settings-of-your-app">6. Info Plist: Edit the Info.plist and Build Settings of Your App</a></li>
+      <li><a href="#5-provision-create-provisioning-profile-combines-steps-2-3-and-4" id="markdown-toc-5-provision-create-provisioning-profile-combines-steps-2-3-and-4">5. Provision: Create Provisioning Profile (Combines Steps 2, 3, and 4)</a></li>
+      <li><a href="#6-infoplist-edit-the-infoplist-and-build-settings-of-your-app" id="markdown-toc-6-infoplist-edit-the-infoplist-and-build-settings-of-your-app">6. Info.plist: Edit the Info.plist and Build Settings of Your App</a></li>
     </ul>
   </li>
   <li><a href="#tutorial-prepare-the-iphone-to-ignore-the-signature-jailbreak" id="markdown-toc-tutorial-prepare-the-iphone-to-ignore-the-signature-jailbreak">Tutorial: Prepare the iPhone to Ignore the Signature (Jailbreak)</a>    <ul>
@@ -889,11 +1159,11 @@ it working, but I had to stop as it’s low priority.</p>
 
 <p>In this article we will cover how to deploy apps from Xcode to an original
 iPhone running iPhone OS 2 or 3 in 2025. This will also work with iPhone 3G,
-iPod Touch (1st Generation), iPod Touch (2nd Generation). This is the 2nd
+iPod Touch (1st Generation), and iPod Touch (2nd Generation). This is the second
 article in the <a href="/retro-tech/2025/12/04/PPC-iPhone-1.html">"Enabling iPhone Development for PowerPC Macs"</a>
 series but this no longer requires a PowerPC Mac. You can use any Mac running
 10.7, 10.6, or 10.5 that has Xcode 3 or 4 with the iPhone SDK installed,
-including a Virtual Machine (if you still have an Intel Mac).</p>
+including a virtual machine (if you still have an Intel Mac).</p>
 
 <p>There are a lot of fiddly steps, but I think it’s important to remember that this
 is no different than what every iPhone developer had to do back in 2008. Now
@@ -905,11 +1175,11 @@ were totally normal steps.</p>
 <ul>
   <li>This requires an Apple Developer account (I am unsure if a free one will work 
 or not)</li>
-  <li>This requires a Jailbroken iPhone or iPod Touch</li>
+  <li>This requires a jailbroken iPhone or iPod Touch</li>
 </ul>
 
 <p>I think it is possible to do this without a developer account. I found a 
-<a href="https://stackoverflow.com/a/10763454">StackOverflow post</a> covering how to do 
+<a href="https://stackoverflow.com/a/10763454">Stack Overflow post</a> covering how to do
 it. However, they all require the use of a jailbreak tool called 
 <a href="https://cydia.saurik.com/codesign.html"><code class="language-plaintext highlighter-rouge">ldid</code></a>. I have not been able to find 
 a copy of <code class="language-plaintext highlighter-rouge">ldid</code> compiled for PowerPC Macs. It might be possible to 
@@ -919,13 +1189,13 @@ but I have not tried.</p>
 <h3 id="approach">Approach</h3>
 
 <p>We are going to prepare Xcode to sign iPhone apps using the Apple Developer
-Portal. Then we are going to prepare the iPhone to ignore the signature via
-Jailbreak. This approach seems strange, but there are 2 sides of the equation.
+Portal. Then we are going to prepare the iPhone to ignore the signature via a
+jailbreak. This approach seems strange, but there are two sides of the equation.
 Xcode will not complete the build process for iPhone apps that are intended for
 the device without proper signatures. But then, these old iPhone OSes are so out
-of date that they no longer contain valid Certificate Authorities to trust those
+of date that they no longer contain valid certificate authorities to trust those
 signatures, resulting in them refusing to launch the signed apps, thus requiring
-the Jailbreak.</p>
+the jailbreak.</p>
 
 <p>In this tutorial we are going to be basically living in the “Organizer” in Xcode</p>
 <ol>
@@ -945,14 +1215,14 @@ admittedly in less detail than this tutorial.</li>
   <li><strong>Certificate:</strong> Create iPhone Development Signing Certificate</li>
   <li><strong>Identity:</strong> Create Wildcard iPhone App Identity</li>
   <li><strong>Device:</strong> Add iPhone Device to Portal</li>
-  <li><strong>Provision:</strong> Create Provisioning Profile (Combines Step 2, 3, 4)</li>
+  <li><strong>Provision:</strong> Create Provisioning Profile (Combines Steps 2, 3, and 4)</li>
   <li><strong>Info Plist:</strong> Edit the Info.plist and Build Settings of Your App</li>
 </ol>
 
 <h4 id="prepare-the-iphone-to-ignore-the-signature-jailbreak">Prepare the iPhone to Ignore the Signature (Jailbreak)</h4>
 
 <ol>
-  <li><strong>Jailbreak:</strong> Restore and Jailbreak iPhone using <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a></li>
+  <li><strong>Jailbreak:</strong> Restore and jailbreak iPhone using <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a></li>
   <li><strong>Cydia:</strong> Install the AppSync Tweak in Cydia</li>
   <li><strong>Provision:</strong> Install the Provisioning Profile on Device</li>
   <li><strong>Run:</strong> Run App on Device</li>
@@ -960,7 +1230,7 @@ admittedly in less detail than this tutorial.</li>
 
 <p>If anyone has advice on how to either not require the developer account to get
 Xcode to deploy without a proper signing certificate OR anyone knows how to get
-the iPhone to launch the properly signed app without Jailbreak, please let me
+the iPhone to launch the properly signed app without a jailbreak, please let me
 know, so I can enhance the tutorial. I think it is frustrating to BOTH need a 
 developer account AND need a jailbreak. It should be one or the other, not both.</p>
 
@@ -969,7 +1239,7 @@ developer account AND need a jailbreak. It should be one or the other, not both.
 <ul>
   <li>A Mac or Virtual Machine that is running Mac OS X 10.7, 10.6, or 10.5</li>
   <li>A Mac with USB 2.0 (it might work with USB 1.1 but no promises)</li>
-  <li>Xcode 4.X.X, 3.2.X, or 3.1.4 (The screenshots in this article are for Xcode 3)</li>
+  <li>Xcode 4.x.x, 3.2.x, or 3.1.4 (The screenshots in this article are for Xcode 3)</li>
   <li>Original iPhone, iPhone 3G, iPod Touch (1st Generation), iPod Touch 
 (2nd Generation)</li>
   <li>Device running iPhone OS software 3.1.3 or lower
@@ -982,7 +1252,7 @@ developer account AND need a jailbreak. It should be one or the other, not both.
 
 <h2 id="tutorial-prepare-the-computer-to-sign-iphone-apps-apple-developer-portal">Tutorial: Prepare the Computer to Sign iPhone Apps (Apple Developer Portal)</h2>
 
-<h3 id="1-authority-install-the-latest-certificate-authorities-into-your-mac">1. Authority: Install the latest Certificate Authorities into your Mac</h3>
+<h3 id="1-authority-install-the-latest-certificate-authorities-on-your-mac">1. Authority: Install the Latest Certificate Authorities on Your Mac</h3>
 
 <p>Before any of this will work, we need to make sure your ancient version of
 Mac OS X is loaded with the latest Apple Certificate Authorities and 
@@ -1015,10 +1285,10 @@ files.
       <li>“Apple Root CA - G3 Root”</li>
     </ol>
   </li>
-  <li>Double click on them one by one. In the Keychain Access open panel, it will 
+  <li>Double-click them one by one. In the Keychain Access open panel, it will
 give you a choice of which keychain to add them to. Choose the System 
 keychain, not the Login keychain.</li>
-  <li>Now do the same for the World Wide Developer Relations intermediate certificates.
+  <li>Now do the same for the Worldwide Developer Relations intermediate certificates.
     <ol>
       <li>Worldwide Developer Relations - G2</li>
       <li>Worldwide Developer Relations - G3</li>
@@ -1034,8 +1304,8 @@ keychain, not the Login keychain.</li>
 <h3 id="2-certificate-create-iphone-development-signing-certificate">2. Certificate: Create iPhone Development Signing Certificate</h3>
 
 <p>This is the most tedious part. You should probably make a folder on your system
-for storing all of the output of this step, so you can zip it all up at the end
-as a backup. This should all be possible on your Vintage Mac via AquaFox
+for storing all the output of this step, so you can zip it all up at the end
+as a backup. This should all be possible on your vintage Mac via AquaFox
 (PowerPC) or ArcticFox (Intel), but I chose to use my modern Mac to do all of
 the Apple Portal stuff. This means I needed to transfer files back and
 forth between the old system and the new system.</p>
@@ -1065,8 +1335,8 @@ selected the Apple Root CA before starting the Assistant. I am not sure if
 it matters which certificate you select, but it seems like you need to select
 something first.</p>
 
-<p>The way I could tell that it was going to work is the assistant had the
-checkbox in the UI that says “Let me specify key pair information”. When that
+<p>The way I could tell that it was going to work was that the assistant displayed the
+checkbox in the UI that says “Let me specify key pair information.” When that
 checkbox was present, then the assistant would actually make the Certificate
 Signing Request file.</p>
 
@@ -1112,7 +1382,7 @@ Signing Request file.</p>
   </tbody>
 </table>
 
-<p>Double click to add the Signing Certificate to the Login keychain. Note
+<p>Double-click to add the Signing Certificate to the Login keychain. Note
 that the Signing Certificate MUST appear in the “My Certificates” section of
 Keychain Access. If you see it in the “All Items” section but not in the 
 “My Certificates” section, then Xcode will not properly see it.</p>
@@ -1120,7 +1390,7 @@ Keychain Access. If you see it in the “All Items” section but not in the
 <p>This happened to me and I used Gemini to help me fix it. You can see
 <a href="/assets/images/retro-tech/ppc-iphone-2/cert8.png">the full conversation here</a>, 
 but the summary is that you need to export the private key as a P12 file, 
-then delete all 3 certificates from Keychain, then re-add the P12 file and then
+then delete all three certificates from Keychain, then re-add the P12 file and then
 re-add the Signing Certificate. That did it for me. I have no idea why.</p>
 
 <h3 id="3-identity-create-wildcard-iphone-app-identity">3. Identity: Create Wildcard iPhone App Identity</h3>
@@ -1150,12 +1420,12 @@ app name goes is just an *. If you are an iOS developer, you may already have
 an established base name. But if not, you can just use the Bonjour name of the
 Mac you are running Xcode on. I will do that and so it will be
 <code class="language-plaintext highlighter-rouge">local.IchigoDaifuku.*</code>. You will need to type this name into the Info.plist
-of every App you make, so make it something easy to remember.</p>
+of every app you make, so make it something easy to remember.</p>
 
 <ol>
   <li>Open <a href="https://developer.apple.com/account/resources/identifiers/list">Apple Developer Portal - Identifiers</a> and click the + button next to Identifiers</li>
   <li>Follow the prompts, all the default options are fine</li>
-  <li>When it asks you for the bundle identifier click the “Wildcard” radio button 
+  <li>When it asks you for the bundle identifier, click the “Wildcard” radio button
 and type in your identifier</li>
   <li>Click “Register”</li>
   <li>There is nothing to download in this step, so you can move to the next step</li>
@@ -1187,7 +1457,7 @@ can generate a provisioning profile in the next step.</p>
   <li>In Xcode, choose Window→Organizer and then plug in your device</li>
   <li>If you see the Device Error above, then this version of Xcode is not 
 compatible with your device or the OS that’s installed on it.</li>
-  <li>Right click on the device name in the side bar and choose “Copy Device 
+  <li>Right-click the device name in the sidebar and choose “Copy Device
 Identifier”</li>
   <li>Open <a href="https://developer.apple.com/account/resources/devices/list">Apple Developer Portal - Devices</a> and click the + button next to Devices</li>
   <li>Go through the prompts and paste in the Device ID when requested</li>
@@ -1200,7 +1470,7 @@ your device version, the software version, and the Xcode version. These all
 need to be compatible to move on. If it’s an iPhone 4 or lower, then the device
 software can easily be downgraded via <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a>.</p>
 
-<h3 id="5-provision-create-provisioning-profile-combines-step-2-3-4">5. Provision: Create Provisioning Profile (Combines Step 2, 3, 4)</h3>
+<h3 id="5-provision-create-provisioning-profile-combines-steps-2-3-and-4">5. Provision: Create Provisioning Profile (Combines Steps 2, 3, and 4)</h3>
 
 <table>
   <thead>
@@ -1245,11 +1515,11 @@ pretty vague but I think the bottom one is the newest</li>
   <li><strong>Organizer:</strong> In Xcode, choose Window→Organizer. In the sidebar, select 
 Provisioning Profiles and then drag the profile from the Finder into the 
 Organizer</li>
-  <li>Now you can ZIP up all of the uploads and downloads created during this part 
-of the tutorial for safe-keeping, in case they are ever needed again</li>
+  <li>Now you can ZIP up all the uploads and downloads created during this part
+of the tutorial for safekeeping, in case they are ever needed again</li>
 </ol>
 
-<h3 id="6-info-plist-edit-the-infoplist-and-build-settings-of-your-app">6. Info Plist: Edit the Info.plist and Build Settings of Your App</h3>
+<h3 id="6-infoplist-edit-the-infoplist-and-build-settings-of-your-app">6. Info.plist: Edit the Info.plist and Build Settings of Your App</h3>
 
 <table>
   <thead>
@@ -1282,13 +1552,13 @@ you create a new application project.</p>
 Type Command + S to save the file</li>
   <li>Open the Build Settings by selecting the project file at the top of the 
 Groups &amp; Files pane and then click on Info in the toolbar</li>
-  <li>In the info panel click on the Build tab and then make sure the Configuration
+  <li>In the info panel, click on the Build tab and then make sure the Configuration
 and Show dropdowns say “All”</li>
   <li>In the Build Settings panel, look for Code Signing Identity, and choose the 
 provisioning profile you created in Step 5 and then close the info panel</li>
   <li>Make sure there is no device connected, then choose Device from the Overview 
 dropdown and then click Build and Go</li>
-  <li>At this point you might see a Keychain access permission, choose “Always 
+  <li>At this point, you might see a Keychain access permission prompt; choose “Always
 Allow”</li>
   <li>Lastly you should see an error appear that says “No provisioned iPhone OS 
 device is connected”</li>
@@ -1297,29 +1567,29 @@ device is connected”</li>
 <p>If you receive the “No provisioned iPhone OS device is connected” error, you
 have succeeded, congratulations! You have just gone through the really tedious
 task that Apple created for all iPhone developers back in 2008. Now Xcode is 100%
-ready to deploy your custom Apps to a real iPhone!</p>
+ready to deploy your custom apps to a real iPhone!</p>
 
 <p>If you see a different error, like a build or signing error, then you have a 
 different problem that you need to troubleshoot before you can move on.</p>
 
 <h2 id="tutorial-prepare-the-iphone-to-ignore-the-signature-jailbreak">Tutorial: Prepare the iPhone to Ignore the Signature (Jailbreak)</h2>
 
-<p>This is the part of the tutorial that an iPhone Developer would not have had to
+<p>This is the part of the tutorial that an iPhone developer would not have had to
 do in 2008. I am not quite sure the reason, but iPhone OS 3.1.3 no longer trusts
 the signature we just worked so hard to enable in Xcode. Yes, we had to do it
-because Xcode will not deploy Apps to a device without a valid signature. But if
+because Xcode will not deploy apps to a device without a valid signature. But if
 you try to plug in your device and deploy to it right now, you will get an error
 telling you that the app could not be installed because there were certificate
 issues and it suggests checking the date and time on the phone. I think what
 has happened is the Certificate Authorities that Apple used in 2008 have expired
 since then and are no longer valid. I tried installing the CAs from Step 1
-of this tutorial on the Phone, but I still got the same error.</p>
+of this tutorial on the phone, but I still got the same error.</p>
 
 <p>It’s OK though, because honestly, these old devices are pretty much bricks
-without a Jailbreak. Also, jailbreaking is so incredibly easy now thanks
+without a jailbreak. Also, jailbreaking is so incredibly easy now thanks
 to <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a> by LukeZGD. 
 If you use this tool successfully, you should definitely 
-<a href="https://ko-fi.com/lukezgd">buy him a Coffee</a> because the script is amazing!
+<a href="https://ko-fi.com/lukezgd">buy him a coffee</a> because the script is amazing!
 It even helps you enter DFU mode with exactly timed instructions.</p>
 
 <h3 id="1-jailbreak-restore-and-jailbreak-iphone-using-legacy-ios-kit">1. Jailbreak: Restore and Jailbreak iPhone using Legacy iOS Kit</h3>
@@ -1345,7 +1615,7 @@ It even helps you enter DFU mode with exactly timed instructions.</p>
   </tbody>
 </table>
 
-<p>I will provide the instructions for performing a Restore and Jailbreak which
+<p>I will provide the instructions for performing a restore and jailbreak, which
 will erase everything on the device. However, if your device is a time capsule,
 and you do not want to erase it, I totally understand. 
 <a href="https://github.com/LukeZGD/Legacy-iOS-Kit#">Legacy iOS Kit</a> can also just 
@@ -1354,10 +1624,10 @@ jailbreak it for you. Please see the <a href="https://github.com/LukeZGD/Legacy-
 <ol>
   <li>On a modern-ish Intel or Apple Silicon Mac, open Terminal: <code class="language-plaintext highlighter-rouge">cd Downloads</code></li>
   <li>Clone Legacy iOS Kit: <code class="language-plaintext highlighter-rouge">git clone https://github.com/LukeZGD/Legacy-iOS-Kit.git</code></li>
-  <li>CD into the Directory: <code class="language-plaintext highlighter-rouge">cd Legacy-iOS-Kit</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd</code> into the directory: <code class="language-plaintext highlighter-rouge">cd Legacy-iOS-Kit</code></li>
   <li>Run the setup script: <code class="language-plaintext highlighter-rouge">./restore.sh</code></li>
   <li>Plug in your device and then run the script again: <code class="language-plaintext highlighter-rouge">./restore.sh</code></li>
-  <li>Follow the onscreen prompts to Restore
+  <li>Follow the onscreen prompts to restore
     <ol>
       <li>Please read the prompts carefully and see the screenshots above for a full
 visual walkthrough</li>
@@ -1372,7 +1642,7 @@ from <a href="https://ipsw.me">IPSW.me</a></li>
 (meaning it is stuck at the slider that says Slide for Emergency), then run
 the script again and it will have an option to attempt activation. If there is
 a SIM card in the device, this should work without the Hacktivate option. But
-sometimes you have to try the “lighter” activation thing 2 or 3 times.</p>
+sometimes you have to try the “lighter” activation thing two or three times.</p>
 
 <h3 id="2-cydia-install-the-appsync-tweak-in-cydia">2. Cydia: Install the AppSync Tweak in Cydia</h3>
 
@@ -1399,9 +1669,9 @@ sometimes you have to try the “lighter” activation thing 2 or 3 times.</p>
   </tbody>
 </table>
 
-<p>Now you will be installing a special Tweak for the iPhone called AppSync. This
-Tweak will prevent the process called <code class="language-plaintext highlighter-rouge">installd</code> from checking for signatures
-when Apps are installed. This is critical to installing apps from iTunes,
+<p>Now you will be installing a special tweak for the iPhone called AppSync. This
+tweak will prevent the process called <code class="language-plaintext highlighter-rouge">installd</code> from checking for signatures
+when apps are installed. This is critical to installing apps from iTunes,
 Xcode, or even Legacy iOS Kit as this one process checks all of them for a 
 valid signature before installing.</p>
 
@@ -1410,7 +1680,7 @@ valid signature before installing.</p>
 for full details. In this tutorial, I will be showing this for iPhone OS 3.1.3.</p>
 
 <ol>
-  <li><strong>Open Cydia:</strong> On first launch, Cydia may need to do a 1-time-setup and then
+  <li><strong>Open Cydia:</strong> On first launch, Cydia may need to do a one-time setup and then
 restart</li>
   <li><strong>Show Sources:</strong> Tap on the Sources tab and wait for it to refresh (it could
 take a while)</li>
@@ -1419,8 +1689,8 @@ them. They will have no icon and if you tap on them, they will have no
 packages</li>
   <li><strong>Add Source:</strong> Tap the “Edit” button at the top right and then tap “Add” at 
 the top left and type <code class="language-plaintext highlighter-rouge">http://ios3.party</code></li>
-  <li><strong>Install AppSync:</strong> Tap on “iPhone OS 3 Party”, Tap on “All Packages”, Tap 
-on “AppSync for OS 3.1”, tap “Modify”, then tap “Install”, lastly tap 
+  <li><strong>Install AppSync:</strong> Tap “iPhone OS 3 Party,” tap “All Packages,” tap
+“AppSync for OS 3.1,” tap “Modify,” then tap “Install,” and lastly tap
 “Confirm”</li>
   <li><strong>Restart:</strong> After you see the button that says “Return to Cydia”, you can 
 tap it and then restart the device</li>
@@ -1445,13 +1715,13 @@ tap it and then restart the device</li>
   </tbody>
 </table>
 
-<p>The last step before running an app is to connect it to your Vintage Mac and
+<p>The last step before running an app is to connect it to your vintage Mac and
 ask the Mac to use it for development.</p>
 
 <ol>
   <li><strong>Organizer:</strong> In Xcode, choose Window→Organizer and then plug in your device</li>
   <li><strong>Use for Development:</strong> Select your device in the sidebar and then click 
-“Use for Development”(sorry, no screenshot because this is a 1-time action)</li>
+“Use for Development” (sorry, no screenshot because this is a one-time action)</li>
   <li><strong>Add Profile:</strong> Under the Provisioning section, click the + button to add 
 your provisioning profile</li>
   <li><strong>Device Verify:</strong> On your device, open Settings, then tap General, then tap 
@@ -1482,7 +1752,7 @@ Profiles to verify your provisioning profile was installed</li>
 </table>
 
 <p>You’re probably pretty tired by now, but hang in there, we are about to finally 
-achieve our goal! Running your custom app on your vintage iPhone with full
+achieve our goal! Running your custom app on your vintage iPhone with the full
 debugger and all the goodies.</p>
 
 <ol>
@@ -1497,11 +1767,11 @@ gutter area)</li>
       <li>⑤ Click Build and Go</li>
     </ol>
   </li>
-  <li>Wait 30-60 seconds and you should see your app launch on your phone and it 
+  <li>Wait 30–60 seconds and you should see your app launch on your phone and it
 will pause at the launch image</li>
-  <li>In Xcode you will see the breakpoint was hit, click the Continue button</li>
+  <li>In Xcode, you will see the breakpoint was hit; click the Continue button</li>
   <li>On your phone, your app will now be running</li>
-  <li>If you see the error in the screenshot above with the selected console output
+  <li>If you see the error in the screenshot above with the selected console output,
 that means that AppSync from the previous step is not installed or not 
 working properly and the iPhone is still checking signatures</li>
 </ol>
@@ -1513,13 +1783,13 @@ working properly and the iPhone is still checking signatures</li>
 <i class="apl-computer-imac-aluminum-20-256 reflect below-sm round-none"></i></p>
 
 <p>You now have a setup that can build and deploy apps to your vintage iPhone!
-Please enjoy the process of making vintage apps and working with old school 
+Please enjoy the process of making vintage apps and working with old-school
 Objective-C. It’s kind of a pain in the butt, but I think you will enjoy its
 simplicity and flexibility.</p>
 
 <p>If you want to run MameDaifuku, my sample app that lists out some build and
 runtime information, you can clone or download it from GitHub.
-<a href="https://github.com/jeffreybergier/MameDaifuku">https://github.com/jeffreybergier/MameDaifuku</a></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[iOS Developers out there, have you ever been interested in stepping back from the new hotness for a moment to revisit your roots and try developing apps for the original iPhone? This article will walk you through the whole process. A lot of things have changed since 2008, but it's still possible in 2025.]]></summary></entry><entry><title type="html">Enabling iPhone Development for PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1.html" rel="alternate" type="text/html" title="Enabling iPhone Development for PowerPC Macs" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1.html"><![CDATA[<table>
+<a href="https://github.com/jeffreybergier/MameDaifuku">https://github.com/jeffreybergier/MameDaifuku</a></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[iOS developers out there, have you ever been interested in stepping back from the new hotness for a moment to revisit your roots and try developing apps for the original iPhone? This article will walk you through the whole process. A lot of things have changed since 2008, but it's still possible in 2025.]]></summary></entry><entry><title type="html">Enabling iPhone Development for PowerPC Macs</title><link href="https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1.html" rel="alternate" type="text/html" title="Enabling iPhone Development for PowerPC Macs" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/12/04/PPC-iPhone-1.html"><![CDATA[<table>
   <thead>
     <tr>
       <th style="width: 50%;">PowerPC Setup</th>
@@ -1581,14 +1851,14 @@ SDK up until iPhone OS 2.2.1 SDK.</p>
 <p>But the 2.2.1 SDK is quite limited and the iPhone really started to come into
 its own with the 3.0 and higher SDKs. These included critical improvements
 like Core Data, AVFoundation, MediaPlayer, and others. So I started to look
-into if it was possible to get the new SDK on a PowerPC Mac as well. And to my
-surprise, it is possible! And will even deploy to a real iPhone running 3.1.3.</p>
+into whether it was possible to get the new SDK on a PowerPC Mac as well. And to my
+surprise, it is possible! It will even deploy to a real iPhone running 3.1.3.</p>
 
 <p>In this document I will walk you through how I did it.</p>
 
 <h3 id="caveats">Caveats</h3>
 
-<p>While this does work, there are some fundamental limitations</p>
+<p>While this does work, there are some fundamental limitations:</p>
 
 <ul>
   <li>iPhone Simulator only runs iPhone OS 2.2.1
@@ -1596,19 +1866,19 @@ surprise, it is possible! And will even deploy to a real iPhone running 3.1.3.</
       <li>This cannot be overcome because Apple only shipped universal PowerPC and Intel binaries for iPhone OS 2.2.1 and lower</li>
     </ul>
   </li>
-  <li>You must have a developer account if you want to deploy to device
+  <li>You must have a developer account if you want to deploy to a device
     <ul>
       <li>There are probably workarounds, but I just did everything the official way</li>
     </ul>
   </li>
-  <li>Your iPhone must be Jailbroken if you want to deploy to device
+  <li>Your iPhone must be jailbroken if you want to deploy to a device
     <ul>
-      <li>I think this is due to expired certificate authorities on the iPhone OS 3.1.3 but I am not 100% sure</li>
+      <li>I think this is due to expired certificate authorities on iPhone OS 3.1.3, but I am not 100% sure</li>
     </ul>
   </li>
   <li>This Xcode 3 is very old and is not much different than the original Project Builder
     <ul>
-      <li>Xcode would not get its new UI style that is still used today until Xcode 4 which only runs on Mac OS X 10.6 Snow Leopard which is Intel only</li>
+      <li>Xcode would not get its new UI style that is still used today until Xcode 4, which only runs on Mac OS X 10.6 Snow Leopard, which is Intel-only</li>
       <li>The SDK does not support many basic features such as Automatic Reference Counting</li>
     </ul>
   </li>
@@ -1628,7 +1898,7 @@ surprise, it is possible! And will even deploy to a real iPhone running 3.1.3.</
 <ul>
   <li>PowerPC Mac</li>
   <li>Mac OS X Leopard 10.5.8 with all updates installed</li>
-  <li>To run on real device
+  <li>To run on a real device
     <ul>
       <li>USB 2.0 (it might work with USB 1.1 but no promises)</li>
       <li>Original iPhone, iPhone 3G, iPod Touch (1st generation), iPod Touch (2nd generation)</li>
@@ -1695,9 +1965,9 @@ the Mac via AFP or SCP.</p>
 <p>Mount the <code class="language-plaintext highlighter-rouge">iphone_sdk_3.1.3_with_xcode_3.1.4__leopard__9m2809a.dmg</code> and open
 the installer file to do a normal install of Xcode. I selected all possible 
 options, but you should only need the basic developer tools package. The 
-installer WILL NOT let you select the iPhone SDK packages. That’s OK, we will
-do that in the next step. This took about 30 minutes on my 1.25GHz iMac G4 
-with 1TB SSD, so please be patient if your system is slower and/or does not 
+installer WILL NOT let you select the iPhone SDK packages. That’s OK; we will
+do that in the next step. This took about 30 minutes on my 1.25 GHz iMac G4
+with a 1 TB SSD, so please be patient if your system is slower and/or does not
 have an SSD.</p>
 
 <p>Note that you must install in the default location <code class="language-plaintext highlighter-rouge">/Developer</code></p>
@@ -1709,7 +1979,7 @@ have an SSD.</p>
 <ol>
   <li>Verify that the iPhone SDK disk image is mounted with the correct name
     <ol>
-      <li>Open terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
+      <li>Open Terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
       <li>You should see <code class="language-plaintext highlighter-rouge">iPhone SDK</code>, not <code class="language-plaintext highlighter-rouge">iPhone SDK 2</code> or some other name. If
 it’s not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
     </ol>
@@ -1725,7 +1995,7 @@ on a PowerPC Mac.</li>
 </ol>
 
 <p>At this point you will have a fully working Xcode install and you will even
-be able to create new iPhone projects. However, there are 3 problems that need 
+be able to create new iPhone projects. However, there are three problems that need
 to be fixed:</p>
 
 <ol>
@@ -1751,7 +2021,7 @@ universal.</p>
 <p>One of the included files is <code class="language-plaintext highlighter-rouge">iPhone221PPCInstaller.mpkg</code>. This file was 
 originally provided on Macintosh Repository but I customized it to only install
 one small part of the iPhone OS 2.2.1 SDK instead of the whole thing. It only
-installs the <code class="language-plaintext highlighter-rouge">iPhoneSimulatorPlatform.pkg</code> which installs the Universal binary
+installs the <code class="language-plaintext highlighter-rouge">iPhoneSimulatorPlatform.pkg</code>, which installs the universal binary
 version of the iPhone Simulator as well as the Interface Builder plugin for
 iPhone XIBs.</p>
 
@@ -1760,15 +2030,15 @@ iPhone XIBs.</p>
   <li>Mount <code class="language-plaintext highlighter-rouge">iPhone_SDK_for_iPhone_OS_2.2.1_PPC.iso</code></li>
   <li>Verify that the iPhone SDK disk image is mounted with the correct name
     <ol>
-      <li>Open terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
+      <li>Open Terminal and type <code class="language-plaintext highlighter-rouge">ls -al /Volumes</code></li>
       <li>You should see <code class="language-plaintext highlighter-rouge">iPhone SDK</code>, not <code class="language-plaintext highlighter-rouge">iPhone SDK 2</code> or some other name. If
 it’s not called exactly <code class="language-plaintext highlighter-rouge">iPhone SDK</code> then the installer will fail.</li>
     </ol>
   </li>
   <li>Open <code class="language-plaintext highlighter-rouge">iPhone221PPCInstaller.mpkg</code> and run the installer. This installs:
     <ol>
-      <li>iPhone Simulator app that is a Universal Binary</li>
-      <li>Interface Builder plugin for reading iPhone XIBs that is a Universal Binary</li>
+      <li>iPhone Simulator app that is a universal binary</li>
+      <li>Interface Builder plugin for reading iPhone XIBs that is a universal binary</li>
       <li>Runs a script that patches the xcspec files
         <ol>
           <li>There is no credit for this script on Macintosh Repository</li>
@@ -1797,25 +2067,25 @@ ichigodaifuku:~ me<span class="nv">$ </span>
 <p>The normal version of <code class="language-plaintext highlighter-rouge">ld</code> that comes with Xcode is a universal binary but the
 version that comes with the iPhone SDK is Intel only (for some reason).
 It’s the only Intel-only part of the SDK, as far as I can tell. I provided a
-script to patch <code class="language-plaintext highlighter-rouge">ld</code> to make it easy, but all it does is backup the original 
-and then copy the version from Xcode into the place the iPhone SDK is.</p>
+script to patch <code class="language-plaintext highlighter-rouge">ld</code> to make it easy, but all it does is back up the original
+and then copy the version from Xcode into the iPhone SDK’s location.</p>
 
 <p>I wanted to make the script run automatically at the end of Step 2 but I could 
 not figure out how to insert the script into the installer. If you know how,
-please let me know and I will improve <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.mpkg</code></p>
+please let me know and I will improve <code class="language-plaintext highlighter-rouge">iPhone313PPCInstaller.mpkg</code>.</p>
 
 <ol>
   <li>Open Terminal</li>
-  <li>Change the permissions to make the script executable (this is not preserved by the zip file)
+  <li>Change the permissions to make the script executable (this is not preserved by the ZIP file)
     <ol>
-      <li>Type <code class="language-plaintext highlighter-rouge">chmod +x </code> note the space at the end</li>
+      <li>Type <code class="language-plaintext highlighter-rouge">chmod +x </code>; note the space at the end</li>
       <li>Drag <code class="language-plaintext highlighter-rouge">iPhone313PPCldPatch.sh</code> into the terminal window</li>
       <li>Press the return key to set the permissions</li>
     </ol>
   </li>
   <li>Execute the script with admin privileges
     <ol>
-      <li>Type <code class="language-plaintext highlighter-rouge">sudo </code> note the space at the end</li>
+      <li>Type <code class="language-plaintext highlighter-rouge">sudo </code>; note the space at the end</li>
       <li>Drag <code class="language-plaintext highlighter-rouge">iPhone313PPCldPatch.sh</code> into the terminal window</li>
       <li>Press the return key to run the script</li>
     </ol>
@@ -1869,11 +2139,11 @@ a sample app and make sure it launches in the simulator.</p>
 
 <p>In the next episode, we will go through the steps needed to get an app running
 on the device. Remember, this is before Xcode could manage signing for you, so
-you will need to do it the old fashioned way <i class="fa-solid fa-hand-peace"></i></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[Apple always officially required an Intel Mac to do iPhone app development, but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing Original iPhone and iPhone 3G apps on your PowerPC Mac.]]></summary></entry><entry><title type="html">MathEdit for OpenStep</title><link href="https://jeffburg.com/apps/2025/10/06/MathEdit.html" rel="alternate" type="text/html" title="MathEdit for OpenStep" /><published>2025-10-06T00:00:00+00:00</published><updated>2025-10-06T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2025/10/06/MathEdit</id><content type="html" xml:base="https://jeffburg.com/apps/2025/10/06/MathEdit.html"><![CDATA[<h2 id="ns-is-for-nextstep">NS is for NextStep</h2>
+you will need to do it the old-fashioned way <i class="fa-solid fa-hand-peace"></i></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="Apps" /><category term="PowerPC" /><category term="iOS" /><category term="Hobby" /><summary type="html"><![CDATA[Apple always officially required an Intel Mac to do iPhone app development, but I figured out how to get the iPhone OS 3.1.3 SDK installed for developing Original iPhone and iPhone 3G apps on your PowerPC Mac.]]></summary></entry><entry><title type="html">MathEdit for OpenStep</title><link href="https://jeffburg.com/apps/2025/10/06/MathEdit.html" rel="alternate" type="text/html" title="MathEdit for OpenStep" /><published>2025-10-06T00:00:00+00:00</published><updated>2025-10-06T00:00:00+00:00</updated><id>https://jeffburg.com/apps/2025/10/06/MathEdit</id><content type="html" xml:base="https://jeffburg.com/apps/2025/10/06/MathEdit.html"><![CDATA[<h2 id="ns-is-for-nextstep">NS is for NextStep</h2>
 
-<p>As Cocoa developers we always taught the NS in NSString, NSDictionary, NSArray,
-etc stands for NextStep. So I thought “What is it like to build an application
-for NextStep?” So I decided to try it! I got an 
+<p>As Cocoa developers, we were always taught that the NS in NSString, NSDictionary, NSArray,
+etc., stands for NeXTSTEP. So I thought, “What is it like to build an application
+for NeXTSTEP?” So I decided to try it! I got an
 <a href="https://previous.nextcommunity.net">OpenStep 4.2 Virtual Machine</a> up and 
 running, installed Project Builder (the precursor to Xcode) and got to work.
 MathEdit is the result.</p>
@@ -1885,8 +2155,8 @@ MathEdit is the result.</p>
 <p>OpenStep’s Foundation and AppKit frameworks are remarkable in that they are
 extremely complete even way back in 1996 (remember Mac OS X 10.0 Cheetah was
 released in 2001). If you ignore NIBs, then the code from OpenStep just works
-in OS X even to do this day. Yes, there are many deprecation warnings, but all
-of the API’s work without issue. And yes, it means NSApplication, NSTableView,
+in OS X even to this day. Yes, there are many deprecation warnings, but all
+of the APIs work without issue. And yes, it means NSApplication, NSTableView,
 NSWindow, NSButton, NSMenu, the responder chain, etc all work exactly the same
 as they do now.</p>
 
@@ -1894,10 +2164,10 @@ as they do now.</p>
 
 <p>However, there is a lot of core functionality missing. Networking for example.
 NSData will download things for you when you give it an internet path, but
-this has all the pitfalls of modern NSData. Its single threaded, blocking, no
+this has all the pitfalls of modern NSData. It’s single-threaded, blocking, has no
 progress, etc. If you want anything more than that you need to drop down to 
 BSD Sockets. AppKit is missing basics like NSToolbar and NSDocument. Foundation
-is missing basics like NSError and NUSRL which kind of explains why there
+is missing basics like NSError and NSURL, which kind of explains why there
 are all those duplicate methods with NSURL and NSString and with NSError and
 without NSError.</p>
 
@@ -1905,7 +2175,7 @@ without NSError.</p>
 
 <p>Lastly, there is the really hard stuff. Objective-C before “2.0” as Apple called
 it is pretty painful. That said, Objective-C 2.0 did not come to Mac OS X until
-10.7, so thats pretty late in OS X history. But still, we are talking about
+10.7, so that’s pretty late in OS X history. But still, we are talking about
 the most basic features missing:</p>
 
 <ul>
@@ -1920,7 +2190,7 @@ the most basic features missing:</p>
 <p>The other major pain point is Nibs. While OpenStep Nibs do work in early 
 versions of OS X, Apple had a bad habit of changing the Nib format, XIB format,
 and then just refusing to load older Nibs for security reasons over the years.
-Sp the only way to make an app that is compatible across history is to not use
+So the only way to make an app that is compatible across history is to not use
 Nibs… and unlike on iOS, AppKit really does not like this. I spent a lot of
 time getting memory management to work properly in early versions of OS X
 that just ABSOLUTELY ASSUMED you were using Nibs. I did get it to work, but this
@@ -1930,7 +2200,7 @@ to set the Application Menu which did not exist in OpenStep.</p>
 
 <h2 id="features">Features</h2>
 
-<p>MathEdit is basically like Math Notes from Apple. Its a normal text editor
+<p>MathEdit is basically like Math Notes from Apple. It’s a normal text editor
 like TextEdit, but if you type in a mathematical formula in the text, it 
 automatically parses it and solves it for you. It makes extensive use of
 NSDecimalNumber and NSTextAttachment to do this. NSTextAttachment in particular
@@ -1941,12 +2211,12 @@ It is such a powerful way to enhance your text documents.</p>
 <h2 id="caveats">Caveats</h2>
 
 <p>I honestly don’t use MathEdit all that often. It is on all my Macs including
-my vintage ones and I think it is a cool proof of concept. But I don’t think its
+my vintage ones and I think it is a cool proof of concept. But I don’t think it’s
 much more than that. But if you want to try it out for yourself, grab a build
 for your favorite Mac and give it a try.</p>
 
-<p><a href="https://github.com/jeffreybergier/MathEdit">https://github.com/jeffreybergier/MathEdit</a></p>]]></content><author><name></name></author><category term="Apps" /><category term="Apple" /><category term="Retro-Tech" /><category term="OpenStep" /><category term="Objective-C" /><category term="Cocoa" /><category term="Mac-OS-X" /><category term="PowerPC" /><summary type="html"><![CDATA[Image Apple's MathNotes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.]]></summary></entry><entry><title type="html">Retro Software Update Server</title><link href="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html" rel="alternate" type="text/html" title="Retro Software Update Server" /><published>2025-09-09T00:00:00+00:00</published><updated>2025-09-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html"><![CDATA[<p>A guide on setting up an Apple Software Update Server Mirror in case Apple ever
-decides to shut down these old update servers. So far software update still
+<p><a href="https://github.com/jeffreybergier/MathEdit">https://github.com/jeffreybergier/MathEdit</a></p>]]></content><author><name></name></author><category term="Apps" /><category term="Apple" /><category term="Retro-Tech" /><category term="OpenStep" /><category term="Objective-C" /><category term="Cocoa" /><category term="Mac-OS-X" /><category term="PowerPC" /><summary type="html"><![CDATA[Imagine Apple's Math Notes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.]]></summary></entry><entry><title type="html">Retro Software Update Server</title><link href="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html" rel="alternate" type="text/html" title="Retro Software Update Server" /><published>2025-09-09T00:00:00+00:00</published><updated>2025-09-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html"><![CDATA[<p>A guide on setting up an Apple Software Update Server mirror in case Apple ever
+decides to shut down these old update servers. So far, Software Update still
 works on Mac OS X 10.4 and above, but Apple already shut down servers for 10.3,
 10.2, 10.1, and 10.0 and those can’t be recovered.</p>
 
@@ -1961,12 +2231,12 @@ for PowerPC Macs, then it’s too late. Sorry.</p>
 <ul id="markdown-toc">
   <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
   <li><a href="#who-am-i" id="markdown-toc-who-am-i">Who Am I</a></li>
-  <li><a href="#how-do-software-updates-work-on-the-mac" id="markdown-toc-how-do-software-updates-work-on-the-mac">How do Software Updates Work on the Mac</a></li>
+  <li><a href="#how-do-software-updates-work-on-the-mac" id="markdown-toc-how-do-software-updates-work-on-the-mac">How Do Software Updates Work on the Mac?</a></li>
   <li><a href="#approach--guide--table-of-contents" id="markdown-toc-approach--guide--table-of-contents">Approach / Guide / Table of Contents</a></li>
   <li><a href="#system-requirements" id="markdown-toc-system-requirements">System Requirements</a></li>
   <li><a href="#guide" id="markdown-toc-guide">Guide</a>    <ul>
-      <li><a href="#1-install-git-homebrew-python2" id="markdown-toc-1-install-git-homebrew-python2">1. Install Git, Homebrew, Python2</a>        <ul>
-          <li><a href="#python2" id="markdown-toc-python2">Python2</a></li>
+      <li><a href="#1-install-git-homebrew-python-2" id="markdown-toc-1-install-git-homebrew-python-2">1. Install Git, Homebrew, Python 2</a>        <ul>
+          <li><a href="#python-2" id="markdown-toc-python-2">Python 2</a></li>
         </ul>
       </li>
       <li><a href="#2-choose-where-software-updates-will-be-mirrored-on-your-server-mac" id="markdown-toc-2-choose-where-software-updates-will-be-mirrored-on-your-server-mac">2. Choose where Software Updates will be mirrored on your server Mac</a></li>
@@ -1995,7 +2265,7 @@ for retro Macs, so please check it out.</p>
   <li><a href="https://jeffburg.social/tags/iMac5K">Homemade iMac 5K Monitor posts on my Mastodon</a></li>
 </ul>
 
-<h2 id="how-do-software-updates-work-on-the-mac">How do Software Updates Work on the Mac</h2>
+<h2 id="how-do-software-updates-work-on-the-mac">How Do Software Updates Work on the Mac?</h2>
 
 <p><img src="/assets/images/retro-tech/software-update-server/002-SUS.png" alt="Retro Software Update Server" /></p>
 
@@ -2005,7 +2275,7 @@ application. The client would send some information about itself to the server
 and the server would process this and tell the client what updates it needed.
 While this seems logical, it also means your servers will be busy processing
 requests from clients. And as Apple started to become really successful at
-selling Macs in the early 2000s the OS X team probably realized that this would
+selling Macs in the early 2000s, the OS X team probably realized that this would
 fail to scale.</p>
 
 <p>So what did they change? Well, in 10.4 and later, the Software Update Server is
@@ -2023,7 +2293,7 @@ The client literally needs to download hundreds of distribution files. Yes, they
 are only a few K each, but then the client also needs to execute the JavaScript
 for each one.</p>
 
-<p>The other side-effect of this system is that now it is easy to mirror the
+<p>The other side effect of this system is that now it is easy to mirror the
 software update server as there is no server-side logic.</p>
 
 <p><strong>Enter Mac OS X Server Software Update Server</strong></p>
@@ -2040,7 +2310,7 @@ compatibility first</li>
 </ol>
 
 <p>This feature is long dead and now Apple facilitates the same control by allowing
-companies to white list or blacklist updates via MDM (Mobile Device Management).
+companies to whitelist or blacklist updates via MDM (Mobile Device Management).
 This does not create a mirror, but simply tells client Macs to ignore updates.
 This method does not save bandwidth in your company. But in the modern day,
 bandwidth is a lot less expensive than it used to be.</p>
@@ -2056,7 +2326,7 @@ URLs failed these basic checks, it would not even start the download.</p>
 
 <p><strong>Enter <a href="https://github.com/wdas/reposado/blob/main/docs/getting_started.md">Reposado</a></strong></p>
 
-<p>Reposado is an open source project written in Python 2 that replicates the
+<p>Reposado is an open-source project written in Python 2 that replicates the
 functionality of the software update server. It checks the Apple catalogs,
 downloads the updates, and then generates new catalogs specific to your mirror.
 In my experience doing this, it seems to work super well. So this guide will
@@ -2066,7 +2336,7 @@ Apple shuts down these old software updates (which may never come).</p>
 <h2 id="approach--guide--table-of-contents">Approach / Guide / Table of Contents</h2>
 
 <ol>
-  <li>Install Git, Homebrew, Python2</li>
+  <li>Install Git, Homebrew, Python 2</li>
   <li>Choose where Software Updates will be mirrored on your server Mac</li>
   <li>Configure the Web Server on your server Mac</li>
   <li>Configure Reposado on your server Mac</li>
@@ -2079,18 +2349,18 @@ Apple shuts down these old software updates (which may never come).</p>
 <p><strong>Server Mac</strong></p>
 
 <ol>
-  <li>50GB+ to dedicate to storing updates
+  <li>50 GB+ to dedicate to storing updates
     <ul>
-      <li>Even the minimal set for 10.4 Tiger is 20GB</li>
-      <li>Supporting all the way to 10.9 Mavericks takes 200GB</li>
+      <li>Even the minimal set for 10.4 Tiger is 20 GB</li>
+      <li>Supporting all the way to 10.9 Mavericks takes 200 GB</li>
       <li>ChatGPT says that around 10.11/10.12 Apple started locking down the 
 software update server and it can’t be changed</li>
     </ul>
   </li>
   <li>A normal home network
     <ul>
-      <li>This guide assumes you connect all your Macs to the internet with ethernet 
-or WiFi and they can find each other and connect to each other using Bonjour
+      <li>This guide assumes you connect all your Macs to the internet with Ethernet
+or Wi-Fi and they can find each other and connect to each other using Bonjour
 names.</li>
     </ul>
   </li>
@@ -2099,7 +2369,7 @@ names.</li>
 <p><strong>Retro Mac</strong></p>
 
 <ol>
-  <li>Connected to Ethernet or WiFi on the same network as your server Mac</li>
+  <li>Connected to Ethernet or Wi-Fi on the same network as your server Mac</li>
   <li>Mac OS X 10.4 or higher</li>
 </ol>
 
@@ -2112,14 +2382,14 @@ this guide gives instructions when using a Mac as the server.</p>
 <p>This guide pretty much runs 100% from Terminal. 
 Any text <code class="language-plaintext highlighter-rouge">in this special format</code> is a terminal command you can copy and paste.</p>
 
-<h3 id="1-install-git-homebrew-python2">1. Install Git, Homebrew, Python2</h3>
+<h3 id="1-install-git-homebrew-python-2">1. Install Git, Homebrew, Python 2</h3>
 
 <ul>
   <li>Git is included as part of the Xcode command line utilities AND these utilities
 are required for Homebrew anyway.</li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">xcodeselect --install</code></p>
+<p><code class="language-plaintext highlighter-rouge">xcode-select --install</code></p>
 
 <ul>
   <li>Homebrew is a simple package manager for macOS. It’s easy to install.
@@ -2131,50 +2401,50 @@ easily launchable from the Terminal.</li>
 
 <p><code class="language-plaintext highlighter-rouge">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></p>
 
-<h4 id="python2">Python2</h4>
+<h4 id="python-2">Python 2</h4>
 
-<p>This is the difficult one. Python2 is far out of date and Homebrew no longer
-has an easy installer for it. We have to use PyEnv and this basically seemed
-to build Python2 from source, which is never fun.</p>
+<p>This is the difficult one. Python 2 is far out of date, and Homebrew no longer
+has an easy installer for it. We have to use pyenv, and this basically seemed
+to build Python 2 from source, which is never fun.</p>
 
-<p><strong>Install PyEnv and other tools needed for compiling</strong></p>
+<p><strong>Install pyenv and other tools needed for compiling</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">brew install pyenv zlib bzip2 readline openssl@1.1</code></p>
 
-<p><strong>Configure the environment for python2 build</strong></p>
+<p><strong>Configure the environment for the Python 2 build</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix openssl@1.1)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(brew --prefix openssl@1.1)/include"
 export PKG_CONFIG_PATH="$(brew --prefix zlib)/lib/pkgconfig:$(brew --prefix bzip2)/lib/pkgconfig:$(brew --prefix readline)/lib/pkgconfig:$(brew --prefix openssl@1.1)/lib/pkgconfig"
 </code></pre></div></div>
 
-<p><strong>Configure your shell to use PyEnv</strong></p>
+<p><strong>Configure your shell to use pyenv</strong></p>
 
-<p>Sorry you may need to look up the commands
-for how to use <code class="language-plaintext highlighter-rouge">vi</code> or use a text editor you know better like <code class="language-plaintext highlighter-rouge">nano</code></p>
+<p>Sorry, you may need to look up the commands
+for how to use <code class="language-plaintext highlighter-rouge">vi</code> or use a text editor you know better, like <code class="language-plaintext highlighter-rouge">nano</code>.</p>
 
 <p><code class="language-plaintext highlighter-rouge">vi ~/.zshrc</code></p>
 
-<p>Paste in the following text and then save and exit</p>
+<p>Paste in the following text and then save and exit:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 </code></pre></div></div>
 
-<p><strong>Compile Python2</strong></p>
+<p><strong>Compile Python 2</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">pyenv install 2.7.18</code></p>
 
-<p><strong>Set Python2 as the default</strong></p>
+<p><strong>Set Python 2 as the default</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">pyenv global 2.7.18</code></p>
 
 <p><strong>Test Python</strong></p>
 
-<p>You should not get an error when running this command</p>
+<p>You should not get an error when running this command:</p>
 
-<p><code class="language-plaintext highlighter-rouge">python -version</code></p>
+<p><code class="language-plaintext highlighter-rouge">python --version</code></p>
 
 <h3 id="2-choose-where-software-updates-will-be-mirrored-on-your-server-mac">2. Choose where Software Updates will be mirrored on your server Mac</h3>
 
@@ -2188,20 +2458,20 @@ an external drive as the mirror takes a lot of space.</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS</code></p>
 
-<p>So the Web Server Document Root and Reposado Storage is</p>
+<p>So the web server document root and Reposado storage are</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/www</code></p>
 
-<p>Reposado git clone is</p>
+<p>The Reposado Git clone is</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado</code></p>
 
-<p>Reposado Metadata storage is</p>
+<p>The Reposado metadata storage is</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/metadata</code></p>
 
 <p>So you can put everything wherever you like, but this guide assumes this
-structure</p>
+structure.</p>
 
 <h3 id="3-configure-the-web-server-on-your-server-mac">3. Configure the Web Server on your server Mac</h3>
 
@@ -2212,7 +2482,7 @@ default. It’s nothing fancy, but it will work for our retro Mac.</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo vi /etc/apache2/httpd.conf</code></p>
 
-<p>This file is pretty long so you have to scroll down to find the DocumentRoot
+<p>This file is pretty long, so you have to scroll down to find the DocumentRoot
 setting. I don’t think you need to change other options, but here are the key
 ones.</p>
 
@@ -2224,9 +2494,9 @@ ones.</p>
 &lt;/Directory&gt;
 </code></pre></div></div>
 
-<p><strong>Give the webserver full disk access</strong></p>
+<p><strong>Give the web server full disk access</strong></p>
 
-<p>This might not be needed if your directory root is on the boot drive
+<p>This might not be needed if your directory root is on the boot drive,
 but I definitely needed it because mine is on an external drive.</p>
 
 <ol>
@@ -2254,7 +2524,7 @@ Retro Mac you won’t be able to update from it either.</p>
 
 <h3 id="4-configure-reposado-on-your-server-mac">4. Configure Reposado on your server Mac</h3>
 
-<p>Ok, Reposado is where all the magic happens, so let’s get started!</p>
+<p>OK, Reposado is where all the magic happens, so let’s get started!</p>
 
 <p><strong>Clone the <a href="https://github.com/wdas/reposado">Reposado</a> Repository</strong></p>
 
@@ -2280,11 +2550,11 @@ Base URL for your local Software Update Service
 
 <p>Reposado defaults to being a production software update server mirror, which is
 not what you want because you are setting up a retro software update mirror in
-case of catastrophe. And you probably don’t want to take 400+GB of updates for
-all modern Macs when you could use less than 100GB to support updating 10.6,
+case of catastrophe. And you probably don’t want to take 400+ GB of updates for
+all modern Macs when you could use less than 100 GB to support updating 10.6,
 10.5, and 10.4 only.</p>
 
-<p><code class="language-plaintext highlighter-rouge">open /Volumes/Data/SUS/reposado/code/preferences.plist</code> (TextEdit should open)</p>
+<p><code class="language-plaintext highlighter-rouge">open /Volumes/Data/Virtualization/SUS/reposado/code/preferences.plist</code> (TextEdit should open)</p>
 
 <p>Your configuration file will look something like this. Copy and paste the keys
 listed below into your configuration and then customize them as you like:</p>
@@ -2329,7 +2599,7 @@ listed below into your configuration and then customize them as you like:</p>
 
 <p>Create the log file and make it readable and writable by all users. Normally it
 would be better to make it readable and writable by the right people, but it’s a
-single log file. Not really security critical.</p>
+single log file. Not really security-critical.</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo touch /var/log/reposado_sync.log</code>
 <code class="language-plaintext highlighter-rouge">sudo chmod 777 /var/log/reposado_sync.log</code></p>
@@ -2342,7 +2612,7 @@ in!</p>
 <h3 id="5-use-reposado-to-mirror-apples-existing-software-updates-to-your-server-mac">5. Use Reposado to mirror Apple’s existing software updates to your server Mac</h3>
 
 <p>First we will do a test run with the minimal set of Software Update Catalogs
-that you configured in the previous section. This is about 20-25GB worth of
+that you configured in the previous section. This is about 20–25 GB worth of
 updates, so depending on how fast or slow your internet connection is, this
 could take a while. Reposado does not generate the catalogs for your retro Mac
 to use until it has finished downloading everything, so you need to wait until
@@ -2359,7 +2629,7 @@ gets updated.</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync</code></p>
 
-<p>That’s it. Now you have to wait for it to download 20GB or so. You should be able
+<p>That’s it. Now you have to wait for it to download 20 GB or so. You should be able
 to see progress in the other terminal window with the tailed log file.</p>
 
 <p><strong>What Success Looks Like</strong></p>
@@ -2395,7 +2665,7 @@ Sep 07 17:27:58 repo_sync run ended
 </code></pre></div></div>
 
 <p>Warnings will be normal as some updates will not be available any longer. If the
-number of products not downloaded is HUGE like, hundreds of items, then you have
+number of products not downloaded is HUGE—say, hundreds of items—then you have
 a problem. But I think 10 or 20 is normal?</p>
 
 <p><strong>Choose Max Version of OS X You Want Updates For</strong></p>
@@ -2423,19 +2693,19 @@ like this:</p>
 &lt;/array&gt;
 </code></pre></div></div>
 
-<p>After you add the new catalogs, run sync again</p>
+<p>After you add the new catalogs, run sync again:</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync</code></p>
 
-<p>Note that supporting up to 10.10 Yosemite takes about 300GB of space</p>
+<p>Note that supporting up to 10.10 Yosemite takes about 300 GB of space.</p>
 
 <p><img src="/assets/images/retro-tech/software-update-server/003-Reposado.png" alt="Retro Software Update Server" /></p>
 
 <p><strong>Some Final Things</strong></p>
 
 <p>Basically, after you complete the sync, you never need to run Reposado again. The
-webserver and the <code class="language-plaintext highlighter-rouge">www</code> folder are all you need. The Software Update server is
-based off of a completely static system, which is super nice and reliable.</p>
+web server and the <code class="language-plaintext highlighter-rouge">www</code> folder are all you need. The Software Update server is
+based on a completely static system, which is super nice and reliable.</p>
 
 <p>If you change the hostname of the server Mac, you can update the
 Preferences.plist file and then run sync again, and it won’t download any new
@@ -2452,14 +2722,14 @@ there are no updates available. So how do you test?</p>
 <ul>
   <li>If you don’t mind erasing your retro Mac, you could just reinstall the OS.</li>
   <li>Install a fresh OS to an external FireWire hard drive and boot from that.</li>
-  <li>Install an old version of OS X in a Virtual Machine and try that.</li>
+  <li>Install an old version of OS X in a virtual machine and try that.</li>
 </ul>
 
 <p><strong>Configure the Retro Mac</strong></p>
 
 <p>All of these have their pros and cons so you decide. But once you get the Mac
 working and it is ready for software updates, run the following command in the
-terminal on the retro Mac</p>
+Terminal on the retro Mac:</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CatalogURL "http://Server-Bonjour-Name.local/content/catalogs/others/index-lion-snowleopard-leopard.merged-1.sucatalog"</code></p>
 
@@ -2468,7 +2738,7 @@ OS X you are running or else it won’t see all of the updates.</p>
 
 <p><strong>Tail the Apache Access Logs on the Server Mac</strong></p>
 
-<p>Tailing these logs will show you the retro Mac is checking all the updates.</p>
+<p>Tailing these logs will show you that the retro Mac is checking all the updates.</p>
 
 <p><code class="language-plaintext highlighter-rouge">tail -f /var/log/apache2/access_log /var/log/apache2/error_log</code></p>
 
@@ -2481,8 +2751,8 @@ may take several reboots to get through all the updates.</p>
 
 <p><strong>What Success Looks Like</strong></p>
 
-<p>In the logs on the server Mac, you should see a lot of access. Like hundreds of
-files to check for updates. On the retro Mac, in the title of the Software
+<p>In the logs on the server Mac, you should see hundreds of file requests to check
+for updates. On the retro Mac, in the title of the Software
 Update window you should see the hostname of your server Mac in parentheses. See
 the screenshot below.</p>
 
@@ -2503,752 +2773,4 @@ RewriteCond %{HTTP_USER_AGENT} Darwin/10
 RewriteRule ^/index\.sucatalog$ /index-leopard-snowleopard.merged-1.sucatalog
 RewriteCond %{HTTP_USER_AGENT} Darwin/11
 RewriteRule ^/index\.sucatalog$ /index-lion-snowleopard-leopard.merged-1.sucatalog
-</code></pre></div></div>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="PowerPC" /><category term="Mac-OS-X" /><category term="Software-Update" /><category term="Hobby" /><summary type="html"><![CDATA[A guide to setting up an Apple Software Update Server mirror in case Apple ever shuts down the old Mac OS X update servers.]]></summary></entry><entry><title type="html">Retro Stream Tutorial</title><link href="https://jeffburg.com/retro-tech/2025/08/17/Retro-Stream-Tutorial.html" rel="alternate" type="text/html" title="Retro Stream Tutorial" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/08/17/Retro-Stream-Tutorial</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/08/17/Retro-Stream-Tutorial.html"><![CDATA[<p>A tutorial on how to stream YouTube or any other video content to PowerPC Macs.
-To see a video of the kind of quality you can expect,
-<a href="https://drive.google.com/file/d/13i3V9a7xyKCAwo0-r4rAtxuz6pWQDmoB/view?usp=sharing">check this recording</a>
-on my Google Drive. I have noticed that the streaming quality from Google 
-Drive directly is not always great, so download it to be sure you are seeing 
-the full quality.</p>
-
-<h2 id="table-of-contents">Table of Contents</h2>
-
-<ul id="markdown-toc">
-  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
-  <li><a href="#who-am-i" id="markdown-toc-who-am-i">Who Am I</a>    <ul>
-      <li><a href="#my-imac-g4-lamps-plus" id="markdown-toc-my-imac-g4-lamps-plus">My iMac G4 (Lamps Plus)</a></li>
-    </ul>
-  </li>
-  <li><a href="#background" id="markdown-toc-background">Background</a>    <ul>
-      <li><a href="#why-cant-old-computers-play-youtube" id="markdown-toc-why-cant-old-computers-play-youtube">Why Can’t Old Computers Play YouTube</a></li>
-      <li><a href="#how-to-stream-high-quality-video-on-a-powerpc-mac" id="markdown-toc-how-to-stream-high-quality-video-on-a-powerpc-mac">How to Stream High Quality Video on a PowerPC Mac</a></li>
-      <li><a href="#known-limitations" id="markdown-toc-known-limitations">Known Limitations</a>        <ul>
-          <li><a href="#video-quality" id="markdown-toc-video-quality">Video Quality:</a></li>
-          <li><a href="#audio-quality" id="markdown-toc-audio-quality">Audio Quality</a></li>
-        </ul>
-      </li>
-      <li><a href="#system-requirements" id="markdown-toc-system-requirements">System Requirements</a>        <ul>
-          <li><a href="#my-setup" id="markdown-toc-my-setup">My Setup</a></li>
-        </ul>
-      </li>
-      <li><a href="#tools" id="markdown-toc-tools">Tools</a></li>
-      <li><a href="#why-use-a-virtual-machine" id="markdown-toc-why-use-a-virtual-machine">Why Use a Virtual Machine</a></li>
-    </ul>
-  </li>
-  <li><a href="#tutorial" id="markdown-toc-tutorial">Tutorial</a>    <ul>
-      <li><a href="#step-1-prepare-your-virtual-machine" id="markdown-toc-step-1-prepare-your-virtual-machine">Step 1: Prepare your Virtual Machine</a></li>
-      <li><a href="#step-2-install-updates" id="markdown-toc-step-2-install-updates">Step 2: Install Updates</a></li>
-      <li><a href="#step-3-install-ffmpeg" id="markdown-toc-step-3-install-ffmpeg">Step 3: Install FFMPEG</a></li>
-      <li><a href="#step-4-test-video-streaming-to-your-apple-silicon-mac" id="markdown-toc-step-4-test-video-streaming-to-your-apple-silicon-mac">Step 4: Test Video Streaming to your Apple Silicon Mac</a></li>
-      <li><a href="#step-5-prepare-the-powerpc-mac" id="markdown-toc-step-5-prepare-the-powerpc-mac">Step 5: Prepare the PowerPC Mac</a></li>
-      <li><a href="#congratulations" id="markdown-toc-congratulations">🥳Congratulations🎉</a></li>
-    </ul>
-  </li>
-  <li><a href="#optimize-playback-performance" id="markdown-toc-optimize-playback-performance">Optimize Playback Performance</a>    <ul>
-      <li><a href="#high-quality-ffmpeg-command" id="markdown-toc-high-quality-ffmpeg-command">High Quality FFMPEG Command</a>        <ul>
-          <li><a href="#ffmpeg-command-explanation" id="markdown-toc-ffmpeg-command-explanation">FFMPEG Command Explanation</a></li>
-        </ul>
-      </li>
-      <li><a href="#modifying-ffmpeg-commands" id="markdown-toc-modifying-ffmpeg-commands">Modifying FFMPEG Commands</a></li>
-    </ul>
-  </li>
-  <li><a href="#faq" id="markdown-toc-faq">FAQ</a></li>
-  <li><a href="#advanced" id="markdown-toc-advanced">Advanced</a>    <ul>
-      <li><a href="#ffmpeg-multi-stream" id="markdown-toc-ffmpeg-multi-stream">FFMPEG Multi-Stream</a></li>
-      <li><a href="#set-exact-resolution-in-debian" id="markdown-toc-set-exact-resolution-in-debian">Set Exact Resolution in Debian</a>        <ul>
-          <li><a href="#how-to-set-the-resolution-manually-on-the-debian-vm" id="markdown-toc-how-to-set-the-resolution-manually-on-the-debian-vm">How to Set the Resolution Manually on the Debian VM</a></li>
-        </ul>
-      </li>
-      <li><a href="#reduce-system-requirements-of-the-vm" id="markdown-toc-reduce-system-requirements-of-the-vm">Reduce System Requirements of the VM</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="who-am-i">Who Am I</h2>
-
-<p>I’m Jeff, a fan of Mac OS X, NeXT, a software developer, and general retro tech
-enthusiast. I have other retro tech guides as well as software I have developed
-for retro Macs, so please check it out.</p>
-
-<ul>
-  <li><a href="https://github.com/jeffreybergier/MathEdit">MathEdit for OpenStep</a>
-    <ul>
-      <li><a href="https://jeffburg.social/tags/OpenStep">MathEdit Development Posts on my Mastodon</a></li>
-    </ul>
-  </li>
-  <li><a href="/retro-tech/2025/09/09/Retro-Software-Update-Server.html">Retro Software Update Server</a></li>
-  <li><a href="https://jeffburg.social/tags/iMacG4">iMac G4 Posts on my Mastodon</a></li>
-  <li><a href="https://jeffburg.social/tags/iMac5K">Homemade iMac 5K Monitor posts on my Mastodon</a></li>
-</ul>
-
-<h3 id="my-imac-g4-lamps-plus">My iMac G4 (Lamps Plus)</h3>
-
-<p>I recently got an iMac G4 and restored it with SSD and max RAM. I got this
-machine because when I was in High School I desperately wanted one but could
-never get it. But I didn’t want to get it if it was going to sit on a shelf and
-collect dust.</p>
-
-<p>So before I bought it I tried this streaming setup to make sure it could work.
-And I am very happy to report that I am happy with the results and this machine
-now makes a great music video display for my KPOP listening enjoyment while I’m
-working.</p>
-
-<h2 id="background">Background</h2>
-
-<p>I am writing this in 2025 and I would say that it has been a good 10 years
-since pretty much any computing device we may have can easily stream
-1080p and 4K content directly from the internet with absolutely no issues.</p>
-
-<p>However, before 2015, this was not always the case. I will paste in specs
-for the iPhone 5 and the original iPhone. You can see from the specs that 
-even with special decoding hardware, the iPhone could only do 480p H.264.</p>
-
-<p>iPhone 5 - 2012 (<a href="https://everymac.com/systems/apple/iphone/specs/apple-iphone-5-a1428-gsm-lte-4-17-north-america-specs.html">Source</a>):</p>
-<blockquote>
-  <p>H.264 video up to 1080p, 30 frames per second</p>
-</blockquote>
-
-<p>iPhone - 2007 (<a href="https://everymac.com/systems/apple/iphone/specs/apple-iphone-specs.html">Source</a>)</p>
-<blockquote>
-  <p>H.264 video, up to 1.5 Mbps, <strong>640 by 480 pixels</strong>, 30 frames per second, 
-Low-Complexity version of the H.264 Baseline Profile</p>
-</blockquote>
-
-<p>As another anecdote, I remember having a <a href="https://everymac.com/systems/apple/powerbook_g4/specs/powerbook_g4_1.67_15_hr.html">1.67GHz PowerBook G4</a>
-from late 2005 and being super amazed that it could rip DVDs into MPEG4
-format (not H.264 yet) at 1x meaning that it ONLY took 2 hours to rip a 2 hour 
-DVD. This was incredible speed during this era.</p>
-
-<p>So while we may feel like high-quality YouTube video playback has been a given
-forever, it actually has not. And so when we use old Macs we may get
-frustrated by their inability to do “simple” tasks like play YouTube. But the
-reason I am giving this background is to illustrate that this is no simple task.</p>
-
-<h3 id="why-cant-old-computers-play-youtube">Why Can’t Old Computers Play YouTube</h3>
-
-<p>1) <strong><a href="https://oldvcr.blogspot.com/2020/11/fun-with-crypto-ancienne-tls-for.html">The TLS Apocalypse</a></strong>: 
-Means PowerPC Macs can’t connect to YouTube at all.</p>
-
-<ul>
-  <li>A few years ago, there was a big push for web servers to
-disable support for TLSv1.1 because there were fundamental flaws found in
-its cryptography. However, on pretty much any system older than 2015, 
-TLS v1.2 is not supported. If the web were working as expected, then these
-systems would just negotiate a TLSv1.1 or v1.0 connection. Hell, even 
-start the connection with no TLS for 90’s system. But basically the entire
-internet decided that just rejecting the connection all together was better
-than allowing an insecure connection. So now what you see is any Mac running
-an OS older than macOS 10.9 Mavericks (2013), basically can’t browse the
-internet at all.</li>
-</ul>
-
-<p>2) <strong>H.264 is too Sophisticated</strong>: Even if these Macs could connect to YouTube,
-H.264 is such a computationally intensive codec, that these old Macs can
-barely play back postage stamp sized video in H.264.</p>
-
-<ul>
-  <li>H.264 was such a huge success because it meant extremely high quality 
-videos used very little bandwidth compared to its predecessors like Xvid
-and MPEG2. So while old Macs have not much trouble with MPEG1, MPEG2, and Xvid,
-we never got high quality videos back in the day because there was not
-enough bandwidth on the internet to get quality video out of these codecs.</li>
-</ul>
-
-<h3 id="how-to-stream-high-quality-video-on-a-powerpc-mac">How to Stream High Quality Video on a PowerPC Mac</h3>
-
-<p>We are basically going to use the fact that we have a local high speed ethernet
-network that our PowerPC Mac sits on to stream an incredibly high bit rate
-yet simple to decode video codec like MPEG1, MPEG2, or Xvid. We are going 
-to use so much bandwidth that even a modern internet connection would have 
-trouble streaming this video over the internet (10+Mbps).</p>
-
-<p>The approach replaces the limited CPU power of PowerPC Macs and replaces it
-with tons of bandwidth which they can handle thanks to their 10/100Mbps
-ethernet ports.</p>
-
-<h3 id="known-limitations">Known Limitations</h3>
-
-<h4 id="video-quality">Video Quality:</h4>
-
-<p>I want to be clear here that we are not going to get beautiful 4K content
-playing on our PowerPC Macs. They just do not have enough power. But depending
-on the system you have you will probably at least get:</p>
-
-<ul>
-  <li>720p video (480p on Tiger)
-    <ul>
-      <li>1080p may be possible on fast G4s and G5s</li>
-    </ul>
-  </li>
-  <li>20-30FPS</li>
-  <li>Decently clear picture without too many blocky compression artifacts</li>
-</ul>
-
-<h4 id="audio-quality">Audio Quality</h4>
-
-<p>Audio quality is excellent. We get full AAC 192k or MP3 320k at 44,100Hz with
-no issues. However, disabling audio will let you get higher video quality.
-So if you are OK using your Apple Silicon Mac as the audio output device
-(which may be preferred if you use AirPods for example), then you can push
-the video codec further.</p>
-
-<h3 id="system-requirements">System Requirements</h3>
-
-<ol>
-  <li>PowerPC Mac running at least Mac OS X 10.4 Tiger (10.5 Leopard preferred)
-    <ol>
-      <li>What about Jaguar? <a href="https://www.videolan.org/vlc/download-macosx.html">VLC claims</a> 
-they have a version that supports 10.2 Jaguar but when I launched it on 
-10.2.8 it just crashed and I didn’t try to troubleshoot at all. But 
-theoretically this would work on any version of OS X if you could get 
-VLC to start.</li>
-      <li>Why is Leopard preferred? In the many hours of testing I have done, 
-Leopard seems to have a better networking stack that can handle 10+Mbps
-onslaught of UDP packets we are going to throw at the system. I was able
-to get almost double the resolution in Leopard (1152x720p) than I was
-able to in Tiger. But Tiger still works fine, just lower quality.</li>
-    </ol>
-  </li>
-  <li>PowerPC Mac connected to your home network over ethernet: Sorry, the Airport
-cards on these old Macs are too slow for this.</li>
-  <li>Apple Silicon Mac: This will be the streaming server. Theoretically, any 
-computer that runs FFMPEG could be the streaming server. But this tutorial 
-is for Apple Silicon Macs.</li>
-</ol>
-
-<h4 id="my-setup">My Setup</h4>
-
-<ul>
-  <li><a href="https://everymac.com/systems/apple/imac/specs/imac_1.0_17_fp.html">iMac (Flat Panel 17-inch, 1GHz)</a> from 2003 with SSD and 1.5GB RAM Upgrade</li>
-  <li><a href="https://everymac.com/systems/apple/macbook-air/specs/macbook-air-m1-8-core-8-core-gpu-13-retina-display-2020-specs.html">MacBook Air (2020)</a> with M1 Chip and 16GB of RAM</li>
-</ul>
-
-<h3 id="tools">Tools</h3>
-
-<ol>
-  <li><a href="https://mac.getutm.app">UTM</a> - A UI wrapper around the venerable QEMU virtualization and emulation tool</li>
-  <li><a href="https://www.debian.org">Debian 12</a> - You can use any Linux you like, but I found Debian 12 to be easiest</li>
-  <li><a href="https://ffmpeg.org">FFMPEG</a> - The one-stop-shop for all video encoding and decoding</li>
-  <li><a href="https://www.videolan.org/vlc/download-macosx.html">VLC</a> - The one-stop-shop for all video playback on OS X for 25 years</li>
-</ol>
-
-<h3 id="why-use-a-virtual-machine">Why Use a Virtual Machine</h3>
-
-<p>The <a href="https://github.com/jeffreybergier/Retro-Stream-Tutorial/blob/main/README-MacVM.md">original version of this tutorial</a> was entirely Mac-based;
-however, I still used a VM because AVFoundation only lets FFMPEG capture
-entire screens and I thought it was not very convenient to give up a whole
-monitor for streaming. But primarily, there is some sort of bug in FFMPEG that makes
-capturing high quality audio via AVFoundation not work properly. I think it’s
-<a href="https://trac.ffmpeg.org/ticket/11398">Bug #11398</a> but I’m not sure.</p>
-
-<p>But as could be expected, FFMPEG works great with Linux. That said, I spent many
-hours troubleshooting and I found some critical things you need from
-your Linux Video Streaming Server. This tutorial is the easiest way I found to
-do this. But you can use your own Linux server as long as:</p>
-
-<ul>
-  <li>It runs X11: This is not the default for many years, but Ubuntu 25.10 drops X11 entirely</li>
-  <li>It runs Pipewire 1.4.2: Debian 12 by default runs a very old version of Pipewire and it does not work properly for this streaming setup</li>
-  <li>It supports hardware GPU acceleration</li>
-</ul>
-
-<h2 id="tutorial">Tutorial</h2>
-
-<p>I tried to add as many screenshots as possible. So if you are getting lost, 
-use Command+F and search for “Screenshot” to highlight all of the screenshot 
-links in the tutorial.</p>
-
-<p>Also note that if you use the Debian VM image I link below, then copy and paste
-works between the Host Mac and the VM Linux. However, remember that Linux uses
-the Control key instead of Command. Also, the terminal in Linux uses
-Control + Shift + C and Control + Shift + V.</p>
-
-<h3 id="step-1-prepare-your-virtual-machine">Step 1: Prepare your Virtual Machine</h3>
-
-<ol>
-  <li>Install <a href="https://mac.getutm.app">UTM</a></li>
-  <li>Open UTM - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/01-UTM-Blank.png">Screenshot</a></li>
-  <li>Download the <a href="https://mac.getutm.app/gallery/debian-12">Debian 12</a> image for UTM</li>
-  <li>Choose a place on your hard drive you want the VM image to live and move it there</li>
-  <li>Extract the Zip file - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/02-Debian-Extract.png">Screenshot</a></li>
-  <li>Double click to open it in UTM - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/03-Debian-Open.png">Screenshot</a></li>
-  <li>Click the “Edit Selected VM” in the toolbar at the top right of the UTM window
-    <ol>
-      <li>[Required] In Network change the “Network Mode” to Bridged - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/04-UTM-Network.png">Screenshot</a></li>
-      <li>[Optional] In Display uncheck “Resize display to window size automatically” - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/05-UTM-Resolution.png">Screenshot</a>
-        <ol>
-          <li>This is a nice feature normally, but for our streaming server we never want the resolution to change</li>
-        </ol>
-      </li>
-      <li>[Optional] In USB Drive delete the USB CD-ROM Drive: We won’t use it - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/06-UTM-CD.png">Screenshot</a></li>
-      <li>[Optional] In Sharing change the “Directory Sharing Mode” to None: We won’t need to share files - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/07-UTM-Sharing.png">Screenshot</a></li>
-    </ol>
-  </li>
-  <li>Boot up your VM</li>
-  <li>[Required] At the login window change to 1 of the Xorg (X11) options - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/08-Settings-X11.png">Screenshot</a>
-    <ol>
-      <li>Username and Password are both <code class="language-plaintext highlighter-rouge">debian</code></li>
-    </ol>
-  </li>
-  <li>[Optional] Open the Settings app and change the following
-    <ol>
-      <li>[Optional] Privacy→Screen - Disable screen blanking - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/09-Settings-ScreenBlank.png">Screenshot</a></li>
-      <li>[Optional] Users - Enable Automatic Login - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/10-Settings-Login.png">Screenshot</a></li>
-      <li>[Optional] Appearance - Enable Dark Mode - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/11-Settings-Appearance.png">Screenshot</a></li>
-      <li>[Optional] Date&amp;Time - Set your time zone - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/12-Settings-TimeZone.png">Screenshot</a></li>
-      <li>[Optional] Keyboard - Add your keyboard if you don’t use a US keyboard - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/13-Settings-Keyboard.png">Screenshot</a></li>
-      <li>[Optional] Mouse&amp;Keyboard - Enable Natural Scrolling - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/14-Settings-Scrolling.png">Screenshot</a>
-        <ol>
-          <li>If you are a Mac user you are probably used to natural scrolling at this point (no judgement 🤣)</li>
-        </ol>
-      </li>
-      <li>[Optional] Sharing - Change the system name - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/15-Settings-Name.png">Screenshot</a>
-        <ol>
-          <li>If you want to use SSH to login to the VM: <code class="language-plaintext highlighter-rouge">ssh debian@Chosen-Sharing-Name.local</code></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Open Firefox and browse to YouTube to ensure your network and sound are working</li>
-  <li>Open Terminal and ping a Mac on your network (preferably not the host Mac) - <code class="language-plaintext highlighter-rouge">ping Retro-Mac-Bonjour-Name.local</code>
-    <ol>
-      <li>If the host is not reachable then there is a network issue (probably not bridged)</li>
-    </ol>
-  </li>
-</ol>
-
-<h3 id="step-2-install-updates">Step 2: Install Updates</h3>
-
-<p>Sorry, some of these steps say to use <code class="language-plaintext highlighter-rouge">vi</code> in the terminal. You may need to 
-look up how to use this text editor, it’s not easy. If there is another text
-editor you already know how to use like <code class="language-plaintext highlighter-rouge">nano</code> feel free to use that instead.</p>
-
-<p><strong>Install Updates from Debian Backports</strong></p>
-
-<p>Debian 12 has many quite old pieces of software because Debian tries to maintain
-a reputation of being stable. But they also offer “backports” which will install
-newer versions of packages to your system. Specifically we need a much newer
-version of Pipewire which is the audio system in Linux that FFMPEG will capture
-from.</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo vi /etc/apt/sources.list</code></p>
-
-<p>At the bottom of the file, paste the following</p>
-
-<p><code class="language-plaintext highlighter-rouge">deb http://deb.debian.org/debian bookworm-backports main contrib non-free</code></p>
-
-<p>Save the file and exit, then update apt</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo apt update</code></p>
-
-<p>Now we need to tell apt to install all of the backport updates. This will tell
-you there are 400+ updates needed, just confirm Yes. Note that it may present
-some text files that give you info about the updates. If those appear, press <code class="language-plaintext highlighter-rouge">q</code>
-to exit and allow the updates to install.</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo apt -t bookworm-backports upgrade</code></p>
-
-<p>Now we need to update any remaining updates</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo apt upgrade</code></p>
-
-<p>Now you can test to make sure a new version of pipewire is installed. The
-version should be 1.4.2 but if it’s below 1, then we have a problem.</p>
-
-<p><code class="language-plaintext highlighter-rouge">pipewire --version</code></p>
-
-<p>Now you can restart the system</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo shutdown -r now</code></p>
-
-<h3 id="step-3-install-ffmpeg">Step 3: Install FFMPEG</h3>
-
-<p>FFMPEG is a legendary tool for video and audio encoding, decoding, and 
-streaming. In this tutorial I will probably only cover 1% of its functionality.
-However, it gives us the power to tweak everything so we can stream to our
-Retro Mac with unexpectedly good quality.</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo apt install ffmpeg pulseaudio-utils</code></p>
-
-<p>Set the default Pipewire audio capture device to be the “monitor”. The default
-capture device is usually the microphone, which makes sense, but is also not
-what we want. I will give you the specific commands for my system, but be
-careful to make sure the long names with numbers all match your system.</p>
-
-<p><code class="language-plaintext highlighter-rouge">pactl list short sources</code></p>
-
-<p>Now set the default to the device that ends in “monitor”. Again, make sure
-the name you type in matches your system if it happens to be different from
-mine.</p>
-
-<p><code class="language-plaintext highlighter-rouge">pactl set-default-source alsa_output.pci-0000_00_03.0.analog-stereo.monitor</code></p>
-
-<h3 id="step-4-test-video-streaming-to-your-apple-silicon-mac">Step 4: Test Video Streaming to your Apple Silicon Mac</h3>
-
-<p>Because the Retro Mac might have other problems we can’t control, first we are
-going to try to stream video from the VM directly to your Apple Silicon
-Mac Host. This will let us know the video streaming is working without worrying
-about 20+ year old hardware and software.</p>
-
-<p><strong>On the Host</strong></p>
-
-<ol>
-  <li>[Host] <a href="https://www.videolan.org/vlc/download-macosx.html">Install VLC</a></li>
-  <li>[Host] Open VLC and choose File→Open Network… and type in <code class="language-plaintext highlighter-rouge">udp://@:1234</code> - <a href="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/16-VLC-Open.png">Screenshot</a></li>
-  <li>[Host] Now the host is waiting for a UDP stream from the VM</li>
-</ol>
-
-<p><strong>On the VM</strong></p>
-
-<p>Open terminal and paste the following. I’ll explain the options later. But for
-now the only thing you need to change is the bonjour name on the last line.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg \
-  -f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \
-  -f pulse -i default \
-  -c:v mpeg4 -qscale:v 5 -vtag XVID \
-  -c:a aac -b:a 192k -ac 2 -ar 44100 \
-  -vf "scale=640x400" \
-  -f mpegts "udp://Host-Mac-Bonjour-Name.local:1234?pkt_size=1316"
-</code></pre></div></div>
-
-<p>You should see that VLC on the host Mac is now playing video of the terminal on
-the VM. So on the VM you can open Firefox and play a YouTube video. If the sound
-comes through twice, then mute the audio in the VM by clicking on the menu item
-at the top right of the screen.</p>
-
-<p>To end the stream, type <code class="language-plaintext highlighter-rouge">q</code> in the terminal of the VM.</p>
-
-<p><img src="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/17-VLC-Success.png" alt="Success Screenshot" /></p>
-
-<h3 id="step-5-prepare-the-powerpc-mac">Step 5: Prepare the PowerPC Mac</h3>
-
-<p>Note that for Leopard, the VLC website says you can use VLC 2.0.10 but I found
-this version to have terrible performance. A search online revealed the same
-thing. Instead you should use the newest version of 1.0 that you can find. 
-Credit to <a href="https://powerpcliberation.blogspot.com/2012/08/video-on-powerpc-playback-on-g4g5.html">PowerPC Liberation: Video on PowerPC: Part 1 - Playback on G4/G5</a></p>
-
-<p>Note that due to the <a href="https://oldvcr.blogspot.com/2020/11/fun-with-crypto-ancienne-tls-for.html">The TLS Apocalypse</a>
-mentioned above, you will almost certainly not be able to download these 
-directly on the PowerPC Mac. Instead you will need to download them on your
-modern Mac and then transfer them over file sharing.</p>
-
-<p><strong>Install VLC on your Retro Mac</strong></p>
-
-<ol>
-  <li>On the Apple Silicon Mac: Download an old version of VLC
-    <ol>
-      <li>Leopard: <a href="https://www.macintoshrepository.org/11636-vlc-media-player">VLC 1.1.12 from Macintosh Repository</a> - <a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/01-PPC-Download-Leopard.png">Screenshot</a></li>
-      <li>Tiger: <a href="https://www.videolan.org/vlc/download-macosx.html">VLC 0.9.10 from VLC Website</a> - <a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/02-PPC-Download-Tiger.png">Screenshot</a></li>
-      <li>Transfer the downloaded file to the PowerPC Mac via File Sharing
-        <ol>
-          <li>New Macs can still connect to the AFP servers on old versions of OS X.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>On the PowerPC Mac: Install and run VLC
-    <ol>
-      <li><a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/03-PPC-VLC-Leopard.png">Leopard Screenshot</a></li>
-      <li><a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/04-PPC-VLC-Tiger.png">Tiger Screenshot</a></li>
-    </ol>
-  </li>
-  <li>On the PowerPC Mac: Get the Bonjour Name
-    <ol>
-      <li>Note that this <a href="https://www.mactech.com/2004/07/22/apple-to-change-rendezvous-name-in-settlement/">used to be called Rendezvous</a>. 
-So you might see that name used instead of Bonjour in the UI.</li>
-      <li>System Preferences→Sharing - <a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/05-PPC-Bonjour-Leopard.png">Leopard Screenshot</a></li>
-      <li>System Preferences→Sharing - <a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/06-PPC-Bonjour-Tiger.png">Tiger Screenshot</a></li>
-    </ol>
-  </li>
-  <li>On the PowerPC Mac: Open VLC and choose File→Open Network - type <code class="language-plaintext highlighter-rouge">udp://@:1234</code> - <a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/07-PPC-VLC-Open.png">Screenshot</a>
-    <ol>
-      <li>Your PowerPC Mac is now waiting for the stream to start</li>
-    </ol>
-  </li>
-  <li>(Optional) On the PowerPC Mac: Save the playlist for easy opening later - <a href="/assets/images/retro-tech/retro-stream-tutorial/040-PPC/09-PPC-VLC-Save.png">Screenshot</a></li>
-</ol>
-
-<p><strong>Start the Video Stream in the Linux VM</strong></p>
-
-<p>In the terminal paste the following. Note this is an extremely low quality 
-stream. We are just making sure it works. We will optimize later.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg \
-  -f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \
-  -f pulse -i default \
-  -c:v mpeg4 -qscale:v 10 -vtag XVID \
-  -c:a aac -b:a 192k -ac 2 -ar 44100 \
-  -vf "scale=640x400" \
-  -f mpegts "udp://Your-Retro-Mac-Bonjour-Name.local:1234?pkt_size=1316"
-</code></pre></div></div>
-
-<h3 id="congratulations">🥳Congratulations🎉</h3>
-
-<p>You have a successful streaming setup completed. Now it’s time to optimize
-playback performance for your PowerPC Mac</p>
-
-<h2 id="optimize-playback-performance">Optimize Playback Performance</h2>
-
-<p>All of my testing was done on my 1GHz iMac G4. But if you have a more powerful
-Mac, you can get more bandwidth and quality out of it. Likewise, if you have 
-a slower Mac, you can reduce quality.</p>
-
-<p>To increase the speed of debugging, know that you can press Q to quit the
-FFMPEG server and then change the settings and restart it again. The PowerPC 
-Mac will just pause until you restart FFMPEG. Note that you can only change 
-minor settings like framerate and quality settings. If you change resolution 
-or codecs, then you will need to stop the stream on the PowerPC Mac and 
-restart it.</p>
-
-<h3 id="high-quality-ffmpeg-command">High Quality FFMPEG Command</h3>
-
-<p>Here is our example command which I find to have very good quality and performance
-on the iMac G4 1GHz. But based on your specific Mac, you may want to change
-these settings.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg \
-  -f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \
-  -f pulse -i default \
-  -c:v mpeg4 -qscale:v 3 -vtag XVID \
-  -c:a aac -b:a 192k -ac 2 -ar 44100 \
-  -vf "eq=gamma=0.80,scale=1152x720" \
-  -f mpegts "udp://Your-Retro-Mac-Bonjour-Name.local:1234?pkt_size=1316"
-</code></pre></div></div>
-
-<h4 id="ffmpeg-command-explanation">FFMPEG Command Explanation</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Command</th>
-      <th>Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">ffmpeg</code></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">-f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \</code></td>
-      <td>This specifies the video input - Modify the framerate to find the right balance between quality and performance</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">-f pulse -i default \</code></td>
-      <td>This specifies the audio input - The default capture device we specified earlier in this tutorial</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">-c:v mpeg4 -qscale:v 3 -vtag XVID \</code></td>
-      <td>This specifies video codec (XVID) - Modify QSCALE from 1 (highest) to 31 (lowest) to find the right balance between quality and performance</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">-c:a aac -b:a 192k -ac 2 -ar 44100 \</code></td>
-      <td>This specifies the audio codec (AAC) - If your Mac has trouble with AAC, you can change to MP3</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">-vf "eq=gamma=0.80,scale=1152x720" \</code></td>
-      <td>This specifies the video filter - You can add many filters, but here we scale the video to be lower resolution and change the gamma to be darker (older Macs had a brighter gamma, so modern content can look washed out)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">-f mpegts "udp://Your-Retro-Mac-Bonjour-Name.local:1234?pkt_size=1316"</code></td>
-      <td>This specifies the destination for the UDP stream (Your retro Mac)</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="modifying-ffmpeg-commands">Modifying FFMPEG Commands</h3>
-
-<p>As FFMPEG is extremely complex, I highly recommend using ChatGPT or another LLM
-to help you with FFMPEG. This is where I learned everything for FFMPEG. I only
-use the free ChatGPT account and it’s perfectly adequate. For example, here is a
-sample prompt and a screenshot of the response. You can see that it exactly
-modified the one line that needed to change.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi, I need help with FFMPEG. I am using Debian 12 with Backports installed to
-stream to an iMac G4 running Leopard and VLC. The iMac doesn't have much
-processor power and so I am trying to optimize performance. I have this FFMPEG
-command that streams in XVID and it plays pretty smoothly on my iMac, but I
-want to try MPEG2. Can you update the command to use MPEG2?
-
-ffmpeg \
-  -f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \
-  -f pulse -i default \
-  -c:v mpeg4 -qscale:v 3 -vtag XVID \
-  -c:a aac -b:a 192k -ac 2 -ar 44100 \
-  -vf "eq=gamma=0.80,scale=1152x720" \
-  -f mpegts "udp://Your-Retro-Mac-Bonjour-Name.local:1234?pkt_size=1316"
-</code></pre></div></div>
-
-<p><img src="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/18-ChatGPT-Codec.png" alt="ChatGPT Help" /></p>
-
-<h2 id="faq">FAQ</h2>
-
-<ol>
-  <li>Isn’t this hard on a Retro Mac?
-    <ol>
-      <li>Yeah, this is very hard on your old Mac. My iMac G4 can do it for hours
-with no stability challenges, but we are talking 100% CPU and many
-gigabytes of network traffic.</li>
-      <li>I think this is more of a philosophical question than a technical one. I
-feel like these beautiful, powerful machines were meant to be used rather
-than sitting on a shelf.</li>
-    </ol>
-  </li>
-  <li>Won’t this slow down my Apple Silicon Mac?
-    <ol>
-      <li>I have the absolute slowest Apple Silicon Mac. It’s an M1 MacBook Air
-with no fan. It’s true that this solution takes about 100% of 1 core of
-the CPU. But I have not noticed any slow downs or throttling. This 
-includes when I am using Xcode to develop software for iOS and Mac apps.</li>
-    </ol>
-  </li>
-  <li>Can this be done without an Apple Silicon Mac?
-    <ol>
-      <li>Absolutely! The server could be any machine that runs FFMPEG which is 
-pretty much any machine. I look forward to seeing a future tutorial that 
-uses a Raspberry Pi 🍓</li>
-      <li>I just created this tutorial using UTM and Apple Silicon because that’s
-what I have. But there is no reason the exact same thing can’t be done 
-with an Intel Mac and VMWare Fusion (which is free now by the way)</li>
-    </ol>
-  </li>
-</ol>
-
-<h2 id="advanced">Advanced</h2>
-
-<h3 id="ffmpeg-multi-stream">FFMPEG Multi-Stream</h3>
-
-<p>FFMPEG with MPEGTS streaming protocol can actually stream to multiple computers
-at once over UDP. Why would you want to do this? Well, if you have a whole 
-army of retro computers, you could have them all play the same video at once…
-Or more likely, you are interested in using modern bluetooth audio options to
-listen to the stream while using the retro Mac to display the content.</p>
-
-<p>Unfortunately, this will not result in every computer playing in sync. The UDP
-stream just flies out of the Linux VM and the client computers play it as
-quickly as they can with no regard to each other.</p>
-
-<p>What’s different in this command?</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg \
-  -f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \
-  -f pulse -i default \
-  -c:v mpeg4 -qscale:v 3 -vtag XVID \
-  -c:a aac -b:a 192k -ac 2 -ar 44100 -async 1 \
-  -vf "eq=gamma=0.80,scale=1152x720,tpad=start_duration=0" \
-  -af "adelay=0|0" \
-  -f mpegts "udp://Lamps-Plus.local:1234?pkt_size=1316" \
-  -f mpegts "udp://Pinkinium.local:1234?pkt_size=1316"
-</code></pre></div></div>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">-f mpegts</code> 2x - Specify as many destinations as you like</li>
-  <li><code class="language-plaintext highlighter-rouge">-vf</code> - Added <code class="language-plaintext highlighter-rouge">tpad=start_duration=0</code> - Change the zero to a number in <strong>seconds</strong> to cause video to be delayed in order to aid with syncing</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">-af</code> - Added Audio Filter - <code class="language-plaintext highlighter-rouge">adelay=0|0"</code> - Change the 0</td>
-          <td>0 to a number in <strong>milliseconds</strong> to cause audio to be delayed in order to aid with syncing. Each side of the</td>
-          <td>is left and right channel, so the numbers should be the same.</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ol>
-
-<h3 id="set-exact-resolution-in-debian">Set Exact Resolution in Debian</h3>
-
-<p>The Debian VM boots to 1280x800 which is a pretty good resolution for a lot of
-retro Macs as long as they are widescreen. However, you may want to set the
-virtual machine to a different resolution. This can be done pretty easily in
-the Settings app under Displays. However, not all resolutions are in there.
-Also, all of those resolutions are at 60Hz which makes sense because that’s
-a typical desktop refresh rate. So why would you want to change the resolution?</p>
-
-<ol>
-  <li>Using the -vf scale option is actually kind of compute intensive because
-FFMPEG has to scale the video before sending it over the wire</li>
-  <li>60Hz is likely way faster than your Retro Mac will be able to render. So this
-is also wasting performance of the Virtual Machine and the Host Mac.</li>
-</ol>
-
-<h4 id="how-to-set-the-resolution-manually-on-the-debian-vm">How to Set the Resolution Manually on the Debian VM</h4>
-
-<p>Declare to the system which resolution you want</p>
-
-<p><code class="language-plaintext highlighter-rouge">cvt 1152 720 30</code></p>
-
-<p>The output will look something like this, and we are interested in the Modeline</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>debian@debian:~$ cvt 1152 720 30
-# 1152x720 29.96 Hz (CVT) hsync: 22.05 kHz; pclk: 31.75 MHz
-Modeline "1152x720_30.00"   31.75  1152 1184 1296 1440  720 723 729 736 -hsync +vsync
-</code></pre></div></div>
-
-<p>Add the resolution to the windowing system. Execute the 2 commands and make
-sure the first one matches the Modeline output exactly.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xrandr --newmode "1152x720_30.00" 31.75 1152 1184 1296 1440 720 723 729 736 -hsync +vsync
-xrandr --addmode Virtual-1 "1152x720_30.00"
-</code></pre></div></div>
-
-<p>Now set the resolution. After you run this command, the resolution should
-change and the UTM window will resize.</p>
-
-<p><code class="language-plaintext highlighter-rouge">xrandr --output Virtual-1 --mode "1152x720_30.00"</code></p>
-
-<p>Now the issue is that this will not persist across reboots and you will have
-to run these 3 commands every time. To fix that we need to save the monitor
-configuration in X11.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir -p /etc/X11/xorg.conf.d
-sudo vi /etc/X11/xorg.conf.d/10-monitor.conf
-</code></pre></div></div>
-
-<p>And put the text in the configuration file. Again, make sure the Modeline
-matches exactly.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Section "Monitor"
-    Identifier "Virtual-1"
-    Modeline "1152x720_30.00" 31.75 1152 1184 1296 1440 720 723 729 736 -hsync +vsync
-    Option "PreferredMode" "1152x720_30.00"
-EndSection
-
-Section "Screen"
-    Identifier "Screen0"
-    Monitor "Virtual-1"
-    DefaultDepth 24
-    SubSection "Display"
-        Modes "1152x720_30.00"
-    EndSubSection
-EndSection
-</code></pre></div></div>
-
-<p>Now when you restart, it should boot into the resolution you specified. Note
-that it will have 3 resolutions during boot. The basic 800x600 used by Grub,
-then it resizes to 1280x800 as the default resolution before X11 starts up, and
-then when you get to the login screen or the desktop, it will resize to your
-selected resolution.</p>
-
-<h3 id="reduce-system-requirements-of-the-vm">Reduce System Requirements of the VM</h3>
-
-<p>After you get everything working, and you know everything works smoothly
-and without hiccups most of the time, then you can reduce the amount of 
-resources the VM is allowed to use. By default it’s 4 cores and 4GB of RAM.</p>
-
-<p>When you have your streaming setup running, use HTOP to see how much RAM
-and how much CPU is in use. HTOP does not come on Debian so you can install it.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
-sudo apt install htop
-htop
-</code></pre></div></div>
-
-<p>In my system, I found it rarely used more than 2GB of RAM and all 4 CPU cores
-were at about 25% when streaming was running. So I decided to reduce the 
-available resources to 2 Cores and 3GB of RAM… I found 1 Core caused skipping
-and other problems with the stream. In UTM you can change the settings
-however you like to reduce the burden on your host Mac.</p>
-
-<p><img src="/assets/images/retro-tech/retro-stream-tutorial/050-Debian/19-UTM-Processor.png" alt="UTM System Settings" /></p>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="PowerPC" /><category term="Video" /><category term="FFMPEG" /><category term="Hobby" /><summary type="html"><![CDATA[A tutorial on how to stream YouTube or any other video content to PowerPC Macs using a Linux VM, FFMPEG, and VLC.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="PowerPC" /><category term="Mac-OS-X" /><category term="Software-Update" /><category term="Hobby" /><summary type="html"><![CDATA[A guide to setting up an Apple Software Update Server mirror in case Apple ever shuts down the old Mac OS X update servers.]]></summary></entry></feed>

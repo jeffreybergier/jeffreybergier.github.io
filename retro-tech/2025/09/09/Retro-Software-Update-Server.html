@@ -65,8 +65,8 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     
-<p>A guide on setting up an Apple Software Update Server Mirror in case Apple ever
-decides to shut down these old update servers. So far software update still
+<p>A guide on setting up an Apple Software Update Server mirror in case Apple ever
+decides to shut down these old update servers. So far, Software Update still
 works on Mac OS X 10.4 and above, but Apple already shut down servers for 10.3,
 10.2, 10.1, and 10.0 and those can’t be recovered.</p>
 
@@ -81,12 +81,12 @@ for PowerPC Macs, then it’s too late. Sorry.</p>
 <ul id="markdown-toc">
   <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
   <li><a href="#who-am-i" id="markdown-toc-who-am-i">Who Am I</a></li>
-  <li><a href="#how-do-software-updates-work-on-the-mac" id="markdown-toc-how-do-software-updates-work-on-the-mac">How do Software Updates Work on the Mac</a></li>
+  <li><a href="#how-do-software-updates-work-on-the-mac" id="markdown-toc-how-do-software-updates-work-on-the-mac">How Do Software Updates Work on the Mac?</a></li>
   <li><a href="#approach--guide--table-of-contents" id="markdown-toc-approach--guide--table-of-contents">Approach / Guide / Table of Contents</a></li>
   <li><a href="#system-requirements" id="markdown-toc-system-requirements">System Requirements</a></li>
   <li><a href="#guide" id="markdown-toc-guide">Guide</a>    <ul>
-      <li><a href="#1-install-git-homebrew-python2" id="markdown-toc-1-install-git-homebrew-python2">1. Install Git, Homebrew, Python2</a>        <ul>
-          <li><a href="#python2" id="markdown-toc-python2">Python2</a></li>
+      <li><a href="#1-install-git-homebrew-python-2" id="markdown-toc-1-install-git-homebrew-python-2">1. Install Git, Homebrew, Python 2</a>        <ul>
+          <li><a href="#python-2" id="markdown-toc-python-2">Python 2</a></li>
         </ul>
       </li>
       <li><a href="#2-choose-where-software-updates-will-be-mirrored-on-your-server-mac" id="markdown-toc-2-choose-where-software-updates-will-be-mirrored-on-your-server-mac">2. Choose where Software Updates will be mirrored on your server Mac</a></li>
@@ -115,7 +115,7 @@ for retro Macs, so please check it out.</p>
   <li><a href="https://jeffburg.social/tags/iMac5K">Homemade iMac 5K Monitor posts on my Mastodon</a></li>
 </ul>
 
-<h2 id="how-do-software-updates-work-on-the-mac">How do Software Updates Work on the Mac</h2>
+<h2 id="how-do-software-updates-work-on-the-mac">How Do Software Updates Work on the Mac?</h2>
 
 <p><img src="/assets/images/retro-tech/software-update-server/002-SUS.png" alt="Retro Software Update Server" /></p>
 
@@ -125,7 +125,7 @@ application. The client would send some information about itself to the server
 and the server would process this and tell the client what updates it needed.
 While this seems logical, it also means your servers will be busy processing
 requests from clients. And as Apple started to become really successful at
-selling Macs in the early 2000s the OS X team probably realized that this would
+selling Macs in the early 2000s, the OS X team probably realized that this would
 fail to scale.</p>
 
 <p>So what did they change? Well, in 10.4 and later, the Software Update Server is
@@ -143,7 +143,7 @@ The client literally needs to download hundreds of distribution files. Yes, they
 are only a few K each, but then the client also needs to execute the JavaScript
 for each one.</p>
 
-<p>The other side-effect of this system is that now it is easy to mirror the
+<p>The other side effect of this system is that now it is easy to mirror the
 software update server as there is no server-side logic.</p>
 
 <p><strong>Enter Mac OS X Server Software Update Server</strong></p>
@@ -160,7 +160,7 @@ compatibility first</li>
 </ol>
 
 <p>This feature is long dead and now Apple facilitates the same control by allowing
-companies to white list or blacklist updates via MDM (Mobile Device Management).
+companies to whitelist or blacklist updates via MDM (Mobile Device Management).
 This does not create a mirror, but simply tells client Macs to ignore updates.
 This method does not save bandwidth in your company. But in the modern day,
 bandwidth is a lot less expensive than it used to be.</p>
@@ -176,7 +176,7 @@ URLs failed these basic checks, it would not even start the download.</p>
 
 <p><strong>Enter <a href="https://github.com/wdas/reposado/blob/main/docs/getting_started.md">Reposado</a></strong></p>
 
-<p>Reposado is an open source project written in Python 2 that replicates the
+<p>Reposado is an open-source project written in Python 2 that replicates the
 functionality of the software update server. It checks the Apple catalogs,
 downloads the updates, and then generates new catalogs specific to your mirror.
 In my experience doing this, it seems to work super well. So this guide will
@@ -186,7 +186,7 @@ Apple shuts down these old software updates (which may never come).</p>
 <h2 id="approach--guide--table-of-contents">Approach / Guide / Table of Contents</h2>
 
 <ol>
-  <li>Install Git, Homebrew, Python2</li>
+  <li>Install Git, Homebrew, Python 2</li>
   <li>Choose where Software Updates will be mirrored on your server Mac</li>
   <li>Configure the Web Server on your server Mac</li>
   <li>Configure Reposado on your server Mac</li>
@@ -199,18 +199,18 @@ Apple shuts down these old software updates (which may never come).</p>
 <p><strong>Server Mac</strong></p>
 
 <ol>
-  <li>50GB+ to dedicate to storing updates
+  <li>50 GB+ to dedicate to storing updates
     <ul>
-      <li>Even the minimal set for 10.4 Tiger is 20GB</li>
-      <li>Supporting all the way to 10.9 Mavericks takes 200GB</li>
+      <li>Even the minimal set for 10.4 Tiger is 20 GB</li>
+      <li>Supporting all the way to 10.9 Mavericks takes 200 GB</li>
       <li>ChatGPT says that around 10.11/10.12 Apple started locking down the 
 software update server and it can’t be changed</li>
     </ul>
   </li>
   <li>A normal home network
     <ul>
-      <li>This guide assumes you connect all your Macs to the internet with ethernet 
-or WiFi and they can find each other and connect to each other using Bonjour
+      <li>This guide assumes you connect all your Macs to the internet with Ethernet
+or Wi-Fi and they can find each other and connect to each other using Bonjour
 names.</li>
     </ul>
   </li>
@@ -219,7 +219,7 @@ names.</li>
 <p><strong>Retro Mac</strong></p>
 
 <ol>
-  <li>Connected to Ethernet or WiFi on the same network as your server Mac</li>
+  <li>Connected to Ethernet or Wi-Fi on the same network as your server Mac</li>
   <li>Mac OS X 10.4 or higher</li>
 </ol>
 
@@ -232,14 +232,14 @@ this guide gives instructions when using a Mac as the server.</p>
 <p>This guide pretty much runs 100% from Terminal. 
 Any text <code class="language-plaintext highlighter-rouge">in this special format</code> is a terminal command you can copy and paste.</p>
 
-<h3 id="1-install-git-homebrew-python2">1. Install Git, Homebrew, Python2</h3>
+<h3 id="1-install-git-homebrew-python-2">1. Install Git, Homebrew, Python 2</h3>
 
 <ul>
   <li>Git is included as part of the Xcode command line utilities AND these utilities
 are required for Homebrew anyway.</li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">xcodeselect --install</code></p>
+<p><code class="language-plaintext highlighter-rouge">xcode-select --install</code></p>
 
 <ul>
   <li>Homebrew is a simple package manager for macOS. It’s easy to install.
@@ -251,50 +251,50 @@ easily launchable from the Terminal.</li>
 
 <p><code class="language-plaintext highlighter-rouge">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></p>
 
-<h4 id="python2">Python2</h4>
+<h4 id="python-2">Python 2</h4>
 
-<p>This is the difficult one. Python2 is far out of date and Homebrew no longer
-has an easy installer for it. We have to use PyEnv and this basically seemed
-to build Python2 from source, which is never fun.</p>
+<p>This is the difficult one. Python 2 is far out of date, and Homebrew no longer
+has an easy installer for it. We have to use pyenv, and this basically seemed
+to build Python 2 from source, which is never fun.</p>
 
-<p><strong>Install PyEnv and other tools needed for compiling</strong></p>
+<p><strong>Install pyenv and other tools needed for compiling</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">brew install pyenv zlib bzip2 readline openssl@1.1</code></p>
 
-<p><strong>Configure the environment for python2 build</strong></p>
+<p><strong>Configure the environment for the Python 2 build</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix openssl@1.1)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(brew --prefix openssl@1.1)/include"
 export PKG_CONFIG_PATH="$(brew --prefix zlib)/lib/pkgconfig:$(brew --prefix bzip2)/lib/pkgconfig:$(brew --prefix readline)/lib/pkgconfig:$(brew --prefix openssl@1.1)/lib/pkgconfig"
 </code></pre></div></div>
 
-<p><strong>Configure your shell to use PyEnv</strong></p>
+<p><strong>Configure your shell to use pyenv</strong></p>
 
-<p>Sorry you may need to look up the commands
-for how to use <code class="language-plaintext highlighter-rouge">vi</code> or use a text editor you know better like <code class="language-plaintext highlighter-rouge">nano</code></p>
+<p>Sorry, you may need to look up the commands
+for how to use <code class="language-plaintext highlighter-rouge">vi</code> or use a text editor you know better, like <code class="language-plaintext highlighter-rouge">nano</code>.</p>
 
 <p><code class="language-plaintext highlighter-rouge">vi ~/.zshrc</code></p>
 
-<p>Paste in the following text and then save and exit</p>
+<p>Paste in the following text and then save and exit:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 </code></pre></div></div>
 
-<p><strong>Compile Python2</strong></p>
+<p><strong>Compile Python 2</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">pyenv install 2.7.18</code></p>
 
-<p><strong>Set Python2 as the default</strong></p>
+<p><strong>Set Python 2 as the default</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">pyenv global 2.7.18</code></p>
 
 <p><strong>Test Python</strong></p>
 
-<p>You should not get an error when running this command</p>
+<p>You should not get an error when running this command:</p>
 
-<p><code class="language-plaintext highlighter-rouge">python -version</code></p>
+<p><code class="language-plaintext highlighter-rouge">python --version</code></p>
 
 <h3 id="2-choose-where-software-updates-will-be-mirrored-on-your-server-mac">2. Choose where Software Updates will be mirrored on your server Mac</h3>
 
@@ -308,20 +308,20 @@ an external drive as the mirror takes a lot of space.</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS</code></p>
 
-<p>So the Web Server Document Root and Reposado Storage is</p>
+<p>So the web server document root and Reposado storage are</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/www</code></p>
 
-<p>Reposado git clone is</p>
+<p>The Reposado Git clone is</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado</code></p>
 
-<p>Reposado Metadata storage is</p>
+<p>The Reposado metadata storage is</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/metadata</code></p>
 
 <p>So you can put everything wherever you like, but this guide assumes this
-structure</p>
+structure.</p>
 
 <h3 id="3-configure-the-web-server-on-your-server-mac">3. Configure the Web Server on your server Mac</h3>
 
@@ -332,7 +332,7 @@ default. It’s nothing fancy, but it will work for our retro Mac.</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo vi /etc/apache2/httpd.conf</code></p>
 
-<p>This file is pretty long so you have to scroll down to find the DocumentRoot
+<p>This file is pretty long, so you have to scroll down to find the DocumentRoot
 setting. I don’t think you need to change other options, but here are the key
 ones.</p>
 
@@ -344,9 +344,9 @@ ones.</p>
 &lt;/Directory&gt;
 </code></pre></div></div>
 
-<p><strong>Give the webserver full disk access</strong></p>
+<p><strong>Give the web server full disk access</strong></p>
 
-<p>This might not be needed if your directory root is on the boot drive
+<p>This might not be needed if your directory root is on the boot drive,
 but I definitely needed it because mine is on an external drive.</p>
 
 <ol>
@@ -374,7 +374,7 @@ Retro Mac you won’t be able to update from it either.</p>
 
 <h3 id="4-configure-reposado-on-your-server-mac">4. Configure Reposado on your server Mac</h3>
 
-<p>Ok, Reposado is where all the magic happens, so let’s get started!</p>
+<p>OK, Reposado is where all the magic happens, so let’s get started!</p>
 
 <p><strong>Clone the <a href="https://github.com/wdas/reposado">Reposado</a> Repository</strong></p>
 
@@ -400,11 +400,11 @@ Base URL for your local Software Update Service
 
 <p>Reposado defaults to being a production software update server mirror, which is
 not what you want because you are setting up a retro software update mirror in
-case of catastrophe. And you probably don’t want to take 400+GB of updates for
-all modern Macs when you could use less than 100GB to support updating 10.6,
+case of catastrophe. And you probably don’t want to take 400+ GB of updates for
+all modern Macs when you could use less than 100 GB to support updating 10.6,
 10.5, and 10.4 only.</p>
 
-<p><code class="language-plaintext highlighter-rouge">open /Volumes/Data/SUS/reposado/code/preferences.plist</code> (TextEdit should open)</p>
+<p><code class="language-plaintext highlighter-rouge">open /Volumes/Data/Virtualization/SUS/reposado/code/preferences.plist</code> (TextEdit should open)</p>
 
 <p>Your configuration file will look something like this. Copy and paste the keys
 listed below into your configuration and then customize them as you like:</p>
@@ -449,7 +449,7 @@ listed below into your configuration and then customize them as you like:</p>
 
 <p>Create the log file and make it readable and writable by all users. Normally it
 would be better to make it readable and writable by the right people, but it’s a
-single log file. Not really security critical.</p>
+single log file. Not really security-critical.</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo touch /var/log/reposado_sync.log</code>
 <code class="language-plaintext highlighter-rouge">sudo chmod 777 /var/log/reposado_sync.log</code></p>
@@ -462,7 +462,7 @@ in!</p>
 <h3 id="5-use-reposado-to-mirror-apples-existing-software-updates-to-your-server-mac">5. Use Reposado to mirror Apple’s existing software updates to your server Mac</h3>
 
 <p>First we will do a test run with the minimal set of Software Update Catalogs
-that you configured in the previous section. This is about 20-25GB worth of
+that you configured in the previous section. This is about 20–25 GB worth of
 updates, so depending on how fast or slow your internet connection is, this
 could take a while. Reposado does not generate the catalogs for your retro Mac
 to use until it has finished downloading everything, so you need to wait until
@@ -479,7 +479,7 @@ gets updated.</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync</code></p>
 
-<p>That’s it. Now you have to wait for it to download 20GB or so. You should be able
+<p>That’s it. Now you have to wait for it to download 20 GB or so. You should be able
 to see progress in the other terminal window with the tailed log file.</p>
 
 <p><strong>What Success Looks Like</strong></p>
@@ -515,7 +515,7 @@ Sep 07 17:27:58 repo_sync run ended
 </code></pre></div></div>
 
 <p>Warnings will be normal as some updates will not be available any longer. If the
-number of products not downloaded is HUGE like, hundreds of items, then you have
+number of products not downloaded is HUGE—say, hundreds of items—then you have
 a problem. But I think 10 or 20 is normal?</p>
 
 <p><strong>Choose Max Version of OS X You Want Updates For</strong></p>
@@ -543,19 +543,19 @@ like this:</p>
 &lt;/array&gt;
 </code></pre></div></div>
 
-<p>After you add the new catalogs, run sync again</p>
+<p>After you add the new catalogs, run sync again:</p>
 
 <p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync</code></p>
 
-<p>Note that supporting up to 10.10 Yosemite takes about 300GB of space</p>
+<p>Note that supporting up to 10.10 Yosemite takes about 300 GB of space.</p>
 
 <p><img src="/assets/images/retro-tech/software-update-server/003-Reposado.png" alt="Retro Software Update Server" /></p>
 
 <p><strong>Some Final Things</strong></p>
 
 <p>Basically, after you complete the sync, you never need to run Reposado again. The
-webserver and the <code class="language-plaintext highlighter-rouge">www</code> folder are all you need. The Software Update server is
-based off of a completely static system, which is super nice and reliable.</p>
+web server and the <code class="language-plaintext highlighter-rouge">www</code> folder are all you need. The Software Update server is
+based on a completely static system, which is super nice and reliable.</p>
 
 <p>If you change the hostname of the server Mac, you can update the
 Preferences.plist file and then run sync again, and it won’t download any new
@@ -572,14 +572,14 @@ there are no updates available. So how do you test?</p>
 <ul>
   <li>If you don’t mind erasing your retro Mac, you could just reinstall the OS.</li>
   <li>Install a fresh OS to an external FireWire hard drive and boot from that.</li>
-  <li>Install an old version of OS X in a Virtual Machine and try that.</li>
+  <li>Install an old version of OS X in a virtual machine and try that.</li>
 </ul>
 
 <p><strong>Configure the Retro Mac</strong></p>
 
 <p>All of these have their pros and cons so you decide. But once you get the Mac
 working and it is ready for software updates, run the following command in the
-terminal on the retro Mac</p>
+Terminal on the retro Mac:</p>
 
 <p><code class="language-plaintext highlighter-rouge">sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CatalogURL "http://Server-Bonjour-Name.local/content/catalogs/others/index-lion-snowleopard-leopard.merged-1.sucatalog"</code></p>
 
@@ -588,7 +588,7 @@ OS X you are running or else it won’t see all of the updates.</p>
 
 <p><strong>Tail the Apache Access Logs on the Server Mac</strong></p>
 
-<p>Tailing these logs will show you the retro Mac is checking all the updates.</p>
+<p>Tailing these logs will show you that the retro Mac is checking all the updates.</p>
 
 <p><code class="language-plaintext highlighter-rouge">tail -f /var/log/apache2/access_log /var/log/apache2/error_log</code></p>
 
@@ -601,8 +601,8 @@ may take several reboots to get through all the updates.</p>
 
 <p><strong>What Success Looks Like</strong></p>
 
-<p>In the logs on the server Mac, you should see a lot of access. Like hundreds of
-files to check for updates. On the retro Mac, in the title of the Software
+<p>In the logs on the server Mac, you should see hundreds of file requests to check
+for updates. On the retro Mac, in the title of the Software
 Update window you should see the hostname of your server Mac in parentheses. See
 the screenshot below.</p>
 
@@ -631,7 +631,8 @@ RewriteRule ^/index\.sucatalog$ /index-lion-snowleopard-leopard.merged-1.sucatal
 </article>
 
       </div>
-    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    </main><!-- This file only exists to override Minima's footer and increase the Font Awesome version. -->
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 
 <footer class="site-footer h-card">
   <data class="u-url" value="/"></data>

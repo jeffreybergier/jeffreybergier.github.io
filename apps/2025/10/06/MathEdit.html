@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="MathEdit for OpenStep" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Image Apple’s MathNotes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history." />
-<meta name="twitter:description" property="og:description" content="Image Apple’s MathNotes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history." />
+<meta name="description" content="Imagine Apple’s Math Notes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history." />
+<meta name="twitter:description" property="og:description" content="Imagine Apple’s Math Notes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history." />
 <link rel="canonical" href="https://jeffburg.com/apps/2025/10/06/MathEdit.html" />
 <meta property="og:url" content="https://jeffburg.com/apps/2025/10/06/MathEdit.html" />
 <meta property="og:site_name" content="Jeffrey Bergier" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="MathEdit for OpenStep" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-06T00:00:00+00:00","datePublished":"2025-10-06T00:00:00+00:00","description":"Image Apple’s MathNotes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.","headline":"MathEdit for OpenStep","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/apps/2025/10/06/MathEdit.html"},"url":"https://jeffburg.com/apps/2025/10/06/MathEdit.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-06T00:00:00+00:00","datePublished":"2025-10-06T00:00:00+00:00","description":"Imagine Apple’s Math Notes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.","headline":"MathEdit for OpenStep","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeffburg.com/apps/2025/10/06/MathEdit.html"},"url":"https://jeffburg.com/apps/2025/10/06/MathEdit.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeffburg.com/feed.xml" title="Jeffrey Bergier" />
 </head>
@@ -55,7 +55,7 @@
     </div>
     
     <div class="post-meta">
-      <h1 class="post-title p-name" itemprop="name headline">MathEdit for OpenStep</h1><p><p>Image Apple’s MathNotes but built as a traditional Cocoa application with the
+      <h1 class="post-title p-name" itemprop="name headline">MathEdit for OpenStep</h1><p><p>Imagine Apple’s Math Notes but built as a traditional Cocoa application with the
 unusual added feature that its codebase spans 30 years of Mac OS X history.</p>
 </p><!-- Custom Layout Ends Here -->
       <time class="dt-published" datetime="2025-10-06T00:00:00+00:00" itemprop="datePublished">
@@ -99,9 +99,9 @@ unusual added feature that its codebase spans 30 years of Mac OS X history.</p>
       <div class="al-primary">
         <h2 id="ns-is-for-nextstep">NS is for NextStep</h2>
 
-<p>As Cocoa developers we always taught the NS in NSString, NSDictionary, NSArray,
-etc stands for NextStep. So I thought “What is it like to build an application
-for NextStep?” So I decided to try it! I got an 
+<p>As Cocoa developers, we were always taught that the NS in NSString, NSDictionary, NSArray,
+etc., stands for NeXTSTEP. So I thought, “What is it like to build an application
+for NeXTSTEP?” So I decided to try it! I got an
 <a href="https://previous.nextcommunity.net">OpenStep 4.2 Virtual Machine</a> up and 
 running, installed Project Builder (the precursor to Xcode) and got to work.
 MathEdit is the result.</p>
@@ -113,8 +113,8 @@ MathEdit is the result.</p>
 <p>OpenStep’s Foundation and AppKit frameworks are remarkable in that they are
 extremely complete even way back in 1996 (remember Mac OS X 10.0 Cheetah was
 released in 2001). If you ignore NIBs, then the code from OpenStep just works
-in OS X even to do this day. Yes, there are many deprecation warnings, but all
-of the API’s work without issue. And yes, it means NSApplication, NSTableView,
+in OS X even to this day. Yes, there are many deprecation warnings, but all
+of the APIs work without issue. And yes, it means NSApplication, NSTableView,
 NSWindow, NSButton, NSMenu, the responder chain, etc all work exactly the same
 as they do now.</p>
 
@@ -122,10 +122,10 @@ as they do now.</p>
 
 <p>However, there is a lot of core functionality missing. Networking for example.
 NSData will download things for you when you give it an internet path, but
-this has all the pitfalls of modern NSData. Its single threaded, blocking, no
+this has all the pitfalls of modern NSData. It’s single-threaded, blocking, has no
 progress, etc. If you want anything more than that you need to drop down to 
 BSD Sockets. AppKit is missing basics like NSToolbar and NSDocument. Foundation
-is missing basics like NSError and NUSRL which kind of explains why there
+is missing basics like NSError and NSURL, which kind of explains why there
 are all those duplicate methods with NSURL and NSString and with NSError and
 without NSError.</p>
 
@@ -133,7 +133,7 @@ without NSError.</p>
 
 <p>Lastly, there is the really hard stuff. Objective-C before “2.0” as Apple called
 it is pretty painful. That said, Objective-C 2.0 did not come to Mac OS X until
-10.7, so thats pretty late in OS X history. But still, we are talking about
+10.7, so that’s pretty late in OS X history. But still, we are talking about
 the most basic features missing:</p>
 
 <ul>
@@ -148,7 +148,7 @@ the most basic features missing:</p>
 <p>The other major pain point is Nibs. While OpenStep Nibs do work in early 
 versions of OS X, Apple had a bad habit of changing the Nib format, XIB format,
 and then just refusing to load older Nibs for security reasons over the years.
-Sp the only way to make an app that is compatible across history is to not use
+So the only way to make an app that is compatible across history is to not use
 Nibs… and unlike on iOS, AppKit really does not like this. I spent a lot of
 time getting memory management to work properly in early versions of OS X
 that just ABSOLUTELY ASSUMED you were using Nibs. I did get it to work, but this
@@ -158,7 +158,7 @@ to set the Application Menu which did not exist in OpenStep.</p>
 
 <h2 id="features">Features</h2>
 
-<p>MathEdit is basically like Math Notes from Apple. Its a normal text editor
+<p>MathEdit is basically like Math Notes from Apple. It’s a normal text editor
 like TextEdit, but if you type in a mathematical formula in the text, it 
 automatically parses it and solves it for you. It makes extensive use of
 NSDecimalNumber and NSTextAttachment to do this. NSTextAttachment in particular
@@ -169,7 +169,7 @@ It is such a powerful way to enhance your text documents.</p>
 <h2 id="caveats">Caveats</h2>
 
 <p>I honestly don’t use MathEdit all that often. It is on all my Macs including
-my vintage ones and I think it is a cool proof of concept. But I don’t think its
+my vintage ones and I think it is a cool proof of concept. But I don’t think it’s
 much more than that. But if you want to try it out for yourself, grab a build
 for your favorite Mac and give it a try.</p>
 
@@ -184,7 +184,8 @@ for your favorite Mac and give it a try.</p>
 </article>
 
       </div>
-    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    </main><!-- This file only exists to override Minima's footer and increase the Font Awesome version. -->
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 
 <footer class="site-footer h-card">
   <data class="u-url" value="/"></data>

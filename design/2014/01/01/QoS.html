@@ -123,8 +123,8 @@ entire network.</p>
 QoS systems usually have the concept of classes. Classes are sort of like
 buckets. The network administrator puts certain applications into certain
 buckets, then the system treats each bucket with a certain level of importance.
-The most important thing to remember about these buckets, is that giving one
-more resources, necessarily gives the others less. Also, putting all traffic
+The most important thing to remember about these buckets is that giving one
+more resources necessarily gives the others less. Also, putting all traffic
 into an important bucket may not be desirable. QoS works by prioritizing
 important traffic over less important traffic. If all traffic is marked as
 important, it can’t do that. Concerns like this were common from network
@@ -147,19 +147,19 @@ app or an individual app group. This makes configuring QoS extremely fast.</p>
 <h3 id="profiles">Profiles</h3>
 <p><a href="/assets/images/design/qos/profiles-2k.png" class="thumbnail"><img src="/assets/images/design/qos/profiles-600.png" alt="Screenshot" /></a>
 QoS profiles are how you connect QoS Classes and Rules and Sites. The
-SteelCentral Controller has a birds-eye view of all the SteelHeads on a
+SteelCentral Controller has a bird’s-eye view of all the SteelHeads on a
 customer’s network. We designed the profiles UI to take advantage of this extra
 knowledge. We did this by having the network administrator choose a source and
 destination site, or group of sites, that each profile applies to. With this
 information, the SteelCentral Controller knows how to distribute the QoS
 Profiles to all appliances automatically. This simplification makes QoS
 configuration far more declarative. This is something we strive for. We call it
-‘intent’ based management. Where the network administrator specifies <strong>what</strong>
+intent-based management, where the network administrator specifies <strong>what</strong>
 they want, rather than <strong>how</strong> to make it happen. This is an incredibly powerful
 paradigm for the new QoS feature.</p>
 
 <h2 id="experimentation">Experimentation</h2>
-<p>As with all products and features, not everything the design team makes, makes
+<p>As with all products and features, not everything created by the design team makes
 it into the product. Sometimes they’re features that are not needed, sometimes
 they are too complex, and sometimes they are just way too cool. Below are some
 experiments that I made that never shipped.</p>
@@ -192,7 +192,8 @@ expanded, it shows relevant errors and warnings.</p>
 </article>
 
       </div>
-    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    </main><!-- This file only exists to override Minima's footer and increase the Font Awesome version. -->
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 
 <footer class="site-footer h-card">
   <data class="u-url" value="/"></data>

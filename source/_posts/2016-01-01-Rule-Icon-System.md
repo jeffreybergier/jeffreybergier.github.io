@@ -2,7 +2,7 @@
 layout: post
 title: "Rule Icon System"
 titleAccessory: "[![Rule Icon System](/assets/images/design/rule-icon-system/is-breakdown-600.png)](/assets/images/design/rule-icon-system/is-breakdown-2k.png){: .reflect .below-xl .round-sm }"
-excerpt: "At a glance view of all the rules that affect a user's global network."
+excerpt: "An at-a-glance view of all the rules that affect a user's global network."
 categories: [Design]
 tags: [Design, Professional]
 ---
@@ -15,9 +15,9 @@ Normally, it's really scary to share Balsamiq mockups because they don't look re
 
 ---
 
-### Intent Based Policy Rules
+### Intent-Based Policy Rules
 [![Intent Based Policy Rules](/assets/images/design/rule-icon-system/is-contents-600.png)](/assets/images/design/rule-icon-system/is-contents-2k.png){: .thumbnail }
-These are a tiny number of slides from a large slide-deck I put together. I was exploring "intent based policy rules." The goal of these rules is to apply broad policy across a global network from a central management console. On this page, I'm focusing more on the visual system I designed for these rules, rather than the rules themselves.
+These are a tiny number of slides from a large slide deck I put together. I was exploring "intent-based policy rules." The goal of these rules is to apply broad policy across a global network from a central management console. On this page, I'm focusing more on the visual system I designed for these rules, rather than the rules themselves.
 
 ### Visual Cues
 [![Visual Cues](/assets/images/design/rule-icon-system/is-visuals-600.png)](/assets/images/design/rule-icon-system/is-visuals-2k.png){: .thumbnail }

@@ -43,7 +43,7 @@ to know this so it can adequately divide up resources. Network administrators
 have hundreds, or even thousands of locations. And each location can have
 multiple network connections. So I created an entire concept around this called
 'Sites.' Each site has any number of uplinks (network connections) and each
-uplink has upstream and downstream bandwidths associated with them. This gives
+uplink has upstream and downstream bandwidths associated with it. This gives
 the QoS system the information it needs on bandwidth restrictions across the
 entire network.
 
@@ -52,8 +52,8 @@ entire network.
 QoS systems usually have the concept of classes. Classes are sort of like
 buckets. The network administrator puts certain applications into certain
 buckets, then the system treats each bucket with a certain level of importance.
-The most important thing to remember about these buckets, is that giving one
-more resources, necessarily gives the others less. Also, putting all traffic
+The most important thing to remember about these buckets is that giving one
+more resources necessarily gives the others less. Also, putting all traffic
 into an important bucket may not be desirable. QoS works by prioritizing
 important traffic over less important traffic. If all traffic is marked as
 important, it can't do that. Concerns like this were common from network
@@ -67,7 +67,7 @@ visually showing class information.
 QoS classes are like buckets you put Apps into that then get managed by the QoS
 system. Rules are the mechanism by which the network administrator puts apps
 into the classes. Because SteelHead has incredibly powerful Deep Packet
-Inspection (DPI) technology. Specifying apps is very easy. Users can search for
+Inspection (DPI) technology, specifying apps is very easy. Users can search for
 commonly known app names, as opposed to intricate IP address and port mappings.
 Also, our team pre-grouped the apps into about 8 groups. Each group contains
 approximately 800 applications. The rules can be specified with an individual
@@ -76,19 +76,19 @@ app or an individual app group. This makes configuring QoS extremely fast.
 ### Profiles
 [![Screenshot](/assets/images/design/qos/profiles-600.png)](/assets/images/design/qos/profiles-2k.png){: .thumbnail }
 QoS profiles are how you connect QoS Classes and Rules and Sites. The
-SteelCentral Controller has a birds-eye view of all the SteelHeads on a
+SteelCentral Controller has a bird's-eye view of all the SteelHeads on a
 customer's network. We designed the profiles UI to take advantage of this extra
 knowledge. We did this by having the network administrator choose a source and
 destination site, or group of sites, that each profile applies to. With this
 information, the SteelCentral Controller knows how to distribute the QoS
 Profiles to all appliances automatically. This simplification makes QoS
 configuration far more declarative. This is something we strive for. We call it
-'intent' based management. Where the network administrator specifies **what**
+intent-based management, where the network administrator specifies **what**
 they want, rather than **how** to make it happen. This is an incredibly powerful
 paradigm for the new QoS feature.
 
 ## Experimentation
-As with all products and features, not everything the design team makes, makes
+As with all products and features, not everything created by the design team makes
 it into the product. Sometimes they're features that are not needed, sometimes
 they are too complex, and sometimes they are just way too cool. Below are some
 experiments that I made that never shipped.

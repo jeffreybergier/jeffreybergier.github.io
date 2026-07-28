@@ -14,7 +14,7 @@ One of the main problems network operators have is managing change on their netw
 
 ### Change Timeline
 [![Change Timeline](/assets/images/design/change-management/cm-now-600.png)](/assets/images/design/change-management/cm-now-2k.png){: .thumbnail }
-Given a time period, the operator should be able to see when changes were saved in the system. They should also be able to see who made the changes and what changes were made. Also, depending on how the Role Based Management system works, changes might need to be submitted for approval before being put into effect. This is shown in the middle of this mockup.
+Given a time period, the operator should be able to see when changes were saved in the system. They should also be able to see who made the changes and what changes were made. Also, depending on how the Role-Based Management system works, changes might need to be submitted for approval before being put into effect. This is shown in the middle of this mockup.
 
 ### New Changes
 [![New Changes](/assets/images/design/change-management/cm-newchanges-600.png)](/assets/images/design/change-management/cm-newchanges-2k.png){: .thumbnail }
@@ -22,12 +22,12 @@ Another really important feature of a change management system is rolling out ch
 
 ### Summary of Changes
 [![Summary of Changes](/assets/images/design/change-management/cm-changes-600.png)](/assets/images/design/change-management/cm-changes-2k.png){: .thumbnail }
-This mockup and the previous one both show what it could look like when a different operator makes a change and it appears in the timeline for this operator to see. This operator can click on the event on the timeline to see what was changed. Depending on how Role Based Management is configured, an operator may need to approve the changes before a rollout can be started.
+This mockup and the previous one both show what it could look like when a different operator makes a change and it appears in the timeline for this operator to see. This operator can click on the event on the timeline to see what was changed. Depending on how Role-Based Management is configured, an operator may need to approve the changes before a rollout can be started.
 
 ### Full Diff
 [![Full Diff](/assets/images/design/change-management/cm-diff-600.png)](/assets/images/design/change-management/cm-diff-2k.png){: .thumbnail }
-It may be necessary to dive deep into the changes made. This could be changes made in the past, or changes that have not yet been rolled out. This is a concept screen showing Application definition changes. This also features my favorite pet feature, impact. Impact shows the network admin approximately how many sites, users, etc this change will affect when it is rolled out.
+It may be necessary to dive deep into the changes made. This could be changes made in the past, or changes that have not yet been rolled out. This is a concept screen showing Application definition changes. This also features my favorite pet feature, impact. Impact shows the network admin approximately how many sites, users, etc., this change will affect when it is rolled out.
 
-### Pixel Perfect Mockup
+### Pixel-Perfect Mockup
 [![Pixel Perfect Mockup](/assets/images/design/change-management/cm-visual-600.png)](/assets/images/design/change-management/cm-visual-2k.png){: .thumbnail }
-All the mockups up to this point were done super quickly in Balsamiq. Rapid prototypes like this are not worth spending a lot of time on until you know the idea is worth investigating. After I made these basic mockups, the rest of the UX team thought it looked concrete enough to make a pixel perfect mockup. This mockup is the same timeline. I love seeing the transformation of a structural idea, into something that is just as useful, but also pleasing to the eye.
+All the mockups up to this point were done super quickly in Balsamiq. Rapid prototypes like this are not worth spending a lot of time on until you know the idea is worth investigating. After I made these basic mockups, the rest of the UX team thought it looked concrete enough to make a pixel-perfect mockup. This mockup is the same timeline. I love seeing the transformation of a structural idea into something that is just as useful, but also pleasing to the eye.

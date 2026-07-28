@@ -17,7 +17,7 @@ tags: [Design, Student]
 
 ### Create a Brand
 [![Create a Brand](/assets/images/design/innovative-kitchenware/ikb-brand-300.png)](/assets/images/design/innovative-kitchenware/ikb-brand-1k.png){: .thumbnail }
-As a group, we created a brand with a product strategy and identity. Our brand was called Citrus. Our intended customer base was not university students, but instead we targeted students' mothers. This allowed us to create better designed products because parents can spend more than students can. Creating the brand was the only group activity. From this point on, the project was individual.
+As a group, we created a brand with a product strategy and identity. Our brand was called Citrus. Our intended customer base was not university students, but instead we targeted students' mothers. This allowed us to create better-designed products because parents can spend more than students can. Creating the brand was the only group activity. From this point on, the project was individual.
 
 ### Research
 [![Research](/assets/images/design/innovative-kitchenware/ikb-research-300.png)](/assets/images/design/innovative-kitchenware/ikb-research-1k.png){: .thumbnail }
@@ -37,4 +37,4 @@ Working with SolidWorks, I crafted each part and created an assembly drawing. Th
 
 ### Mass Manufacture
 [![Mass Manufacture](/assets/images/design/innovative-kitchenware/ikb-mass-300.png)](/assets/images/design/innovative-kitchenware/ikb-mass-1k.png){: .thumbnail }
-I reviewed the CES Materials and Processes database in order to figure out the different manufacturing processes needed to produce my saucepan. These processes were chosen based on a 100,000 unit run.
+I reviewed the CES Materials and Processes database in order to figure out the different manufacturing processes needed to produce my saucepan. These processes were chosen based on a 100,000-unit run.

@@ -14,7 +14,7 @@ tags: [Design, Student]
 
 ### Ideate
 [![Ideate](/assets/images/design/design-for-manufacture/penpot-sketches-300.png)](/assets/images/design/design-for-manufacture/penpot-sketches-1k.png){: .thumbnail }
-During initial ideation, the team threw together pages and pages of possible office themed ideas. We had to keep in mind that another team would be building five of these artifacts in the workshops available at Brunel University. This is just one of many.
+During initial ideation, the team threw together pages and pages of possible office-themed ideas. We had to keep in mind that another team would be building five of these artifacts in the workshops available at Brunel University. This is just one of many.
 
 ### Consider
 [![Consider](/assets/images/design/design-for-manufacture/penpot-consider-300.png)](/assets/images/design/design-for-manufacture/penpot-consider-1k.png){: .thumbnail }

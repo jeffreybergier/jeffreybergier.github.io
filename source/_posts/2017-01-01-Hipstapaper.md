@@ -1,6 +1,6 @@
 ---
 layout: post-accessory
-title: "Hipstapaper: Cross Platform Reading List"
+title: "Hipstapaper: Cross-Platform Reading List"
 titleAccessory: "[![Hipstapaper Screenshot](/assets/images/apps/hipstapaper/title-thumb.png)](/assets/images/apps/hipstapaper/title-full.png){: .reflect .below-xl .round-sm }"
 excerpt: "Hipstapaper was my very first cross-platform app that works on iPhone, iPad, and macOS"
 categories: [Apps]
@@ -52,7 +52,7 @@ most of the toy apps I make now are either AppKit or SwiftUI.
 ### Phase 1 (2016-2018)
 
 During this phase, there were no cross-platform UI frameworks from Apple and
-there was no database that had online syncing from Apple. Thus the technologies
+there was no database that had online syncing from Apple. Thus, the technologies
 I chose were not ideal, but they were the only way to get the job done:
 
 1. Cross-Platform: UIKit and AppKit UI implementations
@@ -70,7 +70,7 @@ I chose were not ideal, but they were the only way to get the job done:
 In WWDC 2019, Apple introduced Core Data syncing via CloudKit. While Apple
 pitched this as their final solution to Core Data syncing, the actual
 [session video](https://developer.apple.com/videos/play/wwdc2019/202) they
-published was so quick, and so information dense that it was hard to follow.
+published was so quick and so information-dense that it was hard to follow.
 As well, the feature has fundamental limitations, that I think have prevented
 it from being very successful.
 
@@ -85,7 +85,7 @@ I wanted to learn SwiftUI and because SwiftUI was finally becoming full-featured
 enough to support apps with complex navigation for both iOS and macOS, I decided
 to take on the challenge. This required significant updates to the database
 wrapper to support SwiftUI's dynamic data model. However, it worked. I was able
-to delete thousands of lines of platform specific UI code and replace it with
+to delete thousands of lines of platform-specific UI code and replace it with
 just one SwiftUI codebase. As well, I learned to love SwiftUI. If you can figure
 out how to let go and let the data drive your application, SwiftUI is simply
 amazing. The way it dynamically updates when there are literally hundreds
@@ -96,6 +96,6 @@ is incredible. SwiftUI is truly a game changer.
 
 I still use Hipstapaper across my devices daily. However, I have never put it 
 on the App Store or anything like that as I know it is missing key features
-that people will want such as offline reading of webpages. Yes, the link to
+that people will want such as offline reading of web pages. Yes, the link to
 the web page is stored offline in the database, but to actually open the web
 page you will need an internet connection.

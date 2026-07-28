@@ -2,9 +2,9 @@
 layout: post
 title: "Retro Stream Tutorial"
 titleAccessory: "[![iMac G4 Streaming YouTube](/assets/images/retro-tech/retro-stream-tutorial/000-Title/01-Title-Thumb.jpg)](/assets/images/retro-tech/retro-stream-tutorial/000-Title/02-Title-Full.jpg){: .reflect .below-xl .round-sm }"
-excerpt: "A tutorial on how to stream YouTube or any other video content to PowerPC Macs using a Linux VM, FFMPEG, and VLC."
+excerpt: "A tutorial on how to stream YouTube or any other video content to PowerPC Macs using a Linux VM, FFmpeg, and VLC."
 categories: [Retro-Tech]
-tags: [PowerPC, Video, FFMPEG, Hobby]
+tags: [PowerPC, Video, FFmpeg, Hobby]
 ---
 {::options toc_levels="2,3,4" /}
 
@@ -34,14 +34,14 @@ for retro Macs, so please check it out.
 
 ### My iMac G4 (Lamps Plus)
 
-I recently got an iMac G4 and restored it with SSD and max RAM. I got this
-machine because when I was in High School I desperately wanted one but could
+I recently got an iMac G4 and restored it with an SSD and max RAM. I got this
+machine because when I was in high school I desperately wanted one but could
 never get it. But I didn't want to get it if it was going to sit on a shelf and
 collect dust.
 
 So before I bought it I tried this streaming setup to make sure it could work.
 And I am very happy to report that I am happy with the results and this machine
-now makes a great music video display for my KPOP listening enjoyment while I'm
+now makes a great music video display for my K-pop listening enjoyment while I'm
 working.
 
 ## Background
@@ -61,9 +61,9 @@ iPhone - 2007 \([Source](https://everymac.com/systems/apple/iphone/specs/apple-i
 > H.264 video, up to 1.5 Mbps, **640 by 480 pixels**, 30 frames per second, 
 > Low-Complexity version of the H.264 Baseline Profile
 
-As another anecdote, I remember having a [1.67GHz PowerBook G4](https://everymac.com/systems/apple/powerbook_g4/specs/powerbook_g4_1.67_15_hr.html)
-from late 2005 and being super amazed that it could rip DVDs into MPEG4
-format (not H.264 yet) at 1x meaning that it ONLY took 2 hours to rip a 2 hour 
+As another anecdote, I remember having a [1.67 GHz PowerBook G4](https://everymac.com/systems/apple/powerbook_g4/specs/powerbook_g4_1.67_15_hr.html)
+from late 2005 and being super amazed that it could rip DVDs into MPEG-4
+format (not H.264 yet) at 1x, meaning that it ONLY took two hours to rip a two-hour
 DVD. This was incredible speed during this era.
 
 So while we may feel like high-quality YouTube video playback has been a given
@@ -71,7 +71,7 @@ forever, it actually has not. And so when we use old Macs we may get
 frustrated by their inability to do "simple" tasks like play YouTube. But the
 reason I am giving this background is to illustrate that this is no simple task.
 
-### Why Can't Old Computers Play YouTube
+### Why Can't Old Computers Play YouTube?
 
 1\) **[The TLS Apocalypse](https://oldvcr.blogspot.com/2020/11/fun-with-crypto-ancienne-tls-for.html)**: 
 Means PowerPC Macs can't connect to YouTube at all.
@@ -81,33 +81,32 @@ Means PowerPC Macs can't connect to YouTube at all.
    its cryptography. However, on pretty much any system older than 2015, 
    TLS v1.2 is not supported. If the web were working as expected, then these
    systems would just negotiate a TLSv1.1 or v1.0 connection. Hell, even 
-   start the connection with no TLS for 90's system. But basically the entire
-   internet decided that just rejecting the connection all together was better
+   start the connection with no TLS for systems from the '90s. But basically the entire
+   internet decided that just rejecting the connection altogether was better
    than allowing an insecure connection. So now what you see is any Mac running
    an OS older than macOS 10.9 Mavericks (2013), basically can't browse the
    internet at all.
    
 2\) **H.264 is too Sophisticated**: Even if these Macs could connect to YouTube,
-H.264 is such a computationally intensive codec, that these old Macs can
-barely play back postage stamp sized video in H.264.
+H.264 is such a computationally intensive codec that these old Macs can
+barely play back postage-stamp-sized video in H.264.
 
- - H.264 was such a huge success because it meant extremely high quality 
+ - H.264 was such a huge success because it meant extremely high-quality
    videos used very little bandwidth compared to its predecessors like Xvid
-   and MPEG2. So while old Macs have not much trouble with MPEG1, MPEG2, and Xvid,
-   we never got high quality videos back in the day because there was not
+   and MPEG-2. So while old Macs do not have much trouble with MPEG-1, MPEG-2, and Xvid,
+   we never got high-quality videos back in the day because there was not
    enough bandwidth on the internet to get quality video out of these codecs.
    
-### How to Stream High Quality Video on a PowerPC Mac
+### How to Stream High-Quality Video on a PowerPC Mac
 
-We are basically going to use the fact that we have a local high speed ethernet
-network that our PowerPC Mac sits on to stream an incredibly high bit rate
-yet simple to decode video codec like MPEG1, MPEG2, or Xvid. We are going 
+We are basically going to use the fact that we have a local high-speed Ethernet
+network that our PowerPC Mac sits on to stream an incredibly high-bitrate
+yet easy-to-decode video codec like MPEG-1, MPEG-2, or Xvid. We are going
 to use so much bandwidth that even a modern internet connection would have 
-trouble streaming this video over the internet (10+Mbps). 
+trouble streaming this video over the internet (10+ Mbps).
 
-The approach replaces the limited CPU power of PowerPC Macs and replaces it
-with tons of bandwidth which they can handle thanks to their 10/100Mbps
-ethernet ports.
+The approach trades the limited CPU power of PowerPC Macs for tons of bandwidth,
+which they can handle thanks to their 10/100 Mbps Ethernet ports.
 
 ### Known Limitations
 
@@ -119,12 +118,12 @@ on the system you have you will probably at least get:
 
 - 720p video (480p on Tiger)
    - 1080p may be possible on fast G4s and G5s
-- 20-30FPS
+- 20–30 FPS
 - Decently clear picture without too many blocky compression artifacts
 
 #### Audio Quality
 
-Audio quality is excellent. We get full AAC 192k or MP3 320k at 44,100Hz with
+Audio quality is excellent. We get full AAC 192k or MP3 320k at 44,100 Hz with
 no issues. However, disabling audio will let you get higher video quality.
 So if you are OK using your Apple Silicon Mac as the audio output device
 (which may be preferred if you use AirPods for example), then you can push
@@ -139,54 +138,54 @@ the video codec further.
       theoretically this would work on any version of OS X if you could get 
       VLC to start.
    1. Why is Leopard preferred? In the many hours of testing I have done, 
-      Leopard seems to have a better networking stack that can handle 10+Mbps
+      Leopard seems to have a better networking stack that can handle the 10+ Mbps
       onslaught of UDP packets we are going to throw at the system. I was able
-      to get almost double the resolution in Leopard (1152x720p) than I was
-      able to in Tiger. But Tiger still works fine, just lower quality.
-1. PowerPC Mac connected to your home network over ethernet: Sorry, the Airport
+      to get almost twice the resolution in Leopard (1152x720) that I was
+      able to get in Tiger. But Tiger still works fine, just at lower quality.
+1. PowerPC Mac connected to your home network over Ethernet: Sorry, the AirPort
    cards on these old Macs are too slow for this.
 1. Apple Silicon Mac: This will be the streaming server. Theoretically, any 
-   computer that runs FFMPEG could be the streaming server. But this tutorial 
+   computer that runs FFmpeg could be the streaming server. But this tutorial
    is for Apple Silicon Macs.
    
 #### My Setup
 
-- [iMac (Flat Panel 17-inch, 1GHz)](https://everymac.com/systems/apple/imac/specs/imac_1.0_17_fp.html) from 2003 with SSD and 1.5GB RAM Upgrade
-- [MacBook Air \(2020\)](https://everymac.com/systems/apple/macbook-air/specs/macbook-air-m1-8-core-8-core-gpu-13-retina-display-2020-specs.html) with M1 Chip and 16GB of RAM
+- [iMac (Flat Panel 17-inch, 1 GHz)](https://everymac.com/systems/apple/imac/specs/imac_1.0_17_fp.html) from 2003 with an SSD and a 1.5 GB RAM upgrade
+- [MacBook Air \(2020\)](https://everymac.com/systems/apple/macbook-air/specs/macbook-air-m1-8-core-8-core-gpu-13-retina-display-2020-specs.html) with an M1 chip and 16 GB of RAM
 
 ### Tools
 
 1. [UTM](https://mac.getutm.app) - A UI wrapper around the venerable QEMU virtualization and emulation tool
 1. [Debian 12](https://www.debian.org) - You can use any Linux you like, but I found Debian 12 to be easiest
-1. [FFMPEG](https://ffmpeg.org) - The one-stop-shop for all video encoding and decoding
-1. [VLC](https://www.videolan.org/vlc/download-macosx.html) - The one-stop-shop for all video playback on OS X for 25 years
+1. [FFmpeg](https://ffmpeg.org) - The one-stop shop for all video encoding and decoding
+1. [VLC](https://www.videolan.org/vlc/download-macosx.html) - The one-stop shop for all video playback on OS X for 25 years
 
 ### Why Use a Virtual Machine
 
 The [original version of this tutorial](https://github.com/jeffreybergier/Retro-Stream-Tutorial/blob/main/README-MacVM.md) was entirely Mac-based;
-however, I still used a VM because AVFoundation only lets FFMPEG capture
+however, I still used a VM because AVFoundation only lets FFmpeg capture
 entire screens and I thought it was not very convenient to give up a whole
-monitor for streaming. But primarily, there is some sort of bug in FFMPEG that makes
-capturing high quality audio via AVFoundation not work properly. I think it's
+monitor for streaming. But primarily, there is some sort of bug in FFmpeg that makes
+capturing high-quality audio via AVFoundation not work properly. I think it's
 [Bug #11398](https://trac.ffmpeg.org/ticket/11398) but I'm not sure.
 
-But as could be expected, FFMPEG works great with Linux. That said, I spent many
+But as could be expected, FFmpeg works great with Linux. That said, I spent many
 hours troubleshooting and I found some critical things you need from
 your Linux Video Streaming Server. This tutorial is the easiest way I found to
 do this. But you can use your own Linux server as long as:
 
-- It runs X11: This is not the default for many years, but Ubuntu 25.10 drops X11 entirely
-- It runs Pipewire 1.4.2: Debian 12 by default runs a very old version of Pipewire and it does not work properly for this streaming setup
+- It runs X11: This has not been the default for many years, and Ubuntu 25.10 drops X11 entirely
+- It runs PipeWire 1.4.2: Debian 12 by default runs a very old version of PipeWire, and it does not work properly for this streaming setup
 - It supports hardware GPU acceleration
 
 ## Tutorial
 
 I tried to add as many screenshots as possible. So if you are getting lost, 
-use Command+F and search for "Screenshot" to highlight all of the screenshot 
+use Command+F and search for "Screenshot" to highlight all the screenshot
 links in the tutorial.
 
 Also note that if you use the Debian VM image I link below, then copy and paste
-works between the Host Mac and the VM Linux. However, remember that Linux uses
+works between the host Mac and the Linux VM. However, remember that Linux uses
 the Control key instead of Command. Also, the terminal in Linux uses
 Control + Shift + C and Control + Shift + V.
 
@@ -196,27 +195,27 @@ Control + Shift + C and Control + Shift + V.
 1. Open UTM - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/01-UTM-Blank.png)
 1. Download the [Debian 12](https://mac.getutm.app/gallery/debian-12) image for UTM
 1. Choose a place on your hard drive you want the VM image to live and move it there
-1. Extract the Zip file - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/02-Debian-Extract.png)
-1. Double click to open it in UTM - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/03-Debian-Open.png)
-1. Click the "Edit Selected VM" in the toolbar at the top right of the UTM window
+1. Extract the ZIP file - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/02-Debian-Extract.png)
+1. Double-click to open it in UTM - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/03-Debian-Open.png)
+1. Click "Edit Selected VM" in the toolbar at the top right of the UTM window
    1. \[Required\] In Network change the "Network Mode" to Bridged - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/04-UTM-Network.png)
    1. \[Optional\] In Display uncheck "Resize display to window size automatically" - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/05-UTM-Resolution.png) 
       1. This is a nice feature normally, but for our streaming server we never want the resolution to change
    1. \[Optional\] In USB Drive delete the USB CD-ROM Drive: We won't use it - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/06-UTM-CD.png)
    1. \[Optional\] In Sharing change the "Directory Sharing Mode" to None: We won't need to share files - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/07-UTM-Sharing.png)  
 1. Boot up your VM
-1. \[Required\] At the login window change to 1 of the Xorg (X11) options - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/08-Settings-X11.png)
+1. \[Required\] At the login window, change to one of the Xorg (X11) options - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/08-Settings-X11.png)
    1. Username and Password are both `debian`
 1. \[Optional\] Open the Settings app and change the following
    1. \[Optional\] Privacy→Screen - Disable screen blanking - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/09-Settings-ScreenBlank.png)
    1. \[Optional\] Users - Enable Automatic Login - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/10-Settings-Login.png)
    1. \[Optional\] Appearance - Enable Dark Mode - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/11-Settings-Appearance.png)
-   1. \[Optional\] Date&Time - Set your time zone - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/12-Settings-TimeZone.png)
+   1. \[Optional\] Date & Time - Set your time zone - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/12-Settings-TimeZone.png)
    1. \[Optional\] Keyboard - Add your keyboard if you don't use a US keyboard - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/13-Settings-Keyboard.png)
-   1. \[Optional\] Mouse&Keyboard - Enable Natural Scrolling - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/14-Settings-Scrolling.png)
-      1. If you are a Mac user you are probably used to natural scrolling at this point (no judgement 🤣)
+   1. \[Optional\] Mouse & Keyboard - Enable Natural Scrolling - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/14-Settings-Scrolling.png)
+      1. If you are a Mac user, you are probably used to natural scrolling at this point (no judgment <i class="fa-regular fa-face-laugh-squint"></i>)
    1. \[Optional\] Sharing - Change the system name - [Screenshot](/assets/images/retro-tech/retro-stream-tutorial/050-Debian/15-Settings-Name.png)
-      1. If you want to use SSH to login to the VM: `ssh debian@Chosen-Sharing-Name.local`
+      1. If you want to use SSH to log in to the VM: `ssh debian@Chosen-Sharing-Name.local`
 1. Open Firefox and browse to YouTube to ensure your network and sound are working
 1. Open Terminal and ping a Mac on your network (preferably not the host Mac) - `ping Retro-Mac-Bonjour-Name.local` 
    1. If the host is not reachable then there is a network issue (probably not bridged)
@@ -224,20 +223,20 @@ Control + Shift + C and Control + Shift + V.
 ### Step 2: Install Updates
 
 Sorry, some of these steps say to use `vi` in the terminal. You may need to 
-look up how to use this text editor, it's not easy. If there is another text
+look up how to use this text editor; it's not easy. If there is another text
 editor you already know how to use like `nano` feel free to use that instead.
 
 **Install Updates from Debian Backports**
 
-Debian 12 has many quite old pieces of software because Debian tries to maintain
-a reputation of being stable. But they also offer "backports" which will install
-newer versions of packages to your system. Specifically we need a much newer
-version of Pipewire which is the audio system in Linux that FFMPEG will capture
+Debian 12 has many pieces of quite old software because Debian tries to maintain
+a reputation for being stable. But they also offer "backports," which will install
+newer versions of packages to your system. Specifically, we need a much newer
+version of PipeWire, which is the audio system in Linux that FFmpeg will capture
 from.
 
 `sudo vi /etc/apt/sources.list`
 
-At the bottom of the file, paste the following
+At the bottom of the file, paste the following:
 
 `deb http://deb.debian.org/debian bookworm-backports main contrib non-free`
 
@@ -256,8 +255,8 @@ Now we need to update any remaining updates
 
 `sudo apt upgrade`
 
-Now you can test to make sure a new version of pipewire is installed. The
-version should be 1.4.2 but if it's below 1, then we have a problem.
+Now you can test to make sure a new version of PipeWire is installed. The
+version should be 1.4.2, but if it's below 1.0, then we have a problem.
 
 `pipewire --version`
 
@@ -265,16 +264,16 @@ Now you can restart the system
 
 `sudo shutdown -r now`
 
-### Step 3: Install FFMPEG
+### Step 3: Install FFmpeg
 
-FFMPEG is a legendary tool for video and audio encoding, decoding, and 
+FFmpeg is a legendary tool for video and audio encoding, decoding, and
 streaming. In this tutorial I will probably only cover 1% of its functionality.
 However, it gives us the power to tweak everything so we can stream to our
 Retro Mac with unexpectedly good quality.
 
 `sudo apt install ffmpeg pulseaudio-utils`
 
-Set the default Pipewire audio capture device to be the "monitor". The default
+Set the default PipeWire audio capture device to be the "monitor." The default
 capture device is usually the microphone, which makes sense, but is also not
 what we want. I will give you the specific commands for my system, but be
 careful to make sure the long names with numbers all match your system.
@@ -287,12 +286,12 @@ mine.
 
 `pactl set-default-source alsa_output.pci-0000_00_03.0.analog-stereo.monitor`
 
-### Step 4: Test Video Streaming to your Apple Silicon Mac
+### Step 4: Test Video Streaming to Your Apple Silicon Mac
 
 Because the Retro Mac might have other problems we can't control, first we are
 going to try to stream video from the VM directly to your Apple Silicon
-Mac Host. This will let us know the video streaming is working without worrying
-about 20+ year old hardware and software.
+host Mac. This will let us know the video streaming is working without worrying
+about hardware and software that are more than 20 years old.
 
 **On the Host**
 
@@ -303,7 +302,7 @@ about 20+ year old hardware and software.
 **On the VM**
 
 Open terminal and paste the following. I'll explain the options later. But for
-now the only thing you need to change is the bonjour name on the last line.
+now the only thing you need to change is the Bonjour name on the last line.
 
 ```
 ffmpeg \
@@ -326,15 +325,15 @@ To end the stream, type `q` in the terminal of the VM.
 
 ### Step 5: Prepare the PowerPC Mac
 
-Note that for Leopard, the VLC website says you can use VLC 2.0.10 but I found
+Note that for Leopard, the VLC website says you can use VLC 2.0.10, but I found
 this version to have terrible performance. A search online revealed the same
-thing. Instead you should use the newest version of 1.0 that you can find. 
+thing. Instead, you should use the newest version of 1.0 that you can find.
 Credit to [PowerPC Liberation: Video on PowerPC: Part 1 - Playback on G4/G5](https://powerpcliberation.blogspot.com/2012/08/video-on-powerpc-playback-on-g4g5.html)
 
-Note that due to the [The TLS Apocalypse](https://oldvcr.blogspot.com/2020/11/fun-with-crypto-ancienne-tls-for.html)
+Note that due to [The TLS Apocalypse](https://oldvcr.blogspot.com/2020/11/fun-with-crypto-ancienne-tls-for.html)
 mentioned above, you will almost certainly not be able to download these 
-directly on the PowerPC Mac. Instead you will need to download them on your
-modern Mac and then transfer them over file sharing.
+directly on the PowerPC Mac. Instead, you will need to download them on your
+modern Mac and then transfer them via file sharing.
 
 **Install VLC on your Retro Mac**
 
@@ -357,7 +356,7 @@ modern Mac and then transfer them over file sharing.
    
 **Start the Video Stream in the Linux VM**
 
-In the terminal paste the following. Note this is an extremely low quality 
+In the terminal, paste the following. Note that this is an extremely low-quality
 stream. We are just making sure it works. We will optimize later.
 
 ```
@@ -371,28 +370,28 @@ ffmpeg \
 ```
 
 
-### 🥳Congratulations🎉
+### <i class="fa-regular fa-face-grin-stars"></i> Congratulations <i class="fa-solid fa-champagne-glasses"></i>
 
 You have a successful streaming setup completed. Now it's time to optimize
-playback performance for your PowerPC Mac
+playback performance for your PowerPC Mac.
 
 ## Optimize Playback Performance
 
-All of my testing was done on my 1GHz iMac G4. But if you have a more powerful
+All of my testing was done on my 1 GHz iMac G4. But if you have a more powerful
 Mac, you can get more bandwidth and quality out of it. Likewise, if you have 
 a slower Mac, you can reduce quality.
 
 To increase the speed of debugging, know that you can press Q to quit the
-FFMPEG server and then change the settings and restart it again. The PowerPC 
-Mac will just pause until you restart FFMPEG. Note that you can only change 
-minor settings like framerate and quality settings. If you change resolution 
+FFmpeg server and then change the settings and restart it. The PowerPC
+Mac will just pause until you restart FFmpeg. Note that you can only change
+minor settings like frame rate and quality settings. If you change resolution
 or codecs, then you will need to stop the stream on the PowerPC Mac and 
 restart it.
 
-### High Quality FFMPEG Command
+### High-Quality FFmpeg Command
 
-Here is our example command which I find to have very good quality and performance
-on the iMac G4 1GHz. But based on your specific Mac, you may want to change
+Here is our example command, which I find to have very good quality and performance
+on the 1 GHz iMac G4. But based on your specific Mac, you may want to change
 these settings.
 
 ```
@@ -405,30 +404,30 @@ ffmpeg \
   -f mpegts "udp://Your-Retro-Mac-Bonjour-Name.local:1234?pkt_size=1316"
 ```
 
-#### FFMPEG Command Explanation
+#### FFmpeg Command Explanation
 
 | Command                                                                  | Explanation |
 |--------------------------------------------------------------------------|-------------|
 | `ffmpeg`                                                                 |             |
-| `-f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \`                   | This specifies the video input - Modify the framerate to find the right balance between quality and performance |
+| `-f x11grab -framerate 20 -draw_mouse 0 -i $DISPLAY \`                   | This specifies the video input - Modify the frame rate to find the right balance between quality and performance |
 | `-f pulse -i default \`                                                  | This specifies the audio input - The default capture device we specified earlier in this tutorial |
-| `-c:v mpeg4 -qscale:v 3 -vtag XVID \`                                    | This specifies video codec (XVID) - Modify QSCALE from 1 (highest) to 31 (lowest) to find the right balance between quality and performance |
+| `-c:v mpeg4 -qscale:v 3 -vtag XVID \`                                    | This specifies the video codec (XVID) - Modify QSCALE from 1 (highest) to 31 (lowest) to find the right balance between quality and performance |
 | `-c:a aac -b:a 192k -ac 2 -ar 44100 \`                                   | This specifies the audio codec (AAC) - If your Mac has trouble with AAC, you can change to MP3 |
-| `-vf "eq=gamma=0.80,scale=1152x720" \`                                   | This specifies the video filter - You can add many filters, but here we scale the video to be lower resolution and change the gamma to be darker (older Macs had a brighter gamma, so modern content can look washed out) |
+| `-vf "eq=gamma=0.80,scale=1152x720" \`                                   | This specifies the video filter - You can add many filters, but here we scale the video to a lower resolution and change the gamma to be darker (older Macs had a brighter gamma, so modern content can look washed out) |
 | `-f mpegts "udp://Your-Retro-Mac-Bonjour-Name.local:1234?pkt_size=1316"` | This specifies the destination for the UDP stream (Your retro Mac) |
 
-### Modifying FFMPEG Commands
+### Modifying FFmpeg Commands
 
-As FFMPEG is extremely complex, I highly recommend using ChatGPT or another LLM
-to help you with FFMPEG. This is where I learned everything for FFMPEG. I only
+As FFmpeg is extremely complex, I highly recommend using ChatGPT or another LLM
+to help you with FFmpeg. This is where I learned everything about FFmpeg. I only
 use the free ChatGPT account and it's perfectly adequate. For example, here is a
-sample prompt and a screenshot of the response. You can see that it exactly
+sample prompt and a screenshot of the response. You can see that it correctly
 modified the one line that needed to change.
 
 ```
-Hi, I need help with FFMPEG. I am using Debian 12 with Backports installed to
+Hi, I need help with FFmpeg. I am using Debian 12 with Backports installed to
 stream to an iMac G4 running Leopard and VLC. The iMac doesn't have much
-processor power and so I am trying to optimize performance. I have this FFMPEG
+processor power and so I am trying to optimize performance. I have this FFmpeg
 command that streams in XVID and it plays pretty smoothly on my iMac, but I
 want to try MPEG2. Can you update the command to use MPEG2?
 
@@ -447,32 +446,32 @@ ffmpeg \
 
 1. Isn't this hard on a Retro Mac?
    1. Yeah, this is very hard on your old Mac. My iMac G4 can do it for hours
-      with no stability challenges, but we are talking 100% CPU and many
+      with no stability challenges, but we are talking about 100% CPU and many
       gigabytes of network traffic.
    1. I think this is more of a philosophical question than a technical one. I
       feel like these beautiful, powerful machines were meant to be used rather
       than sitting on a shelf.
 1. Won't this slow down my Apple Silicon Mac?
    1. I have the absolute slowest Apple Silicon Mac. It's an M1 MacBook Air
-      with no fan. It's true that this solution takes about 100% of 1 core of
-      the CPU. But I have not noticed any slow downs or throttling. This 
+      with no fan. It's true that this solution takes about 100% of one core of
+      the CPU. But I have not noticed any slowdowns or throttling. This
       includes when I am using Xcode to develop software for iOS and Mac apps.
 1. Can this be done without an Apple Silicon Mac?
-   1. Absolutely! The server could be any machine that runs FFMPEG which is 
+   1. Absolutely! The server could be any machine that runs FFmpeg, which is
       pretty much any machine. I look forward to seeing a future tutorial that 
-      uses a Raspberry Pi 🍓
+      uses a Raspberry Pi <i class="fa-brands fa-raspberry-pi"></i>
    1. I just created this tutorial using UTM and Apple Silicon because that's
       what I have. But there is no reason the exact same thing can't be done 
-      with an Intel Mac and VMWare Fusion (which is free now by the way)
+      with an Intel Mac and VMware Fusion (which is free now, by the way).
 
 ## Advanced
 
-### FFMPEG Multi-Stream
+### FFmpeg Multi-Stream
 
-FFMPEG with MPEGTS streaming protocol can actually stream to multiple computers
+FFmpeg using the MPEG-TS streaming protocol can actually stream to multiple computers
 at once over UDP. Why would you want to do this? Well, if you have a whole 
 army of retro computers, you could have them all play the same video at once…
-Or more likely, you are interested in using modern bluetooth audio options to
+Or more likely, you are interested in using modern Bluetooth audio options to
 listen to the stream while using the retro Mac to display the content.
 
 Unfortunately, this will not result in every computer playing in sync. The UDP
@@ -495,7 +494,7 @@ ffmpeg \
 
 1. `-f mpegts` 2x - Specify as many destinations as you like
 1. `-vf` - Added `tpad=start_duration=0` - Change the zero to a number in **seconds** to cause video to be delayed in order to aid with syncing
-1. `-af` - Added Audio Filter - `adelay=0|0"` - Change the 0|0 to a number in **milliseconds** to cause audio to be delayed in order to aid with syncing. Each side of the | is left and right channel, so the numbers should be the same.
+1. `-af` - Added audio filter - `adelay=0|0` - Change the 0|0 to a number in **milliseconds** to cause audio to be delayed in order to aid with syncing. Each side of the | is the left or right channel, so the numbers should be the same.
 
 ### Set Exact Resolution in Debian
 
@@ -503,17 +502,17 @@ The Debian VM boots to 1280x800 which is a pretty good resolution for a lot of
 retro Macs as long as they are widescreen. However, you may want to set the
 virtual machine to a different resolution. This can be done pretty easily in
 the Settings app under Displays. However, not all resolutions are in there.
-Also, all of those resolutions are at 60Hz which makes sense because that's
+Also, all of those resolutions are at 60 Hz, which makes sense because that's
 a typical desktop refresh rate. So why would you want to change the resolution?
 
-1. Using the -vf scale option is actually kind of compute intensive because
-   FFMPEG has to scale the video before sending it over the wire
-1. 60Hz is likely way faster than your Retro Mac will be able to render. So this
-   is also wasting performance of the Virtual Machine and the Host Mac.
+1. Using the -vf scale option is actually kind of compute-intensive because
+   FFmpeg has to scale the video before sending it over the wire
+1. 60 Hz is likely way faster than your retro Mac will be able to render. So this
+   is also wasting performance on the virtual machine and the host Mac.
    
 #### How to Set the Resolution Manually on the Debian VM
 
-Declare to the system which resolution you want
+Declare to the system which resolution you want:
 
 `cvt 1152 720 30`
 
@@ -525,7 +524,7 @@ debian@debian:~$ cvt 1152 720 30
 Modeline "1152x720_30.00"   31.75  1152 1184 1296 1440  720 723 729 736 -hsync +vsync
 ```
 
-Add the resolution to the windowing system. Execute the 2 commands and make
+Add the resolution to the windowing system. Execute the two commands and make
 sure the first one matches the Modeline output exactly.
 
 ```
@@ -539,7 +538,7 @@ change and the UTM window will resize.
 `xrandr --output Virtual-1 --mode "1152x720_30.00"`
 
 Now the issue is that this will not persist across reboots and you will have
-to run these 3 commands every time. To fix that we need to save the monitor
+to run these three commands every time. To fix that, we need to save the monitor
 configuration in X11.
 
 ```
@@ -568,7 +567,7 @@ EndSection
 ```
 
 Now when you restart, it should boot into the resolution you specified. Note
-that it will have 3 resolutions during boot. The basic 800x600 used by Grub,
+that it will have three resolutions during boot. The basic 800x600 used by GRUB,
 then it resizes to 1280x800 as the default resolution before X11 starts up, and
 then when you get to the login screen or the desktop, it will resize to your
 selected resolution.
@@ -577,10 +576,10 @@ selected resolution.
 
 After you get everything working, and you know everything works smoothly
 and without hiccups most of the time, then you can reduce the amount of 
-resources the VM is allowed to use. By default it's 4 cores and 4GB of RAM.
+resources the VM is allowed to use. By default, it's four cores and 4 GB of RAM.
 
-When you have your streaming setup running, use HTOP to see how much RAM
-and how much CPU is in use. HTOP does not come on Debian so you can install it.
+When you have your streaming setup running, use htop to see how much RAM
+and how much CPU is in use. htop does not come with Debian, so you can install it.
 
 ```
 sudo apt update
@@ -588,9 +587,9 @@ sudo apt install htop
 htop
 ```
 
-In my system, I found it rarely used more than 2GB of RAM and all 4 CPU cores
+In my system, I found it rarely used more than 2 GB of RAM and all four CPU cores
 were at about 25% when streaming was running. So I decided to reduce the 
-available resources to 2 Cores and 3GB of RAM… I found 1 Core caused skipping
+available resources to two cores and 3 GB of RAM… I found one core caused skipping
 and other problems with the stream. In UTM you can change the settings
 however you like to reduce the burden on your host Mac.
 

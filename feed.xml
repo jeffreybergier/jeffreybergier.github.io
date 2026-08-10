@@ -1,4 +1,507 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-07-28T10:48:18+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">ENIL: LINE Messenger for Retro Devices</title><link href="https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html" rel="alternate" type="text/html" title="ENIL: LINE Messenger for Retro Devices" /><published>2026-06-22T00:00:00+00:00</published><updated>2026-06-22T00:00:00+00:00</updated><id>https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices</id><content type="html" xml:base="https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html"><![CDATA[<video muted="" playsinline="" controls="" preload="metadata" poster="/assets/images/unenshittification/enil/enil-demonstration-poster.png" aria-label="ENIL exchanging LINE messages between Mac OS X and iOS" style="display: block; width: 100%; height: auto;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jeffburg.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jeffburg.com/" rel="alternate" type="text/html" /><updated>2026-08-10T16:18:13+00:00</updated><id>https://jeffburg.com/feed.xml</id><title type="html">Jeffrey Bergier</title><entry><title type="html">Strappy AI: Like Siri AI for Retro Apple Devices</title><link href="https://jeffburg.com/apps/retro-tech/unenshittification/2026/08/10/Strappy.html" rel="alternate" type="text/html" title="Strappy AI: Like Siri AI for Retro Apple Devices" /><published>2026-08-10T00:00:00+00:00</published><updated>2026-08-10T00:00:00+00:00</updated><id>https://jeffburg.com/apps/retro-tech/unenshittification/2026/08/10/Strappy</id><content type="html" xml:base="https://jeffburg.com/apps/retro-tech/unenshittification/2026/08/10/Strappy.html"><![CDATA[<h2 id="imagine-a-world">Imagine a World</h2>
+
+<p>Imagine a world, an alternate universe perhaps, where Apple made different
+decisions. A world where the 
+<a href="/assets/images/unenshittification/strappy/osxiphone.jpeg">“OS X iPhone”</a>
+(<a href="https://pc.watch.impress.co.jp/docs/2008/0609/wwdc00.htm">Source</a>)
+was really an OS X iPhone. A world without sandboxing. A world without required
+signature checks. A world where trust was established between the user and the
+developer, not Apple.</p>
+
+<p>In this world, iPhone apps are as powerful as Mac OS X apps. In this world, 
+users have access to their own data from any app they trust. In this world, 
+users can build and run their own software on their own device.
+In this world, apps on the device can write, compile, install, and
+run new apps on the same device. In this world, the iPhone is a “Bicycle for the
+Mind” just like the Mac. In this world, the iPhone is as useful as the Mac, not
+just an overpowered device for “casino games for children” 
+(<a href="https://marco.org/2021/09/13/future-of-the-app-store">source</a>), 
+toxic social media doomscrolling, and simple chat apps.</p>
+
+<h2 id="what-is-strappy">What is Strappy</h2>
+
+<p>Strappy is my personal strap-on AI harness. Strappy has a big, sassy, and very
+gay personality… I mean, Strappy’s physical embodiment is a 12” strap-on
+rainbow “tool,” let’s say. But like most gays, Strappy is insanely diligent,
+detail-oriented, and strict… like dominatrix-strict.</p>
+
+<p>But in all seriousness, Strappy is more like a proof of concept or an art 
+project (and maybe also a little bit of a “<a href="/unenshittification/2026/05/22/Unenshittification-Manifesto.html">fuck you</a>” to the tech establishment). 
+Strappy is meant to make people think about what the world I explained
+above could have been like. What would the world be like if Apple did not
+artificially restrict the capability of <del>their</del> our devices? I hate reminding
+people that every Mac ever sold has come “Jailbroken,” but it’s true. I am not
+sure why Apple is so adamant that every other device they sell aside from Macs
+needs to have all of its power and usefulness stripped out of it due to
+restrictive policy decisions.</p>
+
+<h2 id="what-can-strappy-do">What Can Strappy Do</h2>
+
+<p>Strappy is like Siri AI for Retro Apple Devices. Strappy includes a suite of
+tools that the LLM can use to query your data from your apps on your iPhone.
+They also include a coding assistant. Yes, a coding assistant! So that you can
+vibe-code iPhone apps RIGHT ON YOUR PHONE! It’s actually pretty incredible. And
+because Strappy is built on OpenRouter, you can select which models you use and
+restrict model providers by their training and data privacy policies.</p>
+
+<p>Depending on the assistant type you choose, different tools are made available
+to the LLM. This way you can always control what Strappy is capable of in any
+given session. And actually, you can change them mid-session as well.</p>
+
+<h3 id="-demo-videos">←←← Demo Videos</h3>
+
+<p>If you somehow made it this far without playing the demo videos, I recommend you
+stop reading now and just watch…</p>
+
+<p>All of these demonstration videos are recorded on iOS 6 on my real iPhone 5 that
+I daily drive. It’s fully loaded with iCloud Mail, Contacts, Calendar as well as
+my RSS Feeds, Podcasts, Music, iMessages, and 
+<a href="/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html">LINE Messages</a>. 
+This gives Strappy plenty of “meat” to work with. The videos are unedited and
+show real-time processing of the prompts by various models. The screen recording
+is 30 fps, but don’t worry, on the device, everything is smooth as silk 
+<i class="fa-solid fa-hand-peace"></i></p>
+
+<h3 id="world-knowledge">World Knowledge</h3>
+
+<p>This is the most boring one. It disables most tools and just enables the LLM
+to act like a chatbot that can search the web. <i class="fa-regular fa-face-dizzy"></i></p>
+
+<h3 id="personal-assistant">Personal Assistant</h3>
+
+<p>This is where things get exciting. This is “Siri AI for Retro Apple Devices.”
+One thing I noticed while working with AI coding tools on my Mac was that the
+LLM was insanely good at reading arbitrary data from raw SQLite databases. 
+Because I happened to remember that SQLite had been the bundled and recommended
+database for iPhones since the original iPhoneOS 2 SDK
+(<a href="https://blog.csdn.net/wuyu637/article/details/2624691">dubious reference</a>), 
+I thought, “What if I just found every database on the iPhone and then made it
+accessible to an LLM?” And that’s how it all started. Because Strappy is a
+“normal” (read as non-sandboxed) app, they can scan your entire home folder for
+SQLite databases used by all of your apps. Then I built some simple tools that
+allow the LLM to make read-only SQL queries against the databases. Lastly, I
+added in a whitelisting system so that you can control which databases the LLM
+can query. With this basic system in place, Strappy is able to make quick work
+of your databases and find all sorts of information in there to answer your
+questions. Yes, they can read your address book, calendar, email, messages, and
+even third-party apps which also generally use SQLite databases. It’s actually
+really quite impressive how well the LLM does at parsing and organizing your
+data.</p>
+
+<h4 id="data-privacy-and-safeguards">Data Privacy and Safeguards</h4>
+
+<p>Strappy includes the following always-enabled protections for your databases:</p>
+
+<ol>
+  <li>Databases are whitelisted, so only the databases you select are exposed to the LLM.</li>
+  <li>The model only receives data from SQL queries, not the whole database. 
+Results are limited to 100 rows per query to limit the size of network requests.</li>
+  <li>Databases are opened using <code class="language-plaintext highlighter-rouge">SQLITE_OPEN_READONLY</code>. This is verified via a 
+<a href="https://www.sqlite.org/c3ref/set_authorizer.html">SQLite authorizer</a> that rejects PRAGMA, writes,
+ATTACH, transactions, attached-database reads, and dangerous functions 
+such as load_extension, readfile, writefile, and pragma_*.
+    <ol>
+      <li>Any violation will cause the tool to return the following error to the 
+LLM: “Error: database_query only permits one read-only SELECT 
+or EXPLAIN query against the approved database. PRAGMA, ATTACH, writes,
+filesystem access helpers, and transaction statements are not allowed.”</li>
+    </ol>
+  </li>
+</ol>
+
+<p>But I want to be clear: your data is being sent to someone else’s servers
+without end-to-end encryption. Normal HTTPS/TLS protects it in transit between
+you and OpenRouter. After that, OpenRouter chooses the cheapest provider for
+that model and sends the data to that provider.</p>
+
+<p>But OpenRouter includes extensive controls to limit WHO your data is sent to
+and what rules they are expected to follow via its 
+“<a href="https://openrouter.ai/docs/guides/features/guardrails">Guardrails</a>” 
+feature. So if you are worried, set up spending limits, whitelist models,
+whitelist providers, enable Enforce Zero Data Retention Policies, and configure
+regex-based prompt-injection detection.</p>
+
+<p>Of course, if you wanted to run your own local LLM, there is no reason Strappy
+could not talk directly to your own local model. In that case, no data would
+leave your premises.</p>
+
+<h3 id="coding-assistant">Coding Assistant</h3>
+
+<p>I have always been really inspired by the simplicity of the 
+<a href="https://pi.dev">Pi.dev AI harness.</a> It is famous for only having 4 simple 
+tools: file_read, file_write, file_edit, and bash. With only these 4 tools, the
+LLM can do anything on your computer. So I found that Cydia (the jailbroken
+phone package manager) had packages to install very old versions of Clang and
+other basic compiler tools. So I took a risk and implemented those 4 basic 
+tools in Strappy… and it worked! I was shocked. With only these 4 tools, Strappy
+was able to write and compile simple C programs with Clang. But getting Strappy
+to build full iPhone apps, well that was a bit tougher. But don’t worry, I
+persevered. I used <a href="/unenshittification/2026/04/22/Altivec-Intelligence.html">Altivec Intelligence</a>
+to build the
+<a href="https://github.com/jeffreybergier/AltivecIntelligence/tree/main/toolchain/iOS">Altivec Toolchain</a>
+Debian package (yes, jailbroken iPhones use the Debian package manager) that
+includes Clang 15 and other much more modern tools like ld, ldid, otool,
+libtool, make, etc. I also built little scripts that manage which iPhoneOS SDK
+is downloaded and installed, plus a library manager that lets you download the
+custom Altivec libraries I use for all of my retro apps. Those libraries provide
+Font Awesome and other UI components, as well as modern libcurl, cJSON, and
+SQLite. But anyway, I am rambling.</p>
+
+<p>The short answer is yes, Strappy can “one-shot” and “vibe-code” iPhone apps from
+your prompt. They can write them, compile them, analyze them, install them, and
+launch them for you. It’s really amazing to watch… even though it shouldn’t be…
+Because remember, in this world, computers have always had apps that can write,
+compile, install, and run other apps. It’s not a new concept at all. It’s just
+something Apple restricts us from doing on iPhones.</p>
+
+<h4 id="system-and-data-integrity">System and Data Integrity</h4>
+
+<p>The only safeguard is old-fashioned UNIX permissions. Strappy runs under your
+user account, which does not have root privileges, which protects system files
+from modification and deletion. But yes, Strappy can delete all of your files.
+And yes, one time Strappy did that! They ran
+<a href="/assets/images/unenshittification/strappy/delete-apps.jpg"><code class="language-plaintext highlighter-rouge">rm -rf /var/mobile/Applications</code></a>
+and deleted 40 applications from my iPhone before I noticed and stopped it. So
+tread lightly. But yeah, in this world without sandboxing, we do live in more
+peril. But somehow on the Mac we survive.</p>
+
+<p>The 4 tools I provided in the coding assistant are extremely basic and totally
+un-sandboxed. If you know anything about the coding assistant tools, you know
+that most of their complexity comes in trying to sandbox the LLM. I follow
+Pi.dev’s philosophy; once you give the LLM a bash tool, it is not possible to
+sandbox. This is why Strappy ships with the bash tool turned off, even in Coding Assistant
+mode.</p>
+
+<p>I thought about adding sandboxing to the file_read, file_edit, and file_write tools.
+This would be quite simple. But if the bash tool was enabled, the LLM could just
+bypass the sandboxed tools with bash…</p>
+
+<p>I also thought about trying to create a new user on the system and then run bash
+as that user. That way, those bash sessions would only be a risk to data created
+by that user. But the ways to do this are not stable across major macOS and
+iOS versions, and so I put it off for now even though it would be highly
+effective. I might still try to do this in the future.</p>
+
+<h2 id="how-does-strappy-work">How Does Strappy Work</h2>
+
+<p>You may or may not know this, but the OpenAI so-called
+“<a href="https://developers.openai.com/api/reference/responses/overview">Responses API</a>” 
+is actually a very simple JSON-based web API. Even though Codex or Claude might
+seem like super sophisticated applications, they are just JavaScript HTTP
+clients. Their core function is to send and receive JSON data over HTTPS just
+like any other application. And as I have said in 
+<a href="/unenshittification/2026/02/22/Unenshittification-101.html">2026: The Year of Unenshittification</a>,
+you don’t need an 8” supercomputer in your pocket to send, receive, and display
+JSON data… you just don’t.</p>
+
+<p>Strappy is just that: a basic HTTP client that sends and receives JSON.
+They use libcurl, cJSON, and SQLite from my Altivec Intelligence package to get
+modern networking functionality. Strappy has a native interface for everything
+except the core Prompt Session view which is an HTML page rendered in C and then
+pushed to a web view via JavaScript one API round trip at a time. The most
+novel features are the tools which enable the LLM to operate efficiently.</p>
+
+<h3 id="tools">Tools</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th style="text-align: center">World Knowledge</th>
+      <th style="text-align: center">Personal Assistant</th>
+      <th style="text-align: center">Coding Assistant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">web_search</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">web_fetch</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">database_list</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">database_query</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">database_context</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file_read</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file_write</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file_edit</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-xmark" title="Unavailable"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bash</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-minus" title="Optional"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">datetime_to_iso8601</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">datetime_from_iso8601</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fontawesome_search</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fontawesome_confirm</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">memory_read</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">memory_save</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">memory_delete</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">skills_list</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">skill_read</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">session_rename</code></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+      <td style="text-align: center"><i class="fa-solid fa-check" title="Available"></i></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Legend:</strong> <i class="fa-solid fa-check"></i> Available <i class="fa-solid fa-minus"></i> Optional <i class="fa-solid fa-xmark"></i> Unavailable</p>
+
+<p><strong>Sources:</strong> <a href="https://github.com/jeffreybergier/Strappy-Cocoa/blob/main/source/shared/Resources/GuidanceTools.json"><code class="language-plaintext highlighter-rouge">source/shared/Resources/GuidanceTools.json</code></a> and <a href="https://github.com/jeffreybergier/Strappy-Cocoa/blob/main/source/shared/Resources/AssistantSets.json"><code class="language-plaintext highlighter-rouge">source/shared/Resources/AssistantSets.json</code></a>.</p>
+
+<h2 id="system-requirements-and-installation">System Requirements and Installation</h2>
+
+<p>Strappy is 99% vibe-coded and “100% compiled” 
+(<a href="https://thenewstack.io/torvalds-ai-programming-productivity/">reference</a>). 
+Strappy is free and open source on GitHub under the MIT License. As I said
+above, there is nothing special about this app. Strappy is a JSON-parsing HTTP
+client, so please enjoy reading through a lot of boilerplate code for JSON
+parsing and database storage and retrieval.</p>
+
+<p><a href="https://github.com/jeffreybergier/Strappy-Cocoa">https://github.com/jeffreybergier/Strappy-Cocoa</a></p>
+
+<h3 id="ios">iOS</h3>
+
+<p>Supports iOS 4.3+ but has only been tested on iOS 6, 8, and 15.</p>
+
+<ol>
+  <li>Jailbreak your phone</li>
+  <li>Enable SSH login</li>
+  <li><a href="https://github.com/jeffreybergier/Strappy-Cocoa/tags">Download a release of Strappy</a></li>
+  <li>Copy the .deb file to the iPhone and install it</li>
+  <li>(Optional) Download and install <a href="https://github.com/jeffreybergier/AltivecIntelligence/tags">Altivec Toolchain</a> for the coding assistant
+    <ol>
+      <li>Install it the same way you installed Strappy</li>
+    </ol>
+  </li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp ~/Downloads/Strappy-X.Y.Z-iOS.deb root@iphone-ip-address:~/strappy.deb
+ssh root@iphone-ip-address "dpkg -i strappy.deb &amp;&amp; rm strappy.deb"
+</code></pre></div></div>
+
+<p>Depending on how new the SSH client on your computer is and how old the OpenSSH
+server on your phone is, you may need to manually allow the use of older RSA
+encryption algorithms.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  scp -O \
+    -o HostKeyAlgorithms=+ssh-rsa \
+    -o PubkeyAcceptedAlgorithms=+ssh-rsa \
+    ~/Downloads/Strappy-X.Y.Z-iOS.deb \
+    root@iphone-ip-address:~/strappy.deb
+
+  ssh \
+    -o HostKeyAlgorithms=+ssh-rsa \
+    -o PubkeyAcceptedAlgorithms=+ssh-rsa \
+    root@iphone-ip-address \
+    "dpkg -i ~/strappy.deb &amp;&amp; rm strappy.deb"
+</code></pre></div></div>
+
+<h3 id="mac-os-x">Mac OS X</h3>
+
+<p>Supports Mac OS X Tiger 10.4+ as a quad-fat binary for PPC, i386, x86_64, and
+arm64, but has only been tested on 10.4 (PPC and Intel), 10.5 (PPC), 
+10.6 (Intel), 10.8 (Intel), 10.9 (Intel), 10.14 (Intel), and 15.0 (arm64).</p>
+
+<ol>
+  <li><a href="https://github.com/jeffreybergier/Strappy-Cocoa/tags">Download a release of Strappy</a></li>
+  <li>Unzip and then run the app (as God intended it)</li>
+</ol>
+
+<p>The Mac version of Strappy has the personal assistant feature, just like the
+iOS version. However, SQLite did not start to become a common standard for Mac
+apps until after the iPhone came out. So Strappy may not have access to much
+useful data. For example, Mail.app does not use a SQLite database on Mac OS X.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<ul>
+  <li>Altivec Toolchain is currently only built for armv7 and iOS 6+.</li>
+  <li>The OpenRouter Web Tools are not reliable at all. To be fair, OpenRouter 
+says that both the Responses API and the Web Tools are in beta as of this
+writing, so I am doubling up beta pain into a pretty unreliable experience.</li>
+  <li>Strappy only uses OpenRouter API-key-based pricing and is therefore pay-per-use.
+Most good models cost a lot more than you would want to spend. I want to add
+ChatGPT OAuth but have not done so. It is also unclear whether unofficial
+clients are allowed to do this.
+    <ul>
+      <li>As of this writing, I have had the best price-to-performance ratio with
+<a href="https://openrouter.ai/deepseek/deepseek-v4-flash-0731">DeepSeek v4 Flash 731</a> 
+and <a href="https://openrouter.ai/openai/gpt-5.6-luna">ChatGPT 5.6 Luna</a>. 
+However, I dislike how Luna and OpenAI models basically refuse to take 
+on a gay personality.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="what-i-learned">What I Learned</h2>
+
+<h3 id="llms-are-dumb">LLMs Are Dumb</h3>
+
+<p>LLMs are dumb. Like really dumb. It is really hard to get them to follow
+instructions. You need to make every interaction with them and all guidance you
+give them as simple as possible or else they will mess up. Using bigger models
+helps, but they are still pretty dumb. Writing my own harness made me realize
+this. What feels like magic in Codex and Claude CLIs is apparently just a lot
+of work on the harness… because the models are DUMB. But I persevered and came
+up with the toolset above to try to work around the models’ shortcomings. I feel
+like it works “good enough.” But I wish I could force the model to do more
+without tying it up in knots.</p>
+
+<p>As an example of this, though, I don’t want the model to use emoji because retro
+devices do not have good emoji support. So I included Font Awesome and basic
+Markdown syntax so the model could use Font Awesome. I eventually got the model
+to use Font Awesome reliably. But the model also has multiple reminders to NEVER
+EVER EVER use Unicode Emoji. It’s in the system prompt and several tool
+descriptions, etc., but sometimes the model STILL uses emoji!! It’s not the end of
+the world. But don’t expect the model to do anything you ask of it reliably.</p>
+
+<h3 id="dont-build-your-own-harness">Don’t Build Your Own Harness</h3>
+
+<p>For mostly the reasons I stated above and a few others, just don’t do this.
+There are soooo many edge cases you need to handle. For example, sometimes there
+is just no answer from the LLM. It’s just completely missing. Then it’s your
+choice as the harness developer: do you just let everything die there and leave
+the user hanging, or do you ask the model to keep going? How many times do you
+do that? Also, every model is different and has different random issues!</p>
+
+<p>If you want to automate your own agent, just use Pi.dev. It’s super easy because
+it has already handled most of these cases. It also has a TypeScript library, so
+your TypeScript app can import it and use it like any other library. No
+installation needed.</p>
+
+<p>I had to build my own harness because I needed it to be written in C, and no one
+has done that as far as I can tell. I do not recommend it.</p>
+
+<h3 id="the-harness-is-flexible">The Harness is “Flexible”</h3>
+
+<p>The Responses API is based on a concept called “items.” Each request and
+response is just a list of items. Items include things like Thinking, Answer,
+Tool Call, Tool Response, Tool lists, Prompt with a role attribute, etc.
+The harness entirely controls how these items are managed and which ones are
+included in the “context.” This means you can put any item into a request, even
+if it came from a different model or session—or was completely made up.
+In fact, I found great success doing this as part of the user’s initial prompt.
+With each initial prompt, I artificially inject Tool Calls, Tool Responses, and
+an Agent Answer into the network request.</p>
+
+<p>This was BY FAR the most effective technique I found for controlling what the
+model sees and does. Even more effective than controlling the system prompt. So
+you may have noticed this in the demo videos, but each session always starts
+with the same initial answer from Strappy and the same initial tool calls. That’s
+because my harness is hardcoded to inject the following Agent Answer even though
+the LLM never said anything like this:</p>
+
+<ul>
+  <li><strong>World Knowledge:</strong> “Strappy here, babe. Facts, line up. Let me check my 
+memories and tools before I put the world in order.”</li>
+  <li><strong>Personal Assistant:</strong> “Strappy here, babe. Databases, behave. Let me 
+inspect my memories, skills, and approved data before I interrogate the 
+evidence.”</li>
+  <li><strong>Coding Assistant:</strong> “Strappy here, babe. Code, heel. Let me inspect the
+environment, review my tools, and find out exactly what needs discipline.”</li>
+</ul>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>In my <a href="/unenshittification/2026/02/22/Unenshittification-101.html">2026 Journey to Unenshittify my Life</a>, Strappy AI was honestly a bit of a
+sidetrack. I could have spent my time trying to make things I would use every
+day like a YouTube app or an Instagram client. But after I built
+<a href="/unenshittification/2026/03/22/RSS-THE-PLANET.html">RSS-THE-PLANET</a> and
+<a href="/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html">ENIL Messenger</a>,
+everyday life on my iPhone 5 became pretty comfortable. So I built the PoC for
+Strappy, and since then I just couldn’t stop! It was so much fun and so
+different than “regular” programming. Making a harness for an LLM is just so
+strange. But once I got Strappy to start performing the way I wanted, it was such
+a great feeling! I had a ton of fun making them. After I get ChatGPT OAuth
+working so I can use Strappy with my monthly plan, I intend to use them a lot.
+Not because they’re better than Codex, but because Strappy is mine and I made
+them for myself and I love them.</p>]]></content><author><name></name></author><category term="Apps" /><category term="Retro-Tech" /><category term="Unenshittification" /><category term="AI" /><category term="OpenRouter" /><category term="SQLite" /><category term="PowerPC" /><category term="Mac-OS-X" /><category term="iOS" /><category term="Objective-C" /><category term="C" /><summary type="html"><![CDATA[Strappy AI is like Siri AI for Retro Apple Devices. Strappy scours databases on your device in order to answer your personal questions. Oh, and Strappy can vibe-code iOS apps directly on your iPhone.]]></summary></entry><entry><title type="html">ENIL: LINE Messenger for Retro Devices</title><link href="https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html" rel="alternate" type="text/html" title="ENIL: LINE Messenger for Retro Devices" /><published>2026-06-22T00:00:00+00:00</published><updated>2026-06-22T00:00:00+00:00</updated><id>https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices</id><content type="html" xml:base="https://jeffburg.com/apps/retro-tech/unenshittification/2026/06/22/LINE-Messenger-for-Retro-Devices.html"><![CDATA[<video muted="" playsinline="" controls="" preload="metadata" poster="/assets/images/unenshittification/enil/enil-demonstration-poster.png" aria-label="ENIL exchanging LINE messages between Mac OS X and iOS" style="display: block; width: 100%; height: auto;">
   <source src="/assets/images/unenshittification/enil/enil-demonstration.mp4" type="video/mp4" />
   Your browser does not support embedded MP4 video.
 </video>
@@ -2215,562 +2718,4 @@ my vintage ones and I think it is a cool proof of concept. But I don’t think i
 much more than that. But if you want to try it out for yourself, grab a build
 for your favorite Mac and give it a try.</p>
 
-<p><a href="https://github.com/jeffreybergier/MathEdit">https://github.com/jeffreybergier/MathEdit</a></p>]]></content><author><name></name></author><category term="Apps" /><category term="Apple" /><category term="Retro-Tech" /><category term="OpenStep" /><category term="Objective-C" /><category term="Cocoa" /><category term="Mac-OS-X" /><category term="PowerPC" /><summary type="html"><![CDATA[Imagine Apple's Math Notes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.]]></summary></entry><entry><title type="html">Retro Software Update Server</title><link href="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html" rel="alternate" type="text/html" title="Retro Software Update Server" /><published>2025-09-09T00:00:00+00:00</published><updated>2025-09-09T00:00:00+00:00</updated><id>https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server</id><content type="html" xml:base="https://jeffburg.com/retro-tech/2025/09/09/Retro-Software-Update-Server.html"><![CDATA[<p>A guide on setting up an Apple Software Update Server mirror in case Apple ever
-decides to shut down these old update servers. So far, Software Update still
-works on Mac OS X 10.4 and above, but Apple already shut down servers for 10.3,
-10.2, 10.1, and 10.0 and those can’t be recovered.</p>
-
-<p>If you have an interest in retro Macs, this may be something you would like to
-set up in case something bad were to happen. This approach works because these
-servers are still online and still work. If you happen to be reading this 10
-years in the future (2035) because Apple shut down the software update servers
-for PowerPC Macs, then it’s too late. Sorry.</p>
-
-<h2 id="table-of-contents">Table of Contents</h2>
-
-<ul id="markdown-toc">
-  <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
-  <li><a href="#who-am-i" id="markdown-toc-who-am-i">Who Am I</a></li>
-  <li><a href="#how-do-software-updates-work-on-the-mac" id="markdown-toc-how-do-software-updates-work-on-the-mac">How Do Software Updates Work on the Mac?</a></li>
-  <li><a href="#approach--guide--table-of-contents" id="markdown-toc-approach--guide--table-of-contents">Approach / Guide / Table of Contents</a></li>
-  <li><a href="#system-requirements" id="markdown-toc-system-requirements">System Requirements</a></li>
-  <li><a href="#guide" id="markdown-toc-guide">Guide</a>    <ul>
-      <li><a href="#1-install-git-homebrew-python-2" id="markdown-toc-1-install-git-homebrew-python-2">1. Install Git, Homebrew, Python 2</a>        <ul>
-          <li><a href="#python-2" id="markdown-toc-python-2">Python 2</a></li>
-        </ul>
-      </li>
-      <li><a href="#2-choose-where-software-updates-will-be-mirrored-on-your-server-mac" id="markdown-toc-2-choose-where-software-updates-will-be-mirrored-on-your-server-mac">2. Choose where Software Updates will be mirrored on your server Mac</a></li>
-      <li><a href="#3-configure-the-web-server-on-your-server-mac" id="markdown-toc-3-configure-the-web-server-on-your-server-mac">3. Configure the Web Server on your server Mac</a></li>
-      <li><a href="#4-configure-reposado-on-your-server-mac" id="markdown-toc-4-configure-reposado-on-your-server-mac">4. Configure Reposado on your server Mac</a></li>
-      <li><a href="#5-use-reposado-to-mirror-apples-existing-software-updates-to-your-server-mac" id="markdown-toc-5-use-reposado-to-mirror-apples-existing-software-updates-to-your-server-mac">5. Use Reposado to mirror Apple’s existing software updates to your server Mac</a></li>
-      <li><a href="#6-configure-the-retro-mac-to-fetch-updates-from-your-server-mac" id="markdown-toc-6-configure-the-retro-mac-to-fetch-updates-from-your-server-mac">6. Configure the retro Mac to fetch updates from your server Mac</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="who-am-i">Who Am I</h2>
-
-<p>I’m Jeff, a fan of Mac OS X, NeXT, a software developer, and general retro tech
-enthusiast. I have other retro tech guides as well as software I have developed
-for retro Macs, so please check it out.</p>
-
-<ul>
-  <li><a href="https://github.com/jeffreybergier/MathEdit">MathEdit for OpenStep</a>
-    <ul>
-      <li><a href="https://jeffburg.social/tags/OpenStep">MathEdit Development Posts on my Mastodon</a></li>
-    </ul>
-  </li>
-  <li><a href="/retro-tech/2025/08/17/Retro-Stream-Tutorial.html">Retro Stream Tutorial</a></li>
-  <li><a href="https://jeffburg.social/tags/iMacG4">iMac G4 Posts on my Mastodon</a></li>
-  <li><a href="https://jeffburg.social/tags/iMac5K">Homemade iMac 5K Monitor posts on my Mastodon</a></li>
-</ul>
-
-<h2 id="how-do-software-updates-work-on-the-mac">How Do Software Updates Work on the Mac?</h2>
-
-<p><img src="/assets/images/retro-tech/software-update-server/002-SUS.png" alt="Retro Software Update Server" /></p>
-
-<p>The software update system for Mac OS X 10.4 and higher is actually amazingly
-simple and flexible. For 10.3 and lower, it was a traditional client/server
-application. The client would send some information about itself to the server
-and the server would process this and tell the client what updates it needed.
-While this seems logical, it also means your servers will be busy processing
-requests from clients. And as Apple started to become really successful at
-selling Macs in the early 2000s, the OS X team probably realized that this would
-fail to scale.</p>
-
-<p>So what did they change? Well, in 10.4 and later, the Software Update Server is
-nothing more than a huge set of files and a few Update catalogs… one for each
-version of the OS. These sucatalog files list every update available as well
-as “distribution” files. These distributions are available for every supported
-language. They contain the localized description, but they also contain inline
-JavaScript that will be executed by the client to determine if the update is
-needed.</p>
-
-<p>What this means is Apple offloaded all of the work of determining which updates
-it needs from the server to the client. This is great for Apple’s server load,
-but it also explains why checking for updates can take so long the first time.
-The client literally needs to download hundreds of distribution files. Yes, they
-are only a few K each, but then the client also needs to execute the JavaScript
-for each one.</p>
-
-<p>The other side effect of this system is that now it is easy to mirror the
-software update server as there is no server-side logic.</p>
-
-<p><strong>Enter Mac OS X Server Software Update Server</strong></p>
-
-<p>Back in the day, Apple included a Software Update Server as part of Mac OS X
-Server. Apple intended companies to use this to mirror the software updates
-internally in a company to do 2 things:</p>
-
-<ol>
-  <li>Save bandwidth when updating a fleet of Macs</li>
-  <li>Control which updates were
-available to the Macs in your company to ensure that you could test
-compatibility first</li>
-</ol>
-
-<p>This feature is long dead and now Apple facilitates the same control by allowing
-companies to whitelist or blacklist updates via MDM (Mobile Device Management).
-This does not create a mirror, but simply tells client Macs to ignore updates.
-This method does not save bandwidth in your company. But in the modern day,
-bandwidth is a lot less expensive than it used to be.</p>
-
-<p>When I first started this project, I actually tried to use 10.6 Snow Leopard
-Server to host the software update server. However, after much troubleshooting,
-I could not get it to download the updates reliably. It would only download
-about 1/3 of the updates which is not enough for success. I don’t know why it
-refused to download them. All it said was there was a suspected security problem
-and so it refused. ChatGPT suggested that the Apple Software Update Server
-distributed with their OS had very picky client-side URL validation and if the
-URLs failed these basic checks, it would not even start the download.</p>
-
-<p><strong>Enter <a href="https://github.com/wdas/reposado/blob/main/docs/getting_started.md">Reposado</a></strong></p>
-
-<p>Reposado is an open-source project written in Python 2 that replicates the
-functionality of the software update server. It checks the Apple catalogs,
-downloads the updates, and then generates new catalogs specific to your mirror.
-In my experience doing this, it seems to work super well. So this guide will
-explain how to set this up for you so you can prepare for the very dark day when
-Apple shuts down these old software updates (which may never come).</p>
-
-<h2 id="approach--guide--table-of-contents">Approach / Guide / Table of Contents</h2>
-
-<ol>
-  <li>Install Git, Homebrew, Python 2</li>
-  <li>Choose where Software Updates will be mirrored on your server Mac</li>
-  <li>Configure the Web Server on your server Mac</li>
-  <li>Configure Reposado on your server Mac</li>
-  <li>Use Reposado to mirror Apple’s existing software updates to your server Mac</li>
-  <li>Configure the retro Mac to fetch updates from your server Mac</li>
-</ol>
-
-<h2 id="system-requirements">System Requirements</h2>
-
-<p><strong>Server Mac</strong></p>
-
-<ol>
-  <li>50 GB+ to dedicate to storing updates
-    <ul>
-      <li>Even the minimal set for 10.4 Tiger is 20 GB</li>
-      <li>Supporting all the way to 10.9 Mavericks takes 200 GB</li>
-      <li>ChatGPT says that around 10.11/10.12 Apple started locking down the 
-software update server and it can’t be changed</li>
-    </ul>
-  </li>
-  <li>A normal home network
-    <ul>
-      <li>This guide assumes you connect all your Macs to the internet with Ethernet
-or Wi-Fi and they can find each other and connect to each other using Bonjour
-names.</li>
-    </ul>
-  </li>
-</ol>
-
-<p><strong>Retro Mac</strong></p>
-
-<ol>
-  <li>Connected to Ethernet or Wi-Fi on the same network as your server Mac</li>
-  <li>Mac OS X 10.4 or higher</li>
-</ol>
-
-<p>Note that the server Mac can really be any system. Even modern Linux (such as 
-Debian and Ubuntu) automatically identify themselves via Bonjour names. But
-this guide gives instructions when using a Mac as the server.</p>
-
-<h2 id="guide">Guide</h2>
-
-<p>This guide pretty much runs 100% from Terminal. 
-Any text <code class="language-plaintext highlighter-rouge">in this special format</code> is a terminal command you can copy and paste.</p>
-
-<h3 id="1-install-git-homebrew-python-2">1. Install Git, Homebrew, Python 2</h3>
-
-<ul>
-  <li>Git is included as part of the Xcode command line utilities AND these utilities
-are required for Homebrew anyway.</li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">xcode-select --install</code></p>
-
-<ul>
-  <li>Homebrew is a simple package manager for macOS. It’s easy to install.
-Just follow the guide on <a href="https://brew.sh">https://brew.sh</a>. Make sure to 
-follow the instructions in the Terminal after installing Homebrew.
-They are required to make sure that commands you install via Homebrew are
-easily launchable from the Terminal.</li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></p>
-
-<h4 id="python-2">Python 2</h4>
-
-<p>This is the difficult one. Python 2 is far out of date, and Homebrew no longer
-has an easy installer for it. We have to use pyenv, and this basically seemed
-to build Python 2 from source, which is never fun.</p>
-
-<p><strong>Install pyenv and other tools needed for compiling</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">brew install pyenv zlib bzip2 readline openssl@1.1</code></p>
-
-<p><strong>Configure the environment for the Python 2 build</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix openssl@1.1)/lib"
-export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(brew --prefix openssl@1.1)/include"
-export PKG_CONFIG_PATH="$(brew --prefix zlib)/lib/pkgconfig:$(brew --prefix bzip2)/lib/pkgconfig:$(brew --prefix readline)/lib/pkgconfig:$(brew --prefix openssl@1.1)/lib/pkgconfig"
-</code></pre></div></div>
-
-<p><strong>Configure your shell to use pyenv</strong></p>
-
-<p>Sorry, you may need to look up the commands
-for how to use <code class="language-plaintext highlighter-rouge">vi</code> or use a text editor you know better, like <code class="language-plaintext highlighter-rouge">nano</code>.</p>
-
-<p><code class="language-plaintext highlighter-rouge">vi ~/.zshrc</code></p>
-
-<p>Paste in the following text and then save and exit:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-</code></pre></div></div>
-
-<p><strong>Compile Python 2</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">pyenv install 2.7.18</code></p>
-
-<p><strong>Set Python 2 as the default</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">pyenv global 2.7.18</code></p>
-
-<p><strong>Test Python</strong></p>
-
-<p>You should not get an error when running this command:</p>
-
-<p><code class="language-plaintext highlighter-rouge">python --version</code></p>
-
-<h3 id="2-choose-where-software-updates-will-be-mirrored-on-your-server-mac">2. Choose where Software Updates will be mirrored on your server Mac</h3>
-
-<p>The Software Update application on your Mac expects a very specific directory
-structure and catalog format. Reposado creates this for you. But you still
-need to decide where on your system this will go and you will also need
-to configure the web server to use this directory. It is OK to have this on
-an external drive as the mirror takes a lot of space.</p>
-
-<p>On my system I put everything in</p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS</code></p>
-
-<p>So the web server document root and Reposado storage are</p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/www</code></p>
-
-<p>The Reposado Git clone is</p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado</code></p>
-
-<p>The Reposado metadata storage is</p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/metadata</code></p>
-
-<p>So you can put everything wherever you like, but this guide assumes this
-structure.</p>
-
-<h3 id="3-configure-the-web-server-on-your-server-mac">3. Configure the Web Server on your server Mac</h3>
-
-<p>Mac OS X has always included Apache as a web server; it’s just disabled by
-default. It’s nothing fancy, but it will work for our retro Mac.</p>
-
-<p><strong>Set DocumentRoot to the directory you selected above</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo vi /etc/apache2/httpd.conf</code></p>
-
-<p>This file is pretty long, so you have to scroll down to find the DocumentRoot
-setting. I don’t think you need to change other options, but here are the key
-ones.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentRoot "/Volumes/Data/Virtualization/SUS/www"
-&lt;Directory "/Volumes/Data/Virtualization/SUS/www"&gt;
-    Options Indexes FollowSymLinks
-    AllowOverride All
-    Require all granted
-&lt;/Directory&gt;
-</code></pre></div></div>
-
-<p><strong>Give the web server full disk access</strong></p>
-
-<p>This might not be needed if your directory root is on the boot drive,
-but I definitely needed it because mine is on an external drive.</p>
-
-<ol>
-  <li>Open System Settings→Privacy→Full Disk Access</li>
-  <li>Click the plus button and enter your admin password</li>
-  <li>Press ⌘+Shift+G in the file picker and type <code class="language-plaintext highlighter-rouge">/usr/sbin/httpd</code></li>
-</ol>
-
-<p><strong>Turn on the Web Server</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist</code></p>
-
-<p><strong>Test the Web Server</strong></p>
-
-<p>Put a test file in the document root. It can be any file, but perhaps a small
-<code class="language-plaintext highlighter-rouge">.txt</code> file is easiest.</p>
-
-<ol>
-  <li>Open Safari on your Server Mac and type <code class="language-plaintext highlighter-rouge">http://localhost/mytestfile.txt</code></li>
-  <li>Open Safari on your Retro Mac and type <code class="language-plaintext highlighter-rouge">http://Server-Bonjour-Name.local/mytestfile.txt</code></li>
-</ol>
-
-<p>Note that step 2 is critical. If you can’t get the website to load on your
-Retro Mac you won’t be able to update from it either.</p>
-
-<h3 id="4-configure-reposado-on-your-server-mac">4. Configure Reposado on your server Mac</h3>
-
-<p>OK, Reposado is where all the magic happens, so let’s get started!</p>
-
-<p><strong>Clone the <a href="https://github.com/wdas/reposado">Reposado</a> Repository</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Volumes/Data/Virtualization/SUS
-git clone https://github.com/wdas/reposado.git
-</code></pre></div></div>
-
-<p><strong>Configure Reposado</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repoutil --configure</code></p>
-
-<p>Reposado will ask you for the directories you chose earlier. Note if you drag in
-the directories from the Finder, it appends a space after them and the developer
-of Reposado says this will cause errors.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Filesystem path to store replicated catalogs and updates [None]: /Volumes/Data/Virtualization/SUS/www
-Filesystem path to store Reposado metadata [None]: /Volumes/Data/Virtualization/SUS/reposado/code/metadata 
-Base URL for your local Software Update Service
-(Example: http://su.your.org -- leave empty if you are not replicating updates) [None]: Server-Bonjour-Name.local
-</code></pre></div></div>
-
-<p><strong>Configure Reposado (Continued)</strong></p>
-
-<p>Reposado defaults to being a production software update server mirror, which is
-not what you want because you are setting up a retro software update mirror in
-case of catastrophe. And you probably don’t want to take 400+ GB of updates for
-all modern Macs when you could use less than 100 GB to support updating 10.6,
-10.5, and 10.4 only.</p>
-
-<p><code class="language-plaintext highlighter-rouge">open /Volumes/Data/Virtualization/SUS/reposado/code/preferences.plist</code> (TextEdit should open)</p>
-
-<p>Your configuration file will look something like this. Copy and paste the keys
-listed below into your configuration and then customize them as you like:</p>
-
-<ul>
-  <li><strong>AppleCatalogURLs</strong> to the bare minimum for 10.4 Tiger only (we will expand later after we confirm it’s working)</li>
-  <li><strong>PreferredLocalizations</strong> to include the languages you care about</li>
-  <li><strong>RepoSyncLogFile</strong> so you can see sync progress and verify everything is working</li>
-</ul>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
-<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;dict&gt;</span>
-	<span class="nt">&lt;key&gt;</span>LocalCatalogURLBase<span class="nt">&lt;/key&gt;</span>
-	<span class="nt">&lt;string&gt;</span>http://Barely-Regal.local<span class="nt">&lt;/string&gt;</span>
-	<span class="nt">&lt;key&gt;</span>UpdatesMetadataDir<span class="nt">&lt;/key&gt;</span>
-	<span class="nt">&lt;string&gt;</span>/Volumes/Data/Virtualization/SUS/reposado/code/metadata<span class="nt">&lt;/string&gt;</span>
-	<span class="nt">&lt;key&gt;</span>UpdatesRootDir<span class="nt">&lt;/key&gt;</span>
-	<span class="nt">&lt;string&gt;</span>/Volumes/Data/Virtualization/SUS/www<span class="nt">&lt;/string&gt;</span>
-	<span class="nt">&lt;key&gt;</span>AppleCatalogURLs<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;array&gt;</span>
-    <span class="nt">&lt;string&gt;</span>http://swscan.apple.com/content/catalogs/index.sucatalog<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;string&gt;</span>http://swscan.apple.com/content/catalogs/index-1.sucatalog<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;/array&gt;</span>
-    <span class="nt">&lt;key&gt;</span>PreferredLocalizations<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;array&gt;</span>
-    <span class="nt">&lt;string&gt;</span>English<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;string&gt;</span>en<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;string&gt;</span>Japanese<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;string&gt;</span>ja<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;/array&gt;</span>
-    <span class="nt">&lt;key&gt;</span>RepoSyncLogFile<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;string&gt;</span>/var/log/reposado_sync.log<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;key&gt;</span>HumanReadableSizes<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;true/&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/plist&gt;</span>
-</code></pre></div></div>
-
-<p><strong>Create the Log File</strong></p>
-
-<p>Create the log file and make it readable and writable by all users. Normally it
-would be better to make it readable and writable by the right people, but it’s a
-single log file. Not really security-critical.</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo touch /var/log/reposado_sync.log</code>
-<code class="language-plaintext highlighter-rouge">sudo chmod 777 /var/log/reposado_sync.log</code></p>
-
-<p><strong>You’re Ready to Roll!</strong></p>
-
-<p>In the next section we will fire this thing up and updates will start to stream
-in!</p>
-
-<h3 id="5-use-reposado-to-mirror-apples-existing-software-updates-to-your-server-mac">5. Use Reposado to mirror Apple’s existing software updates to your server Mac</h3>
-
-<p>First we will do a test run with the minimal set of Software Update Catalogs
-that you configured in the previous section. This is about 20–25 GB worth of
-updates, so depending on how fast or slow your internet connection is, this
-could take a while. Reposado does not generate the catalogs for your retro Mac
-to use until it has finished downloading everything, so you need to wait until
-it finishes. This is why we start with the minimal catalogs.</p>
-
-<p><strong>Tail the log so you can see the progress</strong></p>
-
-<p>Open a new terminal window or tab and run this command to view the log as it
-gets updated.</p>
-
-<p><code class="language-plaintext highlighter-rouge">tail -f /var/log/reposado_sync.log</code></p>
-
-<p><strong>Start the Software Update Sync</strong></p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync</code></p>
-
-<p>That’s it. Now you have to wait for it to download 20 GB or so. You should be able
-to see progress in the other terminal window with the tailed log file.</p>
-
-<p><strong>What Success Looks Like</strong></p>
-
-<p>The log file will output hundreds of lines, so you may be wondering what success
-looks like. After downloading all of the files, Reposado will build the catalog
-files and then report <code class="language-plaintext highlighter-rouge">repo_sync run ended</code>. It will look something like this.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sep 07 17:26:44 Could not get data from dist file: /Volumes/Data/Virtualization/SUS/content/downloads/03/09/061-5359/mxWDL8cXkFTv9pCp8GMFr2bJFXjtqyQbvx/022-4184.English.dist
-Sep 07 17:26:46 Could not replicate http://swcdn.apple.com/content/downloads/49/33/061-6390/BYBbD3TFbdpntDts78ddSzDSRpXnGKnQsy/FinalCutPro6.0.6Update.smd: Error 22: The requested URL returned error: 403
-Sep 07 17:26:51 Building index.sucatalog...
-Sep 07 17:26:51 WARNING: did not add product 061-1688 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 061-2736 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 061-1720 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 041-85067 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 061-6390 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 061-2006 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 061-5359 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:51 WARNING: did not add product 061-2193 to catalog index.sucatalog.apple because it has not been downloaded.
-Sep 07 17:26:52 178 products found in http://swscan.apple.com/content/catalogs/index-1.sucatalog
-Sep 07 17:26:53 Building index-1.sucatalog...
-Sep 07 17:26:54 268 products found in http://swscan.apple.com/content/catalogs/others/index-leopard.merged-1.sucatalog
-Sep 07 17:26:55 Building index-leopard.merged-1.sucatalog...
-Sep 07 17:26:56 345 products found in http://swscan.apple.com/content/catalogs/others/index-leopard-snowleopard.merged-1.sucatalog
-Sep 07 17:27:05 Building index-leopard-snowleopard.merged-1.sucatalog...
-Sep 07 17:27:08 600 products found in http://swscan.apple.com/content/catalogs/others/index-lion-snowleopard-leopard.merged-1.sucatalog
-Sep 07 17:27:37 Building index-lion-snowleopard-leopard.merged-1.sucatalog...
-Sep 07 17:27:38 448 products found in http://swscan.apple.com/content/catalogs/others/index-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog
-Sep 07 17:27:42 Building index-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog...
-Sep 07 17:27:43 464 products found in https://swscan.apple.com/content/catalogs/others/index-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog
-Sep 07 17:27:57 Building index-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog...
-Sep 07 17:27:58 repo_sync run ended
-</code></pre></div></div>
-
-<p>Warnings will be normal as some updates will not be available any longer. If the
-number of products not downloaded is HUGE—say, hundreds of items—then you have
-a problem. But I think 10 or 20 is normal?</p>
-
-<p><strong>Choose Max Version of OS X You Want Updates For</strong></p>
-
-<p>This is a personal choice based on what Macs you are interested in, how much
-space you have to dedicate to this, and what Macs you think Apple will remove
-from the update servers soonest.</p>
-
-<p>You can see all the catalogs in this <a href="https://github.com/wdas/reposado/blob/main/docs/reposado_preferences.md">Reposado file</a>.
-They are named in a pretty orderly way, so select which OS you want to support
-and then put in the catalog file for that one and all the versions lower. So if
-you want to support 10.10 Yosemite and lower, your Preferences.plist would look
-like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;AppleCatalogURLs&lt;/key&gt;
-&lt;array&gt;
-    &lt;string&gt;http://swscan.apple.com/content/catalogs/index.sucatalog&lt;/string&gt;
-    &lt;string&gt;http://swscan.apple.com/content/catalogs/index-1.sucatalog&lt;/string&gt;
-    &lt;string&gt;http://swscan.apple.com/content/catalogs/others/index-leopard.merged-1.sucatalog&lt;/string&gt;
-    &lt;string&gt;http://swscan.apple.com/content/catalogs/others/index-leopard-snowleopard.merged-1.sucatalog&lt;/string&gt;
-    &lt;string&gt;http://swscan.apple.com/content/catalogs/others/index-lion-snowleopard-leopard.merged-1.sucatalog&lt;/string&gt;
-    &lt;string&gt;http://swscan.apple.com/content/catalogs/others/index-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog&lt;/string&gt;
-    &lt;string&gt;https://swscan.apple.com/content/catalogs/others/index-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog&lt;/string&gt;
-    &lt;string&gt;https://swscan.apple.com/content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog&lt;/string&gt;
-&lt;/array&gt;
-</code></pre></div></div>
-
-<p>After you add the new catalogs, run sync again:</p>
-
-<p><code class="language-plaintext highlighter-rouge">/Volumes/Data/Virtualization/SUS/reposado/code/repo_sync</code></p>
-
-<p>Note that supporting up to 10.10 Yosemite takes about 300 GB of space.</p>
-
-<p><img src="/assets/images/retro-tech/software-update-server/003-Reposado.png" alt="Retro Software Update Server" /></p>
-
-<p><strong>Some Final Things</strong></p>
-
-<p>Basically, after you complete the sync, you never need to run Reposado again. The
-web server and the <code class="language-plaintext highlighter-rouge">www</code> folder are all you need. The Software Update server is
-based on a completely static system, which is super nice and reliable.</p>
-
-<p>If you change the hostname of the server Mac, you can update the
-Preferences.plist file and then run sync again, and it won’t download any new
-files, but at the end Reposado will update the catalog files to use your new
-hostname which is fantastic.</p>
-
-<h3 id="6-configure-the-retro-mac-to-fetch-updates-from-your-server-mac">6. Configure the retro Mac to fetch updates from your server Mac</h3>
-
-<p>So this is a bit tricky, because it’s likely that your retro Mac(s) have already
-run all of their software updates. So when you tell them to check for updates
-from your new Software Update Server Mirror, the retro Mac will still tell you
-there are no updates available. So how do you test?</p>
-
-<ul>
-  <li>If you don’t mind erasing your retro Mac, you could just reinstall the OS.</li>
-  <li>Install a fresh OS to an external FireWire hard drive and boot from that.</li>
-  <li>Install an old version of OS X in a virtual machine and try that.</li>
-</ul>
-
-<p><strong>Configure the Retro Mac</strong></p>
-
-<p>All of these have their pros and cons so you decide. But once you get the Mac
-working and it is ready for software updates, run the following command in the
-Terminal on the retro Mac:</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CatalogURL "http://Server-Bonjour-Name.local/content/catalogs/others/index-lion-snowleopard-leopard.merged-1.sucatalog"</code></p>
-
-<p>Note that you have to point the OS at the correct catalog given the version of
-OS X you are running or else it won’t see all of the updates.</p>
-
-<p><strong>Tail the Apache Access Logs on the Server Mac</strong></p>
-
-<p>Tailing these logs will show you that the retro Mac is checking all the updates.</p>
-
-<p><code class="language-plaintext highlighter-rouge">tail -f /var/log/apache2/access_log /var/log/apache2/error_log</code></p>
-
-<p><strong>Check for Updates on the Retro Mac</strong></p>
-
-<p>Check for updates on your retro Mac and install them. If it’s a fresh install, it
-may take several reboots to get through all the updates.</p>
-
-<p><code class="language-plaintext highlighter-rouge">Apple Menu→Software Update</code></p>
-
-<p><strong>What Success Looks Like</strong></p>
-
-<p>In the logs on the server Mac, you should see hundreds of file requests to check
-for updates. On the retro Mac, in the title of the Software
-Update window you should see the hostname of your server Mac in parentheses. See
-the screenshot below.</p>
-
-<p><img src="/assets/images/retro-tech/software-update-server/001-Title.png" alt="Retro Mac Configured" /></p>
-
-<p><strong>Some Final Things</strong></p>
-
-<p>In the real software update server, Apache rewrite rules are used so any version
-can fetch index.sucatalog and the server will smartly rewrite the URL to be the
-correct one. You can add these if you like, but since you’re probably not
-running an army of retro Macs, it’s probably easier to just do it on the retro
-Mac instead. Here are the rewrite rules if you are interested.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RewriteEngine On
-RewriteCond %{HTTP_USER_AGENT} Darwin/9
-RewriteRule ^/index\.sucatalog$ /index-leopard.merged-1.sucatalog
-RewriteCond %{HTTP_USER_AGENT} Darwin/10
-RewriteRule ^/index\.sucatalog$ /index-leopard-snowleopard.merged-1.sucatalog
-RewriteCond %{HTTP_USER_AGENT} Darwin/11
-RewriteRule ^/index\.sucatalog$ /index-lion-snowleopard-leopard.merged-1.sucatalog
-</code></pre></div></div>]]></content><author><name></name></author><category term="Retro-Tech" /><category term="PowerPC" /><category term="Mac-OS-X" /><category term="Software-Update" /><category term="Hobby" /><summary type="html"><![CDATA[A guide to setting up an Apple Software Update Server mirror in case Apple ever shuts down the old Mac OS X update servers.]]></summary></entry></feed>
+<p><a href="https://github.com/jeffreybergier/MathEdit">https://github.com/jeffreybergier/MathEdit</a></p>]]></content><author><name></name></author><category term="Apps" /><category term="Apple" /><category term="Retro-Tech" /><category term="OpenStep" /><category term="Objective-C" /><category term="Cocoa" /><category term="Mac-OS-X" /><category term="PowerPC" /><summary type="html"><![CDATA[Imagine Apple's Math Notes but built as a traditional Cocoa application with the unusual added feature that its codebase spans 30 years of Mac OS X history.]]></summary></entry></feed>

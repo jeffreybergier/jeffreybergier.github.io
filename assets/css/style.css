@@ -10903,6 +10903,10 @@ a.thumbnail img {
   max-height: 100%;
   object-fit: contain;
 }
+.title-accessory-wide img.title-accessory-image-70 {
+  max-width: 70%;
+  max-height: 70%;
+}
 
 @media (max-width: 800px) {
   .title-accessory {

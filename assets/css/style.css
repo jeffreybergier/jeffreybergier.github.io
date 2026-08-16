@@ -11107,22 +11107,24 @@ a.thumbnail img {
   color: #FFF;
 }
 
-.prompt-info::before {
+.prompt-info::before,
+.prompt-warning::before,
+.prompt-error::before {
   font-family: "Font Awesome 7 Free";
-  content: "\f05a";
+  font-weight: 900;
   font-size: 1.5em;
+}
+
+.prompt-info::before {
+  content: "\f05a";
 }
 
 .prompt-warning::before {
-  font-family: "Font Awesome 7 Free";
   content: "\f071"; /* fa-exclamation-triangle */
-  font-size: 1.5em;
 }
 
 .prompt-error::before {
-  font-family: "Font Awesome 7 Free";
   content: "\f057"; /* fa-times-circle */
-  font-size: 1.5em;
 }
 
 /* ============================================

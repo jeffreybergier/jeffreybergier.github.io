@@ -8,7 +8,7 @@ excerpt: |
   ENIL is my custom-built LINE Messenger companion app, made for old and
   unsupported devices. It supports Mac OS X 10.4 Tiger and later, as well as iOS
   4.3 and later.
-categories: [Apps, Retro-Tech, Unenshittification]
+categories: [Unenshittification]
 tags: [LINE, PowerPC, Mac-OS-X, iOS, Objective-C, C, AI]
 ---
 

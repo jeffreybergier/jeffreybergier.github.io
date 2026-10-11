@@ -1,6 +1,6 @@
 services:
   altivec-intelligence:
-    image: ghcr.io/jeffreybergier/altivec-intelligence:latest
+    image: ${ALTIVEC_IMAGE:-ghcr.io/jeffreybergier/altivec-intelligence:latest}
     stdin_open: true
     tty: true
     environment:
@@ -16,7 +16,7 @@ services:
     command: -lc "altivec-chooser"
 
   serve:
-    image: ghcr.io/jeffreybergier/altivec-intelligence:latest
+    image: ${ALTIVEC_IMAGE:-ghcr.io/jeffreybergier/altivec-intelligence:latest}
     working_dir: /repo/jeffreybergier.github.io/source
     volumes:
       - cache:/cache

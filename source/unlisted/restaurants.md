@@ -6,7 +6,7 @@ exclude: true
 
 **目次**
 
-{::options toc_levels="2,3" /}
+{::options toc_levels="2,3,4" /}
 * TOC
 {:toc}
 

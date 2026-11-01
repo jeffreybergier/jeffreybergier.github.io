@@ -1003,6 +1003,60 @@
   - やばい美味しかった
   - "（やばい美味しかった魚の居酒屋）"
 
+- url: https://tabelog.com/tokyo/A1301/A130103/13283586/
+  status: love
+- url: https://tabelog.com/tokyo/A1301/A130101/13287108/
+  status: love
+- url: https://tabelog.com/tokyo/A1301/A130101/13243545/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1301/A130103/13305225/
+  status: not_been
+  urls:
+  - https://res-reserve.com/ja/restaurants/komyuniti-yotel-ginza
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1301/A130101/13173949/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1310/A131003/13298800/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1310/A131003/13157895/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1310/A131003/13216336/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1310/A131003/13231135/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/tokyo/A1310/A131003/13312850/
+  status: not_been
+  tags:
+  - 行きたい
+- url: https://tabelog.com/yamagata/A0603/A060301/6004348/
+  status: love
+- url: https://tabelog.com/tokyo/A1310/A131003/13204470/
+  status: love
+  tags:
+  - 油ぽかった
+- url: https://tabelog.com/tokyo/A1302/A130201/13286321/
+  status: not_been
+  tags:
+  - 行きたい
+  - 東京駅
+- url: https://tabelog.com/tokyo/A1308/A130803/13148552/
+  status: not_been
+  tags:
+  - 行きたい
+
 # Not found / needs a manually chosen Tabelog restaurant URL.
 #
 # id: 5fb48edd

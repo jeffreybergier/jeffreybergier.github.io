@@ -56,7 +56,7 @@ def fetch_html(url, limit = 3)
 
   uri = URI.parse(url)
   request = Net::HTTP::Get.new(uri)
-  request["User-Agent"] = "Mozilla/5.0 (compatible; jeffburg-restaurant-card-cache/1.0)"
+  request["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0"
   request["Accept-Language"] = "ja,en-US;q=0.8,en;q=0.6"
 
   response = Net::HTTP.start(

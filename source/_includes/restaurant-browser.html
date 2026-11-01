@@ -1,0 +1,54 @@
+{% assign restaurants = site.data.restaurant_cards | default: site.data.restaurants %}
+{% assign statuses = 'love|not_been|have_been' | split: '|' %}
+<div id="restaurant-browser">
+  <form class="restaurant-filters" hidden aria-label="レストランを絞り込む">
+    <fieldset data-filter="status">
+      <legend>表示</legend>
+      <div class="restaurant-filter-options">
+        <label><input type="radio" name="status" value="love" checked><span>おすすめ</span></label>
+        <label><input type="radio" name="status" value="not_been"><span>行きたい</span></label>
+        <label><input type="radio" name="status" value="have_been"><span>もう行った</span></label>
+      </div>
+    </fieldset>
+    <fieldset data-filter="region">
+      <legend>地域</legend>
+      <div class="restaurant-filter-options"></div>
+    </fieldset>
+    <fieldset data-filter="locality" hidden>
+      <legend>市区町村</legend>
+      <div class="restaurant-filter-options"></div>
+    </fieldset>
+    <p class="restaurant-filter-summary" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="restaurant-filter-empty" hidden>
+      <p>この条件に一致するお店はありません。</p>
+      <button type="button" data-clear-region>地域の絞り込みを解除</button>
+    </div>
+  </form>
+  <div class="restaurant-results">
+    {% for status in statuses %}
+      {% case status %}
+        {% when 'love' %}{% assign status_label = 'おすすめ' %}
+        {% when 'not_been' %}{% assign status_label = '行きたい' %}
+        {% when 'have_been' %}{% assign status_label = 'もう行った' %}
+      {% endcase %}
+      {% assign status_items = restaurants | where: 'status', status %}
+      <section data-restaurant-group>
+        <h2>{{ status_label }}</h2>
+        {% assign regions = status_items | group_by: 'addressRegion' | sort: 'name' %}
+        {% for region in regions %}
+          <section data-restaurant-group>
+            <h3>{{ region.name | default: '地域不明' | escape }}</h3>
+            {% assign localities = region.items | group_by: 'addressLocality' | sort: 'name' %}
+            {% for locality in localities %}
+              <section data-restaurant-group>
+                <h4>{{ locality.name | default: '市区町村不明' | escape }}</h4>
+                {% assign items = locality.items | sort: 'tabelog_score' | reverse %}
+                {% include restaurants-list.html restaurants=items section_status=status show_cards=true filterable=true %}
+              </section>
+            {% endfor %}
+          </section>
+        {% endfor %}
+      </section>
+    {% endfor %}
+  </div>
+</div>

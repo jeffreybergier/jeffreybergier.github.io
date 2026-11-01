@@ -47,7 +47,7 @@
     {%- endcapture -%}
     {%- assign visible_tags = visible_tags | strip -%}
   {%- endif -%}
-  <li>
+  <li{% if include.filterable %} data-restaurant data-status="{{ restaurant.status | escape }}" data-region="{{ restaurant.addressRegion | default: '地域不明' | escape }}" data-locality="{{ restaurant.addressLocality | default: '市区町村不明' | escape }}"{% endif %}>
     {%- if include.show_cards and restaurant_image -%}
       {%- if restaurant.url -%}
         <a class="restaurant-card" href="{{ restaurant.url }}">
@@ -55,7 +55,12 @@
         <div class="restaurant-card">
       {%- endif -%}
           <span class="restaurant-card-media">
-            <img src="{{ restaurant_image }}" alt="" loading="lazy">
+            {% if include.filterable %}
+              <img data-src="{{ restaurant_image | escape }}" alt="" loading="lazy" hidden>
+              <noscript><img src="{{ restaurant_image | escape }}" alt="" loading="lazy"></noscript>
+            {% else %}
+              <img src="{{ restaurant_image }}" alt="" loading="lazy">
+            {% endif %}
           </span>
           <span class="restaurant-card-body">
             {%- if restaurant_score_badge != "" -%}

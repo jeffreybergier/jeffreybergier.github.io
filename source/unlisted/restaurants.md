@@ -4,20 +4,8 @@ title: レストラン
 exclude: true
 ---
 
-**目次**
+<link rel="stylesheet" href="{{ '/assets/css/restaurant-filters.css' | relative_url }}">
 
-{::options toc_levels="2,3,4" /}
-* TOC
-{:toc}
+{% include restaurant-browser.html %}
 
-## おすすめ
-
-{% include restaurants.html status="love" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
-
-## 行きたい
-
-{% include restaurants.html status="not_been" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
-
-## もう行った
-
-{% include restaurants.html status="have_been" group_by="addressRegion" subgroup_by="addressLocality" sort_by="tabelog_score" sort_direction="descending" heading_prefix="###" show_cards=true %}
+<script src="{{ '/assets/js/restaurant-filters.js' | relative_url }}" defer></script>

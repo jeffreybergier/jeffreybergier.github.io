@@ -21,6 +21,7 @@ options = {
   output: File.join(SOURCE_DIR, "_data", "restaurant_cards.yml"),
   status: nil,
   refresh: false,
+  offline: false,
   quiet: false
 }
 
@@ -30,6 +31,7 @@ OptionParser.new do |parser|
   parser.on("--input PATH", "Restaurant YAML input") { |path| options[:input] = path }
   parser.on("--output PATH", "Card cache YAML output") { |path| options[:output] = path }
   parser.on("--status STATUS", "Only cache a single restaurant status") { |status| options[:status] = status }
+  parser.on("--offline", "Use and validate the snapshot without network access") { options[:offline] = true }
   parser.on("--refresh", "Refetch existing cache entries") { options[:refresh] = true }
   parser.on("--quiet", "Only print warnings") { options[:quiet] = true }
 end.parse!
@@ -224,6 +226,22 @@ log("Caching #{targets.size} restaurants", options)
 generated_cards = targets.each_with_index.filter_map do |restaurant, index|
   url = restaurant["url"]
   existing = existing_by_url[url]
+  if existing
+    # Editorial data always comes from restaurants.yml, not an older snapshot.
+    existing = existing.dup
+    %w[status chain urls tags].each do |key|
+      existing.delete(key)
+      existing[key] = restaurant[key] if restaurant.key?(key)
+    end
+  end
+  if options[:offline]
+    required = %w[name title addressRegion addressLocality]
+    unless existing && required.all? { |key| !existing[key].to_s.strip.empty? } &&
+           existing["name"] != url && existing["title"] != url
+      abort "Missing restaurant metadata for #{url}. Refresh the snapshot locally before deploying."
+    end
+    next existing
+  end
   existing_current = existing &&
                      existing["url"] == url &&
                      existing["name"].to_s != "" &&

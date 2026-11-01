@@ -24,16 +24,10 @@ jobs:
           cd ./source
           bundle install
 
-      - name: Restore restaurant card cache
-        uses: actions/cache@v4
-        with:
-          path: ./source/_data/restaurant_cards.yml
-          key: restaurant-cards-${{ hashFiles('source/_data/restaurants.yml') }}
-          restore-keys: |
-            restaurant-cards-
-
-      - name: Cache restaurant cards
-        run: ruby ./scripts/cache_restaurant_cards.rb
+      - name: Test and validate restaurant metadata snapshot (no network)
+        run: |
+          ruby ./scripts/test_restaurant_snapshot.rb
+          ruby ./scripts/cache_restaurant_cards.rb --offline
 
       - name: Build site
         run: |

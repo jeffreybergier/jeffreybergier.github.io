@@ -16,8 +16,18 @@ Open `http://localhost:8080`.
 
 `ruby scripts/cache_restaurant_cards.rb --refresh`
 
-This generates `source/_data/restaurant_cards.yml`, which is ignored by git and
-used by Jekyll during the build.
+This updates `source/_data/restaurant_cards.yml`, a checked-in metadata snapshot
+used by Jekyll. Commit the snapshot when adding restaurants or refreshing their
+metadata. Deployment uses `ruby scripts/cache_restaurant_cards.rb --offline`:
+it makes no Tabelog requests and fails before publishing if required names or
+locations are missing. Editorial statuses and tags always come from
+`source/_data/restaurants.yml`.
+
+Run the offline snapshot regression tests with:
+
+```sh
+ruby scripts/test_restaurant_snapshot.rb
+```
 
 ### Restaurant Filters
 

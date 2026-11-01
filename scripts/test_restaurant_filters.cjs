@@ -20,6 +20,11 @@ const { chromium } = require('playwright');
     const visible = page.locator('[data-restaurant]:visible');
     const total = await page.locator('[data-restaurant]').count();
     assert(total > 0);
+    assert(await page.locator('[data-restaurant]').evaluateAll(nodes => nodes.every(node => {
+      const title = node.querySelector('.restaurant-card-title, .restaurant-name');
+      return title && !title.textContent.trim().startsWith('https://') &&
+        node.dataset.region !== '地域不明' && node.dataset.locality !== '市区町村不明';
+    })), 'All cards must have names and geographic metadata, not URL-only fallbacks');
     assert.equal(await page.locator('#markdown-toc').count(), 0);
     assert.equal(await visible.count(), await page.locator('[data-restaurant][data-status="love"]').count());
     assert.equal(await page.locator('[data-status="not_been"] img[src]').count(), 0, 'Unselected images are deferred');

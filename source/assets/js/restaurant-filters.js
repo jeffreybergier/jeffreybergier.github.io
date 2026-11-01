@@ -7,7 +7,7 @@
   var form = root.querySelector('form');
   var cards = Array.from(root.querySelectorAll('[data-restaurant]'));
   var groups = Array.from(root.querySelectorAll('[data-restaurant-group]'));
-  var labels = { love: 'おすすめ', not_been: '行きたい', have_been: 'もう行った' };
+  var labels = { all: 'すべて', love: 'おすすめ', not_been: '行きたい', have_been: 'もう行った' };
   var state;
 
   function unique(values) {
@@ -69,7 +69,7 @@
   function render() {
     var count = 0;
     cards.forEach(function (card) {
-      var match = card.dataset.status === state.status &&
+      var match = (state.status === 'all' || card.dataset.status === state.status) &&
         (!state.region || card.dataset.region === state.region) &&
         (!state.locality || card.dataset.locality === state.locality);
       card.hidden = !match;

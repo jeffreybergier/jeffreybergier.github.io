@@ -30,6 +30,14 @@ const { chromium } = require('playwright');
     const choose = (name, value) => page.locator('input[name="' + name + '"]').evaluateAll((nodes, value) => {
       nodes.find(node => node.value === value).click();
     }, value);
+    assert.equal(await page.locator('input[name="status"]').first().inputValue(), 'all');
+    await choose('status', 'all');
+    assert.equal(await visible.count(), total);
+    await page.reload();
+    assert.equal(await page.locator('input[name="status"]:checked').inputValue(), 'all');
+    assert.equal(await visible.count(), total);
+    await choose('region', '東京都');
+    assert.equal(await visible.count(), await page.locator('[data-restaurant][data-region="東京都"]').count());
     await choose('status', 'not_been');
     await choose('region', '東京都');
     await choose('locality', '中央区');

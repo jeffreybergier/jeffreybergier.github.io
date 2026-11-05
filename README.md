@@ -8,12 +8,33 @@ Jekyll source lives in `source/`.
 
 ### Serve Jekyll
 
-`docker compose up serve`
+`podman compose up serve`
 
-Open `http://localhost:8080`.
+Open `http://localhost:8080`. Docker users can substitute `docker` for `podman`
+in these commands.
+
+Preview startup uses the checked-in restaurant snapshot without contacting
+Tabelog. It checks installed gems first, installing only if dependencies are
+missing. After an initial successful online launch, the same command works
+without Wi-Fi, provided the container image and gem cache are still present.
+`podman compose down` preserves the cache; `down --volumes` does not.
+
+If restaurant names or locations are missing, startup fails promptly rather
+than attempting network requests. Refresh the snapshot while online (below).
+Remote restaurant images and other externally hosted browser resources still
+require connectivity; this makes the local server start offline, not every
+external resource available offline.
 
 ### Refresh Restaurant Cards
 
+While online, use the cached toolchain image:
+
+```sh
+podman compose run --rm --no-deps serve -lc \
+  'ruby ../scripts/cache_restaurant_cards.rb --refresh'
+```
+
+Or, with Ruby installed locally:
 `ruby scripts/cache_restaurant_cards.rb --refresh`
 
 This updates `source/_data/restaurant_cards.yml`, a checked-in metadata snapshot
@@ -52,8 +73,9 @@ Use the preview server's actual port (normally 8080). Tests block external
 requests and cover filtering, history, keyboard interaction, narrow-screen
 layout, deferred images, and the no-JavaScript fallback.
 
-Bundler installs gems into a Docker-managed volume named `bundle`. Keeping that
-cache off the macOS bind mount avoids git hardlink failures under Colima.
+Bundler installs gems under `/cache/bundle/install` in the Compose-managed
+`cache` volume. Keeping that cache off the macOS bind mount avoids git hardlink
+failures under Colima.
 
 If you previously hit a `fatal: hardlink different from source` error, remove
 the old host-mounted Bundler cache once:

@@ -41,8 +41,16 @@ This updates `source/_data/restaurant_cards.yml`, a checked-in metadata snapshot
 used by Jekyll. Commit the snapshot when adding restaurants or refreshing their
 metadata. Deployment uses `ruby scripts/cache_restaurant_cards.rb --offline`:
 it makes no Tabelog requests and fails before publishing if required names or
-locations are missing. Editorial statuses and tags always come from
-`source/_data/restaurants.yml`.
+locations are missing. Editorial statuses, tags, and `dateAdded` always come
+from `source/_data/restaurants.yml`. Every restaurant requires a quoted ISO date,
+for example `dateAdded: "2026-11-01"`. Set it when adding an entry and preserve
+it when changing status, tags, or refreshing metadata. The snapshot validator
+rejects missing or invalid dates. `cached_at` remains the metadata-fetch time,
+not the added date.
+
+Existing dates were backfilled from Git history, including the original Apple
+Notes import and later URL migrations. See [date provenance](docs/restaurant-dates.md)
+for the reconstruction rules and date breakdown.
 
 Run the offline snapshot regression tests with:
 
@@ -54,10 +62,18 @@ ruby scripts/test_restaurant_snapshot.rb
 
 The restaurant page is built as static HTML with one card per restaurant.
 `source/assets/js/restaurant-filters.js` adds single-select status, prefecture,
-and municipality filters. Selections are stored in the URL query parameters
-`status`, `region`, and `locality`; region/locality values use the Japanese names
-from the cached data. Without JavaScript, all grouped cards remain readable.
-Images for unselected cards are deferred until those cards are first selected.
+and municipality filters, plus a sort toggle: **Tabelog rating** (highest first,
+the default) or **date added** (newest first). Sorting applies across all matching
+cards, not just within geographic groups. Same-day additions use rating as a
+tiebreaker; equal ratings retain the original static order. Each card displays
+its added date, location, and visit status.
+
+Selections are stored in the URL query parameters `status`, `region`, `locality`,
+and `sort` (`rating` or `dateAdded`); region/locality values use the Japanese names
+from the cached data. Missing/invalid sort parameters fall back to rating.
+Without JavaScript, all cards remain readable in their original status/location
+groups, sorted by rating within each group. Images for unselected cards are
+deferred until those cards are first selected.
 
 With the preview server running, run the browser regression checks using
 Playwright (installed outside the checkout):
@@ -69,9 +85,11 @@ NODE_PATH=/tmp/jeffburg-filter-tests/node_modules \
   node scripts/test_restaurant_filters.cjs http://localhost:8081
 ```
 
-Use the preview server's actual port (normally 8080). Tests block external
-requests and cover filtering, history, keyboard interaction, narrow-screen
-layout, deferred images, and the no-JavaScript fallback.
+Use the preview server's actual port (normally 8080). To use an installed browser
+instead of downloading one, set `CHROMIUM_PATH=/usr/bin/chromium` when running
+the test. Tests block external requests and cover sorting (including same-day
+ties), filtering, URL/reload/history, keyboard interaction, narrow-screen layout,
+deferred images, and the no-JavaScript fallback.
 
 Bundler installs gems under `/cache/bundle/install` in the Compose-managed
 `cache` volume. Keeping that cache off the macOS bind mount avoids git hardlink

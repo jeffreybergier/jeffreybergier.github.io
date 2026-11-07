@@ -15,6 +15,7 @@
   address: 東京都中央区銀座3-2-15 ギンザ・グラッセ　11F
   telephone: 03-3535-3020
   cached_at: '2026-07-06T13:21:29Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/tokyo/A1302/A130201/13260081/
   source_url: https://tabelog.com/tokyo/A1302/A130201/13260081/
@@ -32,6 +33,7 @@
   address: 東京都千代田区大手町2-6-4 TOKYO TORCH 常磐橋タワー 1F
   telephone: 03-6281-9974
   cached_at: '2026-07-06T13:21:29Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -51,6 +53,7 @@
   address: 東京都中央区銀座西3-1 銀座インズ1 2F
   telephone: 03-3561-7260
   cached_at: '2026-07-06T13:21:30Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -69,6 +72,7 @@
   address: 北海道函館市豊川町12-10 函館ベイ美食倶楽部
   telephone: '0138-22-9696'
   cached_at: '2026-11-05T04:34:41Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/tokyo/A1303/A130301/13298044/
   source_url: https://tabelog.com/tokyo/A1303/A130301/13298044/
@@ -85,6 +89,7 @@
   address: 東京都渋谷区道玄坂1-13-6 斉藤ビル B1F
   telephone: 03-6712-7558
   cached_at: '2026-11-05T04:34:41Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/tokyo/A1306/A130602/13264343/
   source_url: https://tabelog.com/tokyo/A1306/A130602/13264343/
@@ -102,6 +107,7 @@
   address: 東京都港区北青山3-6-26 第5SIビル B1F
   telephone: 03-6427-1941
   cached_at: '2026-07-06T13:21:32Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -120,6 +126,7 @@
   address: 東京都千代田区富士見2-2-9 OSビル 1F
   telephone: 03-6261-0123
   cached_at: '2026-11-05T04:34:42Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://maratan.com/shops
@@ -142,6 +149,7 @@
   address: 東京都中野区中野5-47-3 おかだビル １Ｆ
   telephone: 03-5942-7997
   cached_at: '2026-07-06T13:21:33Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://maps.app.goo.gl/HUB5XfqcR2YF2hDH9?g_st=ic
@@ -163,6 +171,7 @@
   address: 東京都中央区銀座6-7-6 西六ビル　１Ｆ
   telephone: 03-3571-0392
   cached_at: '2026-07-06T13:21:33Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/tokyo/A1310/A131001/13260426/
   source_url: https://tabelog.com/tokyo/A1310/A131001/13260426/
@@ -180,6 +189,7 @@
   address: 東京都千代田区神田佐久間町1-13 チョムチョム秋葉原 5F
   telephone: 03-5577-5285
   cached_at: '2026-07-06T13:21:34Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
 - url: https://tabelog.com/tokyo/A1302/A130201/13282420/
@@ -198,6 +208,7 @@
   address: 東京都中央区八重洲2-2-1 東京ミッドタウン八重洲 3F
   telephone: 03-5299-5188
   cached_at: '2026-07-06T13:21:35Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   tags:
@@ -219,6 +230,7 @@
   address: 東京都中央区銀座8-6-11 新和ビル B1F B
   telephone: 03-6280-6117
   cached_at: '2026-07-06T13:21:35Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -237,6 +249,7 @@
   address: 京都府京都市下京区四条烏丸西入る北側
   telephone: 075-212-3999
   cached_at: '2026-11-05T04:34:42Z'
+  dateAdded: '2026-06-21'
   status: have_been
 - url: https://tabelog.com/tokyo/A1301/A130101/13004881/
   source_url: https://tabelog.com/tokyo/A1301/A130101/13004881/
@@ -254,6 +267,7 @@
   address: 東京都中央区銀座5-5-13 坂口ビル　６Ｆ
   telephone: 03-5537-0010
   cached_at: '2026-07-06T13:21:36Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -273,6 +287,7 @@
   address: 東京都中央区銀座8-6-19 銀座渡辺ビル 5F
   telephone: 03-6255-6388
   cached_at: '2026-11-05T04:34:43Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -291,6 +306,7 @@
   streetAddress: 芝公園4-4-13
   address: 東京都港区芝公園4-4-13
   cached_at: '2026-07-06T13:21:37Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -309,6 +325,7 @@
   address: 東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 2F
   telephone: 03-6811-2363
   cached_at: '2026-11-05T04:34:44Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -328,6 +345,7 @@
   address: 東京都千代田区丸の内2-4-1 丸の内ビルディング 35F
   telephone: 03-5220-0029
   cached_at: '2026-07-06T13:21:38Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://moritaya-kyoto.co.jp/restaurant/marunouchi/menu/
@@ -349,6 +367,7 @@
   address: 東京都中央区日本橋2-10-12 プレリー日本橋ビル 1F
   telephone: 03-6910-3808
   cached_at: '2026-07-06T13:21:39Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -369,6 +388,7 @@
   address: 東京都千代田区丸の内2-4-1 丸の内ビルディング 6F
   telephone: 03-3212-3313
   cached_at: '2026-07-06T13:21:39Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -388,6 +408,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京店 12F
   telephone: 03-3287-2230
   cached_at: '2026-07-06T13:21:40Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -410,6 +431,7 @@
   address: 東京都千代田区丸の内1-9-1 東京駅一番街 M2F
   telephone: 03-5293-4141
   cached_at: '2026-07-06T13:21:40Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -431,6 +453,7 @@
   address: 東京都千代田区神田駿河台4-3 お茶の水サンクレール 2F
   telephone: 03-5577-2941
   cached_at: '2026-11-05T04:34:44Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -453,6 +476,7 @@
   address: 東京都千代田区神田神保町2-2-34 千代田三信ビル ２Ｆ
   telephone: 03-5212-7222
   cached_at: '2026-07-06T13:21:42Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -474,6 +498,7 @@
   address: 東京都千代田区西神田2-1-12 景雲ビル 1F
   telephone: 03-5215-2031
   cached_at: '2026-11-05T04:34:45Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -495,6 +520,7 @@
   address: 東京都千代田区神田神保町1-5 光風館ビル 1F
   telephone: 03-5217-3075
   cached_at: '2026-11-05T04:34:45Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -516,6 +542,7 @@
   address: 東京都千代田区神田三崎町3-7-12 清話會ビル 1F
   telephone: 03-5357-1068
   cached_at: '2026-11-05T04:34:46Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -539,6 +566,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京店 12F
   telephone: 03-3211-2783
   cached_at: '2026-07-06T13:21:44Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   tags:
@@ -559,6 +587,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京 12F
   telephone: 03-5221-7421
   cached_at: '2026-07-06T13:21:44Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -579,6 +608,7 @@
   streetAddress: 神田小川町2-1-2 シンコー・ミュージック・プラザ　Ｂ１Ｆ
   address: 東京都千代田区神田小川町2-1-2 シンコー・ミュージック・プラザ　Ｂ１Ｆ
   cached_at: '2026-11-05T04:34:46Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -601,6 +631,7 @@
   address: 東京都千代田区神田神保町1-8 FUNDES神保町 5F
   telephone: 03-5577-2989
   cached_at: '2026-07-06T13:21:45Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -623,6 +654,7 @@
   address: 東京都千代田区神田神保町2-24 神田K・Nビル 2F
   telephone: 03-6261-3719
   cached_at: '2026-07-06T13:21:46Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -643,6 +675,7 @@
   streetAddress: 神田駿河台2-2-4 御茶ノ水駅前ビル 7F
   address: 東京都千代田区神田駿河台2-2-4 御茶ノ水駅前ビル 7F
   cached_at: '2026-11-05T04:34:47Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -664,6 +697,7 @@
   address: 東京都千代田区神田神保町3-1 日建ビル 1F
   telephone: 03-3238-1292
   cached_at: '2026-11-05T04:34:47Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -685,6 +719,7 @@
   address: 東京都千代田区神田神保町1-10-1 1F・2F
   telephone: 03-3233-8491
   cached_at: '2026-11-05T04:34:48Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   tags:
@@ -704,6 +739,7 @@
   address: 東京都千代田区神田淡路町2-105 ワテラスアネックス 1F
   telephone: 03-5298-5951
   cached_at: '2026-11-05T04:34:48Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   tags:
@@ -723,6 +759,7 @@
   address: 北海道函館市豊川町27-8
   telephone: '0138-86-7112'
   cached_at: '2026-11-05T04:34:49Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   tags:
@@ -743,6 +780,7 @@
   address: 東京都千代田区神田神保町1-5-1 神保町須賀ビル 1F
   telephone: 03-5282-5309
   cached_at: '2026-11-05T04:34:49Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -764,6 +802,7 @@
   address: 東京都千代田区神田駿河台2-4 ウィーンビル 2F
   telephone: 03-5577-6077
   cached_at: '2026-11-05T04:34:50Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   urls:
@@ -786,6 +825,7 @@
   address: 東京都千代田区富士見2-2-6 今井ビル 2F
   telephone: 03-5226-6345
   cached_at: '2026-07-06T13:21:50Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   urls:
@@ -808,6 +848,7 @@
   address: 東京都港区東新橋1-8-2 カレッタ汐留 46F
   telephone: 050-3200-0679
   cached_at: '2026-07-06T13:21:50Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 良かった
@@ -830,6 +871,7 @@
   address: 東京都港区東新橋1-8-1 カレッタ汐留 46F
   telephone: 03-6218-4100
   cached_at: '2026-07-06T13:21:51Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -853,6 +895,7 @@
   address: 東京都港区東新橋1-8-2 カレッタ汐留 46F
   telephone: 03-6253-8577
   cached_at: '2026-07-06T13:21:51Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 良かった
@@ -875,6 +918,7 @@
   address: 東京都港区東新橋1-8-2 カレッタ汐留 46F
   telephone: 050-3159-7781
   cached_at: '2026-07-06T13:21:52Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -898,6 +942,7 @@
   address: 東京都港区東新橋1-9-1 コンラッド　東京 28F
   telephone: 03-6388-8745
   cached_at: '2026-07-06T13:21:52Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - コンラッドホテル
@@ -918,6 +963,7 @@
   address: 東京都港区東新橋1-7-1 パークホテル東京 25F～34F
   telephone: 03-6252-1111
   cached_at: '2026-11-05T04:34:50Z'
+  dateAdded: '2026-07-31'
   status: love
 - url: https://tabelog.com/tokyo/A1301/A130101/13265371/
   source_url: https://tabelog.com/tokyo/A1301/A130101/13265371/
@@ -935,6 +981,7 @@
   address: 東京都中央区銀座8-13-1 三井ガーデンホテル銀座プレミア 16F
   telephone: 03-3543-3381
   cached_at: '2026-07-06T13:21:52Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -955,6 +1002,7 @@
   address: 東京都中央区銀座6-10-1 GINZA SIX 13F
   telephone: 03-6264-5516
   cached_at: '2026-07-06T13:21:53Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 銀座シックス
@@ -972,6 +1020,7 @@
   streetAddress: 銀座7-8-10 SHISEIDO THE STORE 4F
   address: 東京都中央区銀座7-8-10 SHISEIDO THE STORE 4F
   cached_at: '2026-11-05T04:34:51Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -992,6 +1041,7 @@
   address: 東京都中央区銀座7-6-19 ソワレ・ド・銀座弥生ビル B1F
   telephone: 03-6824-5164
   cached_at: '2026-07-06T13:21:54Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1011,6 +1061,7 @@
   address: 東京都中央区銀座3-6-1 松屋銀座  本店 8F
   telephone: 03-5159-8686
   cached_at: '2026-11-05T04:34:52Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 銀座松屋
@@ -1032,6 +1083,7 @@
   address: 東京都中央区銀座4-6-16 銀座三越 11F
   telephone: 03-6263-2669
   cached_at: '2026-07-06T13:21:55Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 良かった
@@ -1054,6 +1106,7 @@
   address: 東京都中央区銀座4-6-16 銀座三越新館 12F
   telephone: 03-3561-7024
   cached_at: '2026-07-06T13:21:55Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 銀座三越
@@ -1072,6 +1125,7 @@
   streetAddress: 銀座5-2-1 銀座ノボ 10F
   address: 東京都中央区銀座5-2-1 銀座ノボ 10F
   cached_at: '2026-11-05T04:34:52Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 銀座東急プラザ
@@ -1092,6 +1146,7 @@
   address: 東京都千代田区有楽町2-1-16
   telephone: 03-3508-7781
   cached_at: '2026-07-06T13:21:57Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - その他
@@ -1111,6 +1166,7 @@
   address: 東京都千代田区有楽町2-3-5 2F
   telephone: 03-6264-6721
   cached_at: '2026-11-05T04:34:53Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   tags:
@@ -1132,6 +1188,7 @@
   address: 東京都千代田区有楽町1-11-1 ビックカメラ有楽町店　６Ｆ
   telephone: 050-1725-8701
   cached_at: '2026-07-31T10:51:31Z'
+  dateAdded: '2026-07-31'
   status: love
   chain: true
 - url: https://tabelog.com/tokyo/A1301/A130102/13163159/
@@ -1148,6 +1205,7 @@
   streetAddress: 銀座4-3-1 並木館コムサステージ銀座 B1F
   address: 東京都中央区銀座4-3-1 並木館コムサステージ銀座 B1F
   cached_at: '2026-11-05T04:34:53Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - その他
@@ -1168,6 +1226,7 @@
   address: 東京都中央区銀座6-6-19
   telephone: 03-3571-8228
   cached_at: '2026-07-06T13:21:58Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - その他
@@ -1188,6 +1247,7 @@
   address: 東京都中央区銀座1-3-6 銀座ベラメンテ １Ｆ・B1F
   telephone: 03-5524-5633
   cached_at: '2026-07-31T10:51:32Z'
+  dateAdded: '2026-07-31'
   status: love
 - url: https://tabelog.com/tokyo/A1301/A130101/13296006/
   source_url: https://tabelog.com/tokyo/A1301/A130101/13296006/
@@ -1205,6 +1265,7 @@
   address: 東京都中央区銀座3-12-16 保立ビル 1F
   telephone: 03-3542-2199
   cached_at: '2026-07-31T10:51:32Z'
+  dateAdded: '2026-07-31'
   status: love
 - url: https://tabelog.com/tokyo/A1301/A130101/13213162/
   source_url: https://tabelog.com/tokyo/A1301/A130101/13213162/
@@ -1222,6 +1283,7 @@
   address: 東京都中央区銀座5-1-7 数寄屋橋ビル B1F
   telephone: 03-3289-0026
   cached_at: '2026-07-06T13:21:59Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1242,6 +1304,7 @@
   address: 東京都中央区銀座2-4-6 銀座ベルビア館 7Ｆ
   telephone: 03-3562-7557
   cached_at: '2026-07-06T13:22:00Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1261,6 +1324,7 @@
   streetAddress: 銀座1-5-10 銀座ファーストファイブビル B1F
   address: 東京都中央区銀座1-5-10 銀座ファーストファイブビル B1F
   cached_at: '2026-11-05T04:34:54Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1281,6 +1345,7 @@
   address: 東京都中央区銀座3-11-11 銀座参番館２　Ｂ１Ｆ
   telephone: 03-3547-7901
   cached_at: '2026-07-06T13:22:01Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1303,6 +1368,7 @@
   address: 東京都中央区銀座7-8-7 銀座GREEN 11F
   telephone: 03-6228-5805
   cached_at: '2026-07-06T13:22:01Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1322,6 +1388,7 @@
   streetAddress: 銀座6-4-16
   address: 東京都中央区銀座6-4-16
   cached_at: '2026-11-05T04:34:55Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://www.ginza-mutou.com/
@@ -1344,6 +1411,7 @@
   address: 東京都中央区銀座1-5-1
   telephone: 03-3564-3835
   cached_at: '2026-07-06T13:22:02Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1364,6 +1432,7 @@
   address: 東京都中央区銀座2-3-4
   telephone: 03-3564-2758
   cached_at: '2026-07-06T13:22:03Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1385,6 +1454,7 @@
   address: 東京都中央区銀座6-12-15 いちご銀座612ビル　2Ｆ
   telephone: 03-5537-7420
   cached_at: '2026-07-06T13:22:04Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1404,6 +1474,7 @@
   address: 東京都中央区銀座3-8-17 菊正ビル
   telephone: 03-3535-5769
   cached_at: '2026-11-05T04:34:55Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1425,6 +1496,7 @@
   address: 東京都中央区銀座5-6-13 西五番街ビル　４Ｆ
   telephone: 03-5537-0388
   cached_at: '2026-07-06T13:22:05Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1444,6 +1516,7 @@
   address: 東京都中央区銀座6-6-7
   telephone: 03-6837-1234
   cached_at: '2026-11-05T04:34:56Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://www.hyatt.com/ja-JP/hotel/japan/hyatt-centric-ginza-tokyo/tyoct/dining
@@ -1466,6 +1539,7 @@
   address: 東京都中央区銀座2-3-6 銀座並木通りビル　５Ｆ
   telephone: 03-3538-2226
   cached_at: '2026-07-06T13:22:06Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://umenohana-restaurant.co.jp/shop-list/info.php?id=910
@@ -1488,6 +1562,7 @@
   address: 東京都千代田区有楽町2-2-3 THE GATE HOTEL 東京 4F
   telephone: 03-6263-8230
   cached_at: '2026-07-06T13:22:07Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.gate-hotel.jp/tokyo/rb/atokyo.html
@@ -1510,6 +1585,7 @@
   address: 東京都港区赤坂3-7-12 ベストウェスタンホテルフィーノ東京赤坂 1F
   telephone: 03-5544-9977
   cached_at: '2026-07-06T13:22:07Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 赤坂見附駅
@@ -1529,6 +1605,7 @@
   address: 東京都港区赤坂3-12-3 センチュリオンホテルレジデンシャル赤坂 1F
   telephone: 03-3568-1340
   cached_at: '2026-07-06T13:22:08Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 赤坂見附駅
@@ -1548,6 +1625,7 @@
   address: 東京都港区赤坂4-9-22
   telephone: 03-3408-2331
   cached_at: '2026-11-05T04:34:56Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1568,6 +1646,7 @@
   address: 東京都港区赤坂3-13-12
   telephone: 050-3647-0607
   cached_at: '2026-07-06T13:22:09Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1588,6 +1667,7 @@
   address: 東京都港区赤坂5-3-1 赤坂Bizタワー 2F
   telephone: 03-6277-7157
   cached_at: '2026-07-06T13:22:09Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://mitsui-shopping-park.com/urban/akasakabiztower-sd/store/600166.html
@@ -1609,6 +1689,7 @@
   address: 東京都渋谷区神宮前4-12-10 表参道ヒルズ 本館 3Ｆ
   telephone: 03-5785-0606
   cached_at: '2026-07-06T13:22:10Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 表参道ヒルズ
@@ -1629,6 +1710,7 @@
   address: 東京都港区北青山2-14-4 THE AOYAMA GRAND HOTEL 4F
   telephone: 03-6271-5429
   cached_at: '2026-07-06T13:22:10Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1650,6 +1732,7 @@
   address: 東京都港区六本木6-10-3 六本木ヒルズ　グランド　ハイアット　東京　１Ｆ
   telephone: 03-4333-8780
   cached_at: '2026-07-06T13:22:11Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 六本木ヒルズ
@@ -1670,6 +1753,7 @@
   address: 東京都港区赤坂9-7-4 東京ミッドタウン ガレリア ガーデンテラス 3F
   telephone: 03-5413-7988
   cached_at: '2026-07-06T13:22:12Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://restaurant.imahan.com/menu-kisentei-midtown/
@@ -1692,6 +1776,7 @@
   address: 東京都千代田区平河町2-16-15 ザ・キタノホテル東京 9F
   telephone: 03-6261-7097
   cached_at: '2026-07-06T13:22:12Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/tokyo/A1307/A130701/13175214/
   source_url: https://tabelog.com/tokyo/A1307/A130701/13175214/
@@ -1709,6 +1794,7 @@
   address: 東京都港区六本木4-11-11 六本木GMビル 4F
   telephone: 050-1794-8119
   cached_at: '2026-07-06T13:22:12Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -1729,6 +1815,7 @@
   streetAddress: 日本橋室町3-2-1 コレド室町テラス B1F
   address: 東京都中央区日本橋室町3-2-1 コレド室町テラス B1F
   cached_at: '2026-07-06T13:22:13Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 三越前駅・室町
@@ -1747,6 +1834,7 @@
   address: 東京都中央区日本橋室町2-1-2 日本橋三井タワー 千疋屋総本店 1F
   telephone: 03-3241-0877
   cached_at: '2026-11-05T04:34:57Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.sembikiya.co.jp/shop-list/caffe-difesta
@@ -1767,6 +1855,7 @@
   address: 東京都中央区日本橋室町1-4-1 日本橋三越本店本館 B1F
   telephone: 03-3241-3311
   cached_at: '2026-11-05T04:34:57Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   tags:
@@ -1786,6 +1875,7 @@
   address: 東京都中央区日本橋室町1-4-1 日本橋三越本店 本館 B1F
   telephone: 03-3241-4225
   cached_at: '2026-11-05T04:34:58Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 三越前駅・室町 > 三越デパ地下
@@ -1803,6 +1893,7 @@
   streetAddress: 日本橋1-2-5
   address: 東京都中央区日本橋1-2-5
   cached_at: '2026-11-05T04:34:58Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 三越前駅・室町 > 三越デパ地下
@@ -1823,6 +1914,7 @@
   address: 東京都中央区日本橋室町1-3-10 日本橋三越本店新館 9Ｆ
   telephone: 03-3275-2800
   cached_at: '2026-07-06T13:22:15Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -1845,6 +1937,7 @@
   address: 東京都中央区日本橋室町1-5-5 コレド室町3 1F
   telephone: 03-6262-3178
   cached_at: '2026-07-06T13:22:16Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 三越前駅・室町
@@ -1865,6 +1958,7 @@
   address: 東京都中央区日本橋室町2-3-1 COREDO室町2 1F
   telephone: 03-5205-8704
   cached_at: '2026-07-06T13:22:16Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 三越前駅・室町
@@ -1883,6 +1977,7 @@
   streetAddress: 日本橋1-4-1 コレド日本橋 4F
   address: 東京都中央区日本橋1-4-1 コレド日本橋 4F
   cached_at: '2026-07-06T13:22:17Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.thongjapan.com/index.php/shop/coredo
@@ -1903,6 +1998,7 @@
   address: 東京都中央区日本橋2-4-1 日本橋タカシマヤ 8F
   telephone: 03-3211-4111
   cached_at: '2026-11-05T04:34:59Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103013
@@ -1924,6 +2020,7 @@
   address: 東京都中央区日本橋2-4-1 日本橋髙島屋 B2F
   telephone: 03-3246-4768
   cached_at: '2026-11-05T04:35:00Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103015
@@ -1945,6 +2042,7 @@
   address: 東京都中央区日本橋2-4-1 日本橋タカシマヤ 8F
   telephone: 03-3211-4111
   cached_at: '2026-11-05T04:35:00Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/103014
@@ -1967,6 +2065,7 @@
   address: 東京都中央区日本橋2-4-1 日本橋高島屋S.C.本館 8F
   telephone: 03-3272-3677
   cached_at: '2026-10-05T11:05:48Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/176902
@@ -1989,6 +2088,7 @@
   address: 東京都中央区日本橋2-5-1 日本橋高島屋S.C. 新館 6F
   telephone: 03-6265-1948
   cached_at: '2026-07-06T13:22:20Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://www.takashimaya.co.jp/nihombashi/specialtystores/shop/237501
@@ -2011,6 +2111,7 @@
   address: 東京都中央区日本橋1-2-5 榮太楼ビル1階
   telephone: 03-3271-7785
   cached_at: '2026-11-05T04:35:01Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2032,6 +2133,7 @@
   address: 東京都千代田区内神田3-19-7 神田北口駅前ビル 1F
   telephone: 050-1722-7773
   cached_at: '2026-07-06T13:22:21Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 神田駅
@@ -2052,6 +2154,7 @@
   address: 東京都中央区日本橋人形町1-12-11 リガーレ日本橋人形町 A-110
   telephone: 03-5695-2029
   cached_at: '2026-07-06T13:22:21Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2072,6 +2175,7 @@
   address: 東京都中央区日本橋人形町2-22-11 井上ビル 1F
   telephone: 03-5643-1566
   cached_at: '2026-07-06T13:22:22Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2092,6 +2196,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京 B1F
   telephone: 03-6273-4175
   cached_at: '2026-11-05T04:35:01Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   tags:
@@ -2113,6 +2218,7 @@
   address: 東京都渋谷区千駄ヶ谷5-24-2 新宿タカシマヤ 13F
   telephone: 03-5361-1865
   cached_at: '2026-07-06T13:22:24Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.restaurants-park.jp/restaurant/?id=22
@@ -2136,6 +2242,7 @@
   address: 東京都千代田区紀尾井町1-3 東京ガーデンテラス紀尾井町 紀尾井テラス 3F
   telephone: 03-3237-5800
   cached_at: '2026-11-05T04:35:02Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   urls:
@@ -2158,6 +2265,7 @@
   address: 東京都渋谷区千駄ヶ谷5-24-2 高島屋タイムズスクエアビル 12F
   telephone: 03-5361-1852
   cached_at: '2026-11-05T04:35:02Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 新宿高島屋
@@ -2178,6 +2286,7 @@
   address: 東京都渋谷区千駄ヶ谷5-24-2 新宿タカシマヤ 14F
   telephone: 03-5361-1878
   cached_at: '2026-07-06T13:22:25Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 新宿高島屋
@@ -2198,6 +2307,7 @@
   address: 東京都渋谷区千駄ヶ谷5-24-2 新宿タカシマヤ 13F
   telephone: 03-5361-1860
   cached_at: '2026-07-06T13:22:26Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 新宿高島屋
@@ -2218,6 +2328,7 @@
   address: 東京都渋谷区千駄ヶ谷5-24-2 新宿タカシマヤ 13F
   telephone: 03-5361-1861
   cached_at: '2026-07-06T13:22:26Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.restaurants-park.jp/restaurant/?id=12
@@ -2239,6 +2350,7 @@
   address: 東京都渋谷区代々木2-2-1 小田急ホテルセンチュリーサザンタワー 20F
   telephone: 03-5354-2172
   cached_at: '2026-07-06T13:22:27Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 小田急ホテル センチュリーサザンタワー
@@ -2260,6 +2372,7 @@
   address: 東京都新宿区新宿3-26-18 カワノビル 6F
   telephone: 03-5368-6303
   cached_at: '2026-07-06T13:22:28Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 新宿三丁目
@@ -2279,6 +2392,7 @@
   streetAddress: 新宿3-32-10 新宿Ｔ＆Ｔビル　Ｂ１Ｆ・Ｂ２Ｆ
   address: 東京都新宿区新宿3-32-10 新宿Ｔ＆Ｔビル　Ｂ１Ｆ・Ｂ２Ｆ
   cached_at: '2026-07-06T13:22:28Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2299,6 +2413,7 @@
   address: 東京都新宿区西新宿2-2-1 京王プラザホテル 本館 45F
   telephone: 03-5322-8151
   cached_at: '2026-07-06T13:22:29Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.keioplaza.co.jp/restaurant/list/aurora
@@ -2321,6 +2436,7 @@
   address: 東京都新宿区西新宿3-7-1 パークハイアット東京　４１Ｆ
   telephone: 03-5323-3461
   cached_at: '2026-07-06T13:22:30Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://restaurants.tokyo.park.hyatt.co.jp/plb.html
@@ -2343,6 +2459,7 @@
   address: 東京都新宿区西新宿7-10-18 小滝橋パシフィカビル3F
   telephone: 03-5337-1305
   cached_at: '2026-07-06T13:22:30Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.google.com/maps/place/%E3%80%92160-0023+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%91%EF%BC%98+%E5%B0%8F%E6%BB%9D%E6%A9%8B%E3%83%91%E3%82%B7%E3%83%95%E3%82%A3%E3%82%AB%E3%83%93%E3%83%AB+3F+%E9%89%84%E6%9D%BF%E4%BA%8C%E7%99%BE%E2%84%83+%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97/@35.6944905,139.6986151,12z/data=!4m6!3m5!1s0x60188cd6358f55c7:0xf9ca79631a9a6105!8m2!3d35.6944905!4d139.6986151!16s%2Fg%2F1xpwjsd1?hl=ja-JP&gl=jp
@@ -2364,6 +2481,7 @@
   address: 東京都新宿区西新宿3-4-7 キンプトン新宿東京 17F
   telephone: 03-6258-1414
   cached_at: '2026-07-06T13:22:31Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://www.kimptonshinjuku.com/jp/tokyo-restaurants/rooftop-bar-86/
@@ -2387,6 +2505,7 @@
   address: 東京都新宿区西新宿7-9-17 第一伊藤ビル　Ｂ１Ｆ
   telephone: 03-3360-3701
   cached_at: '2026-07-06T13:22:31Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2408,6 +2527,7 @@
   address: 東京都新宿区新宿3-14-1 伊勢丹新宿店 B1F
   telephone: 03-3341-1512
   cached_at: '2026-11-05T04:35:03Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 伊勢丹 > デパ地下
@@ -2427,6 +2547,7 @@
   address: 東京都新宿区新宿3-14-1 伊勢丹新宿店 7F
   telephone: 03-5919-7688
   cached_at: '2026-07-06T13:22:32Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://nangokusyuka.co.jp/store/vege_china.html
@@ -2449,6 +2570,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京店 12F
   telephone: 03-6810-0712
   cached_at: '2026-07-06T13:22:33Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   tags:
@@ -2468,6 +2590,7 @@
   streetAddress: 西新宿1-3 小田急百貨店新宿店本館　１２Ｆ
   address: 東京都新宿区西新宿1-3 小田急百貨店新宿店本館　１２Ｆ
   cached_at: '2026-11-05T04:35:03Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.odakyu-restaurant.jp/shop/tsudurao/honten.html
@@ -2488,6 +2611,7 @@
   streetAddress: 西新宿1-5-1 小田急百貨店新宿店 B1F
   address: 東京都新宿区西新宿1-5-1 小田急百貨店新宿店 B1F
   cached_at: '2026-11-05T04:35:04Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 小田急 > デパ地下
@@ -2507,6 +2631,7 @@
   address: 東京都新宿区西新宿3-20-2 東京オペラシティ 53F
   telephone: 03-5353-0089
   cached_at: '2026-07-06T13:22:36Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   urls:
@@ -2530,6 +2655,7 @@
   address: 東京都中央区銀座6-2 コリドー街
   telephone: 03-3571-7715
   cached_at: '2026-07-06T13:22:37Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   tags:
@@ -2549,6 +2675,7 @@
   address: 東京都千代田区丸の内1-9-1 東京駅一番街 1F
   telephone: 03-3216-6717
   cached_at: '2026-11-05T04:35:05Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 東京駅
@@ -2570,6 +2697,7 @@
   address: 東京都千代田区丸の内1-8-3 丸の内トラストタワー本館 シャングリ・ラ 東京 28Ｆ
   telephone: 03-6739-7877
   cached_at: '2026-07-06T13:22:38Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.shangri-la.com/jp/tokyo/shangrila/dining/bars-lounges/lobby-lounge/
@@ -2591,6 +2719,7 @@
   address: 東京都千代田区丸の内1-9-1 JR東日本東京駅丸の内北口改札外
   telephone: '080-3703-9456'
   cached_at: '2026-07-06T13:22:39Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2611,6 +2740,7 @@
   address: 東京都千代田区丸の内1-8-2 鉃鋼ビルディング南館 2・3F
   telephone: 03-6206-3551
   cached_at: '2026-07-06T13:22:39Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 東京駅
@@ -2628,6 +2758,7 @@
   streetAddress: 八重洲2-1 八重洲地下街 B1F
   address: 東京都中央区八重洲2-1 八重洲地下街 B1F
   cached_at: '2026-11-05T04:35:05Z'
+  dateAdded: '2026-06-21'
   status: love
   chain: true
   tags:
@@ -2647,6 +2778,7 @@
   address: 東京都千代田区丸の内1-9-1 東京ステーションホテル 2F
   telephone: 03-5220-2346
   cached_at: '2026-11-05T04:35:06Z'
+  dateAdded: '2026-06-21'
   status: not_been
   urls:
   - https://www.tokyostationhotel.jp/restaurants/torayatokyo/
@@ -2669,6 +2801,7 @@
   address: 東京都千代田区丸の内1-9-1 東京駅一番街 2F 東京グルメゾン
   telephone: 050-3176-6657
   cached_at: '2026-11-05T04:35:06Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.dynacjapan.com/brands/kotobuki/
@@ -2690,6 +2823,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京店 12F
   telephone: 03-6269-9092
   cached_at: '2026-11-05T04:35:07Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.daimaru.co.jp/tokyo/restaurant/12f_tk_torishige.html
@@ -2711,6 +2845,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京店 12F
   telephone: 03-6895-2881
   cached_at: '2026-11-05T04:35:07Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.daimaru.co.jp/tokyo/restaurant/12f_edo_nunoyatahei.html
@@ -2732,6 +2867,7 @@
   address: 東京都千代田区丸の内1-9-1 大丸東京店 3F
   telephone: 03-5860-3542
   cached_at: '2026-11-05T04:35:08Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.daimaru.co.jp/tokyo/restaurant/3f_cafe_sembikiya.html
@@ -2754,6 +2890,7 @@
   address: 東京都千代田区大手町1-5-5 OOTEMORI B2F
   telephone: 03-6269-9596
   cached_at: '2026-07-06T13:22:43Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 大手町
@@ -2774,6 +2911,7 @@
   address: 東京都千代田区大手町1-5-6 大手町タワー 33F
   telephone: 03-5224-3339
   cached_at: '2026-07-06T13:22:44Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://www.aman.com/ja-jp/hotels/aman-tokyo/dining/lounge-aman
@@ -2796,6 +2934,7 @@
   address: 東京都千代田区大手町1-2-1 フォーシーズンズホテル東京大手町 39F
   telephone: 03-6810-0655
   cached_at: '2026-07-06T13:22:44Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.fourseasons.com/jp/otemachi/dining/restaurants/virtu/
@@ -2817,6 +2956,7 @@
   address: 東京都千代田区丸の内1-4-1 丸の内永楽ビルディング iiyo!!（イーヨ!!） B1F
   telephone: 03-6273-4901
   cached_at: '2026-07-06T13:22:45Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 大手町
@@ -2836,6 +2976,7 @@
   address: 東京都千代田区丸の内1-5-1 新丸の内ビルディング 5F
   telephone: 03-3211-6633
   cached_at: '2026-07-06T13:22:46Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 丸ビル
@@ -2855,6 +2996,7 @@
   address: 東京都千代田区丸の内1-5-1 新丸の内ビルディング 5F
   telephone: 03-5224-8686
   cached_at: '2026-11-05T04:35:09Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 丸ビル
@@ -2876,6 +3018,7 @@
   address: 東京都千代田区丸の内2-6-1 丸の内ブリックスクエア B1F
   telephone: 03-6269-9100
   cached_at: '2026-07-06T13:22:46Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2896,6 +3039,7 @@
   address: 東京都千代田区丸の内3-2-3 丸の内二重橋ビル 二重橋スクエア 2F
   telephone: 03-6270-3900
   cached_at: '2026-07-06T13:22:47Z'
+  dateAdded: '2026-06-21'
   status: have_been
 - url: https://tabelog.com/tokyo/A1303/A130301/13188242/
   source_url: https://tabelog.com/tokyo/A1303/A130301/13188242/
@@ -2913,6 +3057,7 @@
   address: 東京都渋谷区渋谷2-21-1 渋谷ヒカリエ 6F
   telephone: 03-6712-6450
   cached_at: '2026-07-06T13:22:48Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - ヒカリエ・レストラン街
@@ -2933,6 +3078,7 @@
   address: 東京都渋谷区渋谷2-24-12 渋谷スクランブルスクエア 12F
   telephone: 03-6427-3613
   cached_at: '2026-07-06T13:22:48Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 渋谷スクランブルスクエア - ショップ & レストラン
@@ -2953,6 +3099,7 @@
   address: 東京都渋谷区渋谷2-24-12 渋谷スクランブルスクエア 12F
   telephone: 03-6452-6229
   cached_at: '2026-07-06T13:22:49Z'
+  dateAdded: '2026-06-21'
   status: have_been
   urls:
   - https://teppan-yaki10shibuya.com/
@@ -2974,6 +3121,7 @@
   address: 東京都渋谷区代官山町14-10 LUZ代官山 B1F
   telephone: 03-6455-0206
   cached_at: '2026-07-06T13:22:49Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -2993,6 +3141,7 @@
   streetAddress: 宇田川町29-4
   address: 東京都渋谷区宇田川町29-4
   cached_at: '2026-11-05T04:35:09Z'
+  dateAdded: '2026-06-21'
   status: have_been
   chain: true
   tags:
@@ -3013,6 +3162,7 @@
   address: 東京都渋谷区道玄坂1-14-9 ソシアル道玄坂ビル B1F
   telephone: 03-6416-4747
   cached_at: '2026-07-06T13:22:50Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3033,6 +3183,7 @@
   address: 東京都文京区後楽1-3-61 東京ドームホテル 2F
   telephone: 03-5805-1129
   cached_at: '2026-07-06T13:22:51Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 東京ドームシティー > 和牛一頭焼肉 牛兵衛 草庵
@@ -3050,6 +3201,7 @@
   streetAddress: 後楽1-3-61 東京ドームシティ　ミーツポート　５Ｆ
   address: 東京都文京区後楽1-3-61 東京ドームシティ　ミーツポート　５Ｆ
   cached_at: '2026-11-05T04:35:10Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 東京ドームシティー
@@ -3071,6 +3223,7 @@
   address: 東京都新宿区神楽坂4-2 阿波屋ビル 1F
   telephone: 03-5206-3633
   cached_at: '2026-07-06T13:22:52Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 神楽坂
@@ -3090,6 +3243,7 @@
   address: 東京都千代田区九段北1-3-4 九段清新ビル 1・2F
   telephone: 03-3261-7606
   cached_at: '2026-07-31T10:48:50Z'
+  dateAdded: '2026-07-31'
   status: love
 - url: https://tabelog.com/tokyo/A1310/A131003/13000282/
   source_url: https://tabelog.com/tokyo/A1310/A131003/13000282/
@@ -3105,6 +3259,7 @@
   streetAddress: 神田神保町2-1 岩波神保町ビル別館 １Ｆ
   address: 東京都千代田区神田神保町2-1 岩波神保町ビル別館 １Ｆ
   cached_at: '2026-11-05T04:35:10Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 道の店
@@ -3125,6 +3280,7 @@
   address: 東京都千代田区神田神保町1-18-10 三光ビル1F
   telephone: 03-6811-0388
   cached_at: '2026-07-06T13:22:53Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 道の店
@@ -3143,6 +3299,7 @@
   address: 東京都千代田区神田神保町1-5-10 堀内神保町ビル B1F
   telephone: 03-3295-7070
   cached_at: '2026-11-05T04:35:11Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 道の店
@@ -3164,6 +3321,7 @@
   address: 東京都千代田区神田神保町1-19
   telephone: 03-3291-6222
   cached_at: '2026-07-06T13:22:54Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 道の店
@@ -3184,6 +3342,7 @@
   address: 東京都千代田区神田三崎町1-1-16 庭のホテル 東京
   telephone: 03-3293-1141
   cached_at: '2026-07-06T13:22:55Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.hotelniwa.jp/hospitality/restaurant/
@@ -3203,6 +3362,7 @@
   streetAddress: 神田神保町2-24-6
   address: 東京都千代田区神田神保町2-24-6
   cached_at: '2026-11-05T04:35:11Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 道の店
@@ -3223,6 +3383,7 @@
   address: 東京都千代田区神田淡路町2-8
   telephone: 03-3251-5511
   cached_at: '2026-07-06T13:22:56Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3243,6 +3404,7 @@
   address: 東京都千代田区神田司町2-15-2
   telephone: 03-3294-5433
   cached_at: '2026-11-05T04:35:12Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3262,6 +3424,7 @@
   address: 東京都千代田区神田淡路町2-2
   telephone: 03-3255-2525
   cached_at: '2026-11-05T04:35:12Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3283,6 +3446,7 @@
   address: 東京都千代田区神田佐久間町1-6-5 TX秋葉原阪急ビル 5F
   telephone: 03-6381-1988
   cached_at: '2026-07-06T13:22:57Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 焼き鳥
@@ -3302,6 +3466,7 @@
   address: 東京都台東区浅草2-17-10
   telephone: 03-3841-6416
   cached_at: '2026-11-05T04:35:13Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3322,6 +3487,7 @@
   address: 東京都墨田区押上1-1-2         東京スカイツリータウン ソラマチ 31F
   telephone: 03-5809-7377
   cached_at: '2026-07-06T13:22:59Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3343,6 +3509,7 @@
   address: 東京都台東区池之端1-4-1
   telephone: 03-3828-5111
   cached_at: '2026-07-06T13:22:59Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 道の店
@@ -3362,6 +3529,7 @@
   address: 東京都台東区三筋1-11-13
   telephone: 03-5809-2866
   cached_at: '2026-07-06T13:23:00Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 道の店
@@ -3381,6 +3549,7 @@
   address: 東京都江東区豊洲6-5-1 豊洲市場内6街区 水産仲卸売場棟 3F
   telephone: 03-6633-0042
   cached_at: '2026-11-05T04:35:13Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3400,6 +3569,7 @@
   address: 東京都豊島区西池袋1-33-3 岩田ビル　１Ｆ・２Ｆ
   telephone: 03-3985-7182
   cached_at: '2026-07-06T13:23:01Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 道の店
@@ -3419,6 +3589,7 @@
   address: 東京都中野区中野5-56-16 村酒場田園ビル １Ｆ
   telephone: 03-3387-1116
   cached_at: '2026-11-05T04:35:14Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - 良かった
@@ -3442,6 +3613,7 @@
   address: 東京都渋谷区渋谷1-13-9 たくぎんビル　Ｂ１Ｆ
   telephone: 03-3409-3445
   cached_at: '2026-08-14T08:40:48Z'
+  dateAdded: '2026-07-05'
   status: love
   chain: true
   tags:
@@ -3462,6 +3634,7 @@
   address: 愛知県名古屋市中村区名駅4-7-1 ミッドランドスクエア B1F
   telephone: 052-462-9242
   cached_at: '2026-07-06T13:23:02Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - "(キシメンサリョウイシコン)"
@@ -3481,6 +3654,7 @@
   address: 愛知県名古屋市中区大須3-6-18
   telephone: 052-252-8810
   cached_at: '2026-07-06T13:23:03Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 別名：名古屋名物 みそかつ 矢場とん 矢場町本店
@@ -3500,6 +3674,7 @@
   address: 愛知県名古屋市中村区名駅4-4-10 名古屋クロスコートタワー B1F
   telephone: 052-551-1133
   cached_at: '2026-07-06T13:23:04Z'
+  dateAdded: '2026-06-21'
   status: have_been
   tags:
   - "(たつむら)・ひつまぶし"
@@ -3519,6 +3694,7 @@
   address: 愛知県名古屋市中村区名駅4-5-26
   telephone: 052-433-3900
   cached_at: '2026-07-06T13:23:04Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.tori-kai.com/shop/unimall.html
@@ -3539,6 +3715,7 @@
   address: 愛知県名古屋市中村区椿町15-27 名駅太閤通口ビル 2F
   telephone: 052-452-1650
   cached_at: '2026-11-05T04:35:15Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://www.yamachan.co.jp/
@@ -3557,6 +3734,7 @@
   address: 愛知県名古屋市中村区名駅1-1-4 JR名古屋駅
   telephone: 052-581-0330
   cached_at: '2026-11-05T04:35:15Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3578,6 +3756,7 @@
   address: 大阪府大阪市北区角田町大阪地下街2-8 ノースモール2
   telephone: 06-6130-9780
   cached_at: '2026-07-06T13:23:06Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 別名：すし酒場 さしす ホワイティうめだ店
@@ -3595,6 +3774,7 @@
   streetAddress: 平野町1-6-11 平一ビル　１Ｆ
   address: 大阪府大阪市中央区平野町1-6-11 平一ビル　１Ｆ
   cached_at: '2026-11-05T04:35:16Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - おすすめ
@@ -3614,6 +3794,7 @@
   address: 大阪府大阪市北区角田町2-5 ホワイティうめだノースモール
   telephone: 06-6311-6445
   cached_at: '2026-11-05T04:35:16Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/osaka/A2701/A270101/27129935/
   source_url: https://tabelog.com/osaka/A2701/A270101/27129935/
@@ -3631,6 +3812,7 @@
   address: 大阪府大阪市北区堂山町梅田地下街3-1 イーストモールNOMOKA
   telephone: 06-6314-0050
   cached_at: '2026-07-06T13:23:07Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/osaka/A2701/A270104/27112899/
   source_url: https://tabelog.com/osaka/A2701/A270104/27112899/
@@ -3647,6 +3829,7 @@
   address: 大阪府大阪市中央区常盤町2-1-3 ハイネス常磐 1F
   telephone: 06-4792-8262
   cached_at: '2026-11-05T04:35:17Z'
+  dateAdded: '2026-06-21'
   status: not_been
   tags:
   - 行きたい
@@ -3667,6 +3850,7 @@
   address: 京都府京都市中京区東洞院通六角下る御射山町273 プラウド京都東洞院 1F
   telephone: 075-366-4361
   cached_at: '2026-07-06T13:23:08Z'
+  dateAdded: '2026-06-21'
   status: love
   urls:
   - https://libertejapon.com/kyoto/
@@ -3687,6 +3871,7 @@
   address: 京都府京都市中京区四条通先斗町上ル西側22
   telephone: 075-211-2469
   cached_at: '2026-07-06T13:23:09Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - 別名：豆腐料理とおばんざい まるたけえびす豆八 京都 先斗町
@@ -3705,6 +3890,7 @@
   address: 京都府京都市下京区烏丸通塩小路下る東塩小路町901 ジェイアール京都伊勢丹 11F
   telephone: 075-352-6233
   cached_at: '2026-11-05T04:35:17Z'
+  dateAdded: '2026-06-21'
   status: love
 - url: https://tabelog.com/miyagi/A0401/A040101/4019641/
   source_url: https://tabelog.com/miyagi/A0401/A040101/4019641/
@@ -3722,6 +3908,7 @@
   address: 宮城県仙台市青葉区中央4-3-1 東四市場1F-A号
   telephone: 022-797-4022
   cached_at: '2026-07-06T13:23:10Z'
+  dateAdded: '2026-06-21'
   status: love
   tags:
   - やばい美味しかった
@@ -3742,6 +3929,7 @@
   address: 東京都港区新橋4-6-5
   telephone: 03-5408-9412
   cached_at: '2026-11-01T03:30:47Z'
+  dateAdded: '2026-11-01'
   status: love
 - url: https://tabelog.com/tokyo/A1301/A130101/13287108/
   source_url: https://tabelog.com/tokyo/A1301/A130101/13287108/
@@ -3759,6 +3947,7 @@
   address: 東京都中央区銀座5-13-19 デュープレックス銀座タワー 5/13 2F
   telephone: 03-6264-2602
   cached_at: '2026-11-01T03:30:47Z'
+  dateAdded: '2026-11-01'
   status: love
 - url: https://tabelog.com/tokyo/A1301/A130101/13243545/
   source_url: https://tabelog.com/tokyo/A1301/A130101/13243545/
@@ -3776,6 +3965,7 @@
   address: 東京都中央区銀座5-13-19 3F
   telephone: 03-6260-6130
   cached_at: '2026-11-01T03:30:48Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3795,6 +3985,7 @@
   address: 東京都港区新橋1-7-7 YOTEL東京銀座 1F
   telephone: 03-6274-6301
   cached_at: '2026-11-01T03:30:48Z'
+  dateAdded: '2026-11-01'
   status: not_been
   urls:
   - https://res-reserve.com/ja/restaurants/komyuniti-yotel-ginza
@@ -3816,6 +4007,7 @@
   address: 東京都中央区銀座1-8-19 ONE GINZA B1F
   telephone: 03-5579-9915
   cached_at: '2026-11-01T03:30:49Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3835,6 +4027,7 @@
   address: 東京都千代田区神田三崎町3-6-1
   telephone: 03-6261-1910
   cached_at: '2026-11-01T03:30:49Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3854,6 +4047,7 @@
   address: 東京都千代田区神田神保町1-105 神保町三井ビル 1F
   telephone: 03-5280-7338
   cached_at: '2026-11-01T03:30:50Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3873,6 +4067,7 @@
   address: 東京都千代田区神田神保町1-14-16 2F
   telephone: 03-3518-2307
   cached_at: '2026-11-01T03:30:50Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3891,6 +4086,7 @@
   address: 東京都千代田区神田神保町2-2-32
   telephone: 03-6380-9390
   cached_at: '2026-11-05T04:35:18Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3910,6 +4106,7 @@
   address: 東京都千代田区神田神保町1-37-1 REDO神保町 1F
   telephone: '080-8888-8030'
   cached_at: '2026-11-01T03:30:51Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3929,6 +4126,7 @@
   address: 山形県酒田市浜中字村東30-3 庄内空港3階フロア
   telephone: 0234-91-1529
   cached_at: '2026-11-01T03:30:52Z'
+  dateAdded: '2026-11-01'
   status: love
 - url: https://tabelog.com/tokyo/A1310/A131003/13204470/
   source_url: https://tabelog.com/tokyo/A1310/A131003/13204470/
@@ -3946,6 +4144,7 @@
   address: 東京都千代田区神田神保町1-5-11
   telephone: 03-5577-6860
   cached_at: '2026-11-01T03:30:52Z'
+  dateAdded: '2026-11-01'
   status: love
   tags:
   - 油ぽかった
@@ -3964,6 +4163,7 @@
   address: "東京都千代田区丸の内1-9-1 東京駅 八重洲口 \Lグランルーフ 2Ｆ グランスタ八重洲"
   telephone: 03-6627-2100
   cached_at: '2026-11-05T04:35:18Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい
@@ -3983,6 +4183,7 @@
   address: 東京都千代田区隼町1-1
   telephone: 03-3288-0111
   cached_at: '2026-11-05T04:35:19Z'
+  dateAdded: '2026-11-01'
   status: not_been
   tags:
   - 行きたい

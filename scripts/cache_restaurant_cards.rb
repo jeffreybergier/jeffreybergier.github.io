@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "cgi"
+require "date"
 require "fileutils"
 require "json"
 require "net/http"
@@ -44,6 +45,8 @@ def read_yaml(path, fallback)
   return fallback unless File.exist?(path)
 
   YAML.load_file(path) || fallback
+rescue Psych::DisallowedClass => error
+  abort "Invalid YAML in #{path}: #{error.message}. Use quoted YYYY-MM-DD strings for dateAdded."
 end
 
 def tabelog_url?(url)
@@ -186,7 +189,7 @@ def enriched_restaurant(restaurant, html)
   description = short_description(html)
 
   enriched = {}
-  %w[url status chain urls tags].each do |key|
+  %w[url dateAdded status chain urls tags].each do |key|
     enriched[key] = restaurant[key] if restaurant.key?(key)
   end
 
@@ -225,11 +228,17 @@ log("Caching #{targets.size} restaurants", options)
 
 generated_cards = targets.each_with_index.filter_map do |restaurant, index|
   url = restaurant["url"]
+  date_added = restaurant["dateAdded"]
+  valid_date = date_added.is_a?(String) && date_added.match?(/\A\d{4}-\d{2}-\d{2}\z/) &&
+               (Date.iso8601(date_added) rescue nil)
+  unless valid_date
+    abort "Invalid or missing dateAdded for #{url}. Set a quoted YYYY-MM-DD date in restaurants.yml."
+  end
   existing = existing_by_url[url]
   if existing
     # Editorial data always comes from restaurants.yml, not an older snapshot.
     existing = existing.dup
-    %w[status chain urls tags].each do |key|
+    %w[dateAdded status chain urls tags].each do |key|
       existing.delete(key)
       existing[key] = restaurant[key] if restaurant.key?(key)
     end

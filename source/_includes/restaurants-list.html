@@ -10,12 +10,14 @@
   {%- endcapture -%}
   {%- assign restaurant_score_badge = restaurant_score_badge | strip -%}
   {%- capture restaurant_badges -%}
-    {%- if restaurant.status and restaurant.status != "have_been" and restaurant.status != include.section_status -%}
+    {%- if include.filterable or restaurant.status and restaurant.status != "have_been" and restaurant.status != include.section_status -%}
       {%- case restaurant.status -%}
       {%- when "not_been" -%}
         <span class="restaurant-badge">未訪問</span>
       {%- when "love" -%}
         <span class="restaurant-badge">おすすめ</span>
+      {%- when "have_been" -%}
+        <span class="restaurant-badge">もう行った</span>
       {%- else -%}
         <span class="restaurant-badge">{{ restaurant.status | replace: "_", " " }}</span>
       {%- endcase -%}
@@ -47,7 +49,7 @@
     {%- endcapture -%}
     {%- assign visible_tags = visible_tags | strip -%}
   {%- endif -%}
-  <li{% if include.filterable %} data-restaurant data-status="{{ restaurant.status | escape }}" data-region="{{ restaurant.addressRegion | default: '地域不明' | escape }}" data-locality="{{ restaurant.addressLocality | default: '市区町村不明' | escape }}"{% endif %}>
+  <li{% if include.filterable %} data-restaurant data-date-added="{{ restaurant.dateAdded | escape }}" data-rating="{{ restaurant.tabelog_score | default: 0 | escape }}" data-status="{{ restaurant.status | escape }}" data-region="{{ restaurant.addressRegion | default: '地域不明' | escape }}" data-locality="{{ restaurant.addressLocality | default: '市区町村不明' | escape }}"{% endif %}>
     {%- if include.show_cards and restaurant_image -%}
       {%- if restaurant.url -%}
         <a class="restaurant-card" href="{{ restaurant.url }}">
@@ -67,6 +69,12 @@
               <span class="restaurant-card-score">{{ restaurant_score_badge }}</span>
             {%- endif -%}
             <span class="restaurant-card-title">{{ restaurant_title }}</span>
+            {%- if include.filterable -%}
+              <span class="restaurant-card-meta">{{ restaurant.addressRegion | escape }} · {{ restaurant.addressLocality | escape }}</span>
+            {%- endif -%}
+            {%- if restaurant.dateAdded -%}
+              <span class="restaurant-card-meta">追加日: <time datetime="{{ restaurant.dateAdded | escape }}">{{ restaurant.dateAdded | escape }}</time></span>
+            {%- endif -%}
             {%- if restaurant_meta != "" -%}
               <span class="restaurant-card-meta">{{ restaurant_meta }}</span>
             {%- endif -%}
@@ -100,6 +108,9 @@
             <span class="restaurant-badges">{{ restaurant_score_badge }}{{ restaurant_badges }}</span>
           {%- endif -%}
         </div>
+        {%- if restaurant.dateAdded -%}
+          <div class="restaurant-meta">追加日: <time datetime="{{ restaurant.dateAdded | escape }}">{{ restaurant.dateAdded | escape }}</time></div>
+        {%- endif -%}
         {%- if restaurant_meta != "" -%}
           <div class="restaurant-meta">{{ restaurant_meta }}</div>
         {%- endif -%}

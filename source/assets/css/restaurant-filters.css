@@ -60,12 +60,12 @@
   outline-offset: 3px;
 }
 
-.restaurant-filters [data-filter="status"] .restaurant-filter-options { gap: 0; }
-.restaurant-filters [data-filter="status"] span { border-radius: 0; }
-.restaurant-filters [data-filter="status"] label:first-child span {
+.restaurant-filters :is([data-filter="status"], [data-filter="sort"]) .restaurant-filter-options { gap: 0; }
+.restaurant-filters :is([data-filter="status"], [data-filter="sort"]) span { border-radius: 0; }
+.restaurant-filters :is([data-filter="status"], [data-filter="sort"]) label:first-child span {
   border-radius: 8px 0 0 8px;
 }
-.restaurant-filters [data-filter="status"] label:last-child span {
+.restaurant-filters :is([data-filter="status"], [data-filter="sort"]) label:last-child span {
   border-radius: 0 8px 8px 0;
 }
 .restaurant-filter-summary { margin: .5rem 0 0; }

@@ -19,6 +19,13 @@
       <legend>市区町村</legend>
       <div class="restaurant-filter-options"></div>
     </fieldset>
+    <fieldset data-filter="sort">
+      <legend>並び順</legend>
+      <div class="restaurant-filter-options">
+        <label><input type="radio" name="sort" value="rating" checked><span>食べログ評価順</span></label>
+        <label><input type="radio" name="sort" value="dateAdded"><span>追加日が新しい順</span></label>
+      </div>
+    </fieldset>
     <p class="restaurant-filter-summary" role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="restaurant-filter-empty" hidden>
       <p>この条件に一致するお店はありません。</p>

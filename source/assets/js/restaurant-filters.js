@@ -40,13 +40,22 @@
   function options(name, values, selected) {
     var container = form.querySelector('[data-filter="' + name + '"] .restaurant-filter-options');
     container.textContent = '';
-    [''].concat(values).forEach(function (value) {
+    var multiple = name === 'locality';
+    if (multiple) {
+      var reset = document.createElement('button');
+      reset.type = 'button';
+      reset.dataset.clearLocality = '';
+      reset.textContent = 'すべて';
+      reset.setAttribute('aria-pressed', selected.length === 0);
+      container.appendChild(reset);
+    }
+    (multiple ? values : [''].concat(values)).forEach(function (value) {
       var label = document.createElement('label');
       var input = document.createElement('input');
-      input.type = 'radio';
+      input.type = multiple ? 'checkbox' : 'radio';
       input.name = name;
       input.value = value;
-      input.checked = value === selected;
+      input.checked = multiple ? selected.indexOf(value) !== -1 : value === selected;
       var text = document.createElement('span');
       text.textContent = value || 'すべて';
       label.appendChild(input);
@@ -61,10 +70,14 @@
     var sort = params.get('sort');
     if (!Object.prototype.hasOwnProperty.call(sortLabels, sort)) sort = 'rating';
     var region = params.get('region') || '';
-    var locality = params.get('locality') || '';
     if (!Object.prototype.hasOwnProperty.call(labels, status)) status = 'love';
     if (regions.indexOf(region) === -1) region = '';
-    if (!region || localities(region).indexOf(locality) === -1) locality = '';
+    // Repeated parameters support multiple selections and older single-value URLs.
+    // Filtering the known options also removes duplicates and invalid localities.
+    var requestedLocalities = params.getAll('locality');
+    var locality = region ? localities(region).filter(function (value) {
+      return requestedLocalities.indexOf(value) !== -1;
+    }) : [];
     return { status: status, region: region, locality: locality, sort: sort };
   }
 
@@ -75,6 +88,13 @@
     options('region', regions, state.region);
     options('locality', localities(state.region), state.locality);
     form.querySelector('[data-filter="locality"]').hidden = !state.region;
+  }
+
+  function syncLocalityControls() {
+    Array.from(form.querySelectorAll('input[name="locality"]')).forEach(function (input) {
+      input.checked = state.locality.indexOf(input.value) !== -1;
+    });
+    form.querySelector('[data-clear-locality]').setAttribute('aria-pressed', state.locality.length === 0);
   }
 
   function render() {
@@ -96,7 +116,7 @@
     cards.forEach(function (card) {
       var match = (state.status === 'all' || card.dataset.status === state.status) &&
         (!state.region || card.dataset.region === state.region) &&
-        (!state.locality || card.dataset.locality === state.locality);
+        (state.locality.length === 0 || state.locality.indexOf(card.dataset.locality) !== -1);
       card.hidden = !match;
       if (match) {
         count += 1;
@@ -109,17 +129,19 @@
       }
     });
     form.querySelector('[role="status"]').textContent =
-      [labels[state.status], state.region || 'すべての地域', state.locality, sortLabels[state.sort]]
+      [labels[state.status], state.region || 'すべての地域', state.locality.join('、'), sortLabels[state.sort]]
         .filter(Boolean).join(' · ') + ' — ' + count + '件';
     form.querySelector('.restaurant-filter-empty').hidden = count !== 0;
   }
 
   function saveState() {
     var url = new URL(window.location.href);
-    ['status', 'region', 'locality', 'sort'].forEach(function (key) {
+    ['status', 'region', 'sort'].forEach(function (key) {
       if (state[key]) url.searchParams.set(key, state[key]);
       else url.searchParams.delete(key);
     });
+    url.searchParams.delete('locality');
+    state.locality.forEach(function (value) { url.searchParams.append('locality', value); });
     window.history.pushState(null, '', url);
   }
 
@@ -127,19 +149,33 @@
   form.addEventListener('change', function (event) {
     var input = event.target;
     if (['status', 'region', 'locality', 'sort'].indexOf(input.name) === -1) return;
-    state[input.name] = input.value;
+    if (input.name === 'locality') {
+      state.locality = Array.from(form.querySelectorAll('input[name="locality"]:checked'))
+        .map(function (selected) { return selected.value; });
+      syncLocalityControls();
+    } else {
+      state[input.name] = input.value;
+    }
     if (input.name === 'region') {
-      state.locality = '';
-      options('locality', localities(state.region), '');
+      state.locality = [];
+      options('locality', localities(state.region), state.locality);
       form.querySelector('[data-filter="locality"]').hidden = !state.region;
     }
     // Do not rebuild the active control: preserve keyboard focus.
     render();
     saveState();
   });
+  // The municipality reset is rebuilt when the prefecture changes.
+  form.addEventListener('click', function (event) {
+    if (!event.target.closest('[data-clear-locality]') || state.locality.length === 0) return;
+    state.locality = [];
+    syncLocalityControls();
+    render();
+    saveState();
+  });
   form.querySelector('[data-clear-region]').addEventListener('click', function () {
     state.region = '';
-    state.locality = '';
+    state.locality = [];
     syncControls();
     render();
     saveState();

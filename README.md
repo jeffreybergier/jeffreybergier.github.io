@@ -61,17 +61,28 @@ ruby scripts/test_restaurant_snapshot.rb
 ### Restaurant Filters
 
 The restaurant page is built as static HTML with one card per restaurant.
-`source/assets/js/restaurant-filters.js` adds single-select status, prefecture,
-and municipality filters, plus a sort toggle: **Tabelog rating** (highest first,
-the default) or **date added** (newest first). Sorting applies across all matching
-cards, not just within geographic groups. Same-day additions use rating as a
+`source/assets/js/restaurant-filters.js` adds single-select status and prefecture
+filters, plus multi-select municipality buttons. Click a municipality to toggle
+it on/off; results match **any** selected municipality. **すべて** clears the
+municipality selection, as does changing the prefecture. With none selected,
+all municipalities in the current prefecture are shown. The buttons use native
+checkboxes for keyboard/assistive-technology support (Tab to focus, Space to
+toggle).
+
+A sort toggle offers **Tabelog rating** (highest first, the default) or **date
+added** (newest first). Sorting applies across all matching cards, not just within
+geographic groups. Same-day additions use rating as a
 tiebreaker; equal ratings retain the original static order. Each card displays
 its added date, location, and visit status.
 
 Selections are stored in the URL query parameters `status`, `region`, `locality`,
 and `sort` (`rating` or `dateAdded`); region/locality values use the Japanese names
-from the cached data. Missing/invalid sort parameters fall back to rating.
-Without JavaScript, all cards remain readable in their original status/location
+from the cached data. Multiple municipalities use repeated parameters, e.g.
+`?region=東京都&locality=中央区&locality=千代田区`. Older single-municipality
+links still work; duplicate or invalid locality values are ignored. Clearing
+the municipality selection removes all `locality` parameters. Selections survive
+reloads and browser Back/Forward. Missing/invalid sort parameters fall back to
+rating. Without JavaScript, all cards remain readable in their original status/location
 groups, sorted by rating within each group. Images for unselected cards are
 deferred until those cards are first selected.
 
@@ -88,8 +99,8 @@ NODE_PATH=/tmp/jeffburg-filter-tests/node_modules \
 Use the preview server's actual port (normally 8080). To use an installed browser
 instead of downloading one, set `CHROMIUM_PATH=/usr/bin/chromium` when running
 the test. Tests block external requests and cover sorting (including same-day
-ties), filtering, URL/reload/history, keyboard interaction, narrow-screen layout,
-deferred images, and the no-JavaScript fallback.
+ties), multi-selection/toggling/reset, filtering, URL/reload/history, keyboard
+interaction, narrow-screen layout, deferred images, and the no-JavaScript fallback.
 
 Bundler installs gems under `/cache/bundle/install` in the Compose-managed
 `cache` volume. Keeping that cache off the macOS bind mount avoids git hardlink

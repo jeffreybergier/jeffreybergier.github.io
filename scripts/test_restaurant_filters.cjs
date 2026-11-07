@@ -53,6 +53,20 @@ const { chromium } = require('playwright');
     const choose = (name, value) => page.locator('input[name="' + name + '"]').evaluateAll((nodes, value) => {
       nodes.find(node => node.value === value).click();
     }, value);
+    const selectedLocalities = () => page.locator('input[name="locality"]:checked')
+      .evaluateAll(nodes => nodes.map(node => node.value).sort());
+    const assertLocalities = async expected => {
+      assert.deepEqual(await selectedLocalities(), expected.slice().sort());
+      assert.equal(await page.locator('[data-clear-locality]').getAttribute('aria-pressed'), String(expected.length === 0));
+      const status = await page.locator('input[name="status"]:checked').inputValue();
+      const region = await page.locator('input[name="region"]:checked').inputValue();
+      const matches = await page.locator('[data-restaurant]').evaluateAll((nodes, { expected, status, region }) =>
+        nodes.filter(n => (status === 'all' || n.dataset.status === status) &&
+          (!region || n.dataset.region === region) &&
+          (!expected.length || expected.includes(n.dataset.locality)))
+          .map(n => n.querySelector('a').href), { expected, status, region });
+      assert.deepEqual(await visible.evaluateAll(nodes => nodes.map(n => n.querySelector('a').href)), matches);
+    };
     assert.equal(await page.locator('input[name="status"]').first().inputValue(), 'all');
     await choose('status', 'all');
     assert.equal(await visible.count(), total);
@@ -99,8 +113,66 @@ const { chromium } = require('playwright');
     await page.goForward();
     assert.equal(await page.locator('input[name="status"]:checked').inputValue(), 'have_been');
 
+    // Municipality checkboxes are ORed together, and a second click deselects.
+    await choose('status', 'all');
+    await choose('locality', '千代田区');
+    await assertLocalities(['中央区', '千代田区']);
+    assert.equal(await page.locator('input[name="locality"][type="radio"]').count(), 0);
+    assert.deepEqual(new URL(page.url()).searchParams.getAll('locality').sort(), ['中央区', '千代田区']);
+    assert((await page.locator('[role="status"]').textContent()).includes('中央区'));
+    assert((await page.locator('[role="status"]').textContent()).includes('千代田区'));
+    await assertSorted('dateAdded');
+    await page.reload();
+    await assertLocalities(['中央区', '千代田区']);
+    await choose('locality', '中央区');
+    await assertLocalities(['千代田区']);
+    await page.goBack();
+    await assertLocalities(['中央区', '千代田区']);
+    await page.goForward();
+    await assertLocalities(['千代田区']);
+    await choose('locality', '千代田区');
+    await assertLocalities([]);
+    assert.equal(new URL(page.url()).searchParams.has('locality'), false);
+
+    await choose('locality', '中央区');
+    await choose('locality', '千代田区');
+    await choose('sort', 'rating');
+    await assertLocalities(['中央区', '千代田区']);
+    await assertSorted('rating');
+    await choose('sort', 'dateAdded');
+    await page.locator('[data-clear-locality]').click();
+    await assertLocalities([]);
+    assert.equal(await page.locator('input[name="region"]:checked').inputValue(), '東京都');
+    assert.equal(await page.locator('input[name="sort"]:checked').inputValue(), 'dateAdded');
+    assert.equal(new URL(page.url()).searchParams.has('locality'), false);
+    const historyLength = await page.evaluate(() => history.length);
+    await page.locator('[data-clear-locality]').click();
+    assert.equal(await page.evaluate(() => history.length), historyLength, 'Resetting an already-clear selection is a no-op');
+
+    // Native checkboxes keep focus and support Space to select/deselect.
+    const central = page.locator('input[name="locality"][value="中央区"]');
+    await central.focus();
+    await page.keyboard.press('Space');
+    await assertLocalities(['中央区']);
+    assert.equal(await page.locator(':focus').inputValue(), '中央区');
+    await page.keyboard.press('Space');
+    await assertLocalities([]);
+    await page.locator('[data-clear-locality]').focus();
+    await page.keyboard.press('Tab');
+    assert.equal(await page.locator(':focus').getAttribute('type'), 'checkbox');
+    await page.keyboard.press('Space');
+    assert.equal((await selectedLocalities()).length, 1);
+    await page.locator('[data-clear-locality]').focus();
+    await page.keyboard.press('Enter');
+    await assertLocalities([]);
+
+    await choose('locality', '中央区');
+    await choose('locality', '千代田区');
+    await choose('status', 'have_been');
+    await assertLocalities(['中央区', '千代田区']);
     await choose('region', '山形県');
-    assert.equal(await page.locator('input[name="locality"]:checked').inputValue(), '');
+    await assertLocalities([]);
+    assert.equal(new URL(page.url()).searchParams.has('locality'), false);
     assert.equal(await visible.count(), 0);
     assert(await page.locator('.restaurant-filter-empty').isVisible());
     await page.locator('[data-clear-region]').click();
@@ -110,6 +182,18 @@ const { chromium } = require('playwright');
     assert.equal(await page.locator('input[name="sort"]:checked').inputValue(), 'dateAdded');
     await assertSorted('dateAdded');
 
+    // Older links still select one locality; duplicate/invalid values are ignored.
+    await page.goto(url + '?region=東京都&locality=中央区');
+    await assertLocalities(['中央区']);
+    await page.goto(url + '?region=東京都&locality=中央区&locality=invalid&locality=中央区&locality=千代田区&locality=京都市中京区&extra=keep#restaurant-browser');
+    await assertLocalities(['中央区', '千代田区']);
+    await choose('locality', '中央区');
+    assert.deepEqual(new URL(page.url()).searchParams.getAll('locality'), ['千代田区']);
+    assert.equal(new URL(page.url()).searchParams.get('extra'), 'keep');
+    assert.equal(new URL(page.url()).hash, '#restaurant-browser');
+    await page.goto(url + '?locality=中央区&locality=千代田区');
+    await assertLocalities([]);
+    assert(await page.locator('[data-filter="locality"]').isHidden());
     await page.goto(url + '?status=invalid&region=invalid&locality=invalid&sort=invalid');
     assert.equal(await page.locator('input[name="sort"]:checked').inputValue(), 'rating');
     await assertSorted('rating');
@@ -128,6 +212,12 @@ const { chromium } = require('playwright');
     assert.equal(await page.locator('input[name="sort"]:checked').inputValue(), 'rating');
     assert.equal(await page.locator(':focus').inputValue(), 'rating');
     await assertSorted('rating');
+    await choose('region', '東京都');
+    await choose('locality', '中央区');
+    await choose('locality', '千代田区');
+    await assertLocalities(['中央区', '千代田区']);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await assertSorted('rating');
     assert.deepEqual(errors, []);
 
     const noJS = await browser.newContext({ javaScriptEnabled: false });
@@ -143,7 +233,7 @@ const { chromium } = require('playwright');
       return ratings.every((value, index) => index === 0 || ratings[index - 1] >= value);
     })), 'No-JS view retains grouped rating order');
     await noJS.close();
-    console.log('PASS: unique dated cards, rating/date sorting, defaults, filters, URL/reload, history, reset, empty state, invalid parameters, deferred images, mobile width, keyboard, no-JS fallback');
+    console.log('PASS: unique dated cards, rating/date sorting, defaults, multi-select/toggle/reset, filters, URL/reload, history, empty state, invalid parameters, deferred images, mobile width, keyboard, no-JS fallback');
   } finally {
     await browser.close();
   }

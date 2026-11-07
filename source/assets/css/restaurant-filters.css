@@ -27,6 +27,7 @@
 }
 
 .restaurant-filter-options label { position: relative; cursor: pointer; }
+.restaurant-filter-options button { cursor: pointer; }
 .restaurant-filter-options input {
   position: absolute;
   width: 1px;
@@ -35,6 +36,7 @@
 }
 
 .restaurant-filter-options span,
+.restaurant-filter-options button,
 .restaurant-filter-empty button {
   display: block;
   box-sizing: border-box;
@@ -47,7 +49,8 @@
   line-height: 1.4;
 }
 
-.restaurant-filter-options input:checked + span {
+.restaurant-filter-options input:checked + span,
+.restaurant-filter-options button[aria-pressed="true"] {
   background: #d9eaff;
   color: #152638;
   border-color: #d9eaff;
@@ -55,6 +58,7 @@
 }
 
 .restaurant-filter-options input:focus-visible + span,
+.restaurant-filter-options button:focus-visible,
 .restaurant-filter-empty button:focus-visible {
   outline: 3px solid #82baff;
   outline-offset: 3px;
